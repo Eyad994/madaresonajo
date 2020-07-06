@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Home Demo</title>
+	<subtitle type="text"></subtitle>
+	<link rel="alternate" type="text/html" href="https://chipblue.net"/>
+	<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/itemlist/category/3-home-demo</id>
+	<updated>2020-07-06T21:49:23+00:00</updated>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/itemlist/category/3-home-demo?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Chat</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/21-chat"/>
+		<published>2019-10-10T08:14:20+00:00</published>
+		<updated>2019-10-10T08:14:20+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/21-chat</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/9b2c4b44fb86522964124ed80d03c5e8_S.jpg&quot; alt=&quot;Chat&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/9b2c4b44fb86522964124ed80d03c5e8_S.jpg&quot; alt=&quot;Chat&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Music</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/20-music"/>
+		<published>2019-10-10T08:13:56+00:00</published>
+		<updated>2019-10-10T08:13:56+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/20-music</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/c889234799e865bbe90cee71f6cd2e53_S.jpg&quot; alt=&quot;Music&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/c889234799e865bbe90cee71f6cd2e53_S.jpg&quot; alt=&quot;Music&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Saas</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/19-saas"/>
+		<published>2019-10-10T08:13:30+00:00</published>
+		<updated>2019-10-10T08:13:30+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/19-saas</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/f4b6dca0e2911082f0eb6e1df1a0e11d_S.jpg&quot; alt=&quot;Saas&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/f4b6dca0e2911082f0eb6e1df1a0e11d_S.jpg&quot; alt=&quot;Saas&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Fintech</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/18-fintech"/>
+		<published>2019-10-10T08:12:59+00:00</published>
+		<updated>2019-10-10T08:12:59+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/18-fintech</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/4965657af186b9092c7a96976ffe881c_S.jpg&quot; alt=&quot;Fintech&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/4965657af186b9092c7a96976ffe881c_S.jpg&quot; alt=&quot;Fintech&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Sport</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/17-sport"/>
+		<published>2019-10-10T08:12:31+00:00</published>
+		<updated>2019-10-10T08:12:31+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/17-sport</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/077ab55046ce80eaf9a3ddea999597ca_S.jpg&quot; alt=&quot;Sport&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/077ab55046ce80eaf9a3ddea999597ca_S.jpg&quot; alt=&quot;Sport&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Food</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/16-food"/>
+		<published>2019-10-10T08:12:05+00:00</published>
+		<updated>2019-10-10T08:12:05+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/16-food</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/c9b002fe1bb0320831a8ae78670fdb6f_S.jpg&quot; alt=&quot;Food&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/c9b002fe1bb0320831a8ae78670fdb6f_S.jpg&quot; alt=&quot;Food&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Photo</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/15-photo"/>
+		<published>2019-10-10T08:11:41+00:00</published>
+		<updated>2019-10-10T08:11:41+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/15-photo</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/fc1da7257992fc36032e11db3df7a664_S.jpg&quot; alt=&quot;Photo&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/fc1da7257992fc36032e11db3df7a664_S.jpg&quot; alt=&quot;Photo&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>Travel</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/14-travel"/>
+		<published>2019-10-10T08:11:08+00:00</published>
+		<updated>2019-10-10T08:11:08+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/14-travel</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/fd8b0f77d767f1f6640afba6916ff67c_S.jpg&quot; alt=&quot;Travel&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/fd8b0f77d767f1f6640afba6916ff67c_S.jpg&quot; alt=&quot;Travel&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+	<entry>
+		<title>News</title>
+		<link rel="alternate" type="text/html" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/13-news"/>
+		<published>2019-10-10T08:10:33+00:00</published>
+		<updated>2019-10-10T08:10:33+00:00</updated>
+		<id>https://chipblue.net/joomla/codrop/index.php/blog/blog-classic/item/13-news</id>
+		<author>
+			<name>Super User</name>
+			<email>admin123@gmail.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/48ee1e8a0a8f50dce4f8cb9ab418e211_S.jpg&quot; alt=&quot;News&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;K2FeedImage&quot;&gt;&lt;img src=&quot;https://chipblue.net/joomla/codrop/media/k2/items/cache/48ee1e8a0a8f50dce4f8cb9ab418e211_S.jpg&quot; alt=&quot;News&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;K2FeedIntroText&quot;&gt;&lt;/div&gt;</content>
+		<category term="Home Demo" />
+	</entry>
+</feed>

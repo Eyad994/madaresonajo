@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Page Demo</title>
+		<description><![CDATA[]]></description>
+		<link>https://chipblue.net</link>
+		<lastBuildDate>Mon, 06 Jul 2020 21:50:07 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="https://chipblue.net/joomla/codrop/index.php/blog/blog-post/itemlist/category/4-page-demo?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Careers</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/27-careers</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/27-careers</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/787ae9ec9023a82f5aa7e4c1a64f73cb_S.jpg" alt="Careers" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:32:20 +0000</pubDate>
+		</item>
+		<item>
+			<title>Faq</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/26-faq</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/26-faq</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/feb4274796d93ff716e9650163a77fb8_S.jpg" alt="Faq" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:31:29 +0000</pubDate>
+		</item>
+		<item>
+			<title>Stories</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/25-stories</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/25-stories</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/af2ef6a0e2c9c528b09655df79f3b312_S.jpg" alt="Stories" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:30:46 +0000</pubDate>
+		</item>
+		<item>
+			<title>Team</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/24-team</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/24-team</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/233826a67be66a810b23a263230da62e_S.jpg" alt="Team" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:30:05 +0000</pubDate>
+		</item>
+		<item>
+			<title>Pricing</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/23-pricing</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/23-pricing</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/e2bf3b11df0b872112757f1c2fee6e32_S.jpg" alt="Pricing" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:29:43 +0000</pubDate>
+		</item>
+		<item>
+			<title>About</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/22-about</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/blog/blog-post/item/22-about</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/71f67488b0857639cee631943a3fc6fa_S.jpg" alt="About" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:29:00 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

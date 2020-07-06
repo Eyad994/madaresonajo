@@ -1,0 +1,181 @@
+@media (min-width: 992.98px) {
+	nav.menu-fixed .menu-cnt ul.menu-op, nav.menu-fixed .menu-cnt ul.menu-mp{
+		list-style:none;
+		display:flex;
+		float: left;
+		padding: 0;
+		margin: 0;
+		margin-left: 30px;
+	}
+	nav.menu-fixed.menu-transparent.light .menu-cnt ul.menu-mp > li > a, nav.menu-fixed.menu-transparent.light .menu-cnt ul.menu-op > li > a{
+		padding-right: 40px;
+		color: #FFF;
+		height: 60px;
+		line-height: 60px;
+		font-size: 15px;
+		letter-spacing: .3px;
+		font-weight: 500;
+		text-decoration: none;
+		text-align: left;
+		padding-left:15px;
+	} 
+	nav.menu-classic.menu-fixed.menu-transparent.light .menu-cnt ul.menu-mp > li > a, nav.menu-classic.menu-fixed.menu-transparent.light .menu-cnt ul.menu-op > li > a{
+		padding-right: 40px;
+		color: #fff;
+		height: 60px;
+		line-height: 60px;
+		font-size: 15px;
+		letter-spacing: .3px;
+		font-weight: 500;
+		text-decoration: none;
+		text-align: left;
+		padding-left:15px;
+	}
+	nav.menu-classic.menu-fixed.menu-transparent.scroll-menu .menu-cnt ul.menu-mp > li > a, nav.menu-classic.menu-fixed.menu-transparent.scroll-menu .menu-cnt ul.menu-op > li > a{
+		padding-right: 40px;
+		color: #fff;
+		height: 60px;
+		line-height: 60px;
+		font-size: 15px;
+		letter-spacing: .3px;
+		font-weight: 500;
+		text-decoration: none;
+		text-align: left;
+		padding-left:15px;
+	}
+	nav.menu-classic.menu-fixed.menu-transparent .menu-cnt ul.menu-mp > li > a, nav.menu-classic.menu-fixed.menu-transparent .menu-cnt ul.menu-op > li > a{
+		padding-right: 40px;
+		color: #000;
+		height: 60px;
+		line-height: 60px;
+		font-size: 15px;
+		letter-spacing: .3px;
+		font-weight: 500;
+		text-decoration: none;
+		text-align: left;
+		padding-left:15px;
+	}
+	nav.menu-classic.menu-fixed.light .menu-cnt ul.menu-mp > li > a, nav.menu-classic.menu-fixed.light .menu-cnt ul.menu-op > li > a{
+		padding-right: 40px;
+		color: #FFF;
+		height: 60px;
+		line-height: 60px;
+		font-size: 15px;
+		letter-spacing: .3px;
+		font-weight: 500;
+		text-decoration: none;
+		text-align: left;
+		padding-left:15px;
+	}
+	nav.menu-fixed .menu-cnt ul.menu-mp li ul li a{
+		text-align:left;
+	}
+	.menu-cnt ul.menu-mp li.dropdown > a:after{
+		font-family: "Icons";
+		content: "\67";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		right: 10px;
+		transition: transform .5s;
+		text-transform: none;
+		opacity: .7;
+	}
+}
+@media (max-width: 991.98px){
+	.menu-cnt ul.menu-mp > li, .dropdown ul.menu-op > li{
+		text-align:left;
+	}
+	.menu-cnt ul.menu-mp > li > a, .dropdown ul.menu-op > li > a{
+		display:block;
+		height: 50px;
+		line-height: 50px;
+	}
+	.menu-cnt ul.menu-mp > li.dropdown > a:after{
+		right: 15px;
+		font-family: "Icons";
+		content: "\67";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		right: 10px;
+		transition: transform .5s;
+		text-transform: none;
+		opacity: .7;
+	}
+	.menu-cnt ul.menu-mp > li.dropdown:hover ul{
+		display:block;
+	} 
+}
+.grid-box .grid-item ul.icon-list.icon-list-horizontal:before, .text-color  ul.icon-list.icon-list-horizontal.icon-list-blog:before{
+	display:none;
+}
+.grid-list .grid-box .grid-item{
+	display:block !important;
+}
+.img-box.video-area img.post-image{
+	width:100%;
+}
+.pt-100{
+padding-top:100px;
+}
+.pb-100{
+padding-bottom:100px;
+}
+.pt-0{
+padding-top:0 !important;
+}
+.pb-0{
+padding-bottom:0 !important;
+}
+.icon-list.icon-circle.icon-list-11:before, ul.icon-list:before{
+    content:none;
+}
+.table.table-border td .icon-check:before{
+content:none;
+}
+ul.menu-mp li ul li ul{
+top:0;
+left:90%;
+}
+ul.menu-mp li ul li ul:before{
+content:none;
+}
+nav.light a.btn-border, .dropdown > ul li:hover > a, .dropdown > ul li.active > a, .menu-cnt ul > li:hover > a, .menu-cnt ul.menu-op > li.active > a, .light .counter h3, .breadcrumb li:last-child a, .breadcrumb li:hover a, .menu-side-collapse .dropdown-submenu > a {
+    color: rgb(71, 178, 228) !important;
+}
+header.header-base.header-image{
+height:450px;
+}
+ol.breadcrumb li a:after{
+	content:none;
+}
+ol.breadcrumb li {
+    display: block;
+    text-decoration: none;
+    padding-right: 15px;
+    margin-right: 15px;
+    font-size: 14px;
+    position: relative;
+}
+ol.breadcrumb li a{
+	padding-right: 0;
+    margin-right: 0;
+}
+ol.breadcrumb li:active{
+    color: rgb(71, 178, 228) !important;
+}
+ol.breadcrumb li:last-child{
+	color: rgb(71, 178, 228) !important;
+}
+.footer-bar > .container div > span:last-child {
+    float: right;
+}

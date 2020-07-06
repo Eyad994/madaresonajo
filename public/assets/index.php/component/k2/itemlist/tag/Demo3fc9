@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Displaying items by tag: Demo</title>
+		<description><![CDATA[]]></description>
+		<link>https://chipblue.net</link>
+		<lastBuildDate>Mon, 06 Jul 2020 21:50:33 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="https://chipblue.net/joomla/codrop/index.php/component/k2/itemlist/tag/Demo?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Careers</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/27-careers</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/27-careers</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/787ae9ec9023a82f5aa7e4c1a64f73cb_S.jpg" alt="Careers" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:32:20 +0000</pubDate>
+		</item>
+		<item>
+			<title>Faq</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/26-faq</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/26-faq</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/feb4274796d93ff716e9650163a77fb8_S.jpg" alt="Faq" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:31:29 +0000</pubDate>
+		</item>
+		<item>
+			<title>Stories</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/25-stories</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/25-stories</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/af2ef6a0e2c9c528b09655df79f3b312_S.jpg" alt="Stories" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:30:46 +0000</pubDate>
+		</item>
+		<item>
+			<title>Team</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/24-team</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/24-team</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/233826a67be66a810b23a263230da62e_S.jpg" alt="Team" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:30:05 +0000</pubDate>
+		</item>
+		<item>
+			<title>Pricing</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/23-pricing</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/23-pricing</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/e2bf3b11df0b872112757f1c2fee6e32_S.jpg" alt="Pricing" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:29:43 +0000</pubDate>
+		</item>
+		<item>
+			<title>About</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/22-about</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/22-about</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/71f67488b0857639cee631943a3fc6fa_S.jpg" alt="About" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Page Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:29:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>Chat</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/21-chat</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/21-chat</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/9b2c4b44fb86522964124ed80d03c5e8_S.jpg" alt="Chat" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Home Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:14:20 +0000</pubDate>
+		</item>
+		<item>
+			<title>Music</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/20-music</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/20-music</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/c889234799e865bbe90cee71f6cd2e53_S.jpg" alt="Music" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Home Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:13:56 +0000</pubDate>
+		</item>
+		<item>
+			<title>Saas</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/19-saas</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/19-saas</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/f4b6dca0e2911082f0eb6e1df1a0e11d_S.jpg" alt="Saas" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Home Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:13:30 +0000</pubDate>
+		</item>
+		<item>
+			<title>Fintech</title>
+			<link>https://chipblue.net/joomla/codrop/index.php/component/k2/item/18-fintech</link>
+			<guid isPermaLink="true">https://chipblue.net/joomla/codrop/index.php/component/k2/item/18-fintech</guid>
+			<description><![CDATA[<div class="K2FeedImage"><img src="https://chipblue.net/joomla/codrop/media/k2/items/cache/4965657af186b9092c7a96976ffe881c_S.jpg" alt="Fintech" /></div><div class="K2FeedIntroText"></div>]]></description>
+			<author>admin123@gmail.com (Super User)</author>
+			<category>Home Demo</category>
+			<pubDate>Thu, 10 Oct 2019 08:12:59 +0000</pubDate>
+		</item>
+	</channel>
+</rss>
