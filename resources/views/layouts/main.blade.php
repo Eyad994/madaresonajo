@@ -26,6 +26,8 @@
     <link href="{{ asset('assets/css/skin.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/media/icons/iconsmind/line-icons.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
     <script src="{{ asset('assets/media/jui/js/jquery.min4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/jui/js/jquery-noconflict4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/jui/js/jquery-migrate.min4c8f.js') }}" type="text/javascript"></script>
@@ -82,7 +84,10 @@
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/pagination.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/social.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/custom.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
 
+
+@yield('script')
 </body>
 
 </html>

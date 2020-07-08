@@ -210,7 +210,8 @@ main > section.section-base.section-color, section.section-bottom-layer-color:af
 }
 
 .cnt-box.boxed .caption, .cnt-box-side-icon.boxed > i, .cnt-box-top-icon.boxed > i, nav.menu-transparent:not(.light).scroll-menu, .boxed-area {
-    background-color: rgb(55, 81, 126);
+    //background-color: rgb(55, 81, 126);
+    background-color: rgb(241, 244, 249);;
 }
 
 .btn-border.light:not(:hover) {
@@ -1440,7 +1441,7 @@ body > header .breadcrumb {
 
 .media-box-down .caption {
     background: rgb(255, 255, 255);
-    padding: 15px 30px;
+    padding: 5px 15px;
     border-radius: 6px;
     bottom: 20px;
     right: -50px;
@@ -1448,6 +1449,7 @@ body > header .breadcrumb {
     z-index: 9;
     text-align: left;
     max-width: 250px;
+    opacity: 0.8;
 }
 
 .media-box-down .caption p {
@@ -2145,7 +2147,9 @@ body > header .breadcrumb {
 }
 
 .cnt-box .caption p {
-    font-size: 17px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #2d3e52;
 }
 
 .cnt-box.boxed {

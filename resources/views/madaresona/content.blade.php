@@ -3,8 +3,11 @@
 
     <div class="container pb-0">
 
+       {{-- border: 1px solid rgb(241, 240, 240);
+        box-shadow: 0 3px 20px -2px rgba(20,45,100,.1);--}}
+
         <div class="row ">
-            <div class='col-lg-12  '>
+            <div class='col-lg-12 '>
                 <table class="table table-grid table-border table-md-6 mce-item-table">
                     <tbody>
                     <tr>
@@ -45,82 +48,79 @@
 </section>
 <section class="section-base" style=" ">
 
-
     <div class="container">
-
         <h2 class="align-center">14 truly unique inner pages.</h2>
         <p class="align-center width-650">
             All our pages are unique and carefully designed to give you the maxium value. </p>
         <hr class="space"/>
         <div class="row ">
             <div class='col-lg-12  '>
-
-                <div class="grid-list" data-columns="3">
+                <div class="grid-list" data-columns="5">
                     <div class="grid-box">
+
                         <div class="grid-item">
-                            <a href="index.php/pages/about.html" target="_blank"
+                            <a href="#" target="_blank"
                                class="media-box media-box-down boxed">
                                 <img src="{{ asset('assets/media/k2/items/cache/71f67488b0857639cee631943a3fc6fa_L.jpg') }}" alt="About">
                                 <div class="caption">
-                                    <h2>About</h2>
+                                    <h3>About</h3>
                                 </div>
                             </a>
                         </div>
 
-
                         <div class="grid-item">
-                            <a href="index.php/pages/pricing-one.html" target="_blank"
+                            <a href="#" target="_blank"
                                class="media-box media-box-down boxed">
                                 <img src="{{ asset('assets/media/k2/items/cache/e2bf3b11df0b872112757f1c2fee6e32_L.jpg') }}"
                                      alt="Pricing">
                                 <div class="caption">
-                                    <h2>Pricing</h2>
+                                    <h3>Pricing</h3>
                                 </div>
                             </a>
                         </div>
 
 
                         <div class="grid-item">
-                            <a href="index.php/pages/team.html" target="_blank"
+                            <a href="#" target="_blank"
                                class="media-box media-box-down boxed">
                                 <img src="{{ asset('assets/media/k2/items/cache/233826a67be66a810b23a263230da62e_L.jpg') }}" alt="Team">
                                 <div class="caption">
-                                    <h2>Team</h2>
+                                    <h3>Team</h3>
                                 </div>
                             </a>
                         </div>
 
 
                         <div class="grid-item">
-                            <a href="index.php/pages/success-stories.html" target="_blank"
+                            <a href="#" target="_blank"
                                class="media-box media-box-down boxed">
                                 <img src="{{ asset('assets/media/k2/items/cache/af2ef6a0e2c9c528b09655df79f3b312_L.jpg') }}"
                                      alt="Stories">
                                 <div class="caption">
-                                    <h2>Stories</h2>
+                                    <h3>Stories</h3>
                                 </div>
                             </a>
                         </div>
 
 
                         <div class="grid-item">
-                            <a href="index.php/pages/faqs.html" target="_blank"
+                            <a href="#" target="_blank"
                                class="media-box media-box-down boxed">
                                 <img src="{{ asset('assets/media/k2/items/cache/feb4274796d93ff716e9650163a77fb8_L.jpg') }}" alt="Faq">
                                 <div class="caption">
-                                    <h2>Faq</h2>
+                                    <h3>Faq</h3>
                                 </div>
                             </a>
                         </div>
 
 
                         <div class="grid-item">
-                            <a href="index.php/pages/careers.html" target="_blank"
+                            <a href="#" target="_blank"
                                class="media-box media-box-down boxed">
                                 <img src="{{ asset('assets/media/k2/items/cache/787ae9ec9023a82f5aa7e4c1a64f73cb_L.jpg') }}"
                                      alt="Careers">
                                 <div class="caption">
-                                    <h2>Careers</h2>
+                                    <h3>Careers</h3>
                                 </div>
                             </a>
                         </div>
