@@ -26,8 +26,24 @@ Table of contents
 
 */
 
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+body{
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.select-banner{
+    text-align-last: right; padding-top: 1px !important;
+}
+/*[lang="ar"] body{
+    font-family: 'Cairo', sans-serif;
+}*/
+
+/*.search-bar-banner{
+    margin-left: -250px;
+}*/
 
 @media (min-width: 768px) {
+
 
     /* show 3 items */
     .carousel-inner .active,
@@ -105,6 +121,7 @@ Table of contents
 #profile-grid .thumbnail {margin-bottom:6px;}
 #profile-grid .panel-thumbnail { overflow: hidden; }
 #profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+
 
 @font-face {
     font-family: "Icons";
@@ -5296,6 +5313,11 @@ Small devices (landscape phones, less than 768px)
 */
 
 @media (max-width: 600px) {
+
+    .search-bar-banner{
+        margin-left: 0 !important;
+    }
+
     [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
         margin-top: 30px;
         /*width: 240px;

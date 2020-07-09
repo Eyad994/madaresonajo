@@ -794,7 +794,7 @@ section.section-top-overflow > .container {
 }
 
 .section-bottom-layer {
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
     background-color: #1d556c !important;
 }
 
