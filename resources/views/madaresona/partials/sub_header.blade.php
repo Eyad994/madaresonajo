@@ -29,7 +29,7 @@
                         </select>
                     </div>
 
-                    <input type="text" name="search_text" class="form-control"
+                    <input type="text" name="search_text" id="search_text" class="form-control"
                            style="text-align: right; font-size: 14px; border: 0px; outline: 0px;"
                            placeholder="بحث عن المدارس ورياض الأطفال">
                     <div class="input-group-prepend">
@@ -44,16 +44,15 @@
             <div class="col-md-12 search-bar-banner"></div>
             <br>
             {{--/*****************************************/--}}
-            <div class="col-md-1 location" style="display: none"></div>
-            <div class="col-md-4 location" style="display: none">
+            <div class="col-md-5 location" style="display: none">
                 <div class="row">
-                    <div class="col-md-4 order-2 order-md-12 form-group">
+                    <div class="col-md-6 order-2 order-md-12 form-group">
                         <select name="region_id" id="region_id" class="form-control select-banner" style="padding-left: 10px" disabled>
                             <option disabled selected>المنطقة</option>
                         </select>
                     </div>
 
-                    <div class="col-md-4 order-1 order-md-12 form-group">
+                    <div class="col-md-3 order-1 order-md-12 form-group">
                         <select name="city_id" id="city_id" class="form-control select-banner">
                             <option disabled selected>المدينة</option>
                             @foreach($cities as $city)
@@ -62,13 +61,15 @@
                         </select>
                     </div>
 
-                    <div class="col-md-4 order-0 order-md-12 form-group">
+                    <div class="col-md-3 order-0 order-md-12 form-group">
                         <select name="country" id="country" class="form-control select-banner">
                             <option value="1">الأردن</option>
                         </select>
                     </div>
                 </div>
             </div>
+            <div class="col-md-5 location" style="display: none"></div>
+
             {{--/*****************************************/--}}
             <div class="col-md-3 schoolType" style="display: none"></div>
             <div class="col-md-2 schoolType" style="display: none">
@@ -87,10 +88,10 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3 order-2 schoolClass" style="display: none">
-                        <input type="number" class="form-control" placeholder="إلى" style="text-align: right">
+                        <input type="number" class="form-control" name="to_price" placeholder="إلى" style="text-align: right">
                     </div>
                     <div class="col-md-3 order-1 order-md-12 schoolClass" style="display: none">
-                        <input type="number" class="form-control" placeholder="من" style="text-align: right">
+                        <input type="number" class="form-control" name="from_price" placeholder="من" style="text-align: right">
                     </div>
                     <div class="col-md-4 order-0 order-md-12 schoolClass" style="display: none">
                         <div class="row">

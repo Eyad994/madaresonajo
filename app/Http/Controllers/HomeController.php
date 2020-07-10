@@ -27,13 +27,42 @@ class HomeController extends Controller
             //'name';
             $schools = School::where('name_en', 'like', '%' . $request->search_text . '%')->orWhere('name_ar', 'like', '%' . $request->search_text . '%')->get();
         } elseif ($request->search_select == 2) {
-            // 'location';
+
+            if (isset($request->$request->region_id) && isset($request->city_id) && isset($request->search_text)) {
+                $schools = School::where('name_en', 'like', '%' . $request->search_text . '%')
+                    ->orWhere('name_ar', 'like', '%' . $request->search_text . '%')
+                    ->where('region_id', $request->region_id)
+                    ->where('city_id', $request->city_id)
+                    ->get();
+            } else {
+                $schools = School::where('id', 0)->get();
+            }
+
 
         } elseif ($request->search_select == 3) {
-            // 'school_type';
+            if (isset($request->search_text) && isset($request->school_type)) {
+                if ($request->school_type == 0) {
+                    $schools = School::where('name_en', 'like', '%' . $request->search_text . '%')
+                        ->orWhere('name_ar', 'like', '%' . $request->search_text . '%')
+                        ->where('curriculum_ls_local', 1)
+                        ->get();
+                } else {
+                    $schools = School::where('name_en', 'like', '%' . $request->search_text . '%')
+                        ->orWhere('name_ar', 'like', '%' . $request->search_text . '%')
+                        ->where('curriculum_ls_public', 1)
+                        ->get();
+                }
+            } else {
+                $schools = School::where('id', 0)->get();
+            }
 
         } elseif ($request->search_select == 4) {
-            // 'fees';
+            if (isset($request->search_text) && isset($request->school_class))
+            {
+                $schools = School::where('id', 0)->get();
+            } else {
+                $schools = School::where('id', 0)->get();
+            }
         }
 
         return view('madaresona.main.schoolsGrid', compact('schools'));

@@ -20,6 +20,12 @@
                     </div>
                 </div>
             @endforeach
+            @if(count($schools) == 0)
+                <div class="col-md-4"></div>
+                <div>
+                    <h1><b style="text-decoration: underline;">No</b> schools was found</h1>
+                </div>
+                @endif
         </div>
         {{--{!! $schools->links() !!}--}}
     </div>

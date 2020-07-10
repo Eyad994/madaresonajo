@@ -3,30 +3,33 @@
     $(document).ready(function () {
 
         $('#search_select').on('change', function (e) {
-            e.preventDefault();
+
+            var searchText = $('#search_text').val();
             var value = $(this).val();
 
-            if (value === 'location') {
+            // location
+            if (value == 2) {
 
                 $('.schoolClass').css('display', 'none');
                 $('.schoolType').css('display', 'none');
 
                 $('.location').css('display', 'block');
-            } else if (value === 'fees') {
+                // fees
+            } else if (value == 4) {
 
                 $('.location').css('display', 'none');
                 $('.schoolType').css('display', 'none');
 
                 $('.schoolClass').css('display', 'block');
-
-            } else if (value === 'school_type') {
+                // school_type
+            } else if (value == 3) {
 
                 $('.location').css('display', 'none');
                 $('.schoolClass').css('display', 'none');
 
                 $('.schoolType').css('display', 'block');
-
-            } else if (value === 'name') {
+                // name
+            } else if (value == 1) {
 
                 $('.location').css('display', 'none');
                 $('.schoolClass').css('display', 'none');
