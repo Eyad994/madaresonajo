@@ -2,11 +2,13 @@
 
 @section('content')
 
-    <section class="section-base" >
+    <section class="section-base">
 
         <div class="container pb-0">
 
-            <h2 class="align-center"><span style="text-decoration: underline; color: #1d556c">{{ count($specialSchools) }}</span> Special Schools</h2>
+            <h2 class="align-center"><span
+                        style="text-decoration: underline; color: #1d556c">{{ count($specialSchools) }}</span> Special
+                Schools</h2>
             <p class="align-center width-650">
                 We are proud of all these schools. </p>
             <hr class="space"/>
@@ -23,25 +25,31 @@
 
                                 @for($i=0; $i < count($specialSchools); $i++)
                                     @if($i == 0)
-                                <div class="carousel-item col-md-3  active">
-                                    <div class="panel panel-default">
-                                        <div class="panel-thumbnail">
-                                            <a href="#" title="image 1" class="thumb">
-                                                <img class="img-fluid mx-auto d-block" style="width: 200px; height: 200px" src="{{ env('IMAGE_URL') }}/images/{{$specialSchools[$i]->name_en}}/{{ $specialSchools[$i]->school_logo }}" alt="slide 1">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                    @else
-                                    <div class="carousel-item col-md-3 ">
-                                        <div class="panel panel-default">
-                                            <div class="panel-thumbnail">
-                                                <a href="#" title="image 3" class="thumb">
-                                                    <img class="img-fluid mx-auto d-block" style="width: 200px; height: 200px" src="{{ env('IMAGE_URL') }}/images/{{$specialSchools[$i]->name_en}}/{{ $specialSchools[$i]->school_logo }}" alt="slide 2">
-                                                </a>
+                                        <div class="carousel-item col-md-3  active">
+                                            <div class="panel panel-default">
+                                                <div class="panel-thumbnail">
+                                                    <a href="#" title="image 1" class="thumb">
+                                                        <img class="img-fluid mx-auto d-block"
+                                                             style="width: 200px; height: 200px"
+                                                             src="{{ env('IMAGE_URL') }}/images/{{$specialSchools[$i]->name_en}}/{{ $specialSchools[$i]->school_logo }}"
+                                                             alt="slide 1">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @else
+                                        <div class="carousel-item col-md-3 ">
+                                            <div class="panel panel-default">
+                                                <div class="panel-thumbnail">
+                                                    <a href="#" title="image 3" class="thumb">
+                                                        <img class="img-fluid mx-auto d-block"
+                                                             style="width: 200px; height: 200px"
+                                                             src="{{ env('IMAGE_URL') }}/images/{{$specialSchools[$i]->name_en}}/{{ $specialSchools[$i]->school_logo }}"
+                                                             alt="slide 2">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     @endif
                                 @endfor
                             </div>
@@ -49,7 +57,8 @@
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+                            <a class="carousel-control-next text-faded" href="#carouselExample" role="button"
+                               data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -66,11 +75,11 @@
                             var itemsPerSlide = 4;
                             var totalItems = $('.carousel-item').length;
 
-                            if (idx >= totalItems-(itemsPerSlide-1)) {
+                            if (idx >= totalItems - (itemsPerSlide - 1)) {
                                 var it = itemsPerSlide - (totalItems - idx);
-                                for (var i=0; i<it; i++) {
+                                for (var i = 0; i < it; i++) {
                                     // append slides to end
-                                    if (e.direction=="left") {
+                                    if (e.direction == "left") {
                                         $('.carousel-item').eq(i).appendTo('.carousel-inner');
                                     }
                                     else {
@@ -86,16 +95,16 @@
                         });
 
 
-                        $(document).ready(function() {
+                        $(document).ready(function () {
                             /* show lightbox when clicking a thumbnail */
-                            $('a.thumb').click(function(event){
+                            $('a.thumb').click(function (event) {
                                 event.preventDefault();
                                 var content = $('.modal-body');
                                 content.empty();
                                 var title = $(this).attr("title");
                                 $('.modal-title').html(title);
                                 content.html($(this).html());
-                                $(".modal-profile").modal({show:true});
+                                $(".modal-profile").modal({show: true});
                             });
 
                         });
@@ -106,8 +115,8 @@
             </div>
         </div>
     </section>
-    <section class="section-base" >
-        <div class="container" style="padding: 0px !important;">
+    <section class="section-base">
+        <div class="container" style="padding: 0px !important;" id="schoolsGrid">
             <hr>
             <h2 class="align-center">14 truly unique inner pages.</h2>
             <p class="align-center width-650">
@@ -131,6 +140,9 @@
                     @endforeach
                 </div>
                 {!! $schools->links() !!}
+                <div class="row">
+                    <div class="col-md-12"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -328,9 +340,10 @@
 
 @section('script')
     <script type="text/javascript">
+
         $('ul.pagination').hide();
         $(function () {
-            $('.infinite-scroll').jscroll({
+             $('.infinite-scroll').jscroll({
                 autoTrigger: true,
                 loadingHtml: '<img class="center-block" src="https://media.giphy.com/media/swhRkVYLJDrCE/giphy.gif" alt="Loading..." />', // MAKE SURE THAT YOU PUT THE CORRECT IMG PATH
                 padding: 5,
@@ -340,7 +353,32 @@
                     $('ul.pagination').remove();
                 }
             });
+
+            $('#searchForm').on('submit', function (e) {
+
+                e.preventDefault();
+                var form = $(this);
+                var url = form.attr('action');
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (data) {
+                        //$('.infinite-scroll').destroy();
+                        $('#schoolsGrid').html(data);
+
+                        /*$('.infinite-scroll').removeData('jscroll').jscroll.destroy();*/
+                        var div = $('#schoolsGrid').offset().top;
+                        $('body, html').animate({scrollTop: div});
+                    }
+                });
+            })
         });
+
     </script>
 
 @endsection

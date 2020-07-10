@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 
 Route::get('/getRegions/{id}', 'HomeController@getRegions');
+
+Route::post('search', 'HomeController@search')->name('search');

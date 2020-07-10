@@ -25,15 +25,18 @@ Table of contents
 ===================================================================
 
 */
-
 @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
-body{
+
+body {
     font-family: 'Cairo', sans-serif !important;
 }
 
-.select-banner{
-    text-align-last: right; padding-top: 1px !important;
+.select-banner {
+    text-align-last: right;
+    padding-top: 1px !important;
+    font-size: 14px !important;
 }
+
 /*[lang="ar"] body{
     font-family: 'Cairo', sans-serif;
 }*/
@@ -44,12 +47,11 @@ body{
 
 @media (min-width: 768px) {
 
-
     /* show 3 items */
     .carousel-inner .active,
     .carousel-inner .active + .carousel-item,
     .carousel-inner .active + .carousel-item + .carousel-item,
-    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
         display: block;
     }
 
@@ -113,15 +115,38 @@ body{
 
 /* Bootstrap Lightbox using Modal */
 
-#profile-grid { overflow: auto; white-space: normal; }
-#profile-grid .profile { padding-bottom: 40px; }
-#profile-grid .panel { padding: 0 }
-#profile-grid .panel-body { padding: 15px }
-#profile-grid .profile-name { font-weight: bold; }
-#profile-grid .thumbnail {margin-bottom:6px;}
-#profile-grid .panel-thumbnail { overflow: hidden; }
-#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+#profile-grid {
+    overflow: auto;
+    white-space: normal;
+}
 
+#profile-grid .profile {
+    padding-bottom: 40px;
+}
+
+#profile-grid .panel {
+    padding: 0
+}
+
+#profile-grid .panel-body {
+    padding: 15px
+}
+
+#profile-grid .profile-name {
+    font-weight: bold;
+}
+
+#profile-grid .thumbnail {
+    margin-bottom: 6px;
+}
+
+#profile-grid .panel-thumbnail {
+    overflow: hidden;
+}
+
+#profile-grid .img-rounded {
+    border-radius: 4px 4px 0 0;
+}
 
 @font-face {
     font-family: "Icons";
@@ -396,7 +421,6 @@ COLOR 5
     border-color: #EAF5FC;
 }
 
-
 /*
 -------------------------------------------------------------------
 LIGHT COLOR
@@ -569,7 +593,6 @@ section.section-center {
         position: static;
     }
 }
-
 
 /*
 -------------------------------------------------------------------
@@ -1777,7 +1800,6 @@ ICON - NAVIGATION MENU
     cursor: pointer;
 }
 
-
 .menu-icon .menu-cnt > ul > li > a {
     padding-left: 55px;
     position: relative;
@@ -1842,7 +1864,7 @@ SIDE - NAVIGATION MENU
         z-index: 99995;
         background-color: #FFFFFF;
         border-right: 1px solid #e7e7e7;
-        box-shadow: 1px 0 2px rgba(0,0,0,0.05);
+        box-shadow: 1px 0 2px rgba(0, 0, 0, 0.05);
     }
 
     .menu-side .menu-brand {
@@ -3168,7 +3190,6 @@ STEPS - COMPONENTS
 -------------------------------------------------------------------
 */
 
-
 .box-steps {
     display: grid;
     grid-gap: 30px;
@@ -3863,7 +3884,6 @@ TABS - CONTAINER
     max-width: 25%;
 }
 
-
 .tab-vertical > .tab-nav li a {
     margin: 15px 0;
 }
@@ -4145,7 +4165,7 @@ SCROLL BOX - CONTAINER
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .scroll-pos-bottom.scroll-box:after {
@@ -4176,7 +4196,7 @@ COLLAPSE BOX - CONTAINER
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
     transition: opacity .5s;
 }
 
@@ -4863,7 +4883,6 @@ Medium devices (tablets, less than 992px)
     Layout
     -------------------------------------------------------------------
     */
-
     [class*=col-lg-] + [class*=col-lg-] {
         margin-top: 30px;
     }
@@ -4944,7 +4963,6 @@ Medium devices (tablets, less than 992px)
     Components
     -------------------------------------------------------------------
     */
-
     .menu-inner:not(.menu-inner-vertical) {
         overflow: hidden;
     }
@@ -5064,6 +5082,7 @@ Medium devices (tablets, less than 992px)
     .scroll-box.disable-md:after {
         display: none;
     }
+
     /*
     -------------------------------------------------------------------
     Sections
@@ -5072,6 +5091,7 @@ Medium devices (tablets, less than 992px)
     .section-map > .container {
         max-width: 315px;
     }
+
     /*
     -------------------------------------------------------------------
     Navigation
@@ -5288,6 +5308,7 @@ Medium devices (tablets, less than 992px)
     .mega-menu .tab-box > .panel.active {
         display: block;
     }
+
     /*
     -------------------------------------------------------------------
     Footer
@@ -5314,7 +5335,7 @@ Small devices (landscape phones, less than 768px)
 
 @media (max-width: 600px) {
 
-    .search-bar-banner{
+    .search-bar-banner {
         margin-left: 0 !important;
     }
 
@@ -5323,15 +5344,17 @@ Small devices (landscape phones, less than 768px)
         /*width: 240px;
         margin-left: 120px;*/
     }
-    .cnt-box.boxed{
+
+    .cnt-box.boxed {
         width: 240px;
         margin-left: 120px;
     }
 
     .img-box img {
-     width: 100% !important;
+        width: 100% !important;
     }
 }
+
 @media (max-width: 767.98px) {
 
     /*
@@ -5339,7 +5362,6 @@ Small devices (landscape phones, less than 768px)
     Layout
     -------------------------------------------------------------------
     */
-
     [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
         margin-top: 30px;
         /*width: 240px;
@@ -5364,7 +5386,6 @@ Small devices (landscape phones, less than 768px)
     Responsive classes
     -------------------------------------------------------------------
     */
-
     .no-margin-sm {
         margin: 0 !important;
     }
@@ -5410,7 +5431,6 @@ Small devices (landscape phones, less than 768px)
     Components
     -------------------------------------------------------------------
     */
-
     .table-full-sm tr {
         display: block;
     }
@@ -5446,7 +5466,6 @@ Small devices (landscape phones, less than 768px)
     Containers
     -------------------------------------------------------------------
     */
-
     [data-columns-sm='1'] > div {
         grid-template-columns: 1fr;
     }
@@ -5522,13 +5541,11 @@ Small devices (landscape phones, less than 768px)
         grid-template-columns: 1fr;
     }
 
-
     /*
     -------------------------------------------------------------------
     Sections
     -------------------------------------------------------------------
     */
-
     .section-block-full > .container > .row > .col:first-child {
         padding: 0 15px;
     }

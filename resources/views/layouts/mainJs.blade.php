@@ -33,7 +33,7 @@
 
                 $('.schoolType').css('display', 'none');
             }
-        })
+        });
 
     });
 
@@ -49,26 +49,9 @@
                 });
 
                 $('#region_id').removeAttr('disabled');
-
-               /* var value =
-                    $.ajax({
-                    url: '/getRegions/' + value,
-                    method: 'get',
-                    success: function (result) {
-                        var schoolId =
-                                                $('#region_id option:not(:first)').remove();
-                        $.each(result, function (index, value) {
-                            if (schoolId == value.id)
-                                $('#region_id').append("<option value='" + value.id + "' selected>" + value.area_name_ar + "");
-                            else
-                                $('#region_id').append("<option value='" + value.id + "'>" + value.area_name_ar + "");
-                        });
-
-                        $('#region_id').removeAttr('disabled');
-                    }
-                });*/
             }
         });
     });
+
 
 </script>
