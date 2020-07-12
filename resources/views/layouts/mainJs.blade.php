@@ -42,10 +42,12 @@
 
     $('#city_id').on('change', function () {
         var value = $(this).val();
+
         $.ajax({
-            url: '/getRegions/' + value,
+            url:'/{{ app()->getLocale() }}/getRegions/' + value,
             method: 'get',
             success: function (result) {
+                console.log(result);
                 $('#region_id option:not(:first)').remove();
                 $.each(result, function (index, value) {
                     $('#region_id').append("<option value='" + value.id + "'>" + value.area_name_ar + "");

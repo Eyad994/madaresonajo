@@ -384,13 +384,13 @@
             var cleanSlug = slug.replace("-/", "");
 
             $.ajax({
-                url: '/school/'+cleanSlug,
+                url: '/{{ app()->getLocale() }}/school/'+cleanSlug,
                 method: 'get',
                 success: function (data) {
                     console.log(data);
                     $('.modal-body').html(data);
                     $('#modal').modal('show');
-                    window.history.pushState("", "", '/'+slug);
+                    window.history.pushState("", "", '/{{ app()->getLocale() }}/'+slug);
                 }
             });
         });

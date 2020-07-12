@@ -20,8 +20,10 @@ class HomeController extends Controller
         return view('madaresona.main.index', compact('schools', 'specialSchools'));
     }
 
-    public function getRegions($id)
+    public function getRegions($lang , $id)
+
     {
+
         $regions = Region::where('city_id', $id)->get();
         return $regions;
     }

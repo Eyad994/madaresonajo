@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class SchoolController extends Controller
 {
-    public function show($slug)
+    public function show($lang ,$slug)
     {
+
         $cleanSlug = str_replace('-', ' ', $slug);
 
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))

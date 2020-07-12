@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="col-sm-1">
-        <a href="">asd</a>
+        <a href="">{{ $school->name_ar }}</a>
     </div>
     <div class="col-sm-1">
         <a href="">asd</a>

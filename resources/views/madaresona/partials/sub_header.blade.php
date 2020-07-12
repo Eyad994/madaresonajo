@@ -12,7 +12,7 @@
             </span>
         </div>--}}
 
-        <form action="{{ route('search') }}" method="POST" id="searchForm">
+            <form action="{{ route('search', app()->getLocale()) }}" method="POST" id="searchForm">
             @csrf
 
         <div class="row">

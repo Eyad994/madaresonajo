@@ -12,14 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group([
+    'prefix' => '{locale}',
+    'where' => ['locale' => '[a-zA-Z]{2}'],
+    'middleware' => 'setlocale'], function () {
 
-Route::get('/', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
 
-Route::get('/getRegions/{id}', 'HomeController@getRegions');
+    Route::get('/getRegions/{id}', 'HomeController@getRegions');
 
-Route::post('search', 'HomeController@search')->name('search');
+    Route::post('search', 'HomeController@search')->name('search');
 
-/******************************************************/
-Route::prefix('school')->group(function () {
-    Route::get('{slug}', 'SchoolController@show');
+    /******************************************************/
+    Route::prefix('school')->group(function () {
+        Route::get('{slug}', 'SchoolController@show');
+    });
 });
