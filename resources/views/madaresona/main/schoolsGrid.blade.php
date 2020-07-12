@@ -2,7 +2,7 @@
     <hr>
     <h2 class="align-center">14 truly unique inner pages.</h2>
     <p class="align-center width-650">
-        All our pages are unique and carefully designed to give you the maxium value. </p>
+        {{ __('all.index') }} </p>
     <hr class="space"/>
     <div class="infinite-scroll">
         <div class="row">

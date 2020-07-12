@@ -18,3 +18,8 @@ Route::get('/', 'HomeController@index');
 Route::get('/getRegions/{id}', 'HomeController@getRegions');
 
 Route::post('search', 'HomeController@search')->name('search');
+
+/******************************************************/
+Route::prefix('school')->group(function () {
+    Route::get('{slug}', 'SchoolController@show');
+});

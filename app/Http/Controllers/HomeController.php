@@ -5,11 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Region;
 use App\Models\School;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        /*$test = School::where('id', 11)->first();
+        $result = preg_replace('/[ ]+/', '-', trim($test->name_ar));
+        return $result;*/
+
         $schools = School::latest()->paginate(6);
         $specialSchools = School::where('special', 1)->get();
         return view('madaresona.main.index', compact('schools', 'specialSchools'));
@@ -37,7 +42,6 @@ class HomeController extends Controller
             } else {
                 $schools = School::where('id', 0)->get();
             }
-
 
         } elseif ($request->search_select == 3) {
             if (isset($request->search_text) && isset($request->school_type)) {
