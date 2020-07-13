@@ -22,12 +22,13 @@
 
                                 @for($i=0; $i < count($specialSchools); $i++)
                                     @if($i == 0)
-                                        <div class="carousel-item col-md-3  active">
+                                        <div class="carousel-item col-md-3  active z-depth-3 rounded">
                                             <div class="panel panel-default">
                                                 <div class="panel-thumbnail">
-                                                    <a href="school/{{ preg_replace('/[ ]+/', '-', trim($specialSchools[$i]->name_ar)) }}" title="{{ $specialSchools[$i]->name_ar }}" class="thumb">
-                                                        <img class="img-fluid mx-auto d-block"
-                                                             style="width: 200px; height: 200px"
+                                                    <a href="school/{{ preg_replace('/[ ]+/', '-', trim($specialSchools[$i]->name_ar)) }}"
+                                                       title="{{ $specialSchools[$i]->name_ar }}" class="thumb">
+                                                        <img class="img-fluid mx-auto d-block z-depth-3 rounded"
+                                                             style="width: 200px; height: 200px;    border: 1px #f1f4f9 solid;  webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);}"
                                                              src="{{ env('IMAGE_URL') }}/images/{{$specialSchools[$i]->name_en}}/{{ $specialSchools[$i]->school_logo }}"
                                                              alt="slide 1">
                                                     </a>
@@ -38,9 +39,10 @@
                                         <div class="carousel-item col-md-3 ">
                                             <div class="panel panel-default">
                                                 <div class="panel-thumbnail">
-                                                    <a href="school/{{ preg_replace('/[ ]+/', '-', trim($specialSchools[$i]->name_ar)) }}" title="{{ $specialSchools[$i]->name_ar }}" class="thumb">
-                                                        <img class="img-fluid mx-auto d-block"
-                                                             style="width: 200px; height: 200px"
+                                                    <a href="school/{{ preg_replace('/[ ]+/', '-', trim($specialSchools[$i]->name_ar)) }}"
+                                                       title="{{ $specialSchools[$i]->name_ar }}" class="thumb">
+                                                        <img class="img-fluid mx-auto d-block z-depth-3 rounded"
+                                                             style="width: 200px; height: 200px; border: 1px #f1f4f9 solid;  webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);"
                                                              src="{{ env('IMAGE_URL') }}/images/{{$specialSchools[$i]->name_en}}/{{ $specialSchools[$i]->school_logo }}"
                                                              alt="slide 2">
                                                     </a>
@@ -78,8 +80,7 @@
                                     // append slides to end
                                     if (e.direction == "left") {
                                         $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                                    }
-                                    else {
+                                    } else {
                                         $('.carousel-item').eq(0).appendTo('.carousel-inner');
                                     }
                                 }
@@ -124,10 +125,12 @@
                     @foreach($schools as $school)
                         <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
                             <div class="cnt-box cnt-box-info boxed" data-href="#"
-                                 style="box-shadow: 0px 1px, 0em 0 0.4em #1d556c;">
-                                <a class="img-box show-school" id="{{ $school->id }}" href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}" slug="{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}">
+                                 z-depth-4 rounded style="border: 1px #f1f4f9 solid">
+                                <a class="img-box show-school" id="{{ $school->id }}"
+                                   href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}"
+                                   slug="{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}">
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                         alt=""  style="width: 200px; height: 200px">
+                                         alt="" style="width: 200px; height: 200px">
                                 </a>
                                 <div class="caption">
                                     <p style="text-align: center;">{{ $school->name_ar }}</p>
@@ -378,19 +381,19 @@
             })
         });
 
-        $(document).on("click", '.show-school', function(event) {
+        $(document).on("click", '.show-school', function (event) {
 
             var slug = $(this).attr('slug');
             var cleanSlug = slug.replace("-/", "");
 
             $.ajax({
-                url: '/{{ app()->getLocale() }}/school/'+cleanSlug,
+                url: '/{{ app()->getLocale() }}/school/' + cleanSlug,
                 method: 'get',
                 success: function (data) {
                     console.log(data);
                     $('.modal-body').html(data);
                     $('#modal').modal('show');
-                    window.history.pushState("", "", '/{{ app()->getLocale() }}/'+slug);
+                    window.history.pushState("", "", '/{{ app()->getLocale() }}/' + slug);
                 }
             });
         });

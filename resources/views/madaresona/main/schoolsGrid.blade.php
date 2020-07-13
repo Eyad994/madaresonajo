@@ -8,8 +8,7 @@
         <div class="row">
             @foreach($schools as $school)
                 <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                    <div class="cnt-box cnt-box-info boxed" data-href="#"
-                         style="box-shadow: 0px 1px, 0em 0 0.4em #1d556c;">
+                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"  data-href="#">
                         <a class="img-box" href="#" data-mce-href="#">
                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
                                  alt="" data-mce-src="images/image-9.jpg" style="width: 200px; height: 200px">
