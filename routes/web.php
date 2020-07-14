@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/{locale?}", "HomeController@index")->name('home')->where('locale', 'ar|en');
 
+Route::get('refreshCarousel', 'HomeController@refreshCarousel');
+
 Route::group([
     'prefix' => '{locale}',
     'where' => ['locale' => '[a-zA-Z]{2}'],

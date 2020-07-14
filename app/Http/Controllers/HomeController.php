@@ -22,6 +22,12 @@ class HomeController extends Controller
         return view('madaresona.main.index', compact('schools', 'specialSchools'));
     }
 
+    public function refreshCarousel()
+    {
+        $specialSchools = School::where('special', 1)->get();
+        return view('madaresona.main.mainCarousel', compact('specialSchools'));
+    }
+
     public function getRegions($lang , $id)
     {
         $regions = Region::where('city_id', $id)->get();

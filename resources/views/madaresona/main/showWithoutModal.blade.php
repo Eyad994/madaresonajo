@@ -28,7 +28,6 @@
 @section('content')
     <section class="section-base section-color align-center" style="background-color: white ">
 
-        <div class="container">
 
             <h2 class="align-center">Lots of amazing features.</h2>
             <p class="align-center width-650">
@@ -40,7 +39,7 @@
 
                     <section>
 
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-left: 5%;">
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab" aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}</a>
                             </li>
@@ -117,11 +116,7 @@
                                                 @endforeach
                                             </ol>
                                         </div>
-                                        <script>
-                                            $('#carousel-thumb').carousel({
-                                                interval: 2000
-                                            });
-                                        </script>
+
                                     </div>
                                 </div>
                                 <!--/.Carousel Wrapper-->
@@ -169,9 +164,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-9">
-                            <div class="overflow-scroll" style="height: 400px; width: 85%; overflow-y: scroll; ">
+                        <div class="col-md-12">
+                            <div class="overflow-scroll" style="height: 400px; width: 100%; overflow-y: scroll; ">
                                 {!! $school->school_details_en !!}
                             </div>
                         </div>
@@ -184,14 +178,21 @@
                     </div>
                 </div>
 
-            </div>
         </div>
     </section>
 @endsection
 
+@section('script')
     <script>
-        document.documentElement.setAttribute("lang", "en");
-        document.documentElement.removeAttribute("class");
-
+        $('#carousel-thumb').carousel({
+            interval: 3000
+        });
     </script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f0cf05e633f30bf"></script>
+@endsection
+        <script>
+            document.documentElement.setAttribute("lang", "en");
+            document.documentElement.removeAttribute("class");
+
+        </script>
+
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f0cf05e633f30bf"></script>

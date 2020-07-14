@@ -17,7 +17,8 @@ class SchoolController extends Controller
 
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))
 
-        $school = School::where('name_ar', 'like', "%$cleanSlug%")->first();
+        $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
+
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $news = News::where('user_id', $school->user_id)->get();
         $transportations = Transportation::where('school_id', $school->id)->get();
@@ -40,4 +41,5 @@ class SchoolController extends Controller
 
         return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums'));
     }
+
 }

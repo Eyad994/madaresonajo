@@ -2,6 +2,7 @@
 @section('content')
 
     <section class="section-base">
+
         <div class="container pb-0">
             <h2 class="align-center"><span
                         style="text-decoration: underline; color: #1d556c">{{ count($specialSchools) }}</span> Special
@@ -16,7 +17,7 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
                     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>--}}
 
-                    <div class="container-fluid">
+                    <div class="container-fluid" id="carouselBody">
                         <div id="carouselIndex" class="carousel slide" data-ride="carousel" data-interval="9000">
                             <div class="carousel-inner row w-100 mx-auto" style="padding-bottom: 10px;" role="listbox">
 
@@ -63,50 +64,6 @@
                             </a>
                         </div>
                     </div>
-{{--
-                    <script>
-
-                        $('#carouselIndex').on('slide.bs.carousel', function (e) {
-
-
-                            var $e = $(e.relatedTarget);
-                            var idx = $e.index();
-                            var itemsPerSlide = 4;
-                            var totalItems = $('.carousel-item').length;
-
-                            if (idx >= totalItems - (itemsPerSlide - 1)) {
-                                var it = itemsPerSlide - (totalItems - idx);
-                                for (var i = 0; i < it; i++) {
-                                    // append slides to end
-                                    if (e.direction == "left") {
-                                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                                    } else {
-                                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                                    }
-                                }
-                            }
-                        });
-
-
-                        $('#carouselExample').carousel({
-                            interval: 2000
-                        });
-
-
-                        $(document).ready(function () {
-                            /* show lightbox when clicking a thumbnail */
-                            $('a.thumb').click(function (event) {
-                                event.preventDefault();
-                                var content = $('.modal-body');
-                                content.empty();
-                                var title = $(this).attr("title");
-                                $('.modal-title').html(title);
-                                content.html($(this).html());
-                                $(".modal-profile").modal({show: true});
-                            });
-
-                        });
-                    </script>--}}
 
 
                 </div>
@@ -127,8 +84,8 @@
                             <div class="cnt-box cnt-box-info boxed" data-href="#"
                                  z-depth-4 rounded style="border: 1px #f1f4f9 solid">
                                 <a class="img-box show-school" id="{{ $school->id }}"
-                                   href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}"
-                                   slug="{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}">
+                                   href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_en)) }}"
+                                   slug="{{ preg_replace('/[ ]+/', '-', trim($school->name_en)) }}">
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
                                          alt="" style="width: 200px; height: 200px">
                                 </a>
@@ -341,9 +298,11 @@
 @endsection
 
 @section('script')
+
     <script type="text/javascript">
 
         $('ul.pagination').hide();
+
         $(function () {
             $('.infinite-scroll').jscroll({
                 autoTrigger: true,
@@ -378,7 +337,7 @@
                         $('body, html').animate({scrollTop: div});
                     }
                 });
-            })
+            });
         });
 
         $(document).on("click", '.show-school', function (event) {
@@ -393,6 +352,10 @@
                     $('.modal-body').html(data);
                     $('#modal').modal('show');
                     window.history.pushState("", "", '/{{ app()->getLocale() }}/' + slug);
+                    $('#closeModal').on('click', function () {
+                        var myNewURL = "";
+                        window.history.pushState("", "Title", "/" + myNewURL );
+                    })
                 }
             });
         });

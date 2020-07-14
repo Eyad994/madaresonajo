@@ -83,6 +83,7 @@
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/social.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/custom.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="{{ asset('assets/font-awesome/js/all.js') }}"></script>
 
