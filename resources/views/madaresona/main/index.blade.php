@@ -12,13 +12,13 @@
 
             <div class="row ">
                 <div class='col-lg-12 '>
-                    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+                    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js" ></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>--}}
 
                     <div class="container-fluid">
-                        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                        <div id="carouselIndex" class="carousel slide" data-ride="carousel" data-interval="9000">
+                            <div class="carousel-inner row w-100 mx-auto" style="padding-bottom: 10px;" role="listbox">
 
                                 @for($i=0; $i < count($specialSchools); $i++)
                                     @if($i == 0)
@@ -52,21 +52,21 @@
                                     @endif
                                 @endfor
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carouselIndex" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next text-faded" href="#carouselExample" role="button"
+                            <a class="carousel-control-next text-faded" href="#carouselIndex" role="button"
                                data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
                     </div>
-
+{{--
                     <script>
 
-                        $('#carouselExample').on('slide.bs.carousel', function (e) {
+                        $('#carouselIndex').on('slide.bs.carousel', function (e) {
 
 
                             var $e = $(e.relatedTarget);
@@ -106,7 +106,7 @@
                             });
 
                         });
-                    </script>
+                    </script>--}}
 
 
                 </div>
@@ -390,7 +390,6 @@
                 url: '/{{ app()->getLocale() }}/school/' + cleanSlug,
                 method: 'get',
                 success: function (data) {
-                    console.log(data);
                     $('.modal-body').html(data);
                     $('#modal').modal('show');
                     window.history.pushState("", "", '/{{ app()->getLocale() }}/' + slug);

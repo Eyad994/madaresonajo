@@ -26,6 +26,7 @@ Table of contents
 
 */
 
+
 .modal {
     padding: 0 !important; // override inline padding-right added from js
 }
@@ -33,7 +34,7 @@ Table of contents
     width: 95%;
     max-width: none;
     height: 100%;
-    margin: 60;
+    margin: 60px;
 }
 .modal .modal-content {
     height: 100%;

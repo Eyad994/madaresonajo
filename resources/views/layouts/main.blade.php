@@ -57,7 +57,6 @@
 <main>
     <div id="system-message-container">
     </div>
-
     @include('madaresona.partials.sub_header')
     {{--<div class="row">
         <div class="col-md-10"></div>

@@ -32,5 +32,12 @@ class AppServiceProvider extends ServiceProvider
             $view->with('cities', $cities);
             $view->with('schoolClasses', $schoolClasses);
         });
+
+        View::composer('madaresona.partials.sub_header', function ($view) {
+            $cities = City::all();
+            $schoolClasses = SchoolClass::all();
+            $view->with('cities', $cities);
+            $view->with('schoolClasses', $schoolClasses);
+        });
     }
 }

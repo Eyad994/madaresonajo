@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Region;
 use App\Models\School;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index($locale = 'en')
     {
+        App::setLocale($locale);
         /*$test = School::where('id', 11)->first();
         $result = preg_replace('/[ ]+/', '-', trim($test->name_ar));
         return $result;*/
@@ -21,9 +23,7 @@ class HomeController extends Controller
     }
 
     public function getRegions($lang , $id)
-
     {
-
         $regions = Region::where('city_id', $id)->get();
         return $regions;
     }
