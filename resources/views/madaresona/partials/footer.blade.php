@@ -66,7 +66,7 @@
 
                 <div class="custom">
                     <div>
-                        <span>© Codrop LTD 2019. Codrop is a powerful Landing Page App Template built by the Blue Team. </span>
+                        <span> COPYRIGHTS © 2018 - {{ now()->year }} Madaresona Jo. ALL RIGHTS RESERVED  </span>
                         <span><img src="{{ asset('assets/images/logo-light.png') }}" alt=""/></span></div>
                 </div>
             </div>

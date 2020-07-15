@@ -6,12 +6,12 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="author" content="CMSBlueTheme"/>
     <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title>Intro</title>
+    <title></title>
+
     {{--<link href="cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />--}}
     {{--<link href="components/com_k2/css/k2574e.css?v=2.9.0" rel="stylesheet" type="text/css" />--}}
     <link href="{{ asset('assets/css/bootstrap-grid.css') }}" rel="stylesheet" type="text/css"/>

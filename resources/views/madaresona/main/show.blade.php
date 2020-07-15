@@ -23,11 +23,30 @@
     }
 
     }
+
+    .scrollbar-warning::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 10px; }
+
+    .scrollbar-warning::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5; }
+
+    .scrollbar-warning::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #FF8800; }
+
+    .scrollbar-warning {
+        scrollbar-color: #FF8800 #F5F5F5;
+    }
+
 </style>
 
 <div class="row">
 
-    <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12">
+    <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style="background: #f6f9fc">
 
         <section>
 
@@ -73,17 +92,17 @@
                             <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
                                  data-ride="carousel">
                                 <!--Slides-->
-                                <div class="carousel-inner" role="listbox" style="height: 450px">
+                                <div class="carousel-inner z-depth-4 rounded" role="listbox" style="height: 450px ">
                                     <?php $i = 0; ?>
                                     @foreach($gallery as $item)
                                         @if($i == 0)
-                                            <div class="carousel-item active">
+                                            <div class="carousel-item active z-depth-4 rounded">
                                                 <img class="d-block w-100"
                                                      src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
                                             </div>
                                         @else
 
-                                            <div class="carousel-item">
+                                            <div class="carousel-item z-depth-4 rounded">
                                                 <img class="d-block w-100"
                                                      src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
                                             </div>
@@ -106,13 +125,13 @@
                                     <?php $i = 0; ?>
                                     @foreach($gallery as $item)
                                         @if($i == 0)
-                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}" class="active">
+                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}" class="active border border-white z-depth-4 rounded">
                                                 <img class="d-block w-100"
                                                      src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
                                                      class="img-fluid">
                                             </li>
                                         @else
-                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}">
+                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}" class="border border-white z-depth-4 rounded">
                                                 <img class="d-block w-100"
                                                      src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
                                                      class="img-fluid">
@@ -141,7 +160,7 @@
                         <div class="carousel-container position-relative row">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="overflow-scroll" style="height: 450px; overflow-y: scroll; ">
+                                    <div class="overflow-scroll scrollbar-warning" style="height: 450px; overflow-y: scroll; ">
                                         {!! $school->principle_en !!}
                                     </div>
                                 </div>
@@ -176,11 +195,11 @@
                                                 </thead>
                                                 <tbody>
                                                 @foreach($premiums as $item)
-                                                <tr>
-                                                    <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
-                                                    <td>{{ $item->price }}</td>
-                                                    <td>{{ $item->schoolClass->class_en }}</td>
-                                                </tr>
+                                                    <tr>
+                                                        <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
+                                                        <td>{{ $item->price }}</td>
+                                                        <td>{{ $item->schoolClass->class_en }}</td>
+                                                    </tr>
                                                 @endforeach
                                                 <tr>
                                                     <td>Suresh Dasari</td>
@@ -260,7 +279,7 @@
 
     </div>
 
-    <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12" style="background: #f6f9fc">
+    <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12">
         <br>
         <div class="row">
             <div class="col-md-3">
@@ -273,10 +292,12 @@
                     - {{ $school->region->area_name_en }}</h6>
             </div>
         </div>
-        <div style="height: 20px"></div>
+        <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);
+    padding: 20px 0 10px;
+    margin: 0 0 20px;"></div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="overflow-scroll" style="height: 400px; width: 100%; overflow-y: scroll; ">
+            <div class="col-md-12" style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
+                <div class="scrollbar-warning" style="height: 400px; width: 100%; overflow-y: scroll;">
                     {!! $school->school_details_en !!}
                 </div>
             </div>
@@ -286,7 +307,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="float: right">
-                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_facebook z-depth-4 rounded "></a>
                     <a class="a2a_button_twitter"></a>
                     <a class="a2a_button_google_gmail"></a>
                     <a class="a2a_button_whatsapp"></a>

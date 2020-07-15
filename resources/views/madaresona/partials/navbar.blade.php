@@ -2,8 +2,7 @@
     <div class="container">
         <div class="menu-brand">
             <a href="{{ route('home') }}">
-                <img class="logo-light" src="{{ asset('assets/images/logo-light.png') }}" alt="Codrop"/>
-                <!--<img class="logo-retina" src="https://chipblue.net/joomla/codrop/images/logo-light.png" alt="Codrop" />-->
+                <img class="logo-light" src="{{ asset('assets/images/logo-light.png') }}" alt="Madaresona JO"/>
             </a>
         </div>
         <i class="menu-btn"></i>
