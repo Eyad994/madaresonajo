@@ -64,8 +64,6 @@
                             </a>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -81,7 +79,8 @@
                 <div class="row">
                     @foreach($schools as $school)
                         <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                            <div class="cnt-box cnt-box-info boxed  z-depth-4 rounded" data-href="#" style="border: 1px #f1f4f9 solid">
+                            <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
+                                 style="border: 1px #f1f4f9 solid">
                                 <a class="img-box show-school" id="{{ $school->id }}"
                                    href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_en)) }}"
                                    slug="{{ preg_replace('/[ ]+/', '-', trim($school->name_en)) }}">
@@ -293,73 +292,75 @@
         </div>
     </section>
 
+            @endsection
+            @section('script')
 
-@endsection
+                <script type="text/javascript">
 
-@section('script')
+                    $('ul.pagination').hide();
 
-    <script type="text/javascript">
+                    $(function () {
+                        $('.infinite-scroll').jscroll({
+                            autoTrigger: true,
+                            loadingHtml: '<img class="center-block" src="https://media.giphy.com/media/swhRkVYLJDrCE/giphy.gif" alt="Loading..." />',
+                            padding: 5,
+                            nextSelector: '.pagination li.active + li a',
+                            contentSelector: 'div.infinite-scroll',
+                            callback: function () {
+                                $('ul.pagination').remove();
+                            }
+                        });
 
-        $('ul.pagination').hide();
+                        $('#searchForm').on('submit', function (e) {
 
-        $(function () {
-            $('.infinite-scroll').jscroll({
-                autoTrigger: true,
-                loadingHtml: '<img class="center-block" src="https://media.giphy.com/media/swhRkVYLJDrCE/giphy.gif" alt="Loading..." />',
-                padding: 5,
-                nextSelector: '.pagination li.active + li a',
-                contentSelector: 'div.infinite-scroll',
-                callback: function () {
-                    $('ul.pagination').remove();
-                }
-            });
+                            e.preventDefault();
+                            var form = $(this);
+                            var url = form.attr('action');
 
-            $('#searchForm').on('submit', function (e) {
+                            $.ajax({
+                                type: "POST",
+                                url: url,
+                                data: new FormData(this),
+                                contentType: false,
+                                cache: false,
+                                processData: false,
+                                success: function (data) {
+                                    //$('.infinite-scroll').destroy();
+                                    $('#schoolsGrid').html(data);
 
-                e.preventDefault();
-                var form = $(this);
-                var url = form.attr('action');
+                                    /*$('.infinite-scroll').removeData('jscroll').jscroll.destroy();*/
+                                    var div = $('#schoolsGrid').offset().top;
+                                    $('body, html').animate({scrollTop: div});
+                                }
+                            });
+                        });
 
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: new FormData(this),
-                    contentType: false,
-                    cache: false,
-                    processData: false,
-                    success: function (data) {
-                        //$('.infinite-scroll').destroy();
-                        $('#schoolsGrid').html(data);
+                        $('#carouselIndex').carousel({
+                            interval: 3000
+                        });
+                    });
 
-                        /*$('.infinite-scroll').removeData('jscroll').jscroll.destroy();*/
-                        var div = $('#schoolsGrid').offset().top;
-                        $('body, html').animate({scrollTop: div});
-                    }
-                });
-            });
-        });
+                    $(document).on("click", '.show-school', function (event) {
 
-        $(document).on("click", '.show-school', function (event) {
+                        var slug = $(this).attr('slug');
+                        var cleanSlug = slug.replace("-/", "");
 
-            var slug = $(this).attr('slug');
-            var cleanSlug = slug.replace("-/", "");
+                        $.ajax({
+                            url: '/{{ app()->getLocale() }}/school/' + cleanSlug,
+                            method: 'get',
+                            success: function (data) {
+                                $('.modal-body').html(data);
+                                $('#modal').modal('show');
+                                window.history.pushState("", "", '/{{ app()->getLocale() }}/' + slug);
+                                $('#closeModal').on('click', function () {
+                                    var myNewURL = "";
+                                    window.history.pushState("", "Title", "/" + myNewURL);
+                                })
+                            }
+                        });
+                    });
 
-            $.ajax({
-                url: '/{{ app()->getLocale() }}/school/' + cleanSlug,
-                method: 'get',
-                success: function (data) {
-                    $('.modal-body').html(data);
-                    $('#modal').modal('show');
-                    window.history.pushState("", "", '/{{ app()->getLocale() }}/' + slug);
-                    $('#closeModal').on('click', function () {
-                        var myNewURL = "";
-                        window.history.pushState("", "Title", "/" + myNewURL );
-                    })
-                }
-            });
-        });
+                </script>
+                @include('modal')
 
-    </script>
-
-    @include('modal')
 @endsection

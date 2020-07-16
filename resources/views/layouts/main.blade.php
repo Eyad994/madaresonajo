@@ -11,7 +11,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="author" content="CMSBlueTheme"/>
     <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title>Intro</title>
+    <title>MadaresonaJo</title>
     {{--<link href="cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />--}}
     {{--<link href="components/com_k2/css/k2574e.css?v=2.9.0" rel="stylesheet" type="text/css" />--}}
     <link href="{{ asset('assets/css/bootstrap-grid.css') }}" rel="stylesheet" type="text/css"/>
@@ -50,6 +50,7 @@
 </head>
 
 <body class="site bthome  com_blue_pagebuilder view-page no-layout no-task itemid-154 ">
+
 <input type="hidden" class="bturl" value="https://chipblue.net/joomla/codrop/"/>
 <!-- Page pre loader -->
 <div id="preloader"></div>
@@ -67,6 +68,7 @@
     @yield('content')
 
 </main>
+
 <i class="scroll-top-btn scroll-top show"></i>
 @include('madaresona.partials.footer')
 <!-- JS Files

@@ -1,4 +1,12 @@
+
 <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+
+    body {
+        font-family: 'Cairo', sans-serif !important;
+    }
+
     .d-block.w-100 {
         max-height: 450px !important;
     }
@@ -27,20 +35,24 @@
     .scrollbar-warning::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
         background-color: #F5F5F5;
-        border-radius: 10px; }
+        border-radius: 10px;
+    }
 
     .scrollbar-warning::-webkit-scrollbar {
         width: 12px;
-        background-color: #F5F5F5; }
+        background-color: #F5F5F5;
+    }
 
     .scrollbar-warning::-webkit-scrollbar-thumb {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-        background-color: #FF8800; }
+        background-color: #FF8800;
+    }
 
     .scrollbar-warning {
         scrollbar-color: #FF8800 #F5F5F5;
     }
+
 
 </style>
 
@@ -125,13 +137,15 @@
                                     <?php $i = 0; ?>
                                     @foreach($gallery as $item)
                                         @if($i == 0)
-                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}" class="active border border-white z-depth-4 rounded">
+                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
+                                                class="active border border-white z-depth-4 rounded">
                                                 <img class="d-block w-100"
                                                      src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
                                                      class="img-fluid">
                                             </li>
                                         @else
-                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}" class="border border-white z-depth-4 rounded">
+                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
+                                                class="border border-white z-depth-4 rounded">
                                                 <img class="d-block w-100"
                                                      src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
                                                      class="img-fluid">
@@ -160,7 +174,8 @@
                         <div class="carousel-container position-relative row">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="overflow-scroll scrollbar-warning" style="height: 450px; overflow-y: scroll; ">
+                                    <div class="overflow-scroll scrollbar-warning"
+                                         style="height: 450px; overflow-y: scroll; ">
                                         {!! $school->principle_en !!}
                                     </div>
                                 </div>
@@ -201,26 +216,6 @@
                                                         <td>{{ $item->schoolClass->class_en }}</td>
                                                     </tr>
                                                 @endforeach
-                                                <tr>
-                                                    <td>Suresh Dasari</td>
-                                                    <td>B.Tech</td>
-                                                    <td>Chennai</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Suresh Dasari</td>
-                                                    <td>B.Tech</td>
-                                                    <td>Chennai</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Suresh Dasari</td>
-                                                    <td>B.Tech</td>
-                                                    <td>Chennai</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Suresh Dasari</td>
-                                                    <td>B.Tech</td>
-                                                    <td>Chennai</td>
-                                                </tr>
 
                                                 </tbody>
                                             </table>
@@ -267,11 +262,90 @@
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="transportation" role="tabpanel"
-                     aria-labelledby="transportation-tab"></div>
+                <div class="tab-pane fade" id="transportation" role="tabpanel" aria-labelledby="transportation-tab">
+                    <style>
+                        #transportationTable {
+                            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                            border-collapse: collapse;
+                            width: 100%;
+                            text-align: right;
+                        }
+
+                        #transportationTable td, #transportationTable th {
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                        }
+
+                        #transportationTable tr:nth-child(even){background-color: #f2f2f2;}
+
+                        #transportationTable tr:hover {background-color: #ddd;}
+
+                        #transportationTable th {
+                            padding-top: 12px;
+                            padding-bottom: 12px;
+                            text-align: right;
+                            background-color: #ff6000;
+                            color: white;
+                        }
+                    </style>
+                    <div class="container mt-5">
+                        <table id="transportationTable">
+                            <tr>
+                                <th>ذهاب واياب</th>
+                                <th>ذهاب</th>
+                                <th>المنطقة</th>
+                            </tr>
+                            @foreach($transportations as $transportation)
+                            <tr>
+                                <td>{{ $transportation->two_way }}</td>
+                                <td>{{ $transportation->one_way }}</td>
+                                <td>{{ $transportation->region_ar }}</td>
+                            </tr>
+                                @endforeach
+                        </table>
+                    </div>
+                </div>
                 <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab"></div>
-                <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab"></div>
-                <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab"></div>
+                <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab">
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align-last: center;">
+                                @if($school->school_brochure != null)
+                                <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}" style="width: 50%" alt="">
+                                    @else
+                                <h1>No Brochure</h1>
+                                    @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
+
+                    <div class="container mt-5" style="text-align: right;">
+                        <h2>معلومات الاتصال</h2>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-4">{{ $school->contact_person_email }}&nbsp;&nbsp;<b style="color: black">:البريد الالكتروني</b> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-4">{{ $school->contact_person_phone }}&nbsp;&nbsp;<b style="color: black">:الهاتف</b> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-4">{{ $school->fax }}&nbsp;&nbsp;<b style="color: black">:فاكس</b> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7"></div>
+                            <div class="col-md-5">{{ $school->website }}&nbsp;&nbsp;<b style="color: black">:الموقع الالكتروني</b> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-4">&nbsp;&nbsp;<b style="color: black">:الجنس</b> </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </section>
@@ -304,6 +378,11 @@
         </div>
         <br>
 
+        <style>
+            .a2a_svg.a2a_s__default {
+                border-radius: 16px;
+            }
+        </style>
         <div class="row">
             <div class="col-md-12">
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="float: right">
