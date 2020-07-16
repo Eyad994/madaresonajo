@@ -305,7 +305,10 @@
                         </table>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab"></div>
+                <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab">
+                    <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}" lng="{{ $school-> lng}}" ></div>
+
+                </div>
                 <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab">
                     <div class="container mt-5">
                         <div class="row">
@@ -401,7 +404,18 @@
 <script>
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.removeAttribute("class");
-
+    initMap();
+    function initMap() {
+        lat= parseFloat( $("#map").attr("lat"));
+        lng= parseFloat($("#map").attr("lng"));
+        // The location of Uluru
+        var uluru = {lat:lat, lng: lng  };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 16, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map ,"icon": '{{ asset('assets/images/school.png') }}' ,title:'title' });
+    }
 </script>
 
 {{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f0cf05e633f30bf"></script>--}}

@@ -32,6 +32,7 @@
     <script src="{{ asset('assets/media/jui/js/jquery-migrate.min4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/k2/assets/js/k2.frontend9dbe.js') }}" type="text/javascript"></script>
 
+
     <!-- Standard Favicon-->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}">
 
@@ -88,6 +89,7 @@
 <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="{{ asset('assets/font-awesome/js/all.js') }}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnpiNImmRHQBxmLIn5o_zTBufGgXzZBko&language=en&region=JO&libraries=places"></script>
 
 @include('layouts.mainJs')
 @yield('script')
