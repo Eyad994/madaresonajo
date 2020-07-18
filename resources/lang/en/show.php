@@ -8,4 +8,5 @@ return [
     'maps' => 'Maps',
     'brochure' => 'Brochure',
     'contactInfo' => 'Contact Info',
+    'news' => 'News',
 ];

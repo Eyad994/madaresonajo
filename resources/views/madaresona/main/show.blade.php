@@ -1,4 +1,3 @@
-
 <style>
 
     @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
@@ -90,6 +89,10 @@
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab"
                        aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}</a>
+                </li>
+                <li class="nav-item waves-effect waves-light">
+                    <a class="nav-link " id="news-tab" data-toggle="tab" href="#news" role="tab"
+                       aria-controls="news" aria-selected="true">{{ __('show.news') }}</a>
                 </li>
             </ul>
 
@@ -184,43 +187,59 @@
                     </div>
 
                 </div>
+                <style>
+                    #tabsTable {
+                        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                        text-align: right;
+                    }
+
+                    #tabsTable td, #tabsTable th {
+                        border: 1px solid #ddd;
+                        padding: 8px;
+                    }
+
+                    #tabsTable tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+
+                    #tabsTable tr:hover {
+                        background-color: #ddd;
+                    }
+
+                    #tabsTable th {
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        text-align: right;
+                        background-color: #ff6000;
+                        color: white;
+                    }
+                </style>
+
                 <div class="tab-pane fade" id="discountForm" role="tabpanel" aria-labelledby="discountForm-tab">
 
                     <div class="container mt-5">
 
                         <div class="row">
                             <div class="col-md-8">
-                                <h5><b>{{ __('price') }}</b></h5>
                                 <div class="col-md-12">
-                                    <div class="grid">
-                                        <div class="grid-container">
-                                            <table>
-                                                <thead>
-                                                <tr class="header">
-                                                    <th>المنهاج
-                                                        <div>المنهاج</div>
-                                                    </th>
-                                                    <th>السعر
-                                                        <div>السعر</div>
-                                                    </th>
-                                                    <th>الصف
-                                                        <div>الصف</div>
-                                                    </th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                @foreach($premiums as $item)
-                                                    <tr>
-                                                        <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
-                                                        <td>{{ $item->price }}</td>
-                                                        <td>{{ $item->schoolClass->class_en }}</td>
-                                                    </tr>
-                                                @endforeach
 
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                    <table id="tabsTable">
+                                        <tr>
+                                            <th>المنهاج</th>
+                                            <th>السعر</th>
+                                            <th>الصف</th>
+                                        </tr>
+                                        @foreach($premiums as $item)
+                                            <tr>
+                                                <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
+                                                <td>{{ $item->price }}</td>
+                                                <td>{{ $item->schoolClass->class_en }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </table>
+
                                 </div>
                             </div>
                             <div class="col-md-4" style="text-align: right; direction: rtl">
@@ -263,50 +282,26 @@
 
                 </div>
                 <div class="tab-pane fade" id="transportation" role="tabpanel" aria-labelledby="transportation-tab">
-                    <style>
-                        #transportationTable {
-                            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                            border-collapse: collapse;
-                            width: 100%;
-                            text-align: right;
-                        }
-
-                        #transportationTable td, #transportationTable th {
-                            border: 1px solid #ddd;
-                            padding: 8px;
-                        }
-
-                        #transportationTable tr:nth-child(even){background-color: #f2f2f2;}
-
-                        #transportationTable tr:hover {background-color: #ddd;}
-
-                        #transportationTable th {
-                            padding-top: 12px;
-                            padding-bottom: 12px;
-                            text-align: right;
-                            background-color: #ff6000;
-                            color: white;
-                        }
-                    </style>
                     <div class="container mt-5">
-                        <table id="transportationTable">
+                        <table id="tabsTable">
                             <tr>
                                 <th>ذهاب واياب</th>
                                 <th>ذهاب</th>
                                 <th>المنطقة</th>
                             </tr>
                             @foreach($transportations as $transportation)
-                            <tr>
-                                <td>{{ $transportation->two_way }}</td>
-                                <td>{{ $transportation->one_way }}</td>
-                                <td>{{ $transportation->region_ar }}</td>
-                            </tr>
-                                @endforeach
+                                <tr>
+                                    <td>{{ $transportation->two_way }}</td>
+                                    <td>{{ $transportation->one_way }}</td>
+                                    <td>{{ $transportation->region_ar }}</td>
+                                </tr>
+                            @endforeach
                         </table>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab">
-                    <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}" lng="{{ $school-> lng}}" ></div>
+                    <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}"
+                         lng="{{ $school-> lng}}"></div>
 
                 </div>
                 <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab">
@@ -314,10 +309,11 @@
                         <div class="row">
                             <div class="col-md-12" style="text-align-last: center;">
                                 @if($school->school_brochure != null)
-                                <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}" style="width: 50%" alt="">
-                                    @else
-                                <h1>No Brochure</h1>
-                                    @endif
+                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
+                                         style="width: 50%" alt="">
+                                @else
+                                    <h1>No Brochure</h1>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -328,24 +324,76 @@
                         <h2>معلومات الاتصال</h2>
                         <div class="row">
                             <div class="col-md-8"></div>
-                            <div class="col-md-4">{{ $school->contact_person_email }}&nbsp;&nbsp;<b style="color: black">:البريد الالكتروني</b> </div>
+                            <div class="col-md-4">{{ $school->contact_person_email }}&nbsp;&nbsp;<b
+                                        style="color: black">:البريد الالكتروني</b></div>
                         </div>
                         <div class="row">
                             <div class="col-md-8"></div>
-                            <div class="col-md-4">{{ $school->contact_person_phone }}&nbsp;&nbsp;<b style="color: black">:الهاتف</b> </div>
+                            <div class="col-md-4">{{ $school->contact_person_phone }}&nbsp;&nbsp;<b
+                                        style="color: black">:الهاتف</b></div>
                         </div>
                         <div class="row">
                             <div class="col-md-8"></div>
-                            <div class="col-md-4">{{ $school->fax }}&nbsp;&nbsp;<b style="color: black">:فاكس</b> </div>
+                            <div class="col-md-4">{{ $school->fax }}&nbsp;&nbsp;<b style="color: black">:فاكس</b></div>
                         </div>
                         <div class="row">
                             <div class="col-md-7"></div>
-                            <div class="col-md-5">{{ $school->website }}&nbsp;&nbsp;<b style="color: black">:الموقع الالكتروني</b> </div>
+                            <div class="col-md-5">{{ $school->website }}&nbsp;&nbsp;<b style="color: black">:الموقع
+                                    الالكتروني</b></div>
                         </div>
                         <div class="row">
                             <div class="col-md-8"></div>
-                            <div class="col-md-4">&nbsp;&nbsp;<b style="color: black">:الجنس</b> </div>
+                            <div class="col-md-4">&nbsp;&nbsp;<b style="color: black">:الجنس</b></div>
                         </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
+
+                    <style>
+                        .card {
+                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                            transition: 0.3s;
+                            width: 100%;
+                            height: 200px;
+                        }
+
+                        .card:hover {
+                            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                        }
+
+                        .container {
+                            padding: 2px 16px;
+                        }
+                    </style>
+
+                    <div class="container mt-5" style="text-align: right; direction: rtl">
+                        @foreach($news as $item)
+                            <div class="row">
+                                <div class="card">
+                                    <div class="col-md-3">
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item->img }}"
+                                             alt="Avatar" style="width:60%">
+                                    </div>
+                                    <div class="col-md-9 container">
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <h5>{{ $item->title_ar }}</h5>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">{!! Illuminate\Support\Str::limit($item->text_ar, $limit = 45, $end = '...') !!}</div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-11"></div>
+                                            <div class="col-md-1">
+                                                <a href="showMore/{{ $item->id }}" target="_blank" class="btn btn-info" style="bottom: 10px; right: 100px;">المزيد</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
 
                 </div>
@@ -406,15 +454,20 @@
     document.documentElement.removeAttribute("class");
     initMap();
     function initMap() {
-        lat= parseFloat( $("#map").attr("lat"));
-        lng= parseFloat($("#map").attr("lng"));
+        lat = parseFloat($("#map").attr("lat"));
+        lng = parseFloat($("#map").attr("lng"));
         // The location of Uluru
-        var uluru = {lat:lat, lng: lng  };
+        var uluru = {lat: lat, lng: lng};
         // The map, centered at Uluru
         var map = new google.maps.Map(
             document.getElementById('map'), {zoom: 16, center: uluru});
         // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map ,"icon": '{{ asset('assets/images/school.png') }}' ,title:'title' });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            "icon": '{{ asset('assets/images/school.png') }}',
+            title: 'title'
+        });
     }
 </script>
 

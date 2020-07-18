@@ -34,4 +34,5 @@ Route::group([
     });
 
     Route::get('{slug}', 'SchoolController@showWithoutModal');
+    Route::get('showMore/{id}', 'SchoolController@showMore');
 });
