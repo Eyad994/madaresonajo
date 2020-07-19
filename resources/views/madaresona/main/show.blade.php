@@ -7,49 +7,60 @@
     }
 
     .nav-tabs {
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
         border: none;
     }
-    .nav-tabs .nav-link{
+
+    .nav-tabs .nav-link {
         border: none;
         border-radius: 0;
         transition: color .2s ease-out;
     }
+
     .tabs-dark .nav-link {
         color: #fff;
     }
+
     .tabs-light .nav-link {
-        color: rgba(0,0,0,.5);
+        color: rgba(0, 0, 0, .5);
     }
+
     .tabs-dark .nav-link:not(.active):hover {
         color: #aeb0b3;
     }
+
     .tabs-light .nav-link:not(.active):hover {
         color: #495057;
     }
 
-    .nav-pills .nav-link{
+    .nav-pills .nav-link {
         border-radius: 2px;
         color: #495057;
         transition: color .2s ease-out, box-shadow .2s;
     }
-    .nav-pills .nav-link:hover{
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+    .nav-pills .nav-link:hover {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 
     }
+
     .nav-pills .nav-item {
         margin: 0 5px;
     }
+
     .nav-pills.pills-dark .nav-link.active {
-        background-color: #343a40!important;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        background-color: #343a40 !important;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     }
+
     .nav-pills.pills-dark .nav-link:not(.active):hover {
         color: #1d1e22;
     }
+
     .tabs-marker .nav-link {
         position: relative;
     }
+
     .tabs-marker .nav-link.active .marker {
         height: 30px;
         width: 30px;
@@ -59,6 +70,7 @@
         position: absolute;
         overflow: hidden;
     }
+
     .tabs-marker .nav-link.active .marker:after {
         content: "";
         height: 15px;
@@ -68,7 +80,7 @@
         transform: rotate(45deg) translatex(-50%);
         transform-origin: left;
         background-color: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
         position: absolute;
     }
 
@@ -118,31 +130,53 @@
         scrollbar-color: #FF8800 #F5F5F5;
     }
 
+    .social:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+
+    .social {
+        -webkit-transform: scale(0.8);
+        /* Browser Variations: */
+
+        -moz-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+    }
+
 
 </style>
 
 <div class="row">
 
-    <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style="background: #f6f9fc">
+    <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style="background: #f6f9fc; padding: 2px">
 
         <section>
 
-            <ul class="nav nav-tabs tabs-marker tabs-dark" style="background-color: #ff6000 " id="myTab" role="tablist">
+            <ul class="nav nav-tabs tabs-marker tabs-dark" style="background-color: #ff6000; border-radius: 5px; "
+                id="myTab" role="tablist">
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab"
-                       aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}<span class="marker"></span></a>
+                       aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}<span
+                                class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
-                       aria-controls="principle" aria-selected="false">{{ __('show.principle') }}<span class="marker"></span></a>
+                       aria-controls="principle" aria-selected="false">{{ __('show.principle') }}<span
+                                class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm" role="tab"
-                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}<span class="marker"></span></a>
+                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}<span
+                                class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation" role="tab"
-                       aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}<span class="marker"></span></a>
+                       aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}<span
+                                class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="maps-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps"
@@ -150,11 +184,13 @@
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="brochure-tab" data-toggle="tab" href="#brochure" role="tab"
-                       aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}<span class="marker"></span></a>
+                       aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}<span
+                                class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab"
-                       aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}<span class="marker"></span></a>
+                       aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}<span
+                                class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="news-tab" data-toggle="tab" href="#news" role="tab"
@@ -275,12 +311,23 @@
                     }
 
                     #tabsTable th {
-                        padding-top: 12px;
-                        padding-bottom: 12px;
-                        text-align: right;
-                        background-color: #ff6000;
+                        text-align: center;
+                        padding: 15px 10px !important;
+                        background-color: #1d556c;
                         color: white;
+                        border: none;
+                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+                        border-radius: 25px;
                     }
+
+                    .div_cheak {
+                        padding: 5px 10px;
+                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+                        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+                        font-family: initial;
+                        font-size: 13px;
+                    }
+
                 </style>
 
                 <div class="tab-pane fade" id="discountForm" role="tabpanel" aria-labelledby="discountForm-tab">
@@ -288,60 +335,67 @@
                     <div class="container mt-5">
 
                         <div class="row">
+                            <div class="col-md-4">
+                                <div dir="row">
+                                    <h4 style="color: #2d3e52;font-weight: bold; font-size: 17px;padding: 10px 0px;">{{ __('show.discounts') }}</h4>
+                                    <div class="col-md-12" style="margin: 0px;padding: 0px;">
+                                        @if($school->discounts_brothers == 1)
+                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
+                                                {{ __('show.brothers') }}
+                                            </div>
+                                        @endif
+                                        @if($school->discounts_quran == 1)
+                                            <div class=" form-group shadow-lg bg-white rounded div_cheak">
+                                                {{ __('show.quran') }}
+                                            </div>
+                                        @endif
+                                        @if($school->discounts_sport == 1)
+                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
+                                                {{ __('show.sport') }}
+                                            </div>
+                                        @endif
+                                        @if($school->discounts_superior == 1)
+                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
+                                                {{ __('show.superior') }}
+                                            </div>
+                                        @endif
+
+                                    </div>
+                                    <h4 style="color: #2d3e52;font-weight: bold; font-size: 17px;padding: 10px 0px;">{{ __('show.the_curriculum') }}</h4>
+                                    <div class="col-md-12" style="margin: 0px;padding: 0px;">
+
+                                        @if($school->curriculum_ls_local == 1)
+                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
+                                                {{ __('show.local') }}
+                                            </div>
+                                        @endif
+                                        @if($school->curriculum_ls_public == 1)
+                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
+                                                {{ __('show.public') }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-8">
                                 <div class="col-md-12">
-
+                                    <h4 style="color: #2d3e52;font-weight: bold; font-size: 17px;padding: 10px 0px;">{{ __('show.price') }}</h4>
                                     <table id="tabsTable">
-                                        <tr>
-                                            <th>المنهاج</th>
-                                            <th>السعر</th>
-                                            <th>الصف</th>
+                                        <tr style="border-radius: 5px">
+                                            <th>{{ __('show.class') }}</th>
+                                            <th>{{ __('show.price') }}</th>
+                                            <th>{{ __('show.curriculum') }}</th>
                                         </tr>
                                         @foreach($premiums as $item)
                                             <tr>
-                                                <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
-                                                <td>{{ $item->price }}</td>
                                                 <td>{{ $item->schoolClass->class_en }}</td>
+                                                <td>{{ $item->price }}</td>
+                                                <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
                                             </tr>
                                         @endforeach
                                     </table>
-
                                 </div>
                             </div>
-                            <div class="col-md-4" style="text-align: right; direction: rtl">
-                                <div dir="row">
-                                    <h4 style="margin-right: 40px">{{ __('discounts') }}</h4>
-                                    <div class="col-md-12">
-                                        <ul>
-                                            @if($school->discounts_superior == 1)
-                                                <li>التميز الدراسي</li>
-                                            @endif
-                                            @if($school->discounts_quran == 1)
-                                                <li>حفظ القرآن الكريم</li>
-                                            @endif
-                                            @if($school->discounts_sport == 1)
-                                                <li>التفوق الرياضي</li>
-                                            @endif
-                                            @if($school->discounts_brothers == 1)
-                                                <li>اخوان</li>
-                                            @endif
-
-                                        </ul>
-                                    </div>
-                                    <h4 style="margin-right: 40px">{{ __('the_curriculum') }}</h4>
-                                    <div class="col-md-12">
-                                        <ul>
-                                            @if($school->curriculum_ls_local == 1)
-                                                <li>محلي</li>
-                                            @endif
-                                            @if($school->curriculum_ls_public == 1)
-                                                <li>دولي</li>
-                                            @endif
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                     </div>
@@ -351,15 +405,16 @@
                     <div class="container mt-5">
                         <table id="tabsTable">
                             <tr>
-                                <th>ذهاب واياب</th>
-                                <th>ذهاب</th>
-                                <th>المنطقة</th>
+                                <th>{{ __('show.region') }}</th>
+                                <th>{{ __('show.one_way') }}</th>
+                                <th>{{ __('show.two_way') }}</th>
                             </tr>
                             @foreach($transportations as $transportation)
                                 <tr>
-                                    <td>{{ $transportation->two_way }}</td>
-                                    <td>{{ $transportation->one_way }}</td>
                                     <td>{{ $transportation->region_ar }}</td>
+                                    <td>{{ $transportation->one_way }}</td>
+                                    <td>{{ $transportation->two_way }}</td>
+
                                 </tr>
                             @endforeach
                         </table>
@@ -376,7 +431,7 @@
                             <div class="col-md-12" style="text-align-last: center;">
                                 @if($school->school_brochure != null)
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                         style="width: 50%" alt="">
+                                         style="width:50%; border-radius: 10px;"  alt="">
                                 @else
                                     <h1>No Brochure</h1>
                                 @endif
@@ -386,33 +441,91 @@
                 </div>
                 <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
 
-                    <div class="container mt-5" style="text-align: right;">
-                        <h2>معلومات الاتصال</h2>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col-md-4">{{ $school->contact_person_email }}&nbsp;&nbsp;<b
-                                        style="color: black">:البريد الالكتروني</b></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col-md-4">{{ $school->contact_person_phone }}&nbsp;&nbsp;<b
-                                        style="color: black">:الهاتف</b></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col-md-4">{{ $school->fax }}&nbsp;&nbsp;<b style="color: black">:فاكس</b></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-7"></div>
-                            <div class="col-md-5">{{ $school->website }}&nbsp;&nbsp;<b style="color: black">:الموقع
-                                    الالكتروني</b></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col-md-4">&nbsp;&nbsp;<b style="color: black">:الجنس</b></div>
+
+                    <div class="container mt-5" style="text-align: center">
+                        <h2 style="color: #2d3e52">{{ __('show.contact_information') }}</h2>
+                        <div class="" style="display: inline-block;
+                                             margin-top: 20px;
+                                             width: 50%;
+                                             text-align: start;
+                                             padding: 20px 40px;
+                                             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+                                                         0 1px 5px 0 rgba(0, 0, 0, 0.2);
+                                             border-radius: 10px;">
+                            <div class="row">
+
+                                <div class="col-md-4 form-group"><b style="color: black"> {{ __('show.email') }} :</b>
+                                </div>
+                                <div class="col-md-8 form-group">{{ $school->contact_person_email }}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.phone') }} :</b>
+                                </div>
+                                <div class="col-md-8 form-group">{{ $school->contact_person_phone }}</div>
+                            </div>
+                            @if(!empty( $school->fax) )
+                            <div class="row">
+                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.fax') }} :</b>
+                                </div>
+                                <div class="col-md-8 form-group">{{ $school->fax }}</div>
+                            </div>
+                            @endif
+                            @if(!empty( $school->website) )
+                            <div class="row">
+
+                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.website') }} : </b>
+                                </div>
+                                <div class="col-md-8 form-group"><a target="_blank"
+                                                                    href="{{ $school->website }}">{{ $school->website }}</a>
+                                </div>
+                            </div>
+                            @endif
+                            <div class="row">
+                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.gender') }} : </b>
+                                </div>
+                                <div class="col-md-8 form-group"></div>
+                            </div>
                         </div>
                     </div>
+                    @if(!empty( $school->facebook_link) ||!empty($school->instagram_link)||!empty( $school->twitter_link)||!empty($school->linkedin_link))
+                        <div class="container mt-5" style="text-align: center">
+                            <h2 style="color: #ff6000">{{ __('show.follow') }}</h2>
+                            <div class="" style="display: inline-block;
+                                             margin-top: 20px;
+                                             text-align: center;
+                                             padding: 6px 40px;
+                                             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+                                              0 1px 5px 0 rgba(0, 0, 0, 0.2);
+                                             border-radius: 10px;">
+                                <div class="row">
 
+                                    <div class="text-center center-block">
+                                        @if(!empty( $school->facebook_link) )
+                                            <a href="{{ $school->facebook_link}}" target="_blank"><i
+                                                        class="fab fa-facebook-square fa-3x social"
+                                                        style="color: #4267B2;"></i></a>
+                                        @endif
+                                        @if(!empty( $school->instagram_link) )
+                                            <a href="{{ $school->instagram_link}}" target="_blank"><i
+                                                        class="fab fa-instagram-square fa-3x social"
+                                                        style="color: #8a49a1;"></i></a>
+                                        @endif
+                                        @if(!empty( $school->twitter_link) )
+                                            <a href="{{ $school->twitter_link}}" target="_blank"><i
+                                                        class="fab fa-twitter-square fa-3x social"
+                                                        style="color: #1DA1F2;"></i></a>
+                                        @endif
+                                        @if(!empty( $school->linkedin_link) )
+                                            <a href="{{ $school->linkedin_link}}" target="_blank"><i
+                                                        class="fab fa-linkedin fa-3x social"
+                                                        style="color: #2867B2;"></i></a>
+                                        @endif
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    @endif
                 </div>
                 <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
 
@@ -453,7 +566,9 @@
                                             <div class="col-md-2"></div>
                                             <div class="col-md-11"></div>
                                             <div class="col-md-1">
-                                                <a href="showMore/{{ $item['id'] }}" target="_blank" class="btn btn-info" style="bottom: 10px; right: 100px;">المزيد</a>
+                                                <a href="showMore/{{ $item['id'] }}" target="_blank"
+                                                   class="btn btn-info"
+                                                   style="bottom: 10px; right: 100px;">المزيد</a>
                                             </div>
                                         </div>
                                     </div>
@@ -484,8 +599,8 @@
             </div>
         </div>
         <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);
-    padding: 20px 0 10px;
-    margin: 0 0 20px;"></div>
+padding: 20px 0 10px;
+margin: 0 0 20px;"></div>
         <div class="row">
             <div class="col-md-12" style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
                 <div class="scrollbar-warning" style="height: 400px; width: 100%; overflow-y: scroll;">
@@ -519,15 +634,16 @@
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.removeAttribute("class");
     initMap();
+
     function initMap() {
         lat = parseFloat($("#map").attr("lat"));
         lng = parseFloat($("#map").attr("lng"));
-        // The location of Uluru
+// The location of Uluru
         var uluru = {lat: lat, lng: lng};
-        // The map, centered at Uluru
+// The map, centered at Uluru
         var map = new google.maps.Map(
             document.getElementById('map'), {zoom: 16, center: uluru});
-        // The marker, positioned at Uluru
+// The marker, positioned at Uluru
         var marker = new google.maps.Marker({
             position: uluru,
             map: map,
