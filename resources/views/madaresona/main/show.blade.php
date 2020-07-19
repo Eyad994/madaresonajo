@@ -6,6 +6,72 @@
         font-family: 'Cairo', sans-serif !important;
     }
 
+    .nav-tabs {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        border: none;
+    }
+    .nav-tabs .nav-link{
+        border: none;
+        border-radius: 0;
+        transition: color .2s ease-out;
+    }
+    .tabs-dark .nav-link {
+        color: #fff;
+    }
+    .tabs-light .nav-link {
+        color: rgba(0,0,0,.5);
+    }
+    .tabs-dark .nav-link:not(.active):hover {
+        color: #aeb0b3;
+    }
+    .tabs-light .nav-link:not(.active):hover {
+        color: #495057;
+    }
+
+    .nav-pills .nav-link{
+        border-radius: 2px;
+        color: #495057;
+        transition: color .2s ease-out, box-shadow .2s;
+    }
+    .nav-pills .nav-link:hover{
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+    }
+    .nav-pills .nav-item {
+        margin: 0 5px;
+    }
+    .nav-pills.pills-dark .nav-link.active {
+        background-color: #343a40!important;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    }
+    .nav-pills.pills-dark .nav-link:not(.active):hover {
+        color: #1d1e22;
+    }
+    .tabs-marker .nav-link {
+        position: relative;
+    }
+    .tabs-marker .nav-link.active .marker {
+        height: 30px;
+        width: 30px;
+        left: 50%;
+        bottom: -30px;
+        transform: translatex(-50%);
+        position: absolute;
+        overflow: hidden;
+    }
+    .tabs-marker .nav-link.active .marker:after {
+        content: "";
+        height: 15px;
+        width: 15px;
+        top: -8px;
+        left: 50%;
+        transform: rotate(45deg) translatex(-50%);
+        transform-origin: left;
+        background-color: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        position: absolute;
+    }
+
     .d-block.w-100 {
         max-height: 450px !important;
     }
@@ -61,38 +127,38 @@
 
         <section>
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <ul class="nav nav-tabs tabs-marker tabs-dark" style="background-color: #ff6000 " id="myTab" role="tablist">
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab"
-                       aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}</a>
+                       aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
-                       aria-controls="principle" aria-selected="false">{{ __('show.principle') }}</a>
+                       aria-controls="principle" aria-selected="false">{{ __('show.principle') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm" role="tab"
-                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}</a>
+                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation" role="tab"
-                       aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}</a>
+                       aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="maps-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps"
-                       aria-selected="true">{{ __('show.maps') }}</a>
+                       aria-selected="true">{{ __('show.maps') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="brochure-tab" data-toggle="tab" href="#brochure" role="tab"
-                       aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}</a>
+                       aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab"
-                       aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}</a>
+                       aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}<span class="marker"></span></a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="news-tab" data-toggle="tab" href="#news" role="tab"
-                       aria-controls="news" aria-selected="true">{{ __('show.news') }}</a>
+                       aria-controls="news" aria-selected="true">{{ __('show.news') }}<span class="marker"></span></a>
                 </li>
             </ul>
 
@@ -372,22 +438,22 @@
                             <div class="row">
                                 <div class="card">
                                     <div class="col-md-3">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item->img }}"
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item['img'] }}"
                                              alt="Avatar" style="width:60%">
                                     </div>
                                     <div class="col-md-9 container">
                                         <div class="row">
                                             <div class="col-md-2"></div>
                                             <div class="col-md-8">
-                                                <h5>{{ $item->title_ar }}</h5>
+                                                <h5>{{ $item['title_ar'] }}</h5>
                                             </div>
                                             <div class="col-md-2"></div>
                                             <div class="col-md-2"></div>
-                                            <div class="col-md-8">{!! Illuminate\Support\Str::limit($item->text_ar, $limit = 45, $end = '...') !!}</div>
+                                            <div class="col-md-8">{!! Illuminate\Support\Str::limit($item['text_ar'], $limit = 45, $end = '...') !!}</div>
                                             <div class="col-md-2"></div>
                                             <div class="col-md-11"></div>
                                             <div class="col-md-1">
-                                                <a href="showMore/{{ $item->id }}" target="_blank" class="btn btn-info" style="bottom: 10px; right: 100px;">المزيد</a>
+                                                <a href="showMore/{{ $item['id'] }}" target="_blank" class="btn btn-info" style="bottom: 10px; right: 100px;">المزيد</a>
                                             </div>
                                         </div>
                                     </div>

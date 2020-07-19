@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Premium;
 use App\Models\Region;
 use App\Models\School;
 use Illuminate\Http\Request;
@@ -69,9 +70,16 @@ class HomeController extends Controller
             }
 
         } elseif ($request->search_select == 4) {
-            if (isset($request->search_text) && isset($request->school_class))
+            if (isset($request->school_class))
             {
-                $schools = School::where('id', 0)->get();
+                $premiums = Premium::where('price', '>=', $request->from_price)
+                    ->orWhere('price', '<=', $request->to_price)
+                    ->where('class_id', $request->school_class)
+                    ->get('school_id')
+                ->toArray();
+
+
+                $schools = School::whereIn('id', $premiums)->get();
             } else {
                 $schools = School::where('id', 0)->get();
             }
