@@ -156,7 +156,7 @@
 
         <section>
 
-            <ul class="nav nav-tabs tabs-marker tabs-dark" style="background-color: #ff6000; border-radius: 5px; "
+            <ul class="nav nav-tabs tabs-marker tabs-dark" style="background-color: #ff6000; border-radius: 5px;font-weight: bold; "
                 id="myTab" role="tablist">
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab"
@@ -281,7 +281,7 @@
                                 <div class="col-md-12">
                                     <div class="overflow-scroll scrollbar-warning"
                                          style="height: 450px; overflow-y: scroll; ">
-                                        {!! $school->principle_en !!}
+                                        {!! (app()->getLocale() == 'en') ? $school->principle_en:$school->principle_ar !!}
                                     </div>
                                 </div>
                             </div>
@@ -293,8 +293,9 @@
                     #tabsTable {
                         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
                         border-collapse: collapse;
+                        border-spacing: 0 1em;
                         width: 100%;
-                        text-align: right;
+                        text-align: center;
                     }
 
                     #tabsTable td, #tabsTable th {
@@ -311,22 +312,29 @@
                     }
 
                     #tabsTable th {
-                        text-align: center;
-                        padding: 15px 10px !important;
+                        padding: 18px 10px !important;
                         background-color: #1d556c;
                         color: white;
                         border: none;
                         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                        border-radius: 25px;
+                        border-radius: 5px;
+                    }
+
+                    #tabsTable td {
+                        border: none;
+                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+                        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+                        border-radius: 5px;
                     }
 
                     .div_cheak {
                         padding: 5px 10px;
                         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
                         0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                        font-family: initial;
                         font-size: 13px;
+                        font-weight: bold;
                     }
+
 
                 </style>
 
@@ -388,9 +396,9 @@
                                         </tr>
                                         @foreach($premiums as $item)
                                             <tr>
-                                                <td>{{ $item->schoolClass->class_en }}</td>
+                                                <td>{{ (app()->getLocale() == 'en') ?$item->schoolClass->class_en:$item->schoolClass->class_ar}}</td>
                                                 <td>{{ $item->price }}</td>
-                                                <td>{{ $item->curriculum == 0 ? 'منهاج محلي' : 'منهاج دولي' }}</td>
+                                                <td>{{ $item->curriculum == 0 ? __('show.local_program')  : __('show.international_program') }}</td>
                                             </tr>
                                         @endforeach
                                     </table>
@@ -411,7 +419,7 @@
                             </tr>
                             @foreach($transportations as $transportation)
                                 <tr>
-                                    <td>{{ $transportation->region_ar }}</td>
+                                    <td>{{ (app()->getLocale() == 'en') ?$transportation->region_en:$transportation->region_ar }}</td>
                                     <td>{{ $transportation->one_way }}</td>
                                     <td>{{ $transportation->two_way }}</td>
 
@@ -429,9 +437,15 @@
                     <div class="container mt-5">
                         <div class="row">
                             <div class="col-md-12" style="text-align-last: center;">
-                                @if($school->school_brochure != null)
+                                @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                         style="width:50%; border-radius: 10px;"  alt="">
+                                         style="width:50%; border-radius: 10px;" alt="">
+                                @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
+                                    <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}" target="_blank" download="" >
+                                        <i class="fad fa-cloud-download" style="  font-size: 300px; margin-top: 60px; "></i>
+                                    </a>
+                                    <div style="font-size: 40px; font-weight: bold; color: #f66001;"> Download </div>
+
                                 @else
                                     <h1>No Brochure</h1>
                                 @endif
@@ -454,40 +468,59 @@
                                              border-radius: 10px;">
                             <div class="row">
 
-                                <div class="col-md-4 form-group"><b style="color: black"> {{ __('show.email') }} :</b>
+                                <div class="col-md-4 form-group">
+                                    <div style="color: #2d3e52; font-weight: bold;"> {{ __('show.email') }} :</div>
                                 </div>
                                 <div class="col-md-8 form-group">{{ $school->contact_person_email }}</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.phone') }} :</b>
+                                <div class="col-md-4 form-group">
+                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.phone') }} :</div>
                                 </div>
                                 <div class="col-md-8 form-group">{{ $school->contact_person_phone }}</div>
                             </div>
                             @if(!empty( $school->fax) )
-                            <div class="row">
-                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.fax') }} :</b>
+                                <div class="row">
+                                    <div class="col-md-4 form-group">
+                                        <div style="color: #2d3e52; font-weight: bold;">{{ __('show.fax') }} :</div>
+                                    </div>
+                                    <div class="col-md-8 form-group">{{ $school->fax }}</div>
                                 </div>
-                                <div class="col-md-8 form-group">{{ $school->fax }}</div>
-                            </div>
                             @endif
                             @if(!empty( $school->website) )
-                            <div class="row">
+                                <div class="row">
 
-                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.website') }} : </b>
+                                    <div class="col-md-4 form-group">
+                                        <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }} :</div>
+                                    </div>
+                                    <div class="col-md-8 form-group"><a target="_blank"
+                                                                        href="{{ $school->website }}">{{ $school->website }}</a>
+                                    </div>
                                 </div>
-                                <div class="col-md-8 form-group"><a target="_blank"
-                                                                    href="{{ $school->website }}">{{ $school->website }}</a>
-                                </div>
-                            </div>
                             @endif
                             <div class="row">
-                                <div class="col-md-4 form-group"><b style="color: black">{{ __('show.gender') }} : </b>
+                                <div class="col-md-4 form-group">
+                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.gender') }} :</div>
                                 </div>
-                                <div class="col-md-8 form-group"></div>
+                                <div class="col-md-8 form-group">
+                                    @if(in_array(0, $genderSchool))
+                                        <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
+                                            {{ __('show.female') }}</span>
+                                    @endif
+                                    @if(in_array(1, $genderSchool))
+                                        <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
+                                            {{ __('show.male') }}</span>
+                                    @endif
+                                    @if(in_array(2, $genderSchool))
+                                        <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
+                                            {{ __('show.mixed') }}</span>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>
-                    @if(!empty( $school->facebook_link) ||!empty($school->instagram_link)||!empty( $school->twitter_link)||!empty($school->linkedin_link))
+                    @if(!empty( $school->facebook_link) ||!empty($school->instagram_link)||
+                    !empty( $school->twitter_link)||!empty($school->linkedin_link))
                         <div class="container mt-5" style="text-align: center">
                             <h2 style="color: #ff6000">{{ __('show.follow') }}</h2>
                             <div class="" style="display: inline-block;
@@ -546,29 +579,30 @@
                         }
                     </style>
 
-                    <div class="container mt-5" style="text-align: right; direction: rtl">
+                    <div class="container mt-5" style="text-align: right;">
                         @foreach($news as $item)
                             <div class="row">
                                 <div class="card">
                                     <div class="col-md-3">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item['img'] }}"
-                                             alt="Avatar" style="width:60%">
+                                        <img src="http://madaresonajo.com/access_files/upload_center/news_img_5f0fe6454aaf7.jpg"
+                                             alt="Avatar"
+                                             style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                     </div>
                                     <div class="col-md-9 container">
-                                        <div class="row">
+                                        <div class="row" style="text-align: left">
                                             <div class="col-md-2"></div>
                                             <div class="col-md-8">
-                                                <h5>{{ $item['title_ar'] }}</h5>
+                                                <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
                                             </div>
                                             <div class="col-md-2"></div>
                                             <div class="col-md-2"></div>
-                                            <div class="col-md-8">{!! Illuminate\Support\Str::limit($item['text_ar'], $limit = 45, $end = '...') !!}</div>
+                                            <div class="col-md-8">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
                                             <div class="col-md-2"></div>
                                             <div class="col-md-11"></div>
                                             <div class="col-md-1">
                                                 <a href="showMore/{{ $item['id'] }}" target="_blank"
                                                    class="btn btn-info"
-                                                   style="bottom: 10px; right: 100px;">المزيد</a>
+                                                   style="bottom: 10px;">{{ __('show.more') }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -589,13 +623,13 @@
         <br>
         <div class="row">
             <div class="col-md-3">
-                <img class="rounded"
+                <img class="rounded" style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);"
                      src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="">
             </div>
             <div class="col-md-9">
-                <h4>{{ $school->name_en }}</h4>
-                <h6 class="text-muted">Jordan, {{ $school->city->city_name_en }}
-                    - {{ $school->region->area_name_en }}</h6>
+                <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
+                <h6 class="text-muted">Jordan, {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
+                    - {{(app()->getLocale() == 'en') ?$school->region->area_name_en:$school->region->area_name_ar }}</h6>
             </div>
         </div>
         <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);
@@ -604,7 +638,7 @@ margin: 0 0 20px;"></div>
         <div class="row">
             <div class="col-md-12" style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
                 <div class="scrollbar-warning" style="height: 400px; width: 100%; overflow-y: scroll;">
-                    {!! $school->school_details_en !!}
+                    {!! (app()->getLocale() == 'en')?$school->school_details_en :$school->school_details_ar !!}
                 </div>
             </div>
         </div>
@@ -616,12 +650,13 @@ margin: 0 0 20px;"></div>
             }
         </style>
         <div class="row">
-            <div class="col-md-12">
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="float: right">
-                    <a class="a2a_button_facebook z-depth-4 rounded "></a>
-                    <a class="a2a_button_twitter"></a>
-                    <a class="a2a_button_google_gmail"></a>
-                    <a class="a2a_button_whatsapp"></a>
+            <div class="col-md-4"><h5 style="color:#ff6000; font-weight: bold;"> Share Us</h5></div>
+            <div class="col-md-8">
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="">
+                    <a class="a2a_button_facebook z-depth-4 rounded " style="margin: 0px 5px;"></a>
+                    <a class="a2a_button_twitter" style="margin: 0px 5px;"></a>
+                    <a class="a2a_button_google_gmail" style="margin: 0px 5px;"></a>
+                    <a class="a2a_button_whatsapp" style="margin: 0px 5px;"></a>
                 </div>
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
             </div>

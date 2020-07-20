@@ -36,12 +36,16 @@ return [
     'gender' => 'Gender',
 
     'follow' => 'Follow Us ',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
+
+    'international_program' => 'International Program',
+    'local_program' => 'Local Program',
+
+    'more' => 'More',
+
+    'female' => 'Female',
+    'male' => 'Male',
+    'mixed' => 'Mixed',
+
     '' => '',
     '' => '',
     '' => '',

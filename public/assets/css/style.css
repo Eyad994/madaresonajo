@@ -45,7 +45,6 @@ td + td {
 }
 td, th {
     border-bottom:1px solid #000;
-    background: #fff;
     color: #000;
     padding: 10px 25px;
 }

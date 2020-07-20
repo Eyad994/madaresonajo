@@ -20,7 +20,7 @@ class SchoolController extends Controller
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))
 
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
-
+        $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $newsArray = News::where('user_id', $school->user_id)->latest()->get();
 
@@ -54,7 +54,7 @@ class SchoolController extends Controller
         $transportations = Transportation::where('school_id', $school->id)->get();
         $premiums = Premium::where('school_id', $school->id)->get();
 
-        return view('madaresona.main.show', compact('school', 'gallery', 'news', 'transportations', 'premiums'));
+        return view('madaresona.main.show', compact('school', 'gallery', 'news', 'transportations', 'premiums','genderSchool'));
     }
 
     public function showWithoutModal($lang ,$slug)
@@ -64,12 +64,14 @@ class SchoolController extends Controller
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))
 
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
+        $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $news = News::where('user_id', $school->user_id)->get();
         $transportations = Transportation::where('school_id', $school->id)->get();
         $premiums = Premium::where('school_id', $school->id)->get();
 
-        return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums'));
+
+        return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums' ,'genderSchool'));
     }
 
     public function showMore($lang, $id)

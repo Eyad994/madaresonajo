@@ -302,7 +302,7 @@
                     $(function () {
                         $('.infinite-scroll').jscroll({
                             autoTrigger: true,
-                            loadingHtml: '<img class="center-block" src="https://media.giphy.com/media/swhRkVYLJDrCE/giphy.gif" alt="Loading..." />',
+                            loadingHtml: '<img class="center-block" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..." />',
                             padding: 5,
                             nextSelector: '.pagination li.active + li a',
                             contentSelector: 'div.infinite-scroll',
