@@ -101,18 +101,18 @@
         <h2 class="align-center">
             <div class="row">
                 <div class="col-md-4"></div>
-                <div class="col-md-4" style="direction: rtl">
+                <div class="col-md-4">
                     <select name="schoolType" id="schoolType" class="form-control" style="font-size: 15px;padding: 1px;">
-                        <option disabled selected>المؤسسات التعليمية</option>
+                        <option style="color: #000; font-weight: bold;" disabled selected>{{ __('index.education_institutions') }}</option>
                         @foreach($schoolsType as $type)
-                            <option value="{{ $type->id }}">{{ $type->name_ar }}</option>
+                            <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
                         @endforeach
                     </select>
                 </div>
             </div>
         </h2>
 
-        <div class="container" style="padding: 0px !important;" id="schoolsGrid">
+        <div class="container fade-left" style="padding: 0px !important;" id="schoolsGrid">
             <hr class="space" />
             <div class="infinite-scroll">
                 <div class="row">

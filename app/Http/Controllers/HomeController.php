@@ -21,7 +21,7 @@ class HomeController extends Controller
         return $result;*/
 
         $schools = School::where('active', 1)->latest()->paginate(6);
-        $specialSchools = School::where('special', 1)->get();
+        $specialSchools = School::where('active', 1)->where('special', 1)->get();
         $mainNews = News::where('news_type', 2)->get();
         $schoolsType = SchoolType::all();
         return view('madaresona.main.index', compact('schools', 'specialSchools', 'mainNews', 'schoolsType'));

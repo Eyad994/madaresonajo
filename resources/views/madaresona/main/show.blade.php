@@ -497,7 +497,7 @@
                                         <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }} :</div>
                                     </div>
                                     <div class="col-md-8 form-group"><a target="_blank"
-                                                                        href="{{ $school->website }}">{{ $school->website }}</a>
+                                                                        href="http://{{ $school->website }}">{{ $school->website }}</a>
                                     </div>
                                 </div>
                             @endif
@@ -570,7 +570,7 @@
                             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                             transition: 0.3s;
                             width: 100%;
-                            height: 200px;
+                           max-height: 250px;
                         }
 
                         .card:hover {

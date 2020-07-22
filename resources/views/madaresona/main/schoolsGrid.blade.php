@@ -20,8 +20,10 @@
             @endforeach
             @if(count($schools) == 0)
                 <div class="col-md-5"></div>
-                <div>
-                    <h1><b style="text-decoration: underline; color: red">لا</b> يوجد نتائج</h1>
+                <div style="text-align: center">
+                    <i class="fad fa-meh-blank" style="font-size: 100px; color: #f66001; margin-bottom:20px;"></i>
+                    <h1 style="font-family: initial;"><b style="text-decoration: underline; color: red">{{ __('index.no') }}</b>{{ __('index.results') }}</h1>
+
                 </div>
                 @endif
         </div>
