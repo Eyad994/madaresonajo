@@ -27,6 +27,7 @@ Route::group([
     Route::get('/getRegions/{id}', 'HomeController@getRegions');
 
     Route::post('search', 'HomeController@search')->name('search');
+    Route::get('institutions/{id}', 'HomeController@educationalInstitutions')->name('institutions');
 
     /******************************************************/
     Route::prefix('school')->group(function () {

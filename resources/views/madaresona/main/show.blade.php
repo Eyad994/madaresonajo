@@ -429,8 +429,11 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab">
-                    <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}"
-                         lng="{{ $school-> lng}}"></div>
+
+                    <div class="container mt-5">
+                        <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}"
+                             lng="{{ $school-> lng}}"></div>
+                    </div>
 
                 </div>
                 <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab">
