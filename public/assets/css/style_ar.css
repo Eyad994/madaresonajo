@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'GE Flow';
+    src: url('http://madaresonajo.com/access_files/fonts/GEFlow.woff2') format('woff2'), url('http://madaresonajo.com/access_files/fonts/GEFlow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, textarea {
+    font-family: 'GE Flow' !important;
+}

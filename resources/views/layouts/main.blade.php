@@ -23,9 +23,17 @@
     <link href="{{ asset('assets/css/media-box.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/social.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/skin/skin.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('assets/css/skin.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/media/icons/iconsmind/line-icons.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
+    @if((app()->getLocale() == 'en'))
+        <link href="{{ asset('assets/css/skin.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
+
+    @endif
+    @if((app()->getLocale() == 'ar'))
+        <link href="{{ asset('assets/css/skin_ar.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assets/css/custom_ar.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assets/css/style_ar.css') }}" rel="stylesheet" type="text/css"/>
+    @endif
     <link rel="stylesheet" href="{{ asset('assets/carousel.min.css') }}">
     <script src="{{ asset('assets/media/jui/js/jquery.min4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/jui/js/jquery-noconflict4c8f.js') }}" type="text/javascript"></script>
@@ -51,8 +59,6 @@
 </head>
 
 <body class="site bthome  com_blue_pagebuilder view-page no-layout no-task itemid-154 ">
-
-<input type="hidden" class="bturl" value="https://chipblue.net/joomla/codrop/"/>
 <!-- Page pre loader -->
 <div id="preloader"></div>
 @include('madaresona.partials.navbar')

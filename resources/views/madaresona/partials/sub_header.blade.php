@@ -1,6 +1,4 @@
-<section class="section-image section-full-width-right light no-padding-top section-bottom-layer"
-         style="/*background: url(banner.png);*/ background-repeat: no-repeat;
-    background-size: 100% 265px; ">
+<section class="section-image section-full-width-right light no-padding-top section-bottom-layer">
 
     <div class="container">
 

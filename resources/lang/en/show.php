@@ -46,6 +46,8 @@ return [
     'male' => 'Male',
     'mixed' => 'Mixed',
 
+    'share_us' => 'Share Us',
+
     '' => '',
     '' => '',
     '' => '',

@@ -18,7 +18,7 @@
 		text-decoration: none;
 		text-align: left;
 		padding-left:15px;
-	} 
+	}
 	nav.menu-classic.menu-fixed.menu-transparent.light .menu-cnt ul.menu-mp > li > a, nav.menu-classic.menu-fixed.menu-transparent.light .menu-cnt ul.menu-op > li > a{
 		padding-right: 40px;
 		color: #fff;
@@ -113,7 +113,7 @@
 	}
 	.menu-cnt ul.menu-mp > li.dropdown:hover ul{
 		display:block;
-	} 
+	}
 }
 .grid-box .grid-item ul.icon-list.icon-list-horizontal:before, .text-color  ul.icon-list.icon-list-horizontal.icon-list-blog:before{
 	display:none;
@@ -150,7 +150,7 @@ ul.menu-mp li ul li ul:before{
 content:none;
 }
 nav.light a.btn-border, .dropdown > ul li:hover > a, .dropdown > ul li.active > a, .menu-cnt ul > li:hover > a, .menu-cnt ul.menu-op > li.active > a, .light .counter h3, .breadcrumb li:last-child a, .breadcrumb li:hover a, .menu-side-collapse .dropdown-submenu > a {
-    color: rgb(71, 178, 228) !important;
+	color: rgb(29, 85, 108) !important;
 }
 header.header-base.header-image{
 height:450px;
@@ -171,10 +171,10 @@ ol.breadcrumb li a{
     margin-right: 0;
 }
 ol.breadcrumb li:active{
-    color: rgb(71, 178, 228) !important;
+    color:  rgb(29, 85, 108) !important;
 }
 ol.breadcrumb li:last-child{
-	color: rgb(71, 178, 228) !important;
+	color:  rgb(29, 85, 108) !important;
 }
 .footer-bar > .container div > span:last-child {
     float: right;

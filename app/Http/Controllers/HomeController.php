@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
-    public function index($locale = 'en')
+    public function index($locale = 'ar')
     {
         App::setLocale($locale);
         /*$test = School::where('id', 11)->first();

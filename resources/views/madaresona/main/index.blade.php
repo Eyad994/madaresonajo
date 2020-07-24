@@ -20,17 +20,6 @@
             padding-top: 10px;
         }
 
-        .dot {
-            height: 6px;
-            width: 6px;
-            margin-left: 3px;
-            margin-right: 3px;
-            margin-top: 2px !important;
-            background-color: rgb(207, 23, 23);
-            border-radius: 50%;
-            display: inline-block
-        }
-
         .news-ahref {
             color: white;
         }
@@ -45,24 +34,14 @@
 
     </style>
     <br>
-    {{--<div class="slideUp" id="news-bar">
-        <marquee direction="right" scrollamount="3" behavior="scroll" onmouseover="this.stop()"
-                 onmouseout="this.start()">
-            @foreach($mainNews as $news)
-                <a href="{{ app()->getLocale() }}/showMore/{{ $news->id }}"
-                   class="hvr-pop">{{ app()->getLocale() == 'ar' ? $news->title_ar : $news->title_en }}</a><a> -*- </a>
-            @endforeach
-        </marquee>
-    </div>--}}
-
-    <div class="container">
+    <div class="container" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}">
         <div class="row">
             <div class="col-md-12">
-                <div class="d-flex justify-content-between align-items-center breaking-news"
-                     style="background: #1d556c">
-                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
-                        <span class="d-flex align-items-center">News</span></div>
-                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+                <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
+                     style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
+                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-left' :'rounded-right'}}">
+                        <span class="d-flex align-items-center font-weight-bold">{{__('index.News')}}</span></div>
+                    <marquee class="news-scroll" behavior="scroll" direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
                              onmouseout="this.start();">
                         @foreach($mainNews as $news)
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
@@ -78,14 +57,11 @@
     </div>
 
 
-    <section class="section-base">
-
+    <section class="section-base" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}">
         <div class="container pb-0">
-            <h2 class="align-center"><span
-                        style="text-decoration: underline; color: #1d556c">{{ count($specialSchools) }}</span> Special
-                Schools</h2>
-            <p class="align-center width-650">
-                We are proud of all these schools. </p>
+            <h2 class="align-center" style="color: #1d556c; "><span class="font-weight-bold"
+                        style="text-decoration: underline; color: #ff6000; ">{{ count($specialSchools) }}</span> {{__('index.special_schools')}}</h2>
+            <p class="align-center width-650"> {{__('index.proud_schools')}}</p>
             <hr class="space"/>
 
             <div class="row ">

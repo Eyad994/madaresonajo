@@ -1,14 +1,10 @@
 <style>
 
-    @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
-
-    body {
-        font-family: 'Cairo', sans-serif !important;
-    }
 
     .nav-tabs {
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
         border: none;
+        padding: 0px;
     }
 
     .nav-tabs .nav-link {
@@ -154,9 +150,15 @@
 
     <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style="background: #f6f9fc; padding: 2px">
 
-        <section>
+        <section
 
-            <ul class="nav nav-tabs tabs-marker tabs-dark" style="background-color: #ff6000; border-radius: 5px;font-weight: bold; "
+                @if((app()->getLocale() == 'ar'))
+                style="direction: rtl; text-align: right;">
+            @else
+                style="direction:ltr; text-align:left;">
+            @endif
+            <ul class="nav nav-tabs tabs-marker tabs-dark"
+                style="background-color: #ff6000; border-radius: 5px;font-weight: bold; "
                 id="myTab" role="tablist">
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab"
@@ -444,10 +446,12 @@
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
                                          style="width:50%; border-radius: 10px;" alt="">
                                 @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
-                                    <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}" target="_blank" download="" >
-                                        <i class="fad fa-cloud-download" style="  font-size: 300px; margin-top: 60px; "></i>
+                                    <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
+                                       target="_blank" download="">
+                                        <i class="fad fa-cloud-download"
+                                           style="  font-size: 300px; margin-top: 60px; "></i>
                                     </a>
-                                    <div style="font-size: 40px; font-weight: bold; color: #f66001;"> Download </div>
+                                    <div style="font-size: 40px; font-weight: bold; color: #f66001;"> Download</div>
 
                                 @else
                                     <h1>No Brochure</h1>
@@ -584,35 +588,35 @@
                     <div class="container mt-5" style="text-align: right;">
                         @foreach($news as $item)
 
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <img src="http://madaresonajo.com/access_files/upload_center/news_img_5f0fe6454aaf7.jpg"
-                                                     alt="Avatar"
-                                                     style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
-                                            </div>
-                                            <div class="col-md-9 container">
-                                                <div class="row" style="text-align: left">
-                                                    <div class="col-md-2"></div>
-                                                    <div class="col-md-8">
-                                                        <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
-                                                    </div>
-                                                    <div class="col-md-2"></div>
-                                                    <div class="col-md-2"></div>
-                                                    <div class="col-md-8">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
-                                                    <div class="col-md-2"></div>
-                                                    <div class="col-md-10"></div>
-                                                    <div class="col-md-2">
-                                                        <a href="showMore/{{ $item['id'] }}" target="_blank"
-                                                           class="btn btn-info"
-                                                           >{{ __('show.more') }}</a>
-                                                    </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="http://madaresonajo.com/access_files/upload_center/news_img_5f0fe6454aaf7.jpg"
+                                                 alt="Avatar"
+                                                 style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                        </div>
+                                        <div class="col-md-9 container">
+                                            <div class="row" style="text-align: left">
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-8">
+                                                    <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
+                                                </div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-8">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-10"></div>
+                                                <div class="col-md-2">
+                                                    <a href="showMore/{{ $item['id'] }}" target="_blank"
+                                                       class="btn btn-info"
+                                                    >{{ __('show.more') }}</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
                         @endforeach
                     </div>
@@ -625,7 +629,12 @@
 
     </div>
 
-    <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12">
+    <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12"
+         @if((app()->getLocale() == 'ar'))
+         style="direction: rtl; text-align: right;">
+        @else
+            style="direction:ltr; text-align:left;">
+        @endif
         <br>
         <div class="row">
             <div class="col-md-3">
@@ -634,7 +643,8 @@
             </div>
             <div class="col-md-9">
                 <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
-                <h6 class="text-muted">Jordan, {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
+                <h6 class="text-muted">
+                    Jordan, {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
                     - {{(app()->getLocale() == 'en') ?$school->region->area_name_en:$school->region->area_name_ar }}</h6>
             </div>
         </div>
@@ -656,7 +666,7 @@ margin: 0 0 20px;"></div>
             }
         </style>
         <div class="row">
-            <div class="col-md-4"><h5 style="color:#ff6000; font-weight: bold;"> Share Us</h5></div>
+            <div class="col-md-4"><h5 style="color:#ff6000; font-weight: bold; padding: 0px 20px;">{{ __('show.share_us') }}</h5></div>
             <div class="col-md-8">
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="">
                     <a class="a2a_button_facebook z-depth-4 rounded " style="margin: 0px 5px;"></a>
