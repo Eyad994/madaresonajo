@@ -24,7 +24,8 @@
     <link href="{{ asset('assets/css/social.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/skin/skin.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/media/icons/iconsmind/line-icons.min.css') }}" rel="stylesheet" type="text/css"/>
-    @if((app()->getLocale() == 'en'))
+
+@if((app()->getLocale() == 'en'))
         <link href="{{ asset('assets/css/skin.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
 
@@ -35,6 +36,7 @@
         <link href="{{ asset('assets/css/style_ar.css') }}" rel="stylesheet" type="text/css"/>
     @endif
     <link rel="stylesheet" href="{{ asset('assets/carousel.min.css') }}">
+    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">--}}
     <script src="{{ asset('assets/media/jui/js/jquery.min4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/jui/js/jquery-noconflict4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/jui/js/jquery-migrate.min4c8f.js') }}" type="text/javascript"></script>

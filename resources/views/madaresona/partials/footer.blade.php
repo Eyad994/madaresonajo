@@ -1,5 +1,5 @@
 <div style="height: 200px"></div>
-{{--<footer class="footer-parallax light">
+<footer class=" light">
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
@@ -74,4 +74,4 @@
 
         </div>
     </div>
-</footer>--}}
+</footer>

@@ -29,12 +29,17 @@
         }
 
         .news-img {
-            margin-bottom:0;
+            margin: 0 10px;
         }
 
+        /********************************/
+
+/**************************************/
+
     </style>
+
     <br>
-    <div class="container" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
@@ -46,7 +51,7 @@
                         @foreach($mainNews as $news)
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
-                            <a href="{{ app()->getLocale() }}/showMore/{{ $news->id }}" target="_blank" class="news-ahref">{{ app()->getLocale() == 'ar' ? $news->title_ar : $news->title_en }}</a>
+                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}" target="_blank" class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
                         @endforeach
@@ -56,8 +61,50 @@
         </div>
     </div>
 
+    <section class="section-base">
+        <div class="top-content">
+            <div class="container-fluid">
+                <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                            <img src="assets/img/backgrounds/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="assets/img/backgrounds/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="section-base" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}">
+    {{--<section class="section-base" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}">
         <div class="container pb-0">
             <h2 class="align-center" style="color: #1d556c; "><span class="font-weight-bold"
                         style="text-decoration: underline; color: #ff6000; ">{{ count($specialSchools) }}</span> {{__('index.special_schools')}}</h2>
@@ -66,10 +113,6 @@
 
             <div class="row ">
                 <div class='col-lg-12 '>
-                    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js" ></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>--}}
-
                     <div class="container-fluid" id="carouselBody">
                         <div id="carouselIndex" class="carousel slide" data-ride="carousel" data-interval="9000">
                             <div class="carousel-inner row w-100 mx-auto" style="padding-bottom: 10px;" role="listbox">
@@ -120,7 +163,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
     <section class="section-base">
         <div class="container">
             <hr>
