@@ -34,6 +34,10 @@ Route::group([
         Route::get('{slug}', 'SchoolController@show');
     });
 
+    Route::get('pricing', 'PricingController@index')->name('pricing');
+    Route::get('contactUs', 'PricingController@contactUs')->name('contactUs');
+
     Route::get('{slug}', 'SchoolController@showWithoutModal');
     Route::get('showMore/{id}', 'SchoolController@showMore');
+
 });

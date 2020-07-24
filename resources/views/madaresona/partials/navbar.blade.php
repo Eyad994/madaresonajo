@@ -16,7 +16,7 @@
                     <li class="item-130   dropdown"><a class=" js-activated bt-white">subscibtion</a>
                         <ul class="">
                             <li class="item-133"><a class="" href=""> Membership Benefits Classic</a></li>
-                            <li class="item-134" ><a  class="" href="">Fees and Payment Methods Gird</a></li>
+                            <li class="item-134" ><a  class="" href="{{ route('pricing', app()->getLocale()) }}">Fees and Payment Methods Gird</a></li>
                             <li class="item-135"><a  class="" href=""> New Subscribers
                                     Post</a></li>
                         </ul>

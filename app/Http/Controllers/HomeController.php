@@ -98,7 +98,12 @@ class HomeController extends Controller
 
     public function educationalInstitutions($lang, $id)
     {
-        $schools = School::where('active', 1)->where('type', $id)->get();
+        if ($id == 0)
+        {
+            $schools = School::where('active', 1)->get();
+        } else {
+            $schools = School::where('active', 1)->where('type', $id)->get();
+        }
         return view('madaresona.main.schoolsGrid', compact('schools'));
     }
 }

@@ -59,7 +59,7 @@
 <main>
     <div id="system-message-container">
     </div>
-    @include('madaresona.partials.sub_header')
+    @yield('sub_header')
     {{--<div class="row">
         <div class="col-md-10"></div>
         <div class="col-md-2">
@@ -89,10 +89,10 @@
 <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="{{ asset('assets/font-awesome/js/all.js') }}"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnpiNImmRHQBxmLIn5o_zTBufGgXzZBko&language=en&region=JO&libraries=places"></script>
-
-@include('layouts.mainJs')
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnpiNImmRHQBxmLIn5o_zTBufGgXzZBko&language=en&region=JO&libraries=places"></script>
 @yield('script')
+@include('layouts.mainJs')
+
 </body>
 
 </html>

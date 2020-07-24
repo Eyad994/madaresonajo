@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('sub_header')
+    @include('madaresona.partials.sub_header')
+    @endsection
 @section('content')
     <style>
         @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
@@ -6,9 +9,43 @@
         body {
             font-family: 'Cairo', sans-serif !important;
         }
+
+        .news {
+            width: 160px
+        }
+
+        .news-scroll a {
+            text-decoration: none;
+            height: 40px;
+            padding-top: 10px;
+        }
+
+        .dot {
+            height: 6px;
+            width: 6px;
+            margin-left: 3px;
+            margin-right: 3px;
+            margin-top: 2px !important;
+            background-color: rgb(207, 23, 23);
+            border-radius: 50%;
+            display: inline-block
+        }
+
+        .news-ahref {
+            color: white;
+        }
+
+        .news-ahref:hover {
+            color: #ff6000;
+        }
+
+        .news-img {
+            margin-bottom:0;
+        }
+
     </style>
     <br>
-    <div class="slideUp" id="news-bar">
+    {{--<div class="slideUp" id="news-bar">
         <marquee direction="right" scrollamount="3" behavior="scroll" onmouseover="this.stop()"
                  onmouseout="this.start()">
             @foreach($mainNews as $news)
@@ -16,6 +53,28 @@
                    class="hvr-pop">{{ app()->getLocale() == 'ar' ? $news->title_ar : $news->title_en }}</a><a> -*- </a>
             @endforeach
         </marquee>
+    </div>--}}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between align-items-center breaking-news"
+                     style="background: #1d556c">
+                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+                        <span class="d-flex align-items-center">News</span></div>
+                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+                             onmouseout="this.start();">
+                        @foreach($mainNews as $news)
+                            <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
+                                 alt="">
+                            <a href="{{ app()->getLocale() }}/showMore/{{ $news->id }}" target="_blank" class="news-ahref">{{ app()->getLocale() == 'ar' ? $news->title_ar : $news->title_en }}</a>
+                            <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
+                                 alt="">
+                        @endforeach
+                    </marquee>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -85,25 +144,20 @@
                 </div>
             </div>
         </div>
-
-        {{--<div id="wrapper">
-            <div id="c1"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" width="150px" height="100px" alt=""></div>
-            <div id="c2">con2</div>
-        </div>​
-        <div id="wrapper form-group">
-            <div id="c1"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" width="150px" height="100px" alt=""></div>
-            <div id="c2">con2</div>
-        </div>​--}}
-
     </section>
     <section class="section-base">
-        <div class="container"><hr></div>
+        <div class="container">
+            <hr>
+        </div>
         <h2 class="align-center">
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <select name="schoolType" id="schoolType" class="form-control" style="font-size: 15px;padding: 1px;">
-                        <option style="color: #000; font-weight: bold;" disabled selected>{{ __('index.education_institutions') }}</option>
+                    <select name="schoolType" id="schoolType" class="form-control"
+                            style="font-size: 15px;padding: 1px;">
+                        <option style="color: #000; font-weight: bold;" disabled
+                                selected>{{ __('index.education_institutions') }}</option>
+                        <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
                         @foreach($schoolsType as $type)
                             <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
                         @endforeach
@@ -113,7 +167,7 @@
         </h2>
 
         <div class="container fade-left" style="padding: 0px !important;" id="schoolsGrid">
-            <hr class="space" />
+            <hr class="space"/>
             <div class="infinite-scroll">
                 <div class="row">
                     @foreach($schools as $school)
@@ -378,7 +432,7 @@
                 var id = $(this).val();
                 $.ajax({
                     type: 'GET',
-                    url: '/{{ app()->getLocale() }}/institutions/'+id,
+                    url: '/{{ app()->getLocale() }}/institutions/' + id,
                     success: function (data) {
                         $('#schoolsGrid').html(data);
                     }
@@ -389,6 +443,7 @@
             $('#carouselIndex').carousel({
                 interval: 3000
             });
+
         });
 
         $(document).on("click", '.show-school', function (event) {

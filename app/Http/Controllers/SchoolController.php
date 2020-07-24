@@ -21,6 +21,7 @@ class SchoolController extends Controller
 
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
         $genderSchool = explode(',', $school->gender);
+
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $newsArray = News::where('active', 1)->where('user_id', $school->user_id)->latest()->get();
 
