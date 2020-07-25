@@ -45,8 +45,8 @@
                 <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
                      style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
                     <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-left' :'rounded-right'}}">
-                        <span class="d-flex align-items-center font-weight-bold">{{__('index.News')}}</span></div>
-                    <marquee class="news-scroll" behavior="scroll"
+                        <span class="d-flex align-items-center font-weight-bold" style="height: 100px;">{{__('index.News')}}</span></div>
+                    <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();"
                              direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
                              onmouseout="this.start();">
                         @foreach($mainNews as $news)
@@ -64,49 +64,106 @@
     </div>
 
     <section class="section-base">
-        <div class="top-content">
-            <div class="container-fluid">
-                <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                            <img src="assets/img/backgrounds/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
-                        </div>
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="assets/img/backgrounds/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
-                        </div>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <div class="container pb-0">
+            <h2 class="align-center" style="color: #1d556c; "><span class="font-weight-bold"
+                                                                    style="text-decoration: underline; color: #ff6000; ">{{ count($specialSchools) }}</span> {{__('index.special_schools')}}
+            </h2>
+            <p class="align-center width-650"> {{__('index.proud_schools')}}</p>
+            <hr class="space"/>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        @foreach($specialSchools as $school)
+                                <div class="item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-thumbnail">
+                                            <a href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}"
+                                               title="{{ $school->name_ar }}" class="thumb">
+                                                <img class="img-fluid mx-auto d-block z-depth-3 rounded"
+                                                     style="width: 200px; height: 200px;    border: 1px #f1f4f9 solid;  webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);}"
+                                                     src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/{{ $school->school_logo }}"
+                                                     alt="slide 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        @endforeach
                     </div>
-                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="my-owl-nav">
+
+                        <span class="my-prev-button">
+    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Prev
+  </span>
+                        <span class="my-next-button">
+    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next
+  </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    {{--<section class="section-base" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}">
+        <style>
+
+            .owl-stage {
+                padding-bottom: 10px
+            }
+
+            .my-owl-nav {
+                margin-top: 20px;
+            }
+
+            .my-owl-nav span {
+                margin: 0 4px;
+            }
+
+            .my-owl-nav span:hover {
+                cursor: pointer;
+                color: #ff6000;
+            }
+        </style>
+        <script>
+
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                /*navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],*/
+                navText: [
+                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+                ],
+                autoplay: true,
+                nav: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+
+
+            var selector = $('.owl-carousel');
+
+            $('.my-next-button').click(function () {
+                selector.trigger('next.owl.carousel');
+            });
+
+            $('.my-prev-button').click(function () {
+                selector.trigger('prev.owl.carousel');
+            });
+        </script>
+    </section>
+    {{--<section class="section-base" >
         <div class="container pb-0">
             <h2 class="align-center" style="color: #1d556c; "><span class="font-weight-bold"
                         style="text-decoration: underline; color: #ff6000; ">{{ count($specialSchools) }}</span> {{__('index.special_schools')}}</h2>
@@ -405,18 +462,17 @@
 
     <section class="section-base section-color align-center" style="background-color: white">
 
-<style>
-    .fa_services
-    {
-        font-size: 50px;
-        margin: 30px 0px 0px 0px;
-        color: #1d556c ;
-    }
-</style>
+        <style>
+            .fa_services {
+                font-size: 50px;
+                margin: 30px 0px 0px 0px;
+                color: #1d556c;
+            }
+        </style>
 
         <div class="container"
              @if((app()->getLocale() == 'ar'))
-        style="direction: rtl; text-align: right;">
+             style="direction: rtl; text-align: right;">
             @else
                 style="direction:ltr; text-align:left;">
             @endif
@@ -430,38 +486,44 @@
                          data-anima="fade-bottom" data-timeline="asc" data-time="1000" data-timeline-time="300">
                         <div class="grid-box">
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-ad fa_services"></i>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center" style="height: 100%"><i
+                                            class="fad fa-ad fa_services"></i>
                                     <div class="caption"><h2>{{__('index.employment_ads')}}</h2>
                                         <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-address-card fa_services"></i>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center" style="height: 100%"><i
+                                            class="fad fa-address-card fa_services"></i>
                                     <div class="caption"><h2>{{__('index.access_curriculum')}}</h2>
                                         <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-sms fa_services"></i>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center" style="height: 100%"><i
+                                            class="fad fa-sms fa_services"></i>
                                     <div class="caption"><h2>{{__('index.text_messages')}}</h2>
                                         <p></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-address-card fa_services"></i>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center" style="height: 100%"><i
+                                            class="fad fa-address-card fa_services"></i>
                                     <div class="caption"><h2>{{__('index.send_cvs')}}</h2>
                                         <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-newspaper fa_services"></i>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center" style="height: 100%"><i
+                                            class="fad fa-newspaper fa_services"></i>
                                     <div class="caption"><h2>{{__('index.news_activities')}}</h2>
                                         <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-user-plus fa_services"></i>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center" style="height: 100%"><i
+                                            class="fad fa-user-plus fa_services"></i>
                                     <div class="caption"><h2>{{__('index.Facilitate_students')}}</h2>
                                         <p></p>
                                     </div>
