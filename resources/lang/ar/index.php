@@ -3,8 +3,8 @@
 return [
 
     'education_institutions' => 'Education Institutions',
-    'no' => 'NO',
-    'results' => ' Results',
+    'no' => 'لا',
+    'results' => 'نتأج',
     'home' => 'الرئيسية',
     'News' => 'الاخبار',
     'subscription' => 'الاشتركات',
@@ -17,11 +17,20 @@ return [
     'contact_us' => 'اتصل بنا',
     'sms_platform' => 'SMS Platform',
     'services' => 'خدماتنا',
+
     'madaresona_jobs' => 'وظائف مدارسنا',
     'special_schools' => 'مدارس مميزة',
     'proud_schools' => 'نحن فخورون بكل هذه المدارس',
-    '' => '',
-    '' => '',
+
+    'employment_ads' => ' اعلانات توظيف',
+    'access_curriculum' => 'تصفح السير الذاتية للمعلمين',
+    'text_messages' => 'رسائل نصية',
+    'send_cvs' => 'ارسال السير الذاتية ',
+    'news_activities' => 'متابعة يومية للأخبار والنشاطات المدرسية',
+    'Facilitate_students' => 'تسهيل عملية التسجيل للطلبة الجدد',
+
+    'subscribe_features' => 'مزايا الاشتراك',
+    'subscribe_features_text' => 'مدارسنا هي الخدمة الأولى على مستوى الأردن وهي خدمة فعالة وشاملة ونحن نسعى من خلال هذا الموقع لربط أكبر قدر ممكن من المدارس والمراكز والمعاهد الخاصة والجامعات والوكالات التعليمية وغيرها',
     '' => '',
     '' => '',
     '' => '',

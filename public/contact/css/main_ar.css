@@ -1,0 +1,11 @@
+
+input.input100 {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 50px 0 30px;
+}
+
+.symbol-input100 {
+    padding-left: 0px;
+    padding-right: 30px;
+}

@@ -1,75 +1,73 @@
 @extends('layouts.main')
 
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-    @import url('https://fonts.googleapis.com/css?family=Domine:700');
-    body{
-        margin:0;
-        padding: 0;
-        font-family: 'Roboto', sans-serif !important;
-    }
-
-    .price-sec{
+    .price-sec {
         width: 100%;
         height: 100%;
-        box-sizing:border-box;
+        box-sizing: border-box;
         padding: 100px 0px;
     }
-    .price-sec .ptables-head{
+
+    .price-sec .ptables-head {
         font-family: 'Domine', serif;
-        box-shadow:0px 6px 14px rgba(0, 0, 0, 0.3);
-        padding:30px 0;
-        margin:0px 0px 100px 0px;
-        border-radius:3px;
-        background:linear-gradient(25deg,#feae3f 15%,transparent 0%),
-        linear-gradient(-25deg, #f321d7 15%, transparent 0%),
-        linear-gradient(-150deg, #64b5f6 15%, transparent 0%),
-        linear-gradient(150deg, #f47 15%, transparent 0%);
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+        padding: 30px 0;
+        margin: 0px 0px 100px 0px;
+        border-radius: 15px;
+        background: linear-gradient(25deg, #1d556c 15%, transparent 0%),
+        linear-gradient(-25deg, #ff6000 15%, transparent 0%),
+        linear-gradient(-150deg, #1d556c 15%, transparent 0%),
+        linear-gradient(150deg, #ff6000 15%, transparent 0%);
 
     }
-    @media all and (max-width:600px){
-        .ptables-head h1{
-            font-size:30px;
+
+    @media all and (max-width: 600px) {
+        .ptables-head h1 {
+            font-size: 30px;
         }
     }
 
 
-    .price-sec .price-table{
-        margin:5px 0px;
+    .price-sec .price-table {
+        margin: 5px 0px;
     }
-    .price-sec .price-table .card{
+
+    .price-sec .price-table .card {
         position: relative;
-        max-width:300px;
-        height:auto;
-        background: linear-gradient(-45deg, #fe0847, #feae3f);
-        border-radius:15px;
+        max-width: 330px;
+        height: auto;
+        background: #F1F5F7;
+        border-radius: 15px;
         margin: 0 auto;
         padding: 40px 20px;
-        box-shadow:0 10px 15px rgba(0,0,0,.5);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
         transition: .5s;
         overflow: hidden;
     }
-    .price-sec .price-table .card:hover{
+
+    .price-sec .price-table .card:hover {
         transform: scale(1.1);
     }
 
     .price-table:nth-child(1) .card,
-    .price-table:nth-child(1) .card .title i{
-        background: linear-gradient(-45deg, #f403d1, #64b5f6);
+    .price-table:nth-child(1) .card .title i {
+        background: #F1F5F7;
 
     }
+
     .price-table:nth-child(2) .card,
-    .price-table:nth-child(2) .card .title i{
-        background: linear-gradient(-45deg, #fe6c61, #f321d7);
+    .price-table:nth-child(2) .card .title i {
+        background:#F1F5F7;
 
     }
 
     .price-table:nth-child(3) .card,
-    .price-table:nth-child(3) .card .title i{
-        background: linear-gradient(-45deg, #24ff72, #9a4eff);
+    .price-table:nth-child(3) .card .title i {
+        background: #F1F5F7;
 
     }
-    .price-table .card:before{
+
+    .price-table .card:before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -78,147 +76,170 @@
         height: 40%;
         background: rgba(255, 255, 255, .1);
         z-index: 1;
-        transform:skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
 
     }
-    .price-table .title i{
-        color:#fff;
+
+    .price-table .title i {
+        color: #000;
         font-size: 60px;
         width: 100px;
-        height:100px;
+        height: 100px;
         border-radius: 50%;
-        text-align:center;
+        text-align: center;
         line-height: 100px;
         box-shadow: 0 10px 10px rgba(0, 0, 0, .2)
     }
-    .price-table .title h2{
+
+    .price-table .title h2 {
         position: relative;
-        margin:20px 0 0;
+        margin: 20px 0 0;
         padding: 0;
-        color:#fff;
+        color: #000;
+        font-weight: bold;
         font-size: 28px;
         z-index: 2;
     }
-    .price-table .price{
+
+    .price-table .price {
         position: relative;
         z-index: 2;
     }
-    .price-table .price h4{
-        margin:0;
+
+    .price-table .price h4 {
+        margin: 0;
         padding: 20px 0;
-        color:#fff;
+        color: #000;
         font-size: 60px;
 
     }
+
     .option {
         position: relative;
         z-index: 2;
     }
-    .option ul{
-        margin:0;
+
+    .option ul {
+        margin: 0;
         padding: 0;
 
     }
-    .option ul li{
-        margin:0 0 10px;
+
+    .option ul li {
+        margin: 0 0 10px;
         padding: 0px 15px;
         list-style: none;
-        color:#fff;
+        color: #000;
         font-size: 16px;
     }
 
-    .card a{
+    .card a {
         position: relative;
+        font-weight: bold;
         z-index: 2;
-        background: #fff;
-        color: #000;
-        width:150px;
+        background: #1e546b;
+        color: #fff;
+        width: 150px;
         height: 40px;
         line-height: 40px;
         display: block;
-        text-align:center;
-        margin:20px auto 0;
+        text-align: center;
+        margin: 20px auto 0;
         font-size: 16px;
         cursor: pointer;
         text-decoration: none;
         border-radius: 40px;
-        box-shadow:0 5px 10px rgba(0, 0, 0, .2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 
     }
-    .card a:hover{
+
+    .card a:hover {
         text-decoration: none;
+        background: #f66001;
+        color:#1e546b;
     }
 </style>
 @section('content')
 
-    <div class="container">
-        <section class="price-sec">
+    <div class="container" >
+        <section class="price-sec"
+                 @if((app()->getLocale() == 'ar'))
+                 style="direction: rtl; text-align: right;margin-bottom: 200px;">
+            @else
+                style="direction:ltr; text-align:left;margin-bottom: 200px;">
+            @endif
             <div class="container-fluid">
-                <div class="container">
+                <div class="container" style="  width: 1400px;">
                     <div class="row ptables-head">
-                        <h1 class="text-center">Pricing Tables in Bootstrap</h1>
+                        <h3 class="text-center" style="margin: 0 auto; font-weight: 600; width: 800px;">{{ __('pricing_index.pricing_text') }}</h3>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 price-table">
-                            <div class="card text-center">
+                            <div class="card text-center" style=" height: 100%;">
                                 <div class="title">
-                                    <i class="fa fa-paper-plane"></i>
-                                    <h2>Basic</h2>
+                                    <i class="fa fa-paper-plane" style="color: #f660015e;"></i>
+                                    <h2>تجريبي</h2>
                                 </div>
-                                <div class="price">
-                                    <h4><sup>$</sup>25</h4>
-                                </div>
+                                {{-- <div class="price">
+                                    <h4><sup>$</sup>500</h4>
+                                </div>--}}
                                 <div class="option">
                                     <ul>
-                                        <li><i class="fa fa-check"></i> 10 GB Space</li>
-                                        <li><i class="fa fa-check"></i> 3 Domain Names</li>
-                                        <li><i class="fa fa-check"></i> 20 Email address</li>
-                                        <li><i class="fa fa-times"></i> Live Support</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 1</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }} </li>
+                                        <li style="margin-bottom: 68px;"><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }} </li>
                                     </ul>
                                 </div>
-                                <a href="{{ route('contactUs', app()->getLocale()) }}">Order Now</a>
+                                <a href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
                             </div>
                         </div>
                         <!-- (1) ===================================-->
                         <div class="col-sm-4 price-table">
                             <div class="card text-center">
                                 <div class="title">
-                                    <i class="fa fa-plane"></i>
-                                    <h2>Standard</h2>
-                                </div>
-                                <div class="price">
-                                    <h4><sup>$</sup>35</h4>
+                                    <i class="fa fa-plane" style="color: #f6600199;"></i>
+                                    <h2>اساسي</h2>
                                 </div>
                                 <div class="option">
                                     <ul>
-                                        <li><i class="fa fa-check"></i> 10 GB Space</li>
-                                        <li><i class="fa fa-check"></i> 10 Domain Names</li>
-                                        <li><i class="fa fa-check"></i> 20 Email address</li>
-                                        <li><i class="fa fa-times"></i> Live Support</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.edit_information_profile_school') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }} </li>
                                     </ul>
                                 </div>
-                                <a href="#">Order Now</a>
+                                <a href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
                             </div>
                         </div>
                         <!-- (2) ===================================-->
                         <div class="col-sm-4 price-table">
                             <div class="card text-center">
                                 <div class="title">
-                                    <i class="fa fa-rocket"></i>
-                                    <h2>Premium</h2>
+                                    <i class="fa fa-rocket" style="color: #f66001;"></i>
+                                    <h2>متقدم</h2>
                                 </div>
-                                <div class="price">
-                                    <h4><sup>$</sup>100</h4>
-                                </div>
+
                                 <div class="option">
                                     <ul>
-                                        <li><i class="fa fa-check"></i> 10 GB Space</li>
-                                        <li><i class="fa fa-check"></i> 60 Domain Names</li>
-                                        <li><i class="fa fa-check"></i> 20 Email address</li>
-                                        <li><i class="fa fa-times"></i> Live Support</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.edit_information_profile_school') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }} </li>
+                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }} </li>
                                     </ul>
                                 </div>
-                                <a href="#">Order Now</a>
+                                <a href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
                             </div>
                         </div>
                     </div>

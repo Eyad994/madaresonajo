@@ -27,7 +27,7 @@
                         <ul class="">
                             <li class="item-133"><a class="" href=""> {{ __('index.feedback') }} </a></li>
                             <li class="item-134" ><a  class="" href="">{{ __('index.faqs') }}</a></li>
-                            <li class="item-135"><a  class="" href="">{{ __('index.contact_us') }}</a></li>
+                            <li class="item-135"><a  class="" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('index.contact_us') }}</a></li>
                         </ul>
                     </li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold">{{ __('index.sms_platform') }}</a></li>

@@ -41,9 +41,8 @@ return [
     'local_program' => 'Local Program',
 
     'more' => 'اكثر',
-
     'female' => 'انثى',
     'male' => 'ذكر',
     'mixed' => 'مختلط',
-    'share_us' => 'شركنا',
+    'share_us' => 'شركنا على',
 ];

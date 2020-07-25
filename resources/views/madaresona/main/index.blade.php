@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('sub_header')
     @include('madaresona.partials.sub_header')
-    @endsection
+@endsection
 @section('content')
     <style>
         @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
@@ -34,7 +34,7 @@
 
         /********************************/
 
-/**************************************/
+        /**************************************/
 
     </style>
 
@@ -46,12 +46,14 @@
                      style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
                     <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-left' :'rounded-right'}}">
                         <span class="d-flex align-items-center font-weight-bold">{{__('index.News')}}</span></div>
-                    <marquee class="news-scroll" behavior="scroll" direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
+                    <marquee class="news-scroll" behavior="scroll"
+                             direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
                              onmouseout="this.start();">
                         @foreach($mainNews as $news)
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
-                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}" target="_blank" class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
+                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}" target="_blank"
+                               class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
                         @endforeach
@@ -296,7 +298,12 @@
             </div>
         </div>
     </section>
-    <section class="section-base section-color" style=" ">
+    <section class="section-base section-color"
+             @if((app()->getLocale() == 'ar'))
+             style="direction: rtl; text-align: right;">
+        @else
+            style="direction:ltr; text-align:left;">
+        @endif>
 
 
         <div class="container">
@@ -338,18 +345,84 @@
                                 documentation</a></div>
                     </div>
                 </div>
+                <div class='col-lg-12  ' style="margin-top: 80px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
+                                    class="themekit-header">Superior performance<br>with great speed and high scores.
+                            </h2>
+                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
+                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
+                                lightweight plugins.</p><a class="btn-text"
+                                                           href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
+                                                           target="_blank" rel="noopener"
+                                                           data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
+                                seo score</a></div>
+                        <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img
+                                    class="margin-23" src="{{ asset('assets/images/intro/seoa6e5.png?1570696809946') }}"
+                                    alt=""
+                                    data-mce-src="images/intro/seo.png"></div>
+                    </div>
+                    <hr class="space-lg">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><img class="timer"
+                                                                                                    src="{{ asset('assets/images/intro/themekita6e5.png?1570696809946') }}"
+                                                                                                    alt=""
+                                                                                                    data-mce-src="images/intro/themekit.png">
+                        </div>
+                        <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
+                             data-time="1000"><h2 class="themekit-header">Superior documentation with<br>everything you
+                                need and more.</h2>
+                            <p>Differentely by the other templates, that are only focused on design and demos, this
+                                template is built with the developers in mind. You can customize this template truly
+                                faster and without limitations.</p><a class="btn-text"
+                                                                      href="https://themekit.dev/docs/code/main/"
+                                                                      target="_blank" rel="noopener"
+                                                                      data-mce-href="https://themekit.dev/docs/code/main/">View
+                                documentation</a></div>
+                    </div>
+                </div>
+                <div class='col-lg-12  ' style="margin-top: 80px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
+                                    class="themekit-header">Superior performance<br>with great speed and high scores.
+                            </h2>
+                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
+                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
+                                lightweight plugins.</p><a class="btn-text"
+                                                           href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
+                                                           target="_blank" rel="noopener"
+                                                           data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
+                                seo score</a></div>
+                        <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img
+                                    class="margin-23" src="{{ asset('assets/images/intro/seoa6e5.png?1570696809946') }}"
+                                    alt=""
+                                    data-mce-src="images/intro/seo.png"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section-base section-color align-center" style="background-color: white ">
+    <section class="section-base section-color align-center" style="background-color: white">
 
+<style>
+    .fa_services
+    {
+        font-size: 50px;
+        margin: 30px 0px 0px 0px;
+        color: #1d556c ;
+    }
+</style>
 
-        <div class="container">
+        <div class="container"
+             @if((app()->getLocale() == 'ar'))
+        style="direction: rtl; text-align: right;">
+            @else
+                style="direction:ltr; text-align:left;">
+            @endif
 
-            <h2 class="align-center">Lots of amazing features.</h2>
-            <p class="align-center width-650">
-                One of the most large and features rich templates on the market. </p>
+            <h2 class="align-center" style="color: #ff6000; font-weight: bold;">{{__('index.subscribe_features')}}</h2>
+            <p class="align-center width-700">{{__('index.subscribe_features_text')}}</p>
             <hr class="space"/>
             <div class="row ">
                 <div class='col-lg-12  '>
@@ -357,43 +430,40 @@
                          data-anima="fade-bottom" data-timeline="asc" data-time="1000" data-timeline-time="300">
                         <div class="grid-box">
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"><i class="im-laptop-phone">&nbsp;</i>
-                                    <div class="caption"><h2>Fully responsive</h2>
-                                        <p>Responsive on all devices with responsive settings and classes.</p></div>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-ad fa_services"></i>
+                                    <div class="caption"><h2>{{__('index.employment_ads')}}</h2>
+                                        <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"><i class="im-fountain-pen">&nbsp;</i>
-                                    <div class="caption"><h2>Colors replacement</h2>
-                                        <p>Replace all the colors of the template from one single css point.</p></div>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-address-card fa_services"></i>
+                                    <div class="caption"><h2>{{__('index.access_curriculum')}}</h2>
+                                        <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"><i
-                                            class="im-running">&nbsp;</i>
-                                    <div class="caption"><h2>Blazing Fast</h2>
-                                        <p>Superior performance, minimal js and css file sizes, great seo scores.</p>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-sms fa_services"></i>
+                                    <div class="caption"><h2>{{__('index.text_messages')}}</h2>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"><i
-                                            class="im-facebook-2">&nbsp;</i>
-                                    <div class="caption"><h2>Social feeds</h2>
-                                        <p>Facebook and Twitter social feed with slider, scroll box and more.</p></div>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-address-card fa_services"></i>
+                                    <div class="caption"><h2>{{__('index.send_cvs')}}</h2>
+                                        <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"><i
-                                            class="im-support">&nbsp;</i>
-                                    <div class="caption"><h2>Premium support</h2>
-                                        <p>Fast 24/7 premium support with 12h average max response time.</p></div>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-newspaper fa_services"></i>
+                                    <div class="caption"><h2>{{__('index.news_activities')}}</h2>
+                                        <p></p></div>
                                 </div>
                             </div>
                             <div class="grid-item anima">
-                                <div class="cnt-box cnt-box-top-icon boxed align-center"><i class="im-coding">&nbsp;</i>
-                                    <div class="caption"><h2>Developers oriented</h2>
-                                        <p>Well written codes, extensive docs, minimal input and maximum output.</p>
+                                <div class="cnt-box cnt-box-top-icon boxed align-center"style="height: 100%"><i class="fad fa-user-plus fa_services"></i>
+                                    <div class="caption"><h2>{{__('index.Facilitate_students')}}</h2>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
