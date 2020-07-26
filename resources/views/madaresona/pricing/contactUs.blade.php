@@ -45,51 +45,88 @@
                 @else
                     style="direction:ltr; text-align:left;">
                 @endif
-                <div class="" style="height: 100px;margin: 0px 100px;">
-                    <img src="{{ asset('contact/images/img-01.png') }}" alt="IMG" style="height: 100px;">
-                </div>
-
-
-                <form class="contact100-form validate-form">
+                <div class="row">
+                    <div class="col-md-4" style="bottom: 15px;">
+                        <div class="col-md-12">
+                            <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
+                            <hr>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12" style="bottom: 20px;">
+                                <h3 class="h4"><i class="fa fa-home" style="color: #ff6000"></i> العنوان</h3>
+                                <p style="margin-top: 5px;">عمان-الأردن الياسمين -شارع جبل عرفات
+                                    مجمع المحتسب التجاري- بناء رقم 83 - الطابق الثاني</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12" style="bottom: 20px;">
+                                <h3 class="h4"><i class="fa fa-phone" style="color: #ff6000"></i> الهاتف</h3>
+                                <p style="margin-top: 5px;">
+                                    962062006896
+                                    962-0797902497
+                                    962-0790452034</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12" style="bottom: 20px;">
+                                <h3 class="h4"><i class="fa fa-fax" style="color: #ff6000"></i> فاكس</h3>
+                                <p style="margin-top: 5px;">962062006896</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12" style="bottom: 20px;">
+                                <h3 class="h4"><i class="fa fa-envelope" style="color: #ff6000"></i> البريد الالكتروني</h3>
+                                <p style="margin-top: 5px;">Info@madaresonajo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <form class="contact100-form validate-form">
 					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}">
 						ارسل رسالة
 					</span>
-                     <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم بالرد في غضون 24 ساعة عمل</h4>
-                    <div class="wrap-input100 validate-input" data-validate="Name is required">
-                        <input class="input100" type="text" name="name" placeholder="الاسم">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                            <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم
+                                بالرد في غضون 24 ساعة عمل</h4>
+                            <div class="wrap-input100 validate-input" data-validate="Name is required">
+                                <input class="input100" type="text" name="name" placeholder="الاسم">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
 						</span>
-                    </div>
+                            </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                        <input class="input100" type="text" name="email_user" placeholder="الهاتف ">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                            <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                                <input class="input100" type="text" name="email_user" placeholder="الهاتف ">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
 							<i class="fad fa-phone" aria-hidden="true"></i>
 						</span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                            </div>
+                            <div class="wrap-input100 validate-input"
+                                 data-validate="Valid email is required: ex@abc.xyz">
+                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
 							<i class="fad fa-envelope" aria-hidden="true"></i>
 						</span>
-                    </div>
+                            </div>
 
 
-                    <div class="wrap-input100 validate-input" data-validate="Message is required">
-                        <textarea class="input100" name="message" placeholder="الرسالة ........"></textarea>
-                        <span class="focus-input100"></span>
-                    </div>
+                            <div class="wrap-input100 validate-input" data-validate="Message is required">
+                                <textarea class="input100" name="message" placeholder="الرسالة ..."></textarea>
+                                <span class="focus-input100"></span>
+                            </div>
 
-                    <div class="container-contact100-form-btn">
-                        <button class="contact100-form-btn">
-                            Send
-                        </button>
+                            <div class="container-contact100-form-btn">
+                                <button class="contact100-form-btn">
+                                    Send
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
+
             </div>
 
 

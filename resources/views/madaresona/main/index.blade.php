@@ -77,21 +77,22 @@
             <hr class="space"/>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="owl-carousel owl-theme">
+                    <div class="owl-carousel owl-theme" style="background: #f1f5f7;">
                         @foreach($specialSchools as $school)
-                                <div class="item">
-                                    <div class="panel panel-default">
-                                        <div class="panel-thumbnail">
-                                            <a href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_ar)) }}"
-                                               title="{{ $school->name_ar }}" class="thumb">
-                                                <img class="img-fluid mx-auto d-block z-depth-3 rounded"
-                                                     style="width: 200px; height: 200px;    border: 1px #f1f4f9 solid;  webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);}"
-                                                     src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/{{ $school->school_logo }}"
-                                                     alt="slide 1">
-                                            </a>
-                                        </div>
+                            <div class="col-md-10" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                                <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
+                                     style="border: 1px #f1f4f9 solid">
+                                    <a class="img-box show-school" id="{{ $school->id }}"
+                                       href="school/{{ preg_replace('/[ ]+/', '-', trim($school->name_en)) }}"
+                                       slug="{{ preg_replace('/[ ]+/', '-', trim($school->name_en)) }}">
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
+                                             alt="" style="width: 200px; height: 200px">
+                                    </a>
+                                    <div class="caption">
+                                        <p style="text-align: center;">{{ $school->name_ar }}</p>
                                     </div>
                                 </div>
+                            </div>
                         @endforeach
                     </div>
                     <div class="my-owl-nav">

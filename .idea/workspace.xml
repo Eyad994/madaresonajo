@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11d15d7e-b626-418f-93fa-37cb882a71ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/madaresonajo.iml" afterPath="$PROJECT_DIR$/.idea/madaresonajo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,44 +32,75 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="64" column="43" lean-forward="false" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+            <state relative-caret-position="236">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="47" column="102" lean-forward="false" selection-start-line="47" selection-start-column="102" selection-end-line="47" selection-end-column="102" />
+            <state relative-caret-position="272">
+              <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
               <folding>
                 <element signature="e#1001#1095#0#HTML" expanded="true" />
                 <element signature="e#1375#1397#0#HTML" expanded="true" />
                 <element signature="e#2967#2991#0#HTML" expanded="true" />
                 <element signature="e#3091#3143#0#HTML" expanded="true" />
-                <element signature="e#4092#4316#0#HTML" expanded="true" />
-                <element signature="e#11624#11661#0#HTML" expanded="true" />
-                <element signature="e#11695#11734#0#HTML" expanded="true" />
-                <element signature="e#12294#12326#0#HTML" expanded="true" />
-                <element signature="e#12549#12574#0#HTML" expanded="true" />
-                <element signature="e#12752#12785#0#HTML" expanded="true" />
-                <element signature="e#13256#13291#0#HTML" expanded="true" />
-                <element signature="e#13423#13450#0#HTML" expanded="true" />
-                <element signature="e#13885#13909#0#HTML" expanded="true" />
-                <element signature="e#18171#18260#0#HTML" expanded="true" />
-                <element signature="e#21635#21660#0#HTML" expanded="true" />
-                <element signature="e#24844#24869#0#HTML" expanded="true" />
-                <element signature="e#26420#26451#0#HTML" expanded="true" />
-                <element signature="e#26680#26769#0#HTML" expanded="true" />
-                <element signature="e#26903#26945#0#HTML" expanded="true" />
-                <element signature="e#27588#27608#0#HTML" expanded="true" />
-                <element signature="e#28063#28083#0#HTML" expanded="true" />
-                <element signature="e#28551#28571#0#HTML" expanded="true" />
-                <element signature="e#29063#29083#0#HTML" expanded="true" />
-                <element signature="e#29542#29562#0#HTML" expanded="true" />
-                <element signature="e#30025#30045#0#HTML" expanded="true" />
+                <element signature="e#3469#3497#0#HTML" expanded="true" />
+                <element signature="e#3611#3636#0#HTML" expanded="true" />
+                <element signature="e#3822#3855#0#HTML" expanded="true" />
+                <element signature="e#4346#4381#0#HTML" expanded="true" />
+                <element signature="e#4525#4552#0#HTML" expanded="true" />
+                <element signature="e#11621#11658#0#HTML" expanded="true" />
+                <element signature="e#11692#11731#0#HTML" expanded="true" />
+                <element signature="e#12291#12323#0#HTML" expanded="true" />
+                <element signature="e#12546#12571#0#HTML" expanded="true" />
+                <element signature="e#12749#12782#0#HTML" expanded="true" />
+                <element signature="e#13253#13288#0#HTML" expanded="true" />
+                <element signature="e#13420#13447#0#HTML" expanded="true" />
+                <element signature="e#13882#13906#0#HTML" expanded="true" />
+                <element signature="e#18168#18257#0#HTML" expanded="true" />
+                <element signature="e#21632#21657#0#HTML" expanded="true" />
+                <element signature="e#24841#24866#0#HTML" expanded="true" />
+                <element signature="e#26417#26448#0#HTML" expanded="true" />
+                <element signature="e#26677#26766#0#HTML" expanded="true" />
+                <element signature="e#26900#26942#0#HTML" expanded="true" />
+                <element signature="e#27585#27605#0#HTML" expanded="true" />
+                <element signature="e#28060#28080#0#HTML" expanded="true" />
+                <element signature="e#28548#28568#0#HTML" expanded="true" />
+                <element signature="e#29060#29080#0#HTML" expanded="true" />
+                <element signature="e#29539#29559#0#HTML" expanded="true" />
+                <element signature="e#30022#30042#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contactUs.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+              <folding>
+                <element signature="e#2431#2524#0#HTML" expanded="true" />
+                <element signature="e#2708#2729#0#HTML" expanded="true" />
+                <element signature="e#2859#2880#0#HTML" expanded="true" />
+                <element signature="e#3060#3081#0#HTML" expanded="true" />
+                <element signature="e#3152#3174#0#HTML" expanded="true" />
+                <element signature="e#3228#3252#0#HTML" expanded="true" />
+                <element signature="e#3550#3571#0#HTML" expanded="true" />
+                <element signature="e#3643#3665#0#HTML" expanded="true" />
+                <element signature="e#3718#3742#0#HTML" expanded="true" />
+                <element signature="e#4069#4090#0#HTML" expanded="true" />
+                <element signature="e#4160#4182#0#HTML" expanded="true" />
+                <element signature="e#4233#4257#0#HTML" expanded="true" />
+                <element signature="e#4445#4466#0#HTML" expanded="true" />
+                <element signature="e#4541#4563#0#HTML" expanded="true" />
+                <element signature="e#4627#4651#0#HTML" expanded="true" />
+                <element signature="e#4887#7255#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>carousel</find>
       <find>schoolType</find>
       <find>institutions</find>
       <find>@meda</find>
@@ -119,6 +149,7 @@
       <find>carouselIndex</find>
       <find>marquee</find>
       <find>d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news rounded-right</find>
+      <find>special</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Eyad\Documents\Laravel Projects\madaresonajo\resources\views</dir>
@@ -179,10 +210,10 @@
         <option value="$PROJECT_DIR$/resources/views/madaresona/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/index.blade.php" />
         <option value="$PROJECT_DIR$/public/contact/css/main.css" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/custom_ar.css" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
       </list>
     </option>
   </component>
@@ -486,56 +517,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madaresonajo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madaresonajo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contact" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madaresonajo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madaresonajo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madaresonajo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madaresonajo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -742,12 +723,12 @@
       <workItem from="1595544009308" duration="8572000" />
       <workItem from="1595624980605" duration="5192000" />
       <workItem from="1595682722107" duration="32000" />
-      <workItem from="1595714814835" duration="2645000" />
+      <workItem from="1595714814835" duration="5319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157081000" />
+    <option name="totallyTimeSpent" value="159755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1051,14 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PricingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/contact/vendor/tilt/tilt.jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1073,13 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -1091,22 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="64" column="43" lean-forward="false" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,36 +1075,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PricingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="47" column="102" lean-forward="false" selection-start-line="47" selection-start-column="102" selection-end-line="47" selection-end-column="102" />
+        <state relative-caret-position="272">
+          <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
           <folding>
             <element signature="e#1001#1095#0#HTML" expanded="true" />
             <element signature="e#1375#1397#0#HTML" expanded="true" />
             <element signature="e#2967#2991#0#HTML" expanded="true" />
             <element signature="e#3091#3143#0#HTML" expanded="true" />
-            <element signature="e#4092#4316#0#HTML" expanded="true" />
-            <element signature="e#11624#11661#0#HTML" expanded="true" />
-            <element signature="e#11695#11734#0#HTML" expanded="true" />
-            <element signature="e#12294#12326#0#HTML" expanded="true" />
-            <element signature="e#12549#12574#0#HTML" expanded="true" />
-            <element signature="e#12752#12785#0#HTML" expanded="true" />
-            <element signature="e#13256#13291#0#HTML" expanded="true" />
-            <element signature="e#13423#13450#0#HTML" expanded="true" />
-            <element signature="e#13885#13909#0#HTML" expanded="true" />
-            <element signature="e#18171#18260#0#HTML" expanded="true" />
-            <element signature="e#21635#21660#0#HTML" expanded="true" />
-            <element signature="e#24844#24869#0#HTML" expanded="true" />
-            <element signature="e#26420#26451#0#HTML" expanded="true" />
-            <element signature="e#26680#26769#0#HTML" expanded="true" />
-            <element signature="e#26903#26945#0#HTML" expanded="true" />
-            <element signature="e#27588#27608#0#HTML" expanded="true" />
-            <element signature="e#28063#28083#0#HTML" expanded="true" />
-            <element signature="e#28551#28571#0#HTML" expanded="true" />
-            <element signature="e#29063#29083#0#HTML" expanded="true" />
-            <element signature="e#29542#29562#0#HTML" expanded="true" />
-            <element signature="e#30025#30045#0#HTML" expanded="true" />
+            <element signature="e#3469#3497#0#HTML" expanded="true" />
+            <element signature="e#3611#3636#0#HTML" expanded="true" />
+            <element signature="e#3822#3855#0#HTML" expanded="true" />
+            <element signature="e#4346#4381#0#HTML" expanded="true" />
+            <element signature="e#4525#4552#0#HTML" expanded="true" />
+            <element signature="e#11621#11658#0#HTML" expanded="true" />
+            <element signature="e#11692#11731#0#HTML" expanded="true" />
+            <element signature="e#12291#12323#0#HTML" expanded="true" />
+            <element signature="e#12546#12571#0#HTML" expanded="true" />
+            <element signature="e#12749#12782#0#HTML" expanded="true" />
+            <element signature="e#13253#13288#0#HTML" expanded="true" />
+            <element signature="e#13420#13447#0#HTML" expanded="true" />
+            <element signature="e#13882#13906#0#HTML" expanded="true" />
+            <element signature="e#18168#18257#0#HTML" expanded="true" />
+            <element signature="e#21632#21657#0#HTML" expanded="true" />
+            <element signature="e#24841#24866#0#HTML" expanded="true" />
+            <element signature="e#26417#26448#0#HTML" expanded="true" />
+            <element signature="e#26677#26766#0#HTML" expanded="true" />
+            <element signature="e#26900#26942#0#HTML" expanded="true" />
+            <element signature="e#27585#27605#0#HTML" expanded="true" />
+            <element signature="e#28060#28080#0#HTML" expanded="true" />
+            <element signature="e#28548#28568#0#HTML" expanded="true" />
+            <element signature="e#29060#29080#0#HTML" expanded="true" />
+            <element signature="e#29539#29559#0#HTML" expanded="true" />
+            <element signature="e#30022#30042#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+          <folding>
+            <element signature="e#2431#2524#0#HTML" expanded="true" />
+            <element signature="e#2708#2729#0#HTML" expanded="true" />
+            <element signature="e#2859#2880#0#HTML" expanded="true" />
+            <element signature="e#3060#3081#0#HTML" expanded="true" />
+            <element signature="e#3152#3174#0#HTML" expanded="true" />
+            <element signature="e#3228#3252#0#HTML" expanded="true" />
+            <element signature="e#3550#3571#0#HTML" expanded="true" />
+            <element signature="e#3643#3665#0#HTML" expanded="true" />
+            <element signature="e#3718#3742#0#HTML" expanded="true" />
+            <element signature="e#4069#4090#0#HTML" expanded="true" />
+            <element signature="e#4160#4182#0#HTML" expanded="true" />
+            <element signature="e#4233#4257#0#HTML" expanded="true" />
+            <element signature="e#4445#4466#0#HTML" expanded="true" />
+            <element signature="e#4541#4563#0#HTML" expanded="true" />
+            <element signature="e#4627#4651#0#HTML" expanded="true" />
+            <element signature="e#4887#7255#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
