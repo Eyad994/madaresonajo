@@ -32,6 +32,13 @@
             margin: 0 10px;
         }
 
+        .selected_education {
+            background: #f1f5f7;
+            padding: 20px 30px;
+            border-radius: 10px !important;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
+        }
+
         /********************************/
 
         /**************************************/
@@ -45,8 +52,10 @@
                 <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
                      style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
                     <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-left' :'rounded-right'}}">
-                        <span class="d-flex align-items-center font-weight-bold" style="height: 100px;">{{__('index.News')}}</span></div>
-                    <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();"
+                        <span class="d-flex align-items-center font-weight-bold"
+                              style="height: 100px;">{{__('index.News')}}</span></div>
+                    <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
+                             onmouseover="this.stop();" onmouseout="this.start();"
                              direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
                              onmouseout="this.start();">
                         @foreach($mainNews as $news)
@@ -78,9 +87,11 @@
             <hr class="space"/>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="owl-carousel owl-theme" style="background: #f1f5f7;">
+                    <div class="owl-carousel owl-theme"
+                         style="background: #f1f5f7; box-shadow: 0 10px 15px rgba(0, 0, 0, .5); border-radius: 10px; ">
                         @foreach($specialSchools as $school)
-                            <div class="col-md-10" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                            <div class="col-md-10"
+                                 style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
                                 <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
                                      style="border: 1px #f1f4f9 solid">
                                     <a class="img-box show-school" id="{{ $school->id }}"
@@ -227,12 +238,17 @@
     </section>--}}
     <section class="section-base">
         <div class="container">
-            <hr>
+            <hr style="margin: 0px;">
         </div>
         <h2 class="align-center">
             <div class="row">
                 <div class="col-md-4"></div>
-                <div class="col-md-4">
+                <div class="col-md-4 selected_education"
+                     @if((app()->getLocale() == 'ar'))
+                     style="direction: rtl; text-align: right;">
+                    @else
+                        style="direction:ltr; text-align:left;">
+                    @endif
                     <select name="schoolType" id="schoolType" class="form-control"
                             style="font-size: 15px;padding: 1px;">
                         <option style="color: #000; font-weight: bold;" disabled
@@ -275,18 +291,23 @@
         </div>
     </section>
 
-    <section class="section-base section-color" style="margin-top: 20px">
+    <section class="section-base section-color" style="margin-top: 20px ">
 
-        <div class="container">
+        <div class="container"
+             @if((app()->getLocale() == 'ar'))
+             style="direction: rtl; text-align: right;">
+            @else
+                style="direction:ltr; text-align:left;">
+            @endif
 
             <div class="row ">
                 <div class='col-lg-12'>
                     <table class="table table-grid table-border align-center table-full-border table-md-6 mce-item-table">
                         <tbody>
                         <tr>
-                            <td>
+                            <td >
                                 <div class="counter counter-icon">
-                                    <div><h3>Happy customers</h3>
+                                    <div><h3>{{__('index.private_schools')}}</h3>
                                         <div class="value text-lg"><span data-to="9000" data-speed="3000">9000</span>
                                             <span> </span></div>
                                     </div>
@@ -294,7 +315,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Landing pages</h3>
+                                    <div><h3>{{__('index.colleges_universities')}}</h3>
                                         <div class="value text-lg"><span data-to="9" data-speed="3000">9</span>
                                             <span> </span></div>
                                     </div>
@@ -302,7 +323,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Premium components</h3>
+                                    <div><h3>{{__('index.kindergartens')}}</h3>
                                         <div class="value text-lg"><span data-to="80" data-speed="3000">80</span>
                                             <span> </span></div>
                                     </div>
@@ -310,7 +331,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Navigation menus</h3>
+                                    <div><h3>{{__('index.nurseries')}}</h3>
                                         <div class="value text-lg"><span data-to="10" data-speed="3000">10</span>
                                             <span> </span></div>
                                     </div>
@@ -320,7 +341,7 @@
                         <tr>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Options</h3>
+                                    <div><h3>{{__('index.training_consulting')}}</h3>
                                         <div class="value text-lg"><span data-to="500" data-speed="3000">500</span>
                                             <span> </span></div>
                                     </div>
@@ -328,7 +349,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Documentation pages</h3>
+                                    <div><h3>{{__('index.learning_difficulties')}}</h3>
                                         <div class="value text-lg"><span data-to="64" data-speed="3000">64</span>
                                             <span> </span></div>
                                     </div>
@@ -336,7 +357,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Photoshop files</h3>
+                                    <div><h3>{{__('index.suppliers')}}</h3>
                                         <div class="value text-lg"><span data-to="25" data-speed="3000">25</span>
                                             <span> </span></div>
                                     </div>
@@ -344,9 +365,9 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>Responsive</h3>
+                                    <div><h3>{{__('index.visitors')}}</h3>
                                         <div class="value text-lg"><span data-to="100" data-speed="3000">100</span>
-                                            <span>%</span></div>
+                                            <span></span></div>
                                     </div>
                                 </div>
                             </td>
@@ -357,107 +378,86 @@
             </div>
         </div>
     </section>
-    <section class="section-base section-color"
+    <section class="section-base section-color "
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">
         @else
             style="direction:ltr; text-align:left;">
-        @endif>
-
-
+        @endif
         <div class="container">
-
+            <style>
+                .img_services {
+                    box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
+                    border: 2px solid #fff;
+                    border-radius: 10px !important;
+                }
+            </style>
             <div class="row ">
-                <div class='col-lg-12  '>
-                    <div class="row align-items-center">
+                <div class='col-lg-12 '   >
+                    <div class="row align-items-center" style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
-                                    class="themekit-header">Superior performance<br>with great speed and high scores.
-                            </h2>
+                                    class="themekit-header">{{__('index.text_messages')}}</h2>
                             <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
                                 to minimize the file size of scripts and styles and to avoid redundante codes. Only
-                                lightweight plugins.</p><a class="btn-text"
-                                                           href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
-                                                           target="_blank" rel="noopener"
-                                                           data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
-                                seo score</a></div>
+                                lightweight plugins.</p>
+                            {{-- <a class="btn-text"
+                                href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
+                                target="_blank" rel="noopener"
+                                data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
+                                 seo score</a>--}}</div>
                         <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img
-                                    class="margin-23" src="{{ asset('assets/images/intro/seoa6e5.png?1570696809946') }}"
+                                    class="margin-23 img_services" src="{{ asset('assets/images/services_1.png') }}"
+                                    alt=""
+                                    data-mce-src="images/intro/seo.png"></div>
+                    </div>
+                    <hr class="space-lg">
+                    <div class="row align-items-center" >
+                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000">
+                            <img
+                                    class="timer img_services"
+                                    src="{{ asset('assets/images/services_3.png') }}"
+                                    alt=""
+                                    data-mce-src="images/intro/themekit.png">
+                        </div>
+                        <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
+                             data-time="1000"><h2
+                                    class="themekit-header">{{__('index.school_administration_systems')}}</h2>
+                            <p>Differentely by the other templates, that are only focused on design and demos, this
+                                template is built with the developers in mind. You can customize this template truly
+                                faster and without limitations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-lg-12  ' style="margin-top: 80px; ">
+                    <div class="row align-items-center" style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
+                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000">
+                            <h2 class="themekit-header">{{__('index.website_design')}}</h2>
+                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
+                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
+                                lightweight plugins.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000">
+                            <img
+                                    class="margin-23 img_services" src="{{ asset('assets/images/services_2.png') }}"
                                     alt=""
                                     data-mce-src="images/intro/seo.png"></div>
                     </div>
                     <hr class="space-lg">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><img class="timer"
-                                                                                                    src="{{ asset('assets/images/intro/themekita6e5.png?1570696809946') }}"
-                                                                                                    alt=""
-                                                                                                    data-mce-src="images/intro/themekit.png">
+                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><img
+                                    class="timer img_services"
+                                    src="{{ asset('assets/images/services_4.png') }}"
+                                    alt=""
+                                    data-mce-src="images/intro/themekit.png">
                         </div>
                         <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
-                             data-time="1000"><h2 class="themekit-header">Superior documentation with<br>everything you
-                                need and more.</h2>
+                             data-time="1000"><h2 class="themekit-header">{{__('index.social_media')}}</h2>
                             <p>Differentely by the other templates, that are only focused on design and demos, this
                                 template is built with the developers in mind. You can customize this template truly
-                                faster and without limitations.</p><a class="btn-text"
-                                                                      href="https://themekit.dev/docs/code/main/"
-                                                                      target="_blank" rel="noopener"
-                                                                      data-mce-href="https://themekit.dev/docs/code/main/">View
-                                documentation</a></div>
+                                faster and without limitations.</p></div>
                     </div>
                 </div>
-                <div class='col-lg-12  ' style="margin-top: 80px;">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
-                                    class="themekit-header">Superior performance<br>with great speed and high scores.
-                            </h2>
-                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
-                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
-                                lightweight plugins.</p><a class="btn-text"
-                                                           href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
-                                                           target="_blank" rel="noopener"
-                                                           data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
-                                seo score</a></div>
-                        <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img
-                                    class="margin-23" src="{{ asset('assets/images/intro/seoa6e5.png?1570696809946') }}"
-                                    alt=""
-                                    data-mce-src="images/intro/seo.png"></div>
-                    </div>
-                    <hr class="space-lg">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><img class="timer"
-                                                                                                    src="{{ asset('assets/images/intro/themekita6e5.png?1570696809946') }}"
-                                                                                                    alt=""
-                                                                                                    data-mce-src="images/intro/themekit.png">
-                        </div>
-                        <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
-                             data-time="1000"><h2 class="themekit-header">Superior documentation with<br>everything you
-                                need and more.</h2>
-                            <p>Differentely by the other templates, that are only focused on design and demos, this
-                                template is built with the developers in mind. You can customize this template truly
-                                faster and without limitations.</p><a class="btn-text"
-                                                                      href="https://themekit.dev/docs/code/main/"
-                                                                      target="_blank" rel="noopener"
-                                                                      data-mce-href="https://themekit.dev/docs/code/main/">View
-                                documentation</a></div>
-                    </div>
-                </div>
-                <div class='col-lg-12  ' style="margin-top: 80px;">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
-                                    class="themekit-header">Superior performance<br>with great speed and high scores.
-                            </h2>
-                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
-                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
-                                lightweight plugins.</p><a class="btn-text"
-                                                           href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
-                                                           target="_blank" rel="noopener"
-                                                           data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
-                                seo score</a></div>
-                        <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img
-                                    class="margin-23" src="{{ asset('assets/images/intro/seoa6e5.png?1570696809946') }}"
-                                    alt=""
-                                    data-mce-src="images/intro/seo.png"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

@@ -2,9 +2,9 @@
 
 return [
 
-    'education_institutions' => 'Education Institutions',
+    'education_institutions' => 'المؤسسات التعليمية',
     'no' => 'لا',
-    'results' => 'نتأج',
+    'results' => ' يوجد نتيجة',
     'home' => 'الرئيسية',
     'News' => 'الاخبار',
     'subscription' => 'الاشتركات',
@@ -31,21 +31,25 @@ return [
 
     'subscribe_features' => 'مزايا الاشتراك',
     'subscribe_features_text' => 'مدارسنا هي الخدمة الأولى على مستوى الأردن وهي خدمة فعالة وشاملة ونحن نسعى من خلال هذا الموقع لربط أكبر قدر ممكن من المدارس والمراكز والمعاهد الخاصة والجامعات والوكالات التعليمية وغيرها',
+    'prev' => 'السابق',
+    'next' => 'التالي',
+
+    'text_messages' => 'الرسائل النصية',
+    'school_administration_systems' => 'انظمة الادارة المدرسية',
+    'website_design' => 'تصميم المواقع الالكترونية',
+    'social_media' => 'السوشل ميديا',
+
+    'private_schools' => 'مدارس خاصة',
+    'colleges_universities' => 'كليات و جامعات',
+    'kindergartens' => 'رياض الأطفال',
+    'nurseries' => 'حضانات',
+    'training_consulting' => 'تدريب واستشارات',
+    'learning_difficulties' => 'تدريب واستشارات',
+
+    'suppliers' => 'موردين',
+    'visitors' => ' الزوار',
     '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
+
     '' => '',
     '' => '',
     '' => '',
