@@ -4,7 +4,6 @@
     <list default="true" id="11d15d7e-b626-418f-93fa-37cb882a71ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,76 +31,29 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="219">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-              <folding>
-                <element signature="e#1001#1095#0#HTML" expanded="true" />
-                <element signature="e#1375#1397#0#HTML" expanded="true" />
-                <element signature="e#2967#2991#0#HTML" expanded="true" />
-                <element signature="e#3091#3143#0#HTML" expanded="true" />
-                <element signature="e#3469#3497#0#HTML" expanded="true" />
-                <element signature="e#3611#3636#0#HTML" expanded="true" />
-                <element signature="e#3822#3855#0#HTML" expanded="true" />
-                <element signature="e#4346#4381#0#HTML" expanded="true" />
-                <element signature="e#4525#4552#0#HTML" expanded="true" />
-                <element signature="e#11621#11658#0#HTML" expanded="true" />
-                <element signature="e#11692#11731#0#HTML" expanded="true" />
-                <element signature="e#12291#12323#0#HTML" expanded="true" />
-                <element signature="e#12546#12571#0#HTML" expanded="true" />
-                <element signature="e#12749#12782#0#HTML" expanded="true" />
-                <element signature="e#13253#13288#0#HTML" expanded="true" />
-                <element signature="e#13420#13447#0#HTML" expanded="true" />
-                <element signature="e#13882#13906#0#HTML" expanded="true" />
-                <element signature="e#18168#18257#0#HTML" expanded="true" />
-                <element signature="e#21632#21657#0#HTML" expanded="true" />
-                <element signature="e#24841#24866#0#HTML" expanded="true" />
-                <element signature="e#26417#26448#0#HTML" expanded="true" />
-                <element signature="e#26677#26766#0#HTML" expanded="true" />
-                <element signature="e#26900#26942#0#HTML" expanded="true" />
-                <element signature="e#27585#27605#0#HTML" expanded="true" />
-                <element signature="e#28060#28080#0#HTML" expanded="true" />
-                <element signature="e#28548#28568#0#HTML" expanded="true" />
-                <element signature="e#29060#29080#0#HTML" expanded="true" />
-                <element signature="e#29539#29559#0#HTML" expanded="true" />
-                <element signature="e#30022#30042#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contactUs.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contactUs.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
-              <folding>
-                <element signature="e#2431#2524#0#HTML" expanded="true" />
-                <element signature="e#2708#2729#0#HTML" expanded="true" />
-                <element signature="e#2859#2880#0#HTML" expanded="true" />
-                <element signature="e#3060#3081#0#HTML" expanded="true" />
-                <element signature="e#3152#3174#0#HTML" expanded="true" />
-                <element signature="e#3228#3252#0#HTML" expanded="true" />
-                <element signature="e#3550#3571#0#HTML" expanded="true" />
-                <element signature="e#3643#3665#0#HTML" expanded="true" />
-                <element signature="e#3718#3742#0#HTML" expanded="true" />
-                <element signature="e#4069#4090#0#HTML" expanded="true" />
-                <element signature="e#4160#4182#0#HTML" expanded="true" />
-                <element signature="e#4233#4257#0#HTML" expanded="true" />
-                <element signature="e#4445#4466#0#HTML" expanded="true" />
-                <element signature="e#4541#4563#0#HTML" expanded="true" />
-                <element signature="e#4627#4651#0#HTML" expanded="true" />
-                <element signature="e#4887#7255#0#HTML" expanded="false" />
-              </folding>
+            <state relative-caret-position="261">
+              <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -212,8 +164,8 @@
         <option value="$PROJECT_DIR$/public/contact/css/main.css" />
         <option value="$PROJECT_DIR$/public/assets/css/custom_ar.css" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
       </list>
     </option>
   </component>
@@ -222,6 +174,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
@@ -347,8 +302,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -723,18 +678,19 @@
       <workItem from="1595544009308" duration="8572000" />
       <workItem from="1595624980605" duration="5192000" />
       <workItem from="1595682722107" duration="32000" />
-      <workItem from="1595714814835" duration="5319000" />
+      <workItem from="1595714814835" duration="5412000" />
+      <workItem from="1595740535697" duration="131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159755000" />
+    <option name="totallyTimeSpent" value="159979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33742005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3411514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2383532" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1075,22 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PricingController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1099,66 +1039,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding>
-            <element signature="e#1001#1095#0#HTML" expanded="true" />
-            <element signature="e#1375#1397#0#HTML" expanded="true" />
-            <element signature="e#2967#2991#0#HTML" expanded="true" />
-            <element signature="e#3091#3143#0#HTML" expanded="true" />
-            <element signature="e#3469#3497#0#HTML" expanded="true" />
-            <element signature="e#3611#3636#0#HTML" expanded="true" />
-            <element signature="e#3822#3855#0#HTML" expanded="true" />
-            <element signature="e#4346#4381#0#HTML" expanded="true" />
-            <element signature="e#4525#4552#0#HTML" expanded="true" />
-            <element signature="e#11621#11658#0#HTML" expanded="true" />
-            <element signature="e#11692#11731#0#HTML" expanded="true" />
-            <element signature="e#12291#12323#0#HTML" expanded="true" />
-            <element signature="e#12546#12571#0#HTML" expanded="true" />
-            <element signature="e#12749#12782#0#HTML" expanded="true" />
-            <element signature="e#13253#13288#0#HTML" expanded="true" />
-            <element signature="e#13420#13447#0#HTML" expanded="true" />
-            <element signature="e#13882#13906#0#HTML" expanded="true" />
-            <element signature="e#18168#18257#0#HTML" expanded="true" />
-            <element signature="e#21632#21657#0#HTML" expanded="true" />
-            <element signature="e#24841#24866#0#HTML" expanded="true" />
-            <element signature="e#26417#26448#0#HTML" expanded="true" />
-            <element signature="e#26677#26766#0#HTML" expanded="true" />
-            <element signature="e#26900#26942#0#HTML" expanded="true" />
-            <element signature="e#27585#27605#0#HTML" expanded="true" />
-            <element signature="e#28060#28080#0#HTML" expanded="true" />
-            <element signature="e#28548#28568#0#HTML" expanded="true" />
-            <element signature="e#29060#29080#0#HTML" expanded="true" />
-            <element signature="e#29539#29559#0#HTML" expanded="true" />
-            <element signature="e#30022#30042#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
-          <folding>
-            <element signature="e#2431#2524#0#HTML" expanded="true" />
-            <element signature="e#2708#2729#0#HTML" expanded="true" />
-            <element signature="e#2859#2880#0#HTML" expanded="true" />
-            <element signature="e#3060#3081#0#HTML" expanded="true" />
-            <element signature="e#3152#3174#0#HTML" expanded="true" />
-            <element signature="e#3228#3252#0#HTML" expanded="true" />
-            <element signature="e#3550#3571#0#HTML" expanded="true" />
-            <element signature="e#3643#3665#0#HTML" expanded="true" />
-            <element signature="e#3718#3742#0#HTML" expanded="true" />
-            <element signature="e#4069#4090#0#HTML" expanded="true" />
-            <element signature="e#4160#4182#0#HTML" expanded="true" />
-            <element signature="e#4233#4257#0#HTML" expanded="true" />
-            <element signature="e#4445#4466#0#HTML" expanded="true" />
-            <element signature="e#4541#4563#0#HTML" expanded="true" />
-            <element signature="e#4627#4651#0#HTML" expanded="true" />
-            <element signature="e#4887#7255#0#HTML" expanded="false" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
