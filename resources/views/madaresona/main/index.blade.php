@@ -378,7 +378,7 @@
             </div>
         </div>
     </section>
-    <section class="section-base section-color "
+    <section class="section-base section-color " id="services"
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">
         @else
@@ -472,7 +472,7 @@
             }
         </style>
 
-        <div class="container"
+        <div class="container" id="subscribe_features"
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">
             @else

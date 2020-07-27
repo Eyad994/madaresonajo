@@ -28,6 +28,11 @@ Route::group([
 
     Route::post('search', 'HomeController@search')->name('search');
     Route::get('institutions/{id}', 'HomeController@educationalInstitutions')->name('institutions');
+    Route::get('news', 'SchoolController@news')->name('news');
+    Route::get('newSubscription', 'SchoolController@newSubscription')->name('newSubscription');
+    Route::post('newSubscription', 'SchoolController@storeNewSubscription')->name('newSubscription');
+    Route::get('newSuggestion', 'SchoolController@newSuggestion')->name('newSuggestion');
+    Route::post('newSuggestion', 'SchoolController@storeNewSuggestion')->name('newSuggestion');
 
     /******************************************************/
     Route::prefix('school')->group(function () {

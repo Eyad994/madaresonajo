@@ -15,23 +15,23 @@
                 <ul class="menu-mp">
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold"  href="{{ route('home') }}"> {{ __('index.home') }}</a></li>
 
-                    <li class="item-129 "><a class=" js-activated bt-white font-weight-bold">{{ __('index.News') }}</a></li>
+                    <li class="item-129 "><a href="{{ route('news', app()->getLocale()) }}" class=" js-activated bt-white font-weight-bold">{{ __('index.News') }}</a></li>
                     <li class="item-130   dropdown"><a class=" js-activated bt-white font-weight-bold">{{ __('index.subscription') }}</a>
                         <ul class="">
-                            <li class="item-133"><a class="" href=""> {{ __('index.membership_Benefits_classic') }}</a></li>
+                            <li class="item-133"><a class="" href="#subscribe_features"> {{ __('index.membership_Benefits_classic') }}</a></li>
                             <li class="item-134" ><a  class="" href="{{ route('pricing', app()->getLocale()) }}">{{ __('index.fees_and_payment_methods_gird') }}</a></li>
-                            <li class="item-135"><a  class="" href=""> {{ __('index.new_subscribers_post') }}</a></li>
+                            <li class="item-135"><a  class="" href="{{ route('newSubscription', app()->getLocale()) }}"> {{ __('index.new_subscribers_post') }}</a></li>
                         </ul>
                     </li>
                     <li class="item-131   dropdown"><a class=" js-activated bt-white font-weight-bold">{{ __('index.help') }}</a>
                         <ul class="">
-                            <li class="item-133"><a class="" href=""> {{ __('index.feedback') }} </a></li>
+                            <li class="item-133"><a class="" href="{{ route('newSuggestion', app()->getLocale()) }}"> {{ __('index.feedback') }} </a></li>
                             <li class="item-134" ><a  class="" href="">{{ __('index.faqs') }}</a></li>
                             <li class="item-135"><a  class="" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('index.contact_us') }}</a></li>
                         </ul>
                     </li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold">{{ __('index.sms_platform') }}</a></li>
-                    <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
+                    <li class="item-101 selected "><a href="#services" class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold">{{ __('index.madaresona_jobs') }}</a></li>
 
                 </ul>

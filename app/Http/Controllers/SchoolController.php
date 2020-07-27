@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\GallarySchool;
 use App\Models\News;
 use App\Models\Premium;
+use App\Models\Requests;
 use App\Models\School;
+use App\Models\Suggestion;
 use App\Models\Transportation;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class SchoolController extends Controller
 {
-    public function show($lang ,$slug)
+    public function show($lang, $slug)
     {
 
         $cleanSlug = str_replace('-', ' ', $slug);
@@ -26,8 +29,7 @@ class SchoolController extends Controller
         $newsArray = News::where('active', 1)->where('user_id', $school->user_id)->latest()->get();
 
         $news = array();
-        foreach ($newsArray as $key => $index)
-        {
+        foreach ($newsArray as $key => $index) {
             $data['id'] = $index['id'];
             $data['user_id'] = $index['user_id'];
             $data['user_type'] = $index['user_type'];
@@ -45,8 +47,7 @@ class SchoolController extends Controller
             $data['updated_at'] = $index['updated_at'];
 
 
-            if ($data['created_at'] > Carbon::now())
-            {
+            if ($data['created_at'] > Carbon::now()) {
                 array_push($news, $data);
             }
 
@@ -55,10 +56,10 @@ class SchoolController extends Controller
         $transportations = Transportation::where('school_id', $school->id)->get();
         $premiums = Premium::where('school_id', $school->id)->get();
 
-        return view('madaresona.main.show', compact('school', 'gallery', 'news', 'transportations', 'premiums','genderSchool'));
+        return view('madaresona.main.show', compact('school', 'gallery', 'news', 'transportations', 'premiums', 'genderSchool'));
     }
 
-    public function showWithoutModal($lang ,$slug)
+    public function showWithoutModal($lang, $slug)
     {
         $cleanSlug = str_replace('-', ' ', $slug);
 
@@ -72,7 +73,7 @@ class SchoolController extends Controller
         $premiums = Premium::where('school_id', $school->id)->get();
 
 
-        return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums' ,'genderSchool'));
+        return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums', 'genderSchool'));
     }
 
     public function showMore($lang, $id)
@@ -84,4 +85,84 @@ class SchoolController extends Controller
         return view('madaresona.main.showMore', compact('news', 'schoolName'));
     }
 
+    public function news()
+    {
+        $newsArray = News::where('active', 1)->latest()->get();
+
+        $news = array();
+        foreach ($newsArray as $key => $index) {
+            $data['id'] = $index['id'];
+            $data['user_id'] = $index['user_id'];
+            $data['user_type'] = $index['user_type'];
+            $data['news_type'] = $index['news_type'];
+            $data['title_ar'] = $index['title_ar'];
+            $data['title_en'] = $index['title_en'];
+            $data['text_ar'] = $index['text_ar'];
+            $data['text_en'] = $index['text_en'];
+            $data['img'] = $index['img'];
+            $data['active'] = $index['active'];
+            $data['active_days'] = $index['active_days'];
+            $data['order'] = $index['order'];
+            $data['youtube'] = $index['youtube'];
+            $data['created_at'] = $index['created_at']->addDays($data['active_days']);
+            $data['updated_at'] = $index['updated_at'];
+
+
+            if ($data['created_at'] > Carbon::now()) {
+                array_push($news, $data);
+            }
+
+        }
+
+        return view('madaresona.news.index', compact('news'));
+    }
+
+    public function newSubscription()
+    {
+        return view('madaresona.subscription.index');
+    }
+
+    public function storeNewSubscription(Request $request)
+    {
+        $request->validate([
+            'school_name' => 'required',
+            'contact_name' => 'required',
+            'email_user' => 'required',
+            'phone_number' => 'required',
+            'message' => 'required',
+        ]);
+
+        Requests::create([
+            'name' => $request->school_name,
+            'contact_name' => $request->contact_name,
+            'email' => $request->email_user,
+            'phone' => $request->phone_number,
+            'text' => $request->message,
+            'type' => 2
+        ]);
+
+        return back()->with(['success' => 'تم ارسال الطلب بنجاح']);
+    }
+
+    public function newSuggestion()
+    {
+        return view('madaresona.help.suggestion');
+    }
+
+    public function storeNewSuggestion(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email_user' => 'required',
+            'message' => 'required',
+        ]);
+
+        Suggestion::create([
+            'name' => $request->name,
+            'email' => $request->email_user,
+            'text' => $request->message,
+        ]);
+
+        return back()->with(['success' => 'تم ارسال الاقتراح بنجاح']);
+    }
 }
