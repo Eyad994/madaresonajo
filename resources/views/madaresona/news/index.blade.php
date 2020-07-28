@@ -3,12 +3,17 @@
 @section('content')
 
     <div style="height: 100px"></div>
-    <div class="container">
+    <div class="container"
+         @if((app()->getLocale() == 'ar'))
+         style="direction: rtl; text-align: right;">
+        @else
+            style="direction:ltr; text-align:left;">
+        @endif
         <section class="section-base">
-            <div class="container mt-5" style="text-align: right;">
+            <div class="container mt-5">
                 @foreach($news as $item)
 
-                    <div class="card">
+                    <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 10px 15px rgba(0, 0, 0, .5);">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
@@ -17,7 +22,7 @@
                                          style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                 </div>
                                 <div class="col-md-9 container">
-                                    <div class="row" style="text-align: left">
+                                    <div class="row">
                                         <div class="col-md-2"></div>
                                         <div class="col-md-8">
                                             <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>

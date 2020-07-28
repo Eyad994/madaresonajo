@@ -1203,7 +1203,6 @@ body > nav.menu-icon .menu-brand {
 
 body > nav .menu-brand {
     height: 60px;
-    padding: 15px 0;
 }
 
 .menu-right {
@@ -1315,9 +1314,8 @@ nav .mega-menu ul.icon-list li {
 footer .menu-inner li {
     position: relative;
     transition: all .5s;
-    display: inline-block;
     clear: both;
-    float: left;
+    direction: rtl;
 }
 
 footer .menu-inner li > a {
@@ -1326,16 +1324,19 @@ footer .menu-inner li > a {
     font-size: 15px;
     opacity: .7;
 }
-
-.footer-bar > .container {
+footer .menu-inner li > span {
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
     opacity: .7;
+}
+.footer-bar > .container {
+   text-align: left;
 }
 
 .footer-bar img {
     height: 20px;
-    margin-top: 5px;
-}
-
+    margin-top: 5px;}
 /*
 
 # HEADERS

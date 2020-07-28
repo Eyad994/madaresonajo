@@ -36,37 +36,36 @@
                        </div>
                        @endif
                     <div class="col-md-4" style="bottom: 15px;">
-                        <div class="col-md-12">
+                        <div class="col-md-12" style="text-align: center">
                             <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
                             <hr>
                         </div>
                         <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-home" style="color: #ff6000"></i> العنوان</h3>
-                                <p style="margin-top: 5px;">عمان-الأردن الياسمين -شارع جبل عرفات
+                            <div class="col-md-12" style="bottom: 20px; ">
+                                <h3 class="h4"><i class="fad fa-home" style="color: #ff6000"></i> العنوان</h3>
+                                <p style="margin-top: 5px; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">عمان-الأردن الياسمين -شارع جبل عرفات
                                     مجمع المحتسب التجاري- بناء رقم 83 - الطابق الثاني</p>
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-phone" style="color: #ff6000"></i> الهاتف</h3>
-                                <p style="margin-top: 5px;">
-                                    962062006896</p>
-                                <p style="margin-top: 5px;">962-0797902497</p>
-                                <p style="margin-top: 5px;">962-0790452034</p>
+                                <h3 class="h4"><i class="fad fa-phone" style="color: #ff6000"></i> الهاتف</h3>
+                                <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962062006896</p>
+                                <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962797902497</p>
+                                <p style="margin-top: 5px; direction:ltr;{{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962790452034</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12" style="bottom: 20px; ">
+                                <h3 class="h4"><i class="fad fa-fax" style="color: #ff6000"></i> فاكس</h3>
+                                <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962062006896</p>
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-fax" style="color: #ff6000"></i> فاكس</h3>
-                                <p style="margin-top: 5px;">962062006896</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-envelope" style="color: #ff6000"></i> البريد الالكتروني
+                                <h3 class="h4"><i class="fad fa-envelope" style="color: #ff6000"></i> البريد الالكتروني
                                 </h3>
-                                <p style="margin-top: 5px;">Info@madaresonajo.com</p>
+                                <p style="margin-top: 5px;{{(app()->getLocale() == 'ar') ? 'margin-right:30px;':'margin-left:30px;'}}">Info@madaresonajo.com</p>
                             </div>
                         </div>
                     </div>
@@ -74,11 +73,11 @@
                     <div class="col-md-6">
                         <form class="contact100-form validate-form" action="{{ route('newSubscription', app()->getLocale()) }}" method="POST">
                             @csrf
-					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}">
-						ارسل رسالة
+					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}" style="color:#1d556c;">
+						اضافة مدرستك
 					</span>
-                            <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم
-                                بالرد في غضون 24 ساعة عمل</h4>
+                            <h4 class="contact100-form-sub_title" >لتصبح مدرستكم عضواً لدى مدارسنـا يرجى أكمال النموذج التالي ليتمكن مندوبينا التواصل معكم في أٌقرب وقت ممكن
+                                </h4>
                             <div class="wrap-input100 validate-input" data-validate="اسم المدرسة مطلوب">
                                 <input class="input100" type="text" name="school_name" placeholder="اسم المدرسة">
                                 <span class="focus-input100"></span>
@@ -91,7 +90,7 @@
                                 <input class="input100" type="text" name="contact_name" placeholder="اسم جهة الاتصال ">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-phone" aria-hidden="true"></i>
+							<i class="fad fa-people-arrows" aria-hidden="true"></i>
 						</span>
                             </div>
                             <div class="wrap-input100 validate-input"
@@ -112,7 +111,7 @@
                             </div>
 
                             <div class="wrap-input100 validate-input" data-validate="Message is required">
-                                <textarea class="input100" name="message" placeholder="الرسالة ..."></textarea>
+                                <textarea class="input100" name="message" placeholder=" عنوان المدرسة التفصيلي ..."></textarea>
                                 <span class="focus-input100"></span>
                             </div>
 

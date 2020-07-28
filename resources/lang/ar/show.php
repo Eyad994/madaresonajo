@@ -40,7 +40,7 @@ return [
     'international_program' => 'International Program',
     'local_program' => 'Local Program',
 
-    'more' => 'اكثر',
+    'more' => 'المزيد',
     'female' => 'انثى',
     'male' => 'ذكر',
     'mixed' => 'مختلط',
