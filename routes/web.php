@@ -34,6 +34,9 @@ Route::group([
     Route::get('newSuggestion', 'SchoolController@newSuggestion')->name('newSuggestion');
     Route::post('newSuggestion', 'SchoolController@storeNewSuggestion')->name('newSuggestion');
 
+    Route::get('faq', 'FaqController@index')->name('faq');
+    Route::get('discounts', 'DiscountController@index')->name('discounts');
+    Route::post('discounts', 'DiscountController@store')->name('storeDiscount');
     /******************************************************/
     Route::prefix('school')->group(function () {
         Route::get('{slug}', 'SchoolController@show');
@@ -44,5 +47,6 @@ Route::group([
 
     Route::get('{slug}', 'SchoolController@showWithoutModal');
     Route::get('showMore/{id}', 'SchoolController@showMore');
+
 
 });

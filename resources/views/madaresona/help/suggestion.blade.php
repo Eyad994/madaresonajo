@@ -3,9 +3,6 @@
 @section('content')
 
     <link rel="icon" type="image/png" href="{{ asset('contact/images/icons/favicon.ico') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('contact/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
           href="{{ asset('contact/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <!--===============================================================================================-->

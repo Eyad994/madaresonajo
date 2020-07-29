@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Discount extends Model
 {
-    //
+    protected $guarded = [];
+
     public function level()
     {
         return $this->belongsTo(SchoolClass::class, 'class_id');

@@ -26,14 +26,16 @@
                     <li class="item-131   dropdown"><a class=" js-activated bt-white font-weight-bold">{{ __('index.help') }}</a>
                         <ul class="">
                             <li class="item-133"><a class="" href="{{ route('newSuggestion', app()->getLocale()) }}"> {{ __('index.feedback') }} </a></li>
-                            <li class="item-134" ><a  class="" href="">{{ __('index.faqs') }}</a></li>
+                            <li class="item-134" ><a  class="" href="{{ route('faq', app()->getLocale()) }}">{{ __('index.faqs') }}</a></li>
                             <li class="item-135"><a  class="" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('index.contact_us') }}</a></li>
                         </ul>
                     </li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold">{{ __('index.sms_platform') }}</a></li>
-                    <li class="item-101 selected "><a href="#services" class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
+                    <li class="item-101 selected "><a href="{{ request()->segment(2) == null ? '#services' : route('home').'#services' }}" class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold">{{ __('index.madaresona_jobs') }}</a></li>
 
+                    <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold"  href="{{ route('discounts', app()->getLocale()) }}"> {{ __('index.discounts') }}</a></li>
+                    <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold"  href="{{ route('home', app()->getLocale()) }}"> {{ __('index.suppliers') }}</a></li>
                 </ul>
             </div>
 

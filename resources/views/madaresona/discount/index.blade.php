@@ -18,24 +18,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main_ar.css') }}">
     @endif
 
-    {{--<hr class="space">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="container mt-5">
-                    <div id="map" style="height: 400px; width: 100%;"></div>
-                </div>
-            </div>
-        </div>
-    </div>--}}
-
-
     <div class="bg-contact100">
         <div class="container-contact100" style="background: #F1F5F7 !important;">
-            <div class="container mt-5"
-                 style="margin-bottom: 10px; padding: 0px;box-shadow: 0 10px 15px rgba(0, 0, 0, .5);border-radius: 10px;">
-                <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
-            </div>
             <div class="wrap-contact100"
                  @if((app()->getLocale() == 'ar'))
                  style="direction: rtl; text-align: right;">
@@ -43,15 +27,21 @@
                     style="direction:ltr; text-align:left;">
                 @endif
                 <div class="row">
+
+                   @if(Session::has('message'))
+                       <div class="col-md-12">
+                           <p class="alert alert-info">{{ Session::get('message') }}</p>
+                       </div>
+                       @endif
                     <div class="col-md-4" style="bottom: 15px;">
                         <div class="col-md-12" style="text-align: center">
                             <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
                             <hr>
                         </div>
                         <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
+                            <div class="col-md-12" style="bottom: 20px; ">
                                 <h3 class="h4"><i class="fad fa-home" style="color: #ff6000"></i> العنوان</h3>
-                                <p style="margin-top: 5px; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">عمان-الأردن الياسمين -شارع جبل
+                                <p style="margin-top: 5px; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">عمان-الأردن الياسمين -شارع جبل عرفات
                                     مجمع المحتسب التجاري- بناء رقم 83 - الطابق الثاني</p>
                             </div>
                         </div>
@@ -79,27 +69,68 @@
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-6">
-                        <form class="contact100-form validate-form">
-					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}">
-						ارسل رسالة
+                        <form class="contact100-form validate-form" action="{{ route('storeDiscount', app()->getLocale()) }}" method="POST">
+                            @csrf
+					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}" style="color:#1d556c;">
+						نموذج الخصومات
 					</span>
-                            <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم
-                                بالرد في غضون 24 ساعة عمل</h4>
-                            <div class="wrap-input100 validate-input" data-validate="Name is required">
+                            <h4 class="contact100-form-sub_title" >احصل على خصم الان وسجل معلومات الطالب
+                            </h4>
+                            <div class="wrap-input100 validate-input">
                                 <input class="input100" type="text" name="name" placeholder="الاسم">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
 						</span>
                             </div>
+                            @if($errors->has('name'))
+                                <div class="error" style="color: red">{{ $errors->first('name') }}</div>
+                            @endif
 
-                            <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                                <input class="input100" type="text" name="email_user" placeholder="الهاتف ">
+                            <div class="wrap-input100 validate-input">
+                                <input class="input100" type="text" name="school_name" placeholder="المدرسة الحالية">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-phone" aria-hidden="true"></i>
+							<i class="fad fa-people-arrows" aria-hidden="true"></i>
 						</span>
                             </div>
+
+                            <div class="wrap-input100 validate-input">
+                                <input class="input100" type="text" name="avg" placeholder="المعدل">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+						</span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input">
+                                <select name="school_class" class="form-control">
+                                    <option selected disabled>اختر المرحلة الدراسية</option>
+                                    @foreach($schoolClasses as $class)
+                                        <option value="{{ $class->id }}">{{ app()->getLocale() == 'ar' ? $class->class_en : $class->class_en }}</option>
+                                    @endforeach
+                                </select>
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+						</span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input">
+                                <select name="city_id" id="city_id" class="form-control select-banner">
+                                    <option disabled selected>المدينة</option>
+                                    @foreach($cities as $city)
+                                        <option value="{{ $city->id }}">{{ $city->city_name_ar }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="wrap-input100 validate-input">
+                                <select name="region_id" id="region_id" class="form-control select-banner" style="padding-left: 10px" disabled>
+                                    <option disabled selected>المنطقة</option>
+                                </select>
+                            </div>
+
                             <div class="wrap-input100 validate-input"
                                  data-validate="Valid email is required: ex@abc.xyz">
                                 <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
@@ -108,19 +139,31 @@
 							<i class="fad fa-envelope" aria-hidden="true"></i>
 						</span>
                             </div>
-
-
-                            <div class="wrap-input100 validate-input" data-validate="Message is required">
-                                <textarea class="input100" name="message" placeholder="الرسالة ..."></textarea>
+                            <div class="wrap-input100 validate-input"
+                                 data-validate="رقم هاتف فعال">
+                                <input class="input100" type="text" name="phone_number" placeholder="الهاتف">
                                 <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+							<i class="fad fa-phone" aria-hidden="true"></i>
+						</span>
                             </div>
 
                             <div class="container-contact100-form-btn">
-                                <button class="contact100-form-btn">
-                                    Send
+                                <button type="submit" class="contact100-form-btn">
+                                    ارسال
                                 </button>
                             </div>
                         </form>
+
+                        @if ($errors->any())
+                            @foreach ($errors->all() as $error)
+                                <div style="color: red; {{ app()->getLocale() == 'ar' ? 'text-align: right;' : 'text-align: left;' }} margin-left: 30px;">
+                                    <ol>
+                                        {{$error}}
+                                    </ol>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
 
@@ -131,9 +174,27 @@
 
     </div>
 
-
 @endsection
 
+<script>
+    $('#city_id').on('change', function () {
+        var value = $(this).val();
+
+        $.ajax({
+            url:'/{{ app()->getLocale() }}/getRegions/' + value,
+            method: 'get',
+            success: function (result) {
+                console.log(result);
+                $('#region_id option:not(:first)').remove();
+                $.each(result, function (index, value) {
+                    $('#region_id').append("<option value='" + value.id + "'>" + value.area_name_ar + "");
+                });
+
+                $('#region_id').removeAttr('disabled');
+            }
+        });
+    });
+</script>
 <!--===============================================================================================-->
 <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script src="{{ asset('contact/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
@@ -151,37 +212,3 @@
 </script>
 <!--===============================================================================================-->
 <script src="{{ asset('contact/js/main.js') }}"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="contact/https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-</script>
-
-@section('script')
-    <script>
-        initMap();
-
-        function initMap() {
-            lat = 31.9151395;
-            lng = 35.8865854;
-            var uluru = {lat: lat, lng: lng};
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 16, center: uluru});
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map,
-                "icon": '{{ asset('assets/images/school.png') }}',
-                title: 'title'
-            });
-        }
-    </script>
-@endsection

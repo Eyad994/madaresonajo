@@ -27,7 +27,9 @@ return [
     'send_cvs' => 'Send CVs',
     'news_activities' => 'News and Activities',
     'Facilitate_students' => 'Facilitate the registration process for new students',
-
+    'discounts' => 'Discounts',
+    'suppliers' => 'Suppliers',
+    'visitors' => ' Visitors',
     '' => '',
     '' => '',
     '' => '',
