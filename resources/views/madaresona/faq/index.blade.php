@@ -4,8 +4,9 @@
 
     <style>
 
+
         #accordion .panel {
-            border-radius: 0;
+            border-radius: 10px;
             border: 0;
             margin-top: 0px;
         }
@@ -13,14 +14,14 @@
         #accordion a {
             display: block;
             padding: 10px 15px;
-            border-bottom: 1px solid #b42b2b;
+            border-bottom: 1px solid #fff;
             text-decoration: none;
         }
 
         #accordion .panel-heading a.collapsed:hover,
         #accordion .panel-heading a.collapsed:focus {
-            background-color: #b42b2b;
-            color: white;
+            background-color: #ff6000;
+            color: white !important;
             transition: all 0.2s ease-in;
         }
 
@@ -37,7 +38,7 @@
 
         #accordion .panel-heading a:not(.collapsed) {
             color: white;
-            background-color: #b42b2b;
+            background-color: #2d3e52;
             transition: all 0.2s ease-in;
         }
 
@@ -57,6 +58,14 @@
             transform: rotate(-135deg);
             transition: all 0.2s ease-in;
         }
+        .faq-title
+        {
+            color: #2d3e52;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+
     </style>
     <div style="margin-top: 100px"></div>
 

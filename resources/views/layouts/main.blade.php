@@ -48,8 +48,7 @@
 
 
     <!--LESS stylesheet for managing color presets -->
-    <link rel="stylesheet/less" type="text/css"
-          href="{{ asset('assets/templates/codrop/less/color193e.css') }}">
+
     <!-- LESS JS engine  -->
     <script src="{{ asset('assets/templates/codrop/less/less-1.5.0.min.js') }}"></script>
 

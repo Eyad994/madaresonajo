@@ -132,16 +132,22 @@ return [
     */
     'attributes' => [
         'name'                  => 'الاسم',
+        'school_name'           => ' اسم المدرسة ',
+        'avg'                   => 'المعدل',
+        'contact_name'          => 'اسم جهة الاتصال',
+        'school_class'          => 'المرحلة الدراسية',
         'username'              => 'اسم المُستخدم',
-        'email'                 => 'البريد الالكتروني',
+        'email_user'            => 'البريد الالكتروني',
         'first_name'            => 'الاسم الأول',
         'last_name'             => 'اسم العائلة',
+        'region_id'             => 'المنطقة ',
+        'city_id'               =>     'المدينة',
         'password'              => 'كلمة المرور',
         'password_confirmation' => 'تأكيد كلمة المرور',
         'city'                  => 'المدينة',
         'country'               => 'الدولة',
         'address'               => 'عنوان السكن',
-        'phone'                 => 'الهاتف',
+        'phone_number'                 => 'الهاتف',
         'mobile'                => 'الجوال',
         'age'                   => 'العمر',
         'sex'                   => 'الجنس',
@@ -172,6 +178,7 @@ return [
         'content_head'          => 'عنوان النافذة',
         'content_description'   => 'الوصف',
         'display_name'          => 'الإسم الظاهر',
-        'selected_file'         => 'الصورة'
+        'selected_file'         => 'الصورة',
+        'message'               => 'النص'
     ],
 ];

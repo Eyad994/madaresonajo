@@ -167,14 +167,16 @@
                 </li>
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
-                       aria-controls="principle" aria-selected="false">{{ __('show.principle') }}<span
+                       aria-controls="principle" aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}<span
                                 class="marker"></span></a>
                 </li>
+                @if(!(($school->type)== 2))
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm" role="tab"
                        aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}<span
                                 class="marker"></span></a>
                 </li>
+                @endif
                 <li class="nav-item waves-effect waves-light">
                     <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation" role="tab"
                        aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}<span
@@ -278,7 +280,7 @@
                 <div class="tab-pane fade" id="principle" role="tabpanel" aria-labelledby="principle-tab">
 
                     <div class="container mt-5">
-                        <div class="carousel-container position-relative row">
+                        <div class="carousel-container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="overflow-scroll scrollbar-warning"
@@ -585,10 +587,10 @@
                         }
                     </style>
 
-                    <div class="container mt-5" style="text-align: right;">
+                    <div class="container mt-5 overflow-scroll scrollbar-warning" style="text-align: right; height: 650px;overflow-y: scroll;">
                         @foreach($news as $item)
 
-                            <div class="card">
+                            <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 10px 15px rgba(0, 0, 0, .5);الموردين">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -597,7 +599,7 @@
                                                  style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                         </div>
                                         <div class="col-md-9 container">
-                                            <div class="row" style="text-align: left">
+                                            <div class="row">
                                                 <div class="col-md-2"></div>
                                                 <div class="col-md-8">
                                                     <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
@@ -643,8 +645,8 @@
             </div>
             <div class="col-md-9">
                 <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
-                <h6 class="text-muted">
-                    Jordan, {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
+                <h6 class="text-muted">{{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}
+                    , {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
                     - {{(app()->getLocale() == 'en') ?$school->region->area_name_en:$school->region->area_name_ar }}</h6>
             </div>
         </div>

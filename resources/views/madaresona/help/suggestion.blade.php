@@ -29,7 +29,7 @@
                 <div class="row">
                     @if(Session::has('success'))
                         <div class="col-md-12">
-                            <p class="alert alert-info">{{ Session::get('success') }}</p>
+                            <p class="alert alert-success">{{ Session::get('success') }}</p>
                         </div>
                     @endif
                     <div class="col-md-4" style="bottom: 15px;">
@@ -83,6 +83,11 @@
 							<i class="fad fa-user" aria-hidden="true"></i>
 						</span>
                             </div>
+                            @if($errors->has('name'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('name') }}</div>
+                            @endif
                             <div class="wrap-input100 validate-input"
                                  data-validate="Valid email is required: ex@abc.xyz">
                                 <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
@@ -91,25 +96,27 @@
 							<i class="fad fa-envelope" aria-hidden="true"></i>
 						</span>
                             </div>
+                            @if($errors->has('email_user'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('email_user') }}</div>
+                            @endif
 
                             <div class="wrap-input100 validate-input" data-validate="Message is required">
-                                <textarea class="input100" name="message" placeholder="الاقتراح"></textarea>
+                                <textarea class="input100" name="message" placeholder="النص"></textarea>
                                 <span class="focus-input100"></span>
                             </div>
-
+                            @if($errors->has('message'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('message') }}</div>
+                            @endif
                             <div class="container-contact100-form-btn">
                                 <button type="submit" class="contact100-form-btn">
                                     ارسال
                                 </button>
                             </div>
                         </form>
-                        @if ($errors->any())
-                            @foreach ($errors->all() as $error)
-                                <div style="color: red; text-align: left;margin-left: 30px;"><ol>
-                                        {{$error}}
-                                    </ol></div>
-                            @endforeach
-                        @endif
                     </div>
                 </div>
 

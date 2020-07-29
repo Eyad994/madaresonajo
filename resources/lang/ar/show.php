@@ -3,6 +3,7 @@
 return [
     'gallery' => 'البوم الصور',
     'principle' => 'كلمة المدير',
+    'president' => 'كلمة الرئيس',
     'discountForm' => 'الخصومات',
     'transportation' => 'المواصلات',
     'maps' => 'الخريطة',
