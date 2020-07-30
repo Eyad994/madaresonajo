@@ -2,7 +2,7 @@
 
 </style>
 <nav class="menu-classic menu-fixed align-right light " data-menu-anima="fade-bottom" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}" >
-    <div class="container">
+    <div class="containerNav">
         <div class="menu-brand">
             <a href="{{ route('home') }}">
                 <img class="logo-light" src="{{ asset('assets/images/logo-light.png') }}" alt="Madaresona JO"/>

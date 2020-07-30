@@ -98,6 +98,7 @@ class SchoolController extends Controller
             $data['news_type'] = $index['news_type'];
             $data['title_ar'] = $index['title_ar'];
             $data['title_en'] = $index['title_en'];
+            $data['school_name'] = School::where('user_id', $index['user_id'])->value('name_en');
             $data['text_ar'] = $index['text_ar'];
             $data['text_en'] = $index['text_en'];
             $data['img'] = $index['img'];

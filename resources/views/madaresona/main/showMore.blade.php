@@ -20,9 +20,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12 " style="padding: 15px; ">
-                    {{--<img src="{{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }}" alt="">--}}
                     <img class="rounded" style="width: 100%;max-height: 300px; "
-                         src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_509107562_2000133320009280346_351827.jpg"
+                         src="{{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }}"
                          alt="">
                 </div>
 

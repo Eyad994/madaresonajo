@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="http://madaresonajo.com/access_files/upload_center/news_img_5f0fe6454aaf7.jpg"
+                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }}"
                                          alt="Avatar"
                                          style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                 </div>

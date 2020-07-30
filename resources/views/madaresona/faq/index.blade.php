@@ -1,11 +1,18 @@
 @extends('layouts.main')
 
 @section('content')
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
 
+        .panel-heading{
+            color: white;
+            background: #1d556c;
+        }
 
-        #accordion .panel {
+        .accordion-toggle{
+            font-weight: bold;
+        }
+        /*#accordion .panel {
             border-radius: 10px;
             border: 0;
             margin-top: 0px;
@@ -42,7 +49,7 @@
             transition: all 0.2s ease-in;
         }
 
-        /* Add Indicator fontawesome icon to the left */
+        !* Add Indicator fontawesome icon to the left *!
         #accordion .panel-heading .accordion-toggle::before {
             font-family: 'FontAwesome';
             content: '\f00d';
@@ -57,7 +64,7 @@
             color: #444;
             transform: rotate(-135deg);
             transition: all 0.2s ease-in;
-        }
+        }*/
         .faq-title
         {
             color: #2d3e52;

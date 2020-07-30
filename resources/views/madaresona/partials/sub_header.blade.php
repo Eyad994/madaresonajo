@@ -110,22 +110,46 @@
         </div>
         </form>
     </div>
+
+    <style>
+        .bannerLogo{
+            height: 256px;
+        }
+        .bannerLogoImg{
+            bottom: 190px
+        }
+        @media (max-width: 700px) {
+            .bannerLogo{
+                height: 40px;
+            }
+
+            .bannerLogoImg{
+                bottom: 170px
+            }
+        }
+    </style>
+
+    <div class="row bannerLogo" >
+        <div class="col-md-5"></div>
+        <div class="col-md-6 bannerLogoImg">
+            <img src="{{ asset('bannerLogo.png') }}" alt=""
+                 data-mce-src="images/phone-wall.png">
+        </div>
+        <div class="col-md-1"></div>
     </div>
-
-
-    <div class="row ">
+    {{--<div class="row ">
         <div class='col-lg-6 col-md-6 col-sm-6  '>
-            <hr class="space">
+
+            --}}{{--<hr class="space">
             <hr class="space-lg">
-            {{--<p><a class="btn btn-sm btn-circle shadow-1 full-width-sm" href="https://1.envato.market/Dmj52"
+            <p><a class="btn btn-sm btn-circle shadow-1 full-width-sm" href="https://1.envato.market/Dmj52"
                   target="_blank" rel="noopener" data-mce-href="https://1.envato.market/Dmj52">Purchase
                     now</a><span class="space">&nbsp;</span> <a class="btn-text active scroll-to hidden-sm"
                                                                 href="#demos" data-mce-href="#demos">View
-                    demos</a></p>--}}
+                    demos</a></p>--}}{{--
         </div>
         <div class='col-lg-6 col-md-6 col-sm-6'></div>
-        {{--<img class="width-min-900" src="{{ asset('assets/images/phone-walla5e7.png') }}" alt=""
-                data-mce-src="images/phone-wall.png">--}}
-    </div>
-    </div>
+        --}}{{--<img class="width-min-900" src="{{ asset('assets/images/phone-walla5e7.png') }}" alt=""
+                data-mce-src="images/phone-wall.png">--}}{{--
+    </div>--}}
 </section>
