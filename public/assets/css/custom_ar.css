@@ -96,7 +96,7 @@
 
 @media (max-width: 991.98px) {
     .menu-cnt ul.menu-mp > li, .dropdown ul.menu-op > li {
-        text-align: left;
+        text-align: center;
     }
 
     .menu-cnt ul.menu-mp > li > a, .dropdown ul.menu-op > li > a {
@@ -116,7 +116,7 @@
         height: 20px;
         line-height: 20px;
         text-align: center;
-        right: 10px;
+        right: 70px;
         transition: transform .5s;
         text-transform: none;
         opacity: .7;

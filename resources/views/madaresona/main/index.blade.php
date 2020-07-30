@@ -184,6 +184,14 @@
         <h2 class="align-center">
             <div class="row">
                 <div class="col-md-4"></div>
+                <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
+                    اختار نوع المؤسة التعليمة للبحث بكل سهولة
+                </div>
+            </div>
+        </h2>
+        <h2 class="align-center">
+            <div class="row">
+                <div class="col-md-4"></div>
                 <div class="col-md-4 selected_education"
                      @if((app()->getLocale() == 'ar'))
                      style="direction: rtl; text-align: right;">
@@ -246,7 +254,7 @@
                     <table class="table table-grid table-border align-center table-full-border table-md-6 mce-item-table">
                         <tbody>
                         <tr>
-                            <td >
+                            <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.private_schools')}}</h3>
                                         <div class="value text-lg"><span data-to="9000" data-speed="3000">9000</span>
@@ -319,6 +327,14 @@
             </div>
         </div>
     </section>
+    <h2 class="align-center">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
+                خدمتنا
+            </div>
+        </div>
+    </h2>
     <section class="section-base section-color " id="services"
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">
@@ -332,15 +348,20 @@
                     border: 2px solid #fff;
                     border-radius: 10px !important;
                 }
+
+                .title_header {
+                    color:#1d556c ;
+                }
             </style>
+
             <div class="row ">
-                <div class='col-lg-12 '   >
-                    <div class="row align-items-center" style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
+                <div class='col-lg-12 '>
+                    <div class="row align-items-center"
+                         style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
-                                    class="themekit-header">{{__('index.text_messages')}}</h2>
-                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
-                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
-                                lightweight plugins.</p>
+                                    class="themekit-header title_header title_header">{{__('index.text_messages')}}</h2>
+                            <p>هي من الأدوات الأساسية التي تساعد الشركات في تسويق منتجاتها أو خدماتها وذلك لجذب عملاء جدد أو بغرض إشهار الإسم التجاري أو إيصال معلومات أول إرسال تنبيهات للعملاء.</p>
+                            <p>إن شركة مدارسنا  تعتبر مزودة لخدمة الإرسال فقط ولا تقوم ببيع أرقام أو بيانات، حيث تستطيع من خلال النظام حفظ الأرقام الخاصة بعملائك حسب التصنيفات التي تناسب عملك، وما يميز النظام هو سهولة الإستخدام من خلال أجهزة الحاسب الآلي والأجهزة اللوحية والهواتف الذكية.</p>
                             {{-- <a class="btn-text"
                                 href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
                                 target="_blank" rel="noopener"
@@ -352,7 +373,7 @@
                                     data-mce-src="images/intro/seo.png"></div>
                     </div>
                     <hr class="space-lg">
-                    <div class="row align-items-center" >
+                    <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000">
                             <img
                                     class="timer img_services"
@@ -362,20 +383,18 @@
                         </div>
                         <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
                              data-time="1000"><h2
-                                    class="themekit-header">{{__('index.school_administration_systems')}}</h2>
-                            <p>Differentely by the other templates, that are only focused on design and demos, this
-                                template is built with the developers in mind. You can customize this template truly
-                                faster and without limitations.</p>
+                                    class="themekit-header title_header">{{__('index.school_administration_systems')}}</h2>
+                            <p></p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
                 <div class='col-lg-12  ' style="margin-top: 80px; ">
-                    <div class="row align-items-center" style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
+                    <div class="row align-items-center"
+                         style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000">
-                            <h2 class="themekit-header">{{__('index.website_design')}}</h2>
-                            <p>Speed is everything, Codrop is built to develop high performance websites. We worked hard
-                                to minimize the file size of scripts and styles and to avoid redundante codes. Only
-                                lightweight plugins.</p>
+                            <h2 class="themekit-header title_header">{{__('index.website_design')}}</h2>
+                            <p></p>
                         </div>
                         <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000">
                             <img
@@ -392,10 +411,8 @@
                                     data-mce-src="images/intro/themekit.png">
                         </div>
                         <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
-                             data-time="1000"><h2 class="themekit-header">{{__('index.social_media')}}</h2>
-                            <p>Differentely by the other templates, that are only focused on design and demos, this
-                                template is built with the developers in mind. You can customize this template truly
-                                faster and without limitations.</p></div>
+                             data-time="1000"><h2 class="themekit-header title_header">{{__('index.social_media')}}</h2>
+                            <p></p></div>
                     </div>
                 </div>
 

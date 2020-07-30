@@ -5761,7 +5761,7 @@ Small devices (landscape phones, less than 768px)
 
     .cnt-box.boxed {
         width: 240px;
-        margin-left: 120px;
+        margin: 0px auto;
     }
 
     .img-box img {

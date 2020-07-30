@@ -146,7 +146,7 @@ body > nav.light:not(.menu-transparent), nav.light.menu-transparent.scroll-menu,
 .tab-icon.tab-vertical > .tab-nav li.active a i, .tab-icon.tab-vertical > .tab-nav li:hover a i, .tab-vertical > .tab-nav li:hover a, .meta-footer, .form-search > div:before, .cnt-box-side .extra-field,
 nav .tab-nav li.active a, nav .tab-nav li:hover a, .menu-inner li:hover > a, .menu-inner li.active > a, a, .mega-menu h5, .search-box-menu > i:hover, .mega-menu .icon-list li a:hover,
 nav.active .menu-btn:before, .text-list-side li div {
-    color: rgb(71, 178, 228);
+    color: #1d556c ;
 }
 
 nav.light a.btn-border, .dropdown > ul li:hover > a, .dropdown > ul li.active > a, .menu-cnt > ul > li:hover > a, .menu-cnt > ul > li.active > a, .light .counter h3, .breadcrumb li:last-child a,

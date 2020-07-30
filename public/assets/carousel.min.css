@@ -525,11 +525,8 @@ pre code {
 }
 
 .containerNav {
-    width: 100%;
-    padding-right: 150px;
-    padding-left: 395px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 1300px;
+    margin: 0px auto;
 }
 
 @media (min-width: 576px) {

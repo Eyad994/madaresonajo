@@ -7,8 +7,8 @@
             style="direction:ltr; text-align:left;">
         @endif
         <div class="container">
-            <div class="title_news rounded"
-                 style="margin-top: 25px; background-color: #fff;  padding: 15px 50px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);">
+            <div class="row">
+            <div class="title_news rounded" style="margin-top: 25px; background-color: #fff;  padding: 15px 50px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);">
                 <h2 style="font-weight: bold">{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}</h2>
                 <p style="border: 2px solid #eaeaea;"></p>
                 <hr class="visible-xs visible-sm">
@@ -17,6 +17,7 @@
                     <i class="fad fa-clock"></i>
                         {{ $news->created_at->format('d M Y - g:i:s A')}}
                 </time>
+            </div>
             </div>
             <div class="row">
                 <div class="col-md-12 " style="padding: 15px; text-align: center; ">
