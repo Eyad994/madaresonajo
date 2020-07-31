@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-12 " style="padding: 15px; text-align: center; ">
                     <img class="rounded" style="width: 50%;max-height: 300px;box-shadow: 0 10px 15px rgba(0, 0, 0, .5); "
-                         src="{{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }}"
+                         src="@if($news->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }} @else {{ env('IMAGE_URL') }}/images/news/{{ $news->img }} @endif"
                          alt="">
                 </div>
 

@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }}"
+                                    <img src="@if($item['news_type'] == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }} @else {{ env('IMAGE_URL') }}/images/news/{{ $item['img'] }} @endif"
                                          alt="Avatar"
                                          style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                 </div>
@@ -33,7 +33,7 @@
                                         <div class="col-md-2"></div>
                                         <div class="col-md-10"></div>
                                         <div class="col-md-2">
-                                            <a href="showMore/{{ $item['id'] }}" target="_blank"
+                                            <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" target="_blank"
                                                class="btn btn-info"
                                             >{{ __('show.more') }}</a>
                                         </div>

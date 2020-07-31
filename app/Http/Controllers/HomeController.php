@@ -7,27 +7,52 @@ use App\Models\Premium;
 use App\Models\Region;
 use App\Models\School;
 use App\Models\SchoolType;
+use App\Models\Visitor;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
     public function index($locale = 'ar')
     {
+
+        $visitor = Visitor::where('ip', request()->ip())->first();
+        if (is_null($visitor))
+        {
+            Visitor::create([
+               'ip' => request()->ip()
+            ]);
+        }
+
+        $visitorCount = Visitor::all()->count();
+
         App::setLocale($locale);
         /*$test = School::where('id', 11)->first();
         $result = preg_replace('/[ ]+/', '-', trim($test->name_ar));
         return $result;*/
+
+        $schoolsQuery = DB::select(
+            'SELECT  (
+SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools ,
+(SELECT COUNT(schools.type)  FROM schools WHERE schools.type=2)AS universities ,
+(SELECT COUNT(schools.type)  FROM schools WHERE schools.type=3)AS kindergartens ,
+(SELECT COUNT(schools.type)  FROM schools WHERE schools.type=4)AS nurseries ,
+(SELECT COUNT(schools.type)  FROM schools WHERE schools.type=5)AS training ,
+(SELECT COUNT(schools.type)  FROM schools WHERE schools.type=6)AS learning ,
+(SELECT COUNT(*)  FROM suppliers) AS suppliers;'
+        );
+
+        $schoolsCounts = $schoolsQuery[0];
 
         $schools = School::where('active', 1)->latest()->paginate(6);
         $specialSchools = School::where('active', 1)->where('special', 1)->get();
         $newsArray = News::where('news_type', 2)->where('active', 1)->latest()->get();
 
         $mainNews = array();
-        foreach ($newsArray as $key => $index)
-        {
+        foreach ($newsArray as $key => $index) {
             $data['id'] = $index['id'];
             $data['user_id'] = $index['user_id'];
             $data['user_type'] = $index['user_type'];
@@ -45,15 +70,14 @@ class HomeController extends Controller
             $data['updated_at'] = $index['updated_at'];
 
 
-            if ($data['created_at'] > Carbon::now())
-            {
+            if ($data['created_at'] > Carbon::now()) {
                 array_push($mainNews, $data);
             }
 
         }
 
         $schoolsType = SchoolType::all();
-        return view('madaresona.main.index', compact('schools', 'specialSchools', 'mainNews', 'schoolsType'));
+        return view('madaresona.main.index', compact('schools', 'specialSchools', 'mainNews', 'schoolsType', 'schoolsCounts', 'visitorCount'));
     }
 
     public function refreshCarousel()
@@ -62,7 +86,7 @@ class HomeController extends Controller
         return view('madaresona.main.mainCarousel', compact('specialSchools'));
     }
 
-    public function getRegions($lang , $id)
+    public function getRegions($lang, $id)
     {
         $regions = Region::where('city_id', $id)->get();
         return $regions;
@@ -83,8 +107,7 @@ class HomeController extends Controller
                 $schools = School::where('active', 1)->where('region_id', $request->region_id)
                     ->orWhere('city_id', $request->city_id)
                     ->get();
-            }
-            else {
+            } else {
                 $schools = School::where('id', 0)->get();
             }
 
@@ -106,13 +129,12 @@ class HomeController extends Controller
             }
 
         } elseif ($request->search_select == 4) {
-            if (isset($request->school_class))
-            {
+            if (isset($request->school_class)) {
                 $premiums = Premium::where('price', '>=', $request->from_price)
                     ->orWhere('price', '<=', $request->to_price)
                     ->where('class_id', $request->school_class)
                     ->get('school_id')
-                ->toArray();
+                    ->toArray();
 
 
                 $schools = School::where('active', 1)->whereIn('id', $premiums)->get();
@@ -127,8 +149,7 @@ class HomeController extends Controller
 
     public function educationalInstitutions($lang, $id)
     {
-        if ($id == 0)
-        {
+        if ($id == 0) {
             $schools = School::where('active', 1)->get();
         } else {
             $schools = School::where('active', 1)->where('type', $id)->get();

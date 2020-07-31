@@ -594,7 +594,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-3">
-                                            <img src="http://madaresonajo.com/access_files/upload_center/news_img_5f0fe6454aaf7.jpg"
+                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item['img'] }}"
                                                  alt="Avatar"
                                                  style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                         </div>
@@ -610,9 +610,10 @@
                                                 <div class="col-md-2"></div>
                                                 <div class="col-md-10"></div>
                                                 <div class="col-md-2">
-                                                    <a href="showMore/{{ $item['id'] }}" target="_blank"
-                                                       class="btn btn-info"
-                                                    >{{ __('show.more') }}</a>
+                                                    <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" target="_blank"
+                                                       class="btn btn-info">
+                                                        {{ __('show.more') }}
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -638,7 +639,15 @@
             style="direction:ltr; text-align:left;">
         @endif
         <br>
-        <div class="row">
+            <style>
+                @media(max-width: 600px)
+                {
+                    .schoolLogo{
+                        text-align: center !important;
+                    }
+                }
+            </style>
+        <div class="row schoolLogo">
             <div class="col-md-3">
                 <img class="rounded" style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);"
                      src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="">

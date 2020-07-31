@@ -48,12 +48,12 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="height: 80px;">
                 <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
                      style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
-                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-left' :'rounded-right'}}">
+                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}" style="height: 100px;">
                         <span class="d-flex align-items-center font-weight-bold"
-                              style="height: 100px;">{{__('index.News')}}</span></div>
+                              style="position: absolute;top: 28px;">{{__('index.News')}}</span></div>
                     <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
                              onmouseover="this.stop();" onmouseout="this.start();"
                              direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
@@ -185,7 +185,7 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
-                    اختار نوع المؤسة التعليمة للبحث بكل سهولة
+                    اختار نوع المؤسسة التعليمة للبحث بكل سهولة
                 </div>
             </div>
         </h2>
@@ -257,7 +257,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.private_schools')}}</h3>
-                                        <div class="value text-lg"><span data-to="9000" data-speed="3000">9000</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->privateSchools }}" data-speed="3000">{{ $schoolsCounts->privateSchools }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -265,7 +265,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.colleges_universities')}}</h3>
-                                        <div class="value text-lg"><span data-to="9" data-speed="3000">9</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->universities }}" data-speed="3000">{{ $schoolsCounts->universities }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.kindergartens')}}</h3>
-                                        <div class="value text-lg"><span data-to="80" data-speed="3000">80</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->kindergartens }}" data-speed="3000">{{ $schoolsCounts->kindergartens }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -281,7 +281,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.nurseries')}}</h3>
-                                        <div class="value text-lg"><span data-to="10" data-speed="3000">10</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->nurseries }}" data-speed="3000">{{ $schoolsCounts->nurseries }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -291,7 +291,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.training_consulting')}}</h3>
-                                        <div class="value text-lg"><span data-to="500" data-speed="3000">500</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->training }}" data-speed="3000">{{ $schoolsCounts->training }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.learning_difficulties')}}</h3>
-                                        <div class="value text-lg"><span data-to="64" data-speed="3000">64</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->learning }}" data-speed="3000">{{ $schoolsCounts->learning }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -307,7 +307,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.suppliers')}}</h3>
-                                        <div class="value text-lg"><span data-to="25" data-speed="3000">25</span>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->suppliers }}" data-speed="3000">{{ $schoolsCounts->suppliers }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -315,7 +315,7 @@
                             <td>
                                 <div class="counter counter-icon">
                                     <div><h3>{{__('index.visitors')}}</h3>
-                                        <div class="value text-lg"><span data-to="100" data-speed="3000">100</span>
+                                        <div class="value text-lg"><span data-to="{{ $visitorCount }}" data-speed="3000">{{ $visitorCount }}</span>
                                             <span></span></div>
                                     </div>
                                 </div>

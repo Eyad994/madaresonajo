@@ -44,7 +44,7 @@ return [
     'kindergartens' => 'رياض الأطفال',
     'nurseries' => 'حضانات',
     'training_consulting' => 'تدريب واستشارات',
-    'learning_difficulties' => 'تدريب واستشارات',
+    'learning_difficulties' => 'صعوبات التعلم',
 
     'suppliers' => 'موردين',
     'visitors' => ' الزوار',

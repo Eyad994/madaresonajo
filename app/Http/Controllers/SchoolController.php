@@ -77,7 +77,7 @@ class SchoolController extends Controller
         return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums', 'genderSchool'));
     }
 
-    public function showMore($lang, $id)
+    public function showMore($lang, $id, $title)
     {
         $news = News::where('id', $id)->first();
 
