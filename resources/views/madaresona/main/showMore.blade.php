@@ -6,6 +6,7 @@
         @else
             style="direction:ltr; text-align:left;">
         @endif
+
         <div class="container">
             <div class="title_news rounded" style="margin-top: 25px; background-color: #fff;  padding: 15px 50px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);">
                 <h2 style="font-weight: bold">{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}</h2>
@@ -39,8 +40,28 @@
                              picture-in-picture" allowfullscreen></iframe>
 
                 </div>
+            @endif
+
+            @if(isset($relatedNews) && count($relatedNews) > 0)
+            <h2 style="text-align: center; margin-top: 10px">أخبار ذات صلة</h2>
+            <div class="row">
+
+                @foreach($relatedNews as $item)
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="@if($item->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $item->img }} @else {{ env('IMAGE_URL') }}/images/news/{{ $item->img }} @endif" alt="img">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'], $limit = 45, $end = '...') !!}</h5>
+                            <a href="/{{ app()->getLocale() }}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" class="btn btn-primary mt-auto" target="_blank">المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                    @endforeach
+
+            </div>
+                @endif
         </div>
-        @endif
+
 
         <hr class="space">
         </div>

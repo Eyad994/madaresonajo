@@ -30,9 +30,6 @@ class HomeController extends Controller
         $visitorCount = Visitor::all()->count();
 
         App::setLocale($locale);
-        /*$test = School::where('id', 11)->first();
-        $result = preg_replace('/[ ]+/', '-', trim($test->name_ar));
-        return $result;*/
 
         $schoolsQuery = DB::select(
             'SELECT  (
@@ -47,9 +44,9 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
 
         $schoolsCounts = $schoolsQuery[0];
 
-        $schools = School::where('active', 1)->latest()->paginate(6);
+        $schools = School::where('active', 1)->orderBy('school_order')->paginate(6);
         $specialSchools = School::where('active', 1)->where('special', 1)->get();
-        $newsArray = News::where('news_type', 2)->where('active', 1)->latest()->get();
+        $newsArray = News::where('news_type', 2)->where('active', 1)->orderBy('order')->get();
 
         $mainNews = array();
         foreach ($newsArray as $key => $index) {

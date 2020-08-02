@@ -61,7 +61,7 @@
                         @foreach($mainNews as $news)
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
-                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}" target="_blank"
+                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}" target="_blank"
                                class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">

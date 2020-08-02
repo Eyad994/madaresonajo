@@ -102,7 +102,7 @@
                             <h4 class="contact100-form-sub_title">احصل على خصم الان وسجل معلومات الطالب
                             </h4>
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="text" name="name" placeholder="الاسم">
+                                <input class="input100" type="text" name="name" id="name" value="{{ old('name') }}" placeholder="الاسم">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
@@ -115,7 +115,7 @@
                             @endif
 
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="text" name="school_name" placeholder="المدرسة الحالية">
+                                <input class="input100" type="text" name="school_name" value="{{ old('school_name') }}" placeholder="المدرسة الحالية">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-people-arrows" aria-hidden="true"></i>
@@ -128,7 +128,7 @@
                             @endif
 
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="number" name="avg" placeholder="المعدل">
+                                <input class="input100" type="number" name="avg" value="{{ old('avg') }}" placeholder="المعدل">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-people-arrows" aria-hidden="true"></i>
@@ -160,7 +160,12 @@
                                 <select name="city_id" id="city_id" class="form-control select-banner option_c">
                                     <option disabled selected>المدينة</option>
                                     @foreach($cities as $city)
-                                        <option value="{{ $city->id }}">{{ $city->city_name_ar }}</option>
+                                        @if (old('city_id') == $city->id)
+                                            <option value="{{ $city->id }}" selected>{{ $city->city_name_ar }}</option>
+                                        @else
+                                            <option value="{{ $city->id }}">{{ $city->city_name_ar }}</option>
+                                        @endif
+
                                     @endforeach
                                 </select>
                                 <span class="focus-input100"></span>
@@ -241,7 +246,6 @@
             url: '/{{ app()->getLocale() }}/getRegions/' + value,
             method: 'get',
             success: function (result) {
-                console.log(result);
                 $('#region_id option:not(:first)').remove();
                 $.each(result, function (index, value) {
                     $('#region_id').append("<option value='" + value.id + "'>" + value.area_name_ar + "");

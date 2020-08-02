@@ -81,9 +81,16 @@ class SchoolController extends Controller
     {
         $news = News::where('id', $id)->first();
 
+        if ($news->news_type == 1)
+        {
+            $relatedNews = News::where('id', '!=', $id)->where('news_type', 1)->orderBy('order')->take(3)->get();
+        } else {
+            $relatedNews = News::where('id', '!=', $id)->where('user_id', $news->user_id)->orderBy('order')->take(3)->get();
+        }
+
         $schoolName = School::where('user_id', $news->user_id)->value('name_en');
 
-        return view('madaresona.main.showMore', compact('news', 'schoolName'));
+        return view('madaresona.main.showMore', compact('news', 'schoolName', 'relatedNews'));
     }
 
     public function news()
