@@ -26,6 +26,11 @@ Route::group([
 
     Route::get('/getRegions/{id}', 'HomeController@getRegions');
 
+    /***************************Supplier**************************************/
+    Route::prefix('supplier')->group(function (){
+       Route::get('index', 'SupplierController@index')->name('mainSupplier');
+    });
+    /*****************************************************************/
     Route::post('search', 'HomeController@search')->name('search');
     Route::get('institutions/{id}', 'HomeController@educationalInstitutions')->name('institutions');
     Route::get('news', 'SchoolController@news')->name('news');

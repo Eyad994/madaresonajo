@@ -10,6 +10,12 @@
             font-family: 'Cairo', sans-serif !important;
         }
 
+        @media only screen and (max-width: 991px) {
+            #wrapper {
+                display: none;
+            }
+        }
+
         .news {
             width: 160px
         }
@@ -43,15 +49,44 @@
 
         /**************************************/
 
+        #c1 {
+            float: left;
+            margin-left: 10px;
+        }
+
+        #c2 {
+            margin-right: 10px;
+            float: right;
+        }
     </style>
 
-    <br>
+
+    <div id="wrapper">
+        <div id="c1">
+            @foreach($suppliersAdvertisements as $advertisement)
+                <a href="{{ $advertisement->url }}">
+                    <img src="https://astonsocial.com.au/wp-content/uploads/2018/03/Facebook-Advertising.png" width="220px" height="150px" alt="">
+                </a>
+                <hr class="space">
+            @endforeach
+        </div>
+        <div id="c2">
+            @foreach($schoolsAdvertisements as $advertisement)
+                <a href="{{ $advertisement->url }}">
+                    <img src="https://astonsocial.com.au/wp-content/uploads/2018/03/Facebook-Advertising.png" width="220px" height="150px" alt="">
+                </a>
+                <hr class="space">
+            @endforeach
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="height: 80px;">
                 <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
                      style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
-                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}" style="height: 100px;">
+                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}"
+                         style="height: 100px;">
                         <span class="d-flex align-items-center font-weight-bold"
                               style="position: absolute;top: 28px;">{{__('index.News')}}</span></div>
                     <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
@@ -61,7 +96,8 @@
                         @foreach($mainNews as $news)
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
-                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}" target="_blank"
+                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
+                               target="_blank"
                                class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
@@ -85,6 +121,20 @@
             </h2>
             <p class="align-center width-650"> {{__('index.proud_schools')}}</p>
             <hr class="space"/>
+            {{--<div class="row advertisements">
+                <div class="col-md-3">
+                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
+                </div>
+            </div>--}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme"
@@ -177,7 +227,7 @@
         </script>
     </section>
 
-    <section class="section-base">
+    <section class="section-base" style="margin-bottom: 20px;">
         <div class="container">
             <hr style="margin: 0px;">
         </div>
@@ -327,20 +377,25 @@
             </div>
         </div>
     </section>
-    <h2 class="align-center">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
-                خدمتنا
+
+    <section class="section-base">
+        <h2 class="align-center">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
+                    خدمتنا
+                </div>
             </div>
-        </div>
-    </h2>
+        </h2>
+    </section>
+
     <section class="section-base section-color " id="services"
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">
         @else
             style="direction:ltr; text-align:left;">
         @endif
+
         <div class="container">
             <style>
                 .img_services {
@@ -350,7 +405,7 @@
                 }
 
                 .title_header {
-                    color:#1d556c ;
+                    color: #1d556c;
                 }
             </style>
 
@@ -360,8 +415,11 @@
                          style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
                                     class="themekit-header title_header title_header">{{__('index.text_messages')}}</h2>
-                            <p>هي من الأدوات الأساسية التي تساعد الشركات في تسويق منتجاتها أو خدماتها وذلك لجذب عملاء جدد أو بغرض إشهار الإسم التجاري أو إيصال معلومات أول إرسال تنبيهات للعملاء.</p>
-                            <p>إن شركة مدارسنا  تعتبر مزودة لخدمة الإرسال فقط ولا تقوم ببيع أرقام أو بيانات، حيث تستطيع من خلال النظام حفظ الأرقام الخاصة بعملائك حسب التصنيفات التي تناسب عملك، وما يميز النظام هو سهولة الإستخدام من خلال أجهزة الحاسب الآلي والأجهزة اللوحية والهواتف الذكية.</p>
+                            <p>هي من الأدوات الأساسية التي تساعد الشركات في تسويق منتجاتها أو خدماتها وذلك لجذب عملاء
+                                جدد أو بغرض إشهار الإسم التجاري أو إيصال معلومات أول إرسال تنبيهات للعملاء.</p>
+                            <p>إن شركة مدارسنا تعتبر مزودة لخدمة الإرسال فقط ولا تقوم ببيع أرقام أو بيانات، حيث تستطيع
+                                من خلال النظام حفظ الأرقام الخاصة بعملائك حسب التصنيفات التي تناسب عملك، وما يميز النظام
+                                هو سهولة الإستخدام من خلال أجهزة الحاسب الآلي والأجهزة اللوحية والهواتف الذكية.</p>
                             {{-- <a class="btn-text"
                                 href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
                                 target="_blank" rel="noopener"
@@ -495,6 +553,7 @@
             </div>
         </div>
     </section>
+
 
 @endsection
 @section('script')
