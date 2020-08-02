@@ -83,9 +83,9 @@ class SchoolController extends Controller
 
         if ($news->news_type == 1)
         {
-            $relatedNews = News::where('id', '!=', $id)->with('school:id,user_id,name_en')->where('news_type', 1)->orderBy('order')->take(3)->get();
-        } else {
             $relatedNews = News::where('id', '!=', $id)->with('school:id,user_id,name_en')->where('user_id', $news->user_id)->orderBy('order')->take(3)->get();
+        } else {
+            $relatedNews = News::where('id', '!=', $id)->with('school:id,user_id,name_en')->where('news_type', 1)->orderBy('order')->take(3)->get();
         }
 
         $schoolName = School::where('user_id', $news->user_id)->value('name_en');
