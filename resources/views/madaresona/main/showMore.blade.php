@@ -1,4 +1,11 @@
 @extends('layouts.main')
+<meta property="og:url"           content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/showMore/{{ $news->id }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news->title_en) : trim($news->title_ar)) }}" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}" />
+<meta property="og:description"   content="{!! (app()->getLocale() == 'en') ? $news->text_en: $news->text_ar!!}" />
+<meta property="og:image"         content="@if($news->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $news->img }} @endif" />
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="300">
 @section('content')
     <section class="section-base section-color"
              @if((app()->getLocale() == 'ar'))
@@ -8,6 +15,7 @@
         @endif
 
         <div class="container">
+
             <div class="title_news rounded"
                  style="margin-top: 25px; background-color: #fff;  padding: 15px 50px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);">
                 <h2 style="font-weight: bold">{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}</h2>
@@ -27,6 +35,21 @@
                 <p style="border: 2px solid #eaeaea;"></p>
                 <hr class="visible-xs visible-sm">
                 <span>{{__('showMore.date_created')}}</span>
+                <span id="fb-root" style="float: left;">
+                    <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+
+                    <!-- Your share button code -->
+    <div class="fb-share-button"
+         data-href="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/showMore/{{ $news->id }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news->title_en) : trim($news->title_ar)) }}"
+         data-layout="button" data-size="small">
+    </div>
+                </span>
                 <time>
                     <i class="fad fa-clock"></i>
                     {{ $news->created_at->format('d m Y - g:i A')}}
@@ -65,8 +88,10 @@
             @endif
         </div>
 
-
         <hr class="space">
         </div>
     </section>
+
+    <div ></div>
+
 @endsection

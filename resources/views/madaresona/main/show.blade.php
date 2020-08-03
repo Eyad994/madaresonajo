@@ -693,8 +693,7 @@ margin: 0 0 20px;"></div>
 </div>
 
 <script>
-    document.documentElement.setAttribute("lang", "en");
-    document.documentElement.removeAttribute("class");
+
     initMap();
 
     function initMap() {
