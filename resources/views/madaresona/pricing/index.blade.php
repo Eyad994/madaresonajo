@@ -40,7 +40,7 @@
         border-radius: 15px;
         margin: 0 auto;
         padding: 40px 20px;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
         transition: .5s;
         overflow: hidden;
     }

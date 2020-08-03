@@ -2,6 +2,7 @@
 
 </style>
 <nav class="menu-classic menu-fixed align-right light " data-menu-anima="fade-bottom" style="direction:{{(app()->getLocale() == 'en') ?'ltr;' :'rtl;'}}" >
+
     <div class="containerNav">
         <div class="menu-brand">
             <a href="{{ route('home') }}">

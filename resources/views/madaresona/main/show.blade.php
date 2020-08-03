@@ -590,7 +590,7 @@
                     <div class="container mt-5 overflow-scroll scrollbar-warning" style="text-align: right; height: 650px;overflow-y: scroll;">
                         @foreach($news as $item)
 
-                            <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 10px 15px rgba(0, 0, 0, .5);الموردين">
+                            <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-3">

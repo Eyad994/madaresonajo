@@ -58,7 +58,7 @@
                             .fa_c {
                                 margin: 0px 5px !important;
                                 border-radius: 5px;
-                                box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
+                                box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
                             }
                         </style>
                         <a class="facebook fa_c" href="https://web.facebook.com/madaresonajoltd/?ref=bookmarks"><i

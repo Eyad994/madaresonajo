@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11d15d7e-b626-418f-93fa-37cb882a71ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/madaresonajo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/madaresonajo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/pricing/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/pricing/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/supplier/showMore.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/supplier/showMore.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/supplier/showWithoutModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/supplier/showWithoutModal.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/asm89/stack-cors/" />
     <ignored path="$PROJECT_DIR$/vendor/brick/math/" />
@@ -117,11 +125,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
               <caret line="25" column="68" lean-forward="true" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+              <folding>
+                <element signature="e#679#713#0#HTML" expanded="true" />
+                <element signature="e#954#997#0#HTML" expanded="true" />
+                <element signature="e#1065#1182#0#HTML" expanded="true" />
+                <element signature="e#1489#1523#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,12 +168,16 @@
       <find>خدم</find>
       <find>supplier</find>
       <find>images/news</find>
+      <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5);</find>
+      <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5)</find>
     </findStrings>
     <replaceStrings>
       <replace>images/Main News</replace>
+      <replace>box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/resources/views</dir>
+      <dir>$PROJECT_DIR$/resources/views/madaresona</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -149,14 +188,14 @@
       <list>
         <option value="$PROJECT_DIR$/app/Models/News.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" />
       </list>
     </option>
   </component>
@@ -307,7 +346,23 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="madaresona" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
               <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -408,12 +463,12 @@
       <workItem from="1596363582560" duration="2567000" />
       <workItem from="1596366330171" duration="246000" />
       <workItem from="1596366585167" duration="487000" />
-      <workItem from="1596466023425" duration="184000" />
+      <workItem from="1596466023425" duration="2203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6729000" />
+    <option name="totallyTimeSpent" value="8748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="0" />
@@ -728,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
@@ -822,17 +870,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="37" column="148" selection-start-line="37" selection-start-column="148" selection-end-line="37" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="25" column="68" lean-forward="true" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+          <folding>
+            <element signature="e#679#713#0#HTML" expanded="true" />
+            <element signature="e#954#997#0#HTML" expanded="true" />
+            <element signature="e#1065#1182#0#HTML" expanded="true" />
+            <element signature="e#1489#1523#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
