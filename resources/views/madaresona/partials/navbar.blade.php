@@ -31,7 +31,7 @@
                             <li class="item-135"><a  class="" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('index.contact_us') }}</a></li>
                         </ul>
                     </li>
-                    <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold" href="http://www.josmsservice.com/madaresona/" target="_blank">{{ __('index.sms_platform') }}</a></li>
+                    <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold" href="http://www.josmsservice.com/madaresona/" #f5f5f5>{{ __('index.sms_platform') }}</a></li>
                     <li class="item-101 selected "><a href="{{ request()->segment(2) == null ? '#services' : route('home').'#services' }}" class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold" href="http://job.madaresonajo.com">{{ __('index.madaresona_jobs') }}</a></li>
 

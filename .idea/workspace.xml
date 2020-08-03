@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11d15d7e-b626-418f-93fa-37cb882a71ce" name="Default" comment="" />
+    <list default="true" id="11d15d7e-b626-418f-93fa-37cb882a71ce" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/vendor/asm89/stack-cors/" />
     <ignored path="$PROJECT_DIR$/vendor/brick/math/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
@@ -135,8 +137,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+            <state relative-caret-position="513">
+              <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
               <folding>
                 <element signature="e#679#713#0#HTML" expanded="true" />
                 <element signature="e#954#997#0#HTML" expanded="true" />
@@ -156,14 +158,18 @@
       <find>images/news</find>
       <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5);</find>
       <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5)</find>
+      <find>#F1F5F7</find>
     </findStrings>
     <replaceStrings>
       <replace>images/Main News</replace>
       <replace>box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;</replace>
+      <replace>#f5f5f5</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/resources/views</dir>
       <dir>$PROJECT_DIR$/resources/views/madaresona</dir>
+      <dir>$PROJECT_DIR$/resources</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -449,15 +455,16 @@
       <workItem from="1596363582560" duration="2567000" />
       <workItem from="1596366330171" duration="246000" />
       <workItem from="1596366585167" duration="487000" />
-      <workItem from="1596466023425" duration="2454000" />
+      <workItem from="1596466023425" duration="2761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8999000" />
+    <option name="totallyTimeSpent" value="9306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39420936" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -874,8 +881,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+        <state relative-caret-position="513">
+          <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
           <folding>
             <element signature="e#679#713#0#HTML" expanded="true" />
             <element signature="e#954#997#0#HTML" expanded="true" />

@@ -33,7 +33,7 @@
                                         <div class="col-md-2"></div>
                                         <div class="col-md-10"></div>
                                         <div class="col-md-2">
-                                            <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" target="_blank"
+                                            <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" #f5f5f5
                                                class="btn btn-info"
                                             >{{ __('show.more') }}</a>
                                         </div>

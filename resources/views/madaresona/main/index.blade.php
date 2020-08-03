@@ -97,7 +97,7 @@
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
                             <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
-                               target="_blank"
+                               #f5f5f5
                                class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
                             <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                                  alt="">
@@ -422,7 +422,7 @@
                                 هو سهولة الإستخدام من خلال أجهزة الحاسب الآلي والأجهزة اللوحية والهواتف الذكية.</p>
                             {{-- <a class="btn-text"
                                 href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
-                                target="_blank" rel="noopener"
+                                #f5f5f5 rel="noopener"
                                 data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
                                  seo score</a>--}}</div>
                         <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img

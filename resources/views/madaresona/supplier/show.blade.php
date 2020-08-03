@@ -449,7 +449,7 @@
                                          style="width:50%; border-radius: 10px;" alt="">
                                 @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
                                     <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                       target="_blank" download="">
+                                       #f5f5f5 download="">
                                         <i class="fad fa-cloud-download"
                                            style="  font-size: 300px; margin-top: 60px; "></i>
                                     </a>
@@ -502,7 +502,7 @@
                                     <div class="col-md-4 form-group">
                                         <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }} :</div>
                                     </div>
-                                    <div class="col-md-8 form-group"><a target="_blank"
+                                    <div class="col-md-8 form-group"><a #f5f5f5
                                                                         href="http://{{ $school->website }}">{{ $school->website }}</a>
                                     </div>
                                 </div>
@@ -610,7 +610,7 @@
                                                 <div class="col-md-2"></div>
                                                 <div class="col-md-10"></div>
                                                 <div class="col-md-2">
-                                                    <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" target="_blank"
+                                                    <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" #f5f5f5
                                                        class="btn btn-info">
                                                         {{ __('show.more') }}
                                                     </a>

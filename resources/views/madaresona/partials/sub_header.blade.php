@@ -143,7 +143,7 @@
             --}}{{--<hr class="space">
             <hr class="space-lg">
             <p><a class="btn btn-sm btn-circle shadow-1 full-width-sm" href="https://1.envato.market/Dmj52"
-                  target="_blank" rel="noopener" data-mce-href="https://1.envato.market/Dmj52">Purchase
+                  #f5f5f5 rel="noopener" data-mce-href="https://1.envato.market/Dmj52">Purchase
                     now</a><span class="space">&nbsp;</span> <a class="btn-text active scroll-to hidden-sm"
                                                                 href="#demos" data-mce-href="#demos">View
                     demos</a></p>--}}{{--

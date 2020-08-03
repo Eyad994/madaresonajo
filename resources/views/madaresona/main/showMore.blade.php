@@ -55,7 +55,7 @@
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'], $limit = 45, $end = '...') !!}</h5>
                                     <a href="/{{ app()->getLocale() }}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
-                                       class="btn btn-primary mt-auto" target="_blank">المزيد</a>
+                                       class="btn btn-primary mt-auto" >المزيد</a>
                                 </div>
                             </div>
                         </div>
