@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-12 " style="padding: 15px; text-align: center; ">
                     <img class="rounded" style="width: 50%;max-height: 300px;box-shadow: 0 10px 15px rgba(0, 0, 0, .5); "
-                         src="@if($news->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }} @else {{ env('IMAGE_URL') }}/images/news/{{ $news->img }} @endif"
+                         src="@if($news->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $news->img }} @endif"
                          alt="">
                 </div>
 
@@ -49,7 +49,7 @@
                 @foreach($relatedNews as $item)
                 <div class="col-lg-4 d-flex align-items-stretch">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="@if($item->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school']['name_en'] }}/news/{{ $item->img }} @else {{ env('IMAGE_URL') }}/images/news/{{ $item->img }} @endif" alt="img">
+                        <img class="card-img-top" src="@if($item->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school']['name_en'] }}/news/{{ $item->img }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $item->img }} @endif" alt="img">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'], $limit = 45, $end = '...') !!}</h5>
                             <a href="/{{ app()->getLocale() }}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" class="btn btn-primary mt-auto" target="_blank">المزيد</a>

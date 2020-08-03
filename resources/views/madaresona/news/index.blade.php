@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="@if($item['news_type'] == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }} @else {{ env('IMAGE_URL') }}/images/news/{{ $item['img'] }} @endif"
+                                    <img src="@if($item['news_type'] == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $item['img'] }} @endif"
                                          alt="Avatar"
                                          style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                 </div>
