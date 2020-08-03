@@ -36,7 +36,7 @@
         position: relative;
         max-width: 330px;
         height: auto;
-        background: #F1F5F7;
+        background: #f5f5f5;
         border-radius: 15px;
         margin: 0 auto;
         padding: 40px 20px;
@@ -51,19 +51,19 @@
 
     .price-table:nth-child(1) .card,
     .price-table:nth-child(1) .card .title i {
-        background: #F1F5F7;
+        background: #f5f5f5;
 
     }
 
     .price-table:nth-child(2) .card,
     .price-table:nth-child(2) .card .title i {
-        background:#F1F5F7;
+        background:#f5f5f5;
 
     }
 
     .price-table:nth-child(3) .card,
     .price-table:nth-child(3) .card .title i {
-        background: #F1F5F7;
+        background: #f5f5f5;
 
     }
 

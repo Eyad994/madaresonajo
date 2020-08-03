@@ -39,7 +39,7 @@
         }
 
         .selected_education {
-            background: #f1f5f7;
+            background: #f5f5f5;
             padding: 20px 30px;
             border-radius: 10px !important;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
@@ -124,7 +124,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme"
-                         style="background: #f1f5f7; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
+                         style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
                         @foreach($specialSchools as $school)
                             <div class="col-md-10"
                                  style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}

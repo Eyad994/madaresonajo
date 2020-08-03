@@ -31,7 +31,7 @@
 
 
     <div class="bg-contact100">
-        <div class="container-contact100" style="background: #F1F5F7 !important;">
+        <div class="container-contact100" style="background: #f5f5f5 !important;">
             <div class="container mt-5"
                  style="margin-bottom: 10px; padding: 0px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;border-radius: 10px;">
                 <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>

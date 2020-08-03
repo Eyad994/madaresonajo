@@ -205,7 +205,7 @@ body hr:not([class*=space]) {
 }
 
 main > section.section-base.section-color, section.section-bottom-layer-color:after, .section-color .cnt-box-team:not(.boxed) .caption, .header-base {
-    background-color: #F1F5F7;
+    background-color: #f5f5f5;
 }
 
 .cnt-box.boxed .caption, .cnt-box-side-icon.boxed > i, .cnt-box-top-icon.boxed > i, nav.menu-transparent:not(.light).scroll-menu, .boxed-area {

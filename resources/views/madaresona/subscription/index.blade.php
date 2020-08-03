@@ -19,7 +19,7 @@
     @endif
 
     <div class="bg-contact100">
-        <div class="container-contact100" style="background: #F1F5F7 !important;">
+        <div class="container-contact100" style="background: #f5f5f5 !important;">
             <div class="wrap-contact100"
                  @if((app()->getLocale() == 'ar'))
                  style="direction: rtl; text-align: right;">
