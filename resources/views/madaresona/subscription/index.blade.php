@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main.css') }}">
     @if((app()->getLocale() == 'ar'))
         <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main_ar.css') }}">
-    @endif
+    @endif>
 
     <div class="bg-contact100">
         <div class="container-contact100" style="background: #f5f5f5 !important;">
@@ -76,7 +76,7 @@
                             <h4 class="contact100-form-sub_title" >لتصبح مدرستكم عضواً لدى مدارسنـا يرجى أكمال النموذج التالي ليتمكن مندوبينا التواصل معكم في أٌقرب وقت ممكن
                                 </h4>
                             <div class="wrap-input100 validate-input" >
-                                <input class="input100" type="text" name="school_name" placeholder="اسم المدرسة">
+                                <input class="input100" type="text" name="school_name" placeholder="اسم المدرسة" value="{{ old('school_name') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
@@ -88,7 +88,7 @@
                                     * {{ $errors->first('school_name') }}</div>
                             @endif
                             <div class="wrap-input100 validate-input" >
-                                <input class="input100" type="text" name="contact_name" placeholder="اسم جهة الاتصال ">
+                                <input class="input100" type="text" name="contact_name" placeholder="اسم جهة الاتصال " value="{{ old('contact_name') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-people-arrows" aria-hidden="true"></i>
@@ -101,7 +101,7 @@
                             @endif
                             <div class="wrap-input100 validate-input"
                                  data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
+                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني" value="{{ old('email_user') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-envelope" aria-hidden="true"></i>
@@ -114,7 +114,7 @@
                             @endif
                             <div class="wrap-input100 validate-input"
                                  data-validate="رقم هاتف فعال">
-                                <input class="input100" type="text" name="phone_number" placeholder="الهاتف">
+                                <input class="input100" type="text" name="phone_number" placeholder="الهاتف" value="{{ old('phone_number') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-phone" aria-hidden="true"></i>
@@ -127,7 +127,7 @@
                             @endif
 
                             <div class="wrap-input100 validate-input" >
-                                <textarea class="input100" name="message" placeholder=" عنوان المدرسة التفصيلي ..."></textarea>
+                                <textarea class="input100" name="message" placeholder=" عنوان المدرسة التفصيلي ..."> {{ old('message') }}</textarea>
                                 <span class="focus-input100"></span>
                             </div>
                             @if($errors->has('message'))

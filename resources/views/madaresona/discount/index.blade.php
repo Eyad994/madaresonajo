@@ -26,12 +26,14 @@
             color: #66666682;
             background: #e6e6e6;
         }
-        .form-control:focus {
-            color: #495057;
-            background-color: #fff;
-            border-color: #ff6000;
-            outline: 0;
-            box-shadow: 0 0 0 .2rem rgba(255, 96, 0, 0.25)
+
+        .option_c:focus {
+            box-shadow: none;
+            background: #e6e6e6;
+        }
+
+        .option_c option {
+            background: #fff;
         }
 
     </style>
@@ -102,7 +104,8 @@
                             <h4 class="contact100-form-sub_title">احصل على خصم الان وسجل معلومات الطالب
                             </h4>
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="text" name="name" id="name" value="{{ old('name') }}" placeholder="الاسم">
+                                <input class="input100" type="text" name="name" id="name" value="{{ old('name') }}"
+                                       placeholder="الاسم">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
@@ -115,10 +118,11 @@
                             @endif
 
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="text" name="school_name" value="{{ old('school_name') }}" placeholder="المدرسة الحالية">
+                                <input class="input100" type="text" name="school_name" value="{{ old('school_name') }}"
+                                       placeholder="المدرسة الحالية">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+							<i class="fad fa-school" aria-hidden="true"></i>
 						</span>
                             </div>
                             @if($errors->has('school_name'))
@@ -128,10 +132,11 @@
                             @endif
 
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="number" name="avg" value="{{ old('avg') }}" placeholder="المعدل">
+                                <input class="input100" type="number" name="avg" value="{{ old('avg') }}"
+                                       placeholder="المعدل">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+							<i class="fad fa-percent" aria-hidden="true"></i>
 						</span>
                             </div>
                             @if($errors->has('avg'))
@@ -139,15 +144,19 @@
                                      style="color: red; padding: 0px 20px 5px 20px;">* {{ $errors->first('avg') }}</div>
                             @endif
                             <div class="wrap-input100 validate-input">
-                                <select name="school_class" class="form-control option_c">
+                                <select name="school_class" id="school_class" class="form-control option_c">
                                     <option selected disabled>اختر المرحلة الدراسية</option>
                                     @foreach($schoolClasses as $class)
-                                        <option value="{{ $class->id }}">{{ app()->getLocale() == 'ar' ? $class->class_ar : $class->class_en }}</option>
+                                        @if (old('school_class') == $class->id)
+                                            <option value="{{ $class->id }}" selected >{{ app()->getLocale() == 'ar' ? $class->class_ar : $class->class_en }}</option>
+                                        @else
+                                            <option value="{{ $class->id }}">{{ app()->getLocale() == 'ar' ? $class->class_ar : $class->class_en }}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+							<i class="fad fa-chalkboard-teacher" aria-hidden="true"></i>
 						</span>
                             </div>
                             @if($errors->has('school_class'))
@@ -170,7 +179,7 @@
                                 </select>
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+                                    <i class="fad fad fa-city" aria-hidden="true"></i>
 						</span>
                             </div>
                             @if($errors->has('city_id'))
@@ -186,7 +195,7 @@
                                 </select>
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
-							<i class="fad fa-people-arrows" aria-hidden="true"></i>
+							<i class="fad fa-map-marked-alt" aria-hidden="true"></i>
 						</span>
                             </div>
                             @if($errors->has('region_id'))
@@ -194,9 +203,8 @@
                                      style="color: red; padding: 0px 20px 5px 20px;">
                                     * {{ $errors->first('region_id') }}</div>
                             @endif
-                            <div class="wrap-input100 validate-input"
-                                 data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="email" name="email_user" placeholder="البريد الاكتروني">
+                            <div class="wrap-input100 ">
+                                <input class="input100" type="email" name="email_user" placeholder="البريد الاكتروني" value="{{ old('email_user') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-envelope" aria-hidden="true"></i>
@@ -208,7 +216,7 @@
                                     * {{ $errors->first('email_user') }}</div>
                             @endif
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="number" name="phone_number" placeholder="الهاتف">
+                                <input class="input100" type="number" name="phone_number" placeholder="الهاتف" value="{{ old('phone_number') }}" >
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-phone" aria-hidden="true"></i>

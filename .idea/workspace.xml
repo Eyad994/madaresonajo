@@ -2,7 +2,252 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11d15d7e-b626-418f-93fa-37cb882a71ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DiscountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DiscountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PricingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PricingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/content-box.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/content-box.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/check-gray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/customers-24fad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/customers4fad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/devicesbacd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/food/food-2a591.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/food/foodf847.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hd-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hd-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hd-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hd-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hd-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hd-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/img-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/intro/seo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/intro/seoa6e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/intro/themekit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/intro/themekita6e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/iso-1e514.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/iso-2172b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/iso-32923.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logo-light.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/logo-light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-1167e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-11a63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-174de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-18174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-1cfa0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-2167e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-21a63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-274de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-2cfa0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-31a63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-374de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-38174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-3cfa0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-4167e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-474de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-48174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-4b9e2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-4cfa0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-5167e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-574de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-58174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-5b9e2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-5cfa0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-6167e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-674de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-68174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-6b9e2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-6cfa0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-7167e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-78174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-1096e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-14558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-2096e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-24558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-3096e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-34558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-4096e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-44558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-5096e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-54558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-6096e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logos/white/logo-64558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/map1062.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-11062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-119ca8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-131062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-13341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-13fe6b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-151062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-159ca8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-15fe6b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-18b3d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-1b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-23341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-31062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-33341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-38b3d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-43341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-5167e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-59ca8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-7167e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-79ca8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-7b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/music/image-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/news/image-1ee6c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/news/image-2ee6c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/news/news-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/news/news-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/no-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-108174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-118174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-1243a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-1343a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-145ff7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-155ff7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-1a505.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-23136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-33136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-48be0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-58be0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-69028.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-79ca8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-8ca2e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-9ca2e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-108a59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-113ab9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-118a59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-128a59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-138a59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-13ab9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-143ab9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-1ee12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-23ab9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-2ee12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-3ee12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-43ab9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-48a59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-4b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-4ee12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-53ab9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-58a59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-5b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-5ee12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-6b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-6ee12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-7093a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-7b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-8b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-screen-9b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone-walla5e7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo-19a10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-104fad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-114fad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-124fad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-134fad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-17113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-1b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-27113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-2b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-37113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-47113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-4b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-57113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-67113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-6b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-7167e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-7b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-8167e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-8b464.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/image-94fad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/square-1b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/photo/square-2b464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-11.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-12.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-8.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/icon-9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/image-1a4a6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/image-2a4a6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/saas/overlay-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/school.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/school.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sign-dark9466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sign-darke57b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sign.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sport/image-13bc7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sport/screen-143a3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sport/screen-16399.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sport/screen-19f43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sport/screen-1c617.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-apple-white1e45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-apple-white738b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-apple2541.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-apple84f1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-appleb464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-google-white1e45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-google-white738b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-google2541.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-google84f1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/store-googleb464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/tablet-1f4cf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/team406f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/travel/travel-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/travel/travel-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/travel/wide-1a792.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-11d02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-14716.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-15374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-1e33c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-25374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-31d02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-34716.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-35374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-3e33c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-41d02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-45374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-4e33c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-51d02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-55374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-5e33c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-65374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-75374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/user-85374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/video-poster-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/video-poster.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/wide-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contact/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contact/css/main_ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact/css/main_ar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/discount/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/discount/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/asm89/stack-cors/" />
     <ignored path="$PROJECT_DIR$/vendor/brick/math/" />
@@ -114,10 +359,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12502">
-              <caret line="673" column="7" selection-start-line="673" selection-start-column="7" selection-end-line="673" selection-end-column="7" />
+            <state relative-caret-position="437">
+              <caret line="41" column="45" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -125,26 +370,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="590">
+              <caret line="59" column="75" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
+        <entry file="file://$PROJECT_DIR$/public/assets/carousel.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="6688">
+              <caret line="352" column="19" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2337">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="418">
+              <caret line="106" column="53" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="53" />
+              <folding>
+                <element signature="e#40#69#0#PHP" expanded="true" />
+                <element signature="e#2402#3181#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,32 +401,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2793">
-              <caret line="147" selection-start-line="147" selection-end-line="147" />
-              <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
-              <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="247">
+              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -189,7 +414,6 @@
       <find>خدم</find>
       <find>supplier</find>
       <find>images/news</find>
-      <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5);</find>
       <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5)</find>
       <find>#F1F5F7</find>
       <find>target=&quot;_blank&quot;</find>
@@ -198,11 +422,18 @@
       <find>time</find>
       <find>582a3ab88147e4684e43b8b0</find>
       <find>https://embed.tawk.to/582a3ab88147e4684e43b8b0/default</find>
+      <find>box-shadow: 0 10px 15px rgba(0, 0, 0, .5);</find>
+      <find>.focus-input100 {</find>
+      <find>index</find>
+      <find>services</find>
+      <find>خدمتنا</find>
+      <find>h4</find>
+      <find>showWithoutModal</find>
     </findStrings>
     <replaceStrings>
       <replace>images/Main News</replace>
-      <replace>box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;</replace>
       <replace>#f5f5f5</replace>
+      <replace>box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/resources/views/madaresona</dir>
@@ -218,17 +449,30 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/Models/News.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/validation.php" />
+        <option value="$PROJECT_DIR$/public/contact/css/main.css" />
+        <option value="$PROJECT_DIR$/public/contact/css/main_ar.css" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/discount/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PricingController.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DiscountController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/benefitsSubscribing.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/content-box.css" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/faSubscribing.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/services.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/carousel.min.css" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
       </list>
     </option>
   </component>
@@ -335,7 +579,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1990" />
+    <option name="x" value="70" />
     <option name="y" value="27" />
     <option name="width" value="1850" />
     <option name="height" value="1053" />
@@ -355,6 +599,89 @@
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
               <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
+              <item name="subscription" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
+              <item name="supplier" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -451,17 +778,18 @@
       <workItem from="1596366330171" duration="246000" />
       <workItem from="1596366585167" duration="487000" />
       <workItem from="1596493863937" duration="3033000" />
-      <workItem from="1596522723116" duration="817000" />
+      <workItem from="1596522723116" duration="17068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12604000" />
+    <option name="totallyTimeSpent" value="28855000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
+    <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23051225" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23051225" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -475,7 +803,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4914712" visible="true" weight="0.21309656" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4914712" visible="true" weight="0.21309656" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50852877" side_tool="true" weight="0.2383532" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -509,27 +837,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/media/jui/js/bootstrap.min4c8f.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="7" column="4624" selection-start-line="7" selection-start-column="4624" selection-end-line="7" selection-end-column="4624" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="5" column="13547" selection-start-line="5" selection-start-column="13547" selection-end-line="5" selection-end-column="13547" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="4905" column="8" selection-start-line="4905" selection-start-column="8" selection-end-line="4905" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Requests.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -596,20 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PricingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/validation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -617,48 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DiscountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding>
-            <element signature="e#40#60#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="161" column="3" selection-start-line="161" selection-start-column="3" selection-end-line="161" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1734">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/help/suggestion.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/carousel.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="531" column="22" selection-start-line="531" selection-start-column="22" selection-end-line="531" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -733,13 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/discount/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/mainCarousel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -761,20 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="382" column="29" lean-forward="true" selection-start-line="382" selection-start-column="29" selection-end-line="382" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -790,54 +1024,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="193" lean-forward="true" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="193" />
-          <folding>
-            <element signature="e#1830#1916#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12502">
           <caret line="673" column="7" selection-start-line="673" selection-start-column="7" selection-end-line="673" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2337">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2793">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,17 +1038,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="210">
+          <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2337">
+          <caret line="132" column="18" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-640">
+          <caret line="161" column="3" selection-start-line="161" selection-start-column="3" selection-end-line="161" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contact/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="311" column="16" selection-start-line="311" selection-start-column="10" selection-end-line="311" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contact/css/main_ar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/discount/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="53" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#10;n#form#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DiscountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PricingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="13" />
+          <folding>
+            <element signature="e#40#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="136" column="98" selection-start-line="136" selection-start-column="98" selection-end-line="136" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+        <state relative-caret-position="-1596">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/content-box.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/faSubscribing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
+          <folding>
+            <element signature="e#613#655#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/services.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="40" column="288" selection-start-line="40" selection-start-column="288" selection-end-line="40" selection-end-column="288" />
+          <folding>
+            <element signature="e#46#363#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/carousel.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6688">
+          <caret line="352" column="19" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="59" column="75" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="106" column="53" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="53" />
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+            <element signature="e#2402#3181#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

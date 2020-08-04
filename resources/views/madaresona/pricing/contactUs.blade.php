@@ -43,6 +43,12 @@
                     style="direction:ltr; text-align:left;">
                 @endif
                 <div class="row">
+
+                    @if(Session::has('message'))
+                        <div class="col-md-12">
+                            <p class="alert alert-success">{{ Session::get('message') }}</p>
+                        </div>
+                    @endif
                     <div class="col-md-4" style="bottom: 15px;">
                         <div class="col-md-12" style="text-align: center">
                             <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
@@ -79,45 +85,67 @@
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-6">
-                        <form class="contact100-form validate-form">
+
+                        <form class="contact100-form validate-form"
+                            action="{{ route('storeContactUs', app()->getLocale()) }}" method="POST">
+                            @csrf
 					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}">
 						ارسل رسالة
 					</span>
                             <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم
                                 بالرد في غضون 24 ساعة عمل</h4>
                             <div class="wrap-input100 validate-input" data-validate="Name is required">
-                                <input class="input100" type="text" name="name" placeholder="الاسم">
+                                <input class="input100" type="text" name="name" placeholder="الاسم" value="{{ old('name') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
 						</span>
                             </div>
+                            @if($errors->has('name'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('name') }}</div>
+                            @endif
 
                             <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                                <input class="input100" type="text" name="email_user" placeholder="الهاتف ">
+                                <input class="input100" type="text" name="phone_number" placeholder="الهاتف " value="{{ old('phone_number') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-phone" aria-hidden="true"></i>
 						</span>
                             </div>
+                            @if($errors->has('phone_number'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('phone_number') }}</div>
+                            @endif
                             <div class="wrap-input100 validate-input"
                                  data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
+                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني" value="{{ old('email_user') }}" >
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-envelope" aria-hidden="true"></i>
 						</span>
                             </div>
-
+                            @if($errors->has('email_user'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('email_user') }}</div>
+                            @endif
 
                             <div class="wrap-input100 validate-input" data-validate="Message is required">
-                                <textarea class="input100" name="message" placeholder="الرسالة ..."></textarea>
+                                <textarea class="input100" name="message" placeholder="الرسالة ...">{{ old('message') }}</textarea>
                                 <span class="focus-input100"></span>
                             </div>
+                            @if($errors->has('message'))
+                                <div class="error"
+                                     style="color: red; padding: 0px 20px 5px 20px;">
+                                    * {{ $errors->first('message') }}</div>
+                            @endif
 
                             <div class="container-contact100-form-btn">
                                 <button class="contact100-form-btn">
-                                    Send
+                                    ارسل
                                 </button>
                             </div>
                         </form>

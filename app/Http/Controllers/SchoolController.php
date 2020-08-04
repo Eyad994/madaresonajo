@@ -11,10 +11,22 @@ use App\Models\Suggestion;
 use App\Models\Transportation;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Validator;
 
 class SchoolController extends Controller
 {
+    public function services()
+    {
+        return view('madaresona.main.services');
+    }
+
+    public function faSubscribing()
+    {
+        return view('madaresona.main.faSubscribing');
+    }
+
+
     public function show($lang, $slug)
     {
 
@@ -76,13 +88,30 @@ class SchoolController extends Controller
 
         return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums', 'genderSchool'));
     }
+    public function showWithoutModalOut($id, $slug,$locale = 'ar')
+    {
+
+        App::setLocale($locale);
+        $cleanSlug = str_replace('-', ' ', $slug);
+
+        // preg_replace('/[-]+/', ' ', trim($cleanSlug))
+
+        $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
+        $genderSchool = explode(',', $school->gender);
+        $gallery = GallarySchool::where('school_id', $school->id)->get();
+        $news = News::where('user_id', $school->user_id)->get();
+        $transportations = Transportation::where('school_id', $school->id)->get();
+        $premiums = Premium::where('school_id', $school->id)->get();
+
+
+        return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums', 'genderSchool'));
+    }
 
     public function showMore($lang, $id, $title)
     {
         $news = News::where('id', $id)->first();
 
-        if ($news->news_type == 1)
-        {
+        if ($news->news_type == 1) {
             $relatedNews = News::where('id', '!=', $id)->with('school:id,user_id,name_en')->where('user_id', $news->user_id)->orderBy('order')->take(3)->get();
         } else {
             $relatedNews = News::where('id', '!=', $id)->with('school:id,user_id,name_en')->where('news_type', 1)->orderBy('order')->take(3)->get();
@@ -136,8 +165,8 @@ class SchoolController extends Controller
         $request->validate([
             'school_name' => 'required',
             'contact_name' => 'required',
-            'email_user' => 'required',
-            'phone_number' => 'required',
+            'email_user' => 'required|email',
+            'phone_number' => 'required|numeric',
             'message' => 'required',
         ]);
 

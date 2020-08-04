@@ -38,6 +38,8 @@ Route::group([
     Route::post('newSubscription', 'SchoolController@storeNewSubscription')->name('newSubscription');
     Route::get('newSuggestion', 'SchoolController@newSuggestion')->name('newSuggestion');
     Route::post('newSuggestion', 'SchoolController@storeNewSuggestion')->name('newSuggestion');
+    Route::get('services', 'SchoolController@services')->name('services');
+    Route::get('faSubscribing', 'SchoolController@faSubscribing')->name('faSubscribing');
 
     Route::get('faq', 'FaqController@index')->name('faq');
     Route::get('discounts', 'DiscountController@index')->name('discounts');
@@ -49,9 +51,10 @@ Route::group([
 
     Route::get('pricing', 'PricingController@index')->name('pricing');
     Route::get('contactUs', 'PricingController@contactUs')->name('contactUs');
-
+    Route::post('store/contactUs', 'PricingController@store')->name('storeContactUs');
     Route::get('{slug}', 'SchoolController@showWithoutModal');
     Route::get('showMore/{id}/{title}', 'SchoolController@showMore');
 
-
 });
+
+Route::get('school-data/{id}/{slug}', 'SchoolController@showWithoutModalOut');

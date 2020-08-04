@@ -19,7 +19,7 @@
                     <li class="item-129 "><a href="{{ route('news', app()->getLocale()) }}" class=" js-activated bt-white font-weight-bold">{{ __('index.News') }}</a></li>
                     <li class="item-130   dropdown"><a class=" js-activated bt-white font-weight-bold">{{ __('index.subscription') }}</a>
                         <ul class="">
-                            <li class="item-133"><a class="" href="#subscribe_features"> {{ __('index.membership_Benefits_classic') }}</a></li>
+                            <li class="item-133"><a class="" href="{{ route('faSubscribing', app()->getLocale()) }}">  {{ __('index.membership_Benefits_classic') }}</a></li>
                             <li class="item-134" ><a  class="" href="{{ route('pricing', app()->getLocale()) }}">{{ __('index.fees_and_payment_methods_gird') }}</a></li>
                             <li class="item-135"><a  class="" href="{{ route('newSubscription', app()->getLocale()) }}"> {{ __('index.new_subscribers_post') }}</a></li>
                         </ul>
@@ -32,7 +32,7 @@
                         </ul>
                     </li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold" href="http://www.josmsservice.com/madaresona/" #f5f5f5>{{ __('index.sms_platform') }}</a></li>
-                    <li class="item-101 selected "><a href="{{ request()->segment(2) == null ? '#services' : route('home').'#services' }}" class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
+                    <li class="item-101 selected "><a href="{{ route('services', app()->getLocale())  }}" class=" js-activated bt-white font-weight-bold">{{ __('index.services') }}</a></li>
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold" href="http://job.madaresonajo.com">{{ __('index.madaresona_jobs') }}</a></li>
 
                     <li class="item-101 selected "><a class=" js-activated bt-white font-weight-bold"  href="{{ route('discounts', app()->getLocale()) }}"> {{ __('index.discounts') }}</a></li>

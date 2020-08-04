@@ -27,8 +27,8 @@ class DiscountController extends Controller
             'school_class' => 'required',
             'city_id' => 'required',
             'region_id' => 'required',
-            'email_user' => 'required',
-            'phone_number' => 'required',
+            'email_user' => 'required|email',
+            'phone_number' => 'required|numeric',
         ]);
 
         Discount::create([

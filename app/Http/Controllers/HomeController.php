@@ -17,6 +17,8 @@ use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
+
+
     public function index($locale = 'ar')
     {
 
