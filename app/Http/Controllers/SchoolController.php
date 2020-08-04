@@ -111,7 +111,7 @@ class SchoolController extends Controller
     {
         App::setLocale($locale);
         $cleanSlug = str_replace('-', ' ', $slug);
-
+        $cleanSlug = rtrim($cleanSlug);
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))
 
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();

@@ -20,8 +20,6 @@ Route::get('refreshCarousel', 'HomeController@refreshCarousel');
 Route::get('{locale?}/school-data/{id}/{slug}', 'SchoolController@showWithoutModalOut');
 Route::get('school-data/{id}/{slug}', 'SchoolController@showWithoutModalOutTwo');
 
-Route::get('{locale?}/news-content/{id}/{slug}', 'SchoolController@showWithoutModalOut');
-Route::get('news-content/{id}/{slug}', 'SchoolController@showWithoutModalOutTwo');
 /*************************************************************************************/
 
 Route::group([
