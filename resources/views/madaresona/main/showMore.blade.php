@@ -2,7 +2,7 @@
 <meta property="og:url"           content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/showMore/{{ $news->id }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news->title_en) : trim($news->title_ar)) }}" />
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}" />
-<meta property="og:description"   content="{!! (app()->getLocale() == 'en') ? $news->text_en: $news->text_ar!!}" />
+{{--<meta property="og:description"   content="{!! (app()->getLocale() == 'en') ? $news->text_en: $news->text_ar!!}" />--}}
 <meta property="og:image"         content="@if($news->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $schoolName }}/news/{{ $news->img }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $news->img }} @endif" />
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="300">

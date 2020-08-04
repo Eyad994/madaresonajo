@@ -95,7 +95,7 @@ class SchoolController extends Controller
 
     public function news()
     {
-        $newsArray = News::where('active', 1)->latest()->get();
+        $newsArray = News::where('active', 1)->orderBy('order')->get();
 
         $news = array();
         foreach ($newsArray as $key => $index) {
