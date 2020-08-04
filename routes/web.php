@@ -16,10 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get("/{locale?}", "HomeController@index")->name('home')->where('locale', 'ar|en');
 
 Route::get('refreshCarousel', 'HomeController@refreshCarousel');
-
+/*************************************************************************************/
 Route::get('{locale?}/school-data/{id}/{slug}', 'SchoolController@showWithoutModalOut');
 Route::get('school-data/{id}/{slug}', 'SchoolController@showWithoutModalOutTwo');
 
+Route::get('{locale?}/news-content/{id}/{slug}', 'SchoolController@showWithoutModalOut');
+Route::get('news-content/{id}/{slug}', 'SchoolController@showWithoutModalOutTwo');
+/*************************************************************************************/
 
 Route::group([
     'prefix' => '{locale}',
