@@ -17,6 +17,9 @@ Route::get("/{locale?}", "HomeController@index")->name('home')->where('locale', 
 
 Route::get('refreshCarousel', 'HomeController@refreshCarousel');
 
+Route::get('{locale?}/school-data/{id}/{slug}', 'SchoolController@showWithoutModalOut');
+
+
 Route::group([
     'prefix' => '{locale}',
     'where' => ['locale' => '[a-zA-Z]{2}'],
@@ -54,7 +57,4 @@ Route::group([
     Route::post('store/contactUs', 'PricingController@store')->name('storeContactUs');
     Route::get('{slug}', 'SchoolController@showWithoutModal');
     Route::get('showMore/{id}/{title}', 'SchoolController@showMore');
-
 });
-
-Route::get('school-data/{id}/{slug}', 'SchoolController@showWithoutModalOut');

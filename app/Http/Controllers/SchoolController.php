@@ -88,9 +88,8 @@ class SchoolController extends Controller
 
         return view('madaresona.main.showWithoutModal', compact('school', 'gallery', 'news', 'transportations', 'premiums', 'genderSchool'));
     }
-    public function showWithoutModalOut($id, $slug,$locale = 'ar')
+    public function showWithoutModalOut($locale = 'ar', $id, $slug)
     {
-
         App::setLocale($locale);
         $cleanSlug = str_replace('-', ' ', $slug);
 
