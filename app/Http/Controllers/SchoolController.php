@@ -9,6 +9,7 @@ use App\Models\Requests;
 use App\Models\School;
 use App\Models\Suggestion;
 use App\Models\Transportation;
+use App\Traits\VisitorTrait;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -16,6 +17,18 @@ use Illuminate\Support\Facades\Validator;
 
 class SchoolController extends Controller
 {
+    use VisitorTrait;
+
+
+    /**
+     * SchoolController constructor.
+     */
+    public function __construct()
+    {
+
+        $this->storeVisitor();
+    }
+
     public function services()
     {
         return view('madaresona.main.services');
@@ -127,6 +140,7 @@ class SchoolController extends Controller
 
     public function showMore($lang, $id, $title)
     {
+
         $news = News::where('id', $id)->first();
 
         if ($news->news_type == 1) {

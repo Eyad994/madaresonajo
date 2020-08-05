@@ -1,20 +1,13 @@
-<section class="section-image section-full-width-right light no-padding-top section-bottom-layer">
+<section class="section-image section-full-width-right light no-padding-top section-bottom-layer" style="top: 40px; background-image: url({{ asset('banner.jpg') }})">
 
-    <div class="container">
-
-        <br>
-        {{--<div class="input-group">
-            <input class="form-control py-2 border-right-0 border" type="search" value="search" id="example-search-input">
-            <span class="input-group-append">
-                <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-            </span>
-        </div>--}}
+    <div class="container" style="">
 
             <form action="{{ route('search', app()->getLocale()) }}" method="POST" id="searchForm">
             @csrf
 
         <div class="row">
-            <div class="col-md-5 search-bar-banner">
+            <div class="col-md-7"></div>
+            <div class="col-md-5 ">
                 {{--<label for="validationDefaultUsername">Username</label>--}}
                 <div class="input-group">
 
@@ -28,13 +21,13 @@
                     </div>
 
                     <input type="text" name="search_text" id="search_text" class="form-control"
-                           style="text-align: right; font-size: 14px; border: 0px; outline: 0px;"
+                           style="text-align: right; font-size: 14px; border: 0px; outline: 0px; width: 95%; margin-top: 10px;"
                            placeholder="بحث عن المدارس ورياض الأطفال">
                     <div class="input-group-prepend">
-                        <button type="submit" class="btn btn-info" id="inputGroupPrepend2"><i class="fa fa-search"></i></button>
+                        <button type="submit" class="btn btn-info" id="inputGroupPrepend2" style="top: 10px;"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
-                <small class="form-text" style="font-size: 11px; text-align: right">اكتشف المزيد من
+                <small class="form-text" style="font-size: 11px; text-align: right;font-weight: bold;color: #ffa276;">اكتشف المزيد من
                     المدارس ورياض
                     الأطفال، ومركز التدريب وأكثر من ذلك
                 </small>
@@ -114,9 +107,9 @@
     <style>
         .bannerLogo{
             height: 256px;
+
         }
         .bannerLogoImg{
-            bottom: 190px
         }
         @media (max-width: 700px) {
             .bannerLogo{
@@ -129,14 +122,19 @@
         }
     </style>
 
-    <div class="row bannerLogo" >
+    <div class="row bannerLogo">
+        <div class="col-md-12 bannerLogoImg">
+
+        </div>
+    </div>
+    {{--<div class="row bannerLogo" >
         <div class="col-md-5"></div>
         <div class="col-md-6 bannerLogoImg">
             <img src="{{ asset('bannerLogo.png') }}" alt=""
                  data-mce-src="images/phone-wall.png">
         </div>
         <div class="col-md-1"></div>
-    </div>
+    </div>--}}
     {{--<div class="row ">
         <div class='col-lg-6 col-md-6 col-sm-6  '>
 

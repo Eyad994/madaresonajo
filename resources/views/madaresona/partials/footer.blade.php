@@ -1,4 +1,122 @@
-<footer class=" light " style="text-align: center">
+@extends('layouts.navAndFooterLinks')
+
+@section('footer')
+    <footer id="footer" class="style5" data-uw-node-idx="927">
+        <div class="footer-wrapper" data-uw-node-idx="928">
+            <div class="container" data-uw-node-idx="929">
+                <div class="row" data-uw-node-idx="930">
+                    <div class="col-sm-6 col-md-5" data-uw-node-idx="931">
+                        <h2 data-uw-node-idx="932">إختصارات</h2>
+                        <ul class="discover triangle hover row" data-uw-node-idx="933">
+                            <li class="active col-xs-6" data-uw-node-idx="934"><a href="" data-uw-node-idx="935">من نحن</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href=" data-uw-node-idx="937">اعلن معنا</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="938"><a href="" data-uw-node-idx="939">حسابي</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="940"><a href="" data-uw-node-idx="941">أضف إعلان مناقصة</a></li>
+
+
+
+                            <li class="col-xs-6" data-uw-node-idx="942"><a href="" data-uw-node-idx="943">الجهات الناشرة</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="944"><a href="" data-uw-node-idx="945">الشروط والأحكام</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="946"><a href="" data-uw-node-idx="947">خيارات البحث</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="948"><a href="" data-uw-node-idx="949">سياسة الخصوصية</a></li>
+                        </ul>
+                        <br>
+                        <br>
+                        <h6 data-uw-node-idx="950">
+                            <i class="fas fa-map-marked-alt" data-uw-node-idx="951"></i>
+                            &nbsp;
+                            فروعنا
+
+                        </h6>
+                        <a href="#" data-uw-node-idx="952">
+                            <img src="{{ asset('WebAr/images/flags/jo-s.png') }}" data-uw-node-idx="953">
+                        </a>
+                        <a href="https://www.tenderuae.com/" target="_blank" data-uw-node-idx="954">
+                            <img src="{{ asset('WebAr/images/flags/uae-s.png') }}" data-uw-node-idx="955">
+                        </a>
+                        <a href="https://www.ctckw.net/" target="_blank" title="مناقصات الكويت" data-uw-node-idx="956">
+                            <img src="{{ asset('WebAr/images/flags/kw-s.png') }}" alt="مناقصات الكويت" data-uw-node-idx="957">
+                        </a>
+                        <a href="https://www.tendersa.com/" target="_blank" data-uw-node-idx="958">
+                            <img src="{{ asset('WebAr/images/flags/sa-s.png') }}" data-uw-node-idx="959">
+                        </a>
+                        <a href="https://www.iqtenders.com/" target="_blank" data-uw-node-idx="960">
+                            <img src="{{ asset('WebAr/images/flags/ir-s.png') }}" data-uw-node-idx="961">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4" data-uw-node-idx="962">
+                        <h2 data-uw-node-idx="963">القائمة البريدية</h2>
+                        <p data-uw-node-idx="964">سجّل بريدك الإلكتروني ليصلك كل ما تودّ معرفته عن تندرجو</p>
+                        <div class="with-icon full-width" data-uw-node-idx="965">
+                            <input type="text" id="txtSubscriber" class="input-text full-width" data-uw-node-idx="966">
+                            <button id="btnSubscriber" type="button" class="icon yellow-bg white-color" data-uw-node-idx="967">
+                                <i id="sbciconcclass" class="soap-icon-message" data-uw-node-idx="968"></i>
+                            </button>
+                        </div>
+                        <div class="clearer" data-uw-node-idx="969">
+                            <br>
+                        </div>
+                        <span data-uw-node-idx="970">نحن نحترم خصوصيتك</span>
+                        <div class="clearer" data-uw-node-idx="971">
+                            <hr>
+                        </div>
+
+                        <div class="pull-left" data-uw-node-idx="972">
+                            <img src="{{ asset('WebEn/images/PaymentIcon.svg') }}" alt="Payment Methods" data-uw-node-idx="973"><br>
+                            <br>
+                            <img src="{{ asset('WebEn/images/verified.svg') }}" width="160" alt="Payment Methods" data-uw-node-idx="974">
+                        </div>
+                        <div class="clearer" data-uw-node-idx="975">
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-6 col-md-3" data-uw-node-idx="976">
+                        <h2 data-uw-node-idx="977">عن تندرجو</h2>
+                        <p data-uw-node-idx="978"> منصة تجارية تعمل على توفير الفرص التجارية وحلول المعلومات للشركات المحلية والدولية</p>
+
+                        <br>
+                        <address class="contact-details" data-uw-node-idx="979">
+                            <span class="contact-phone" data-uw-node-idx="980"><i class="soap-icon-phone" data-uw-node-idx="981">&nbsp;</i>06-4205541</span>
+                            <br>
+                            <a href="#" class="contact-email" data-uw-node-idx="982">info@tenderjo.com</a>
+                        </address>
+
+                        <ul class="social-icons clearfix" data-uw-node-idx="983">
+                            <li class="instagram" data-uw-node-idx="984"><a title="" href="https://www.instagram.com/tender.jo/" data-toggle="tooltip" target="_blank" data-original-title="instagram" data-uw-node-idx="985"><i class="soap-icon-instagram" data-uw-node-idx="986"></i></a></li>
+                            <li class="twitter" data-uw-node-idx="987"><a title="" href="https://twitter.com/TENDERJORDAN" data-toggle="tooltip" target="_blank" data-original-title="twitter" data-uw-node-idx="988"><i class="soap-icon-twitter" data-uw-node-idx="989"></i></a></li>
+                            <li class="pinterest" data-uw-node-idx="990"><a title="" href="https://www.pinterest.com/tenderjordan/" data-toggle="tooltip" target="_blank" data-original-title="pinterest" data-uw-node-idx="991"><i class="soap-icon-pinterest" data-uw-node-idx="992"></i></a></li>
+
+                            <li class="linkedin" data-uw-node-idx="993"><a title="" href="http://www.linkedin.com/company/tenderjo" data-toggle="tooltip" target="_blank" data-original-title="linkedin" data-uw-node-idx="994"><i class="soap-icon-linkedin" data-uw-node-idx="995"></i></a></li>
+                            <li class="facebook" data-uw-node-idx="996"><a title="" href="http://www.facebook.com/tenderjordan" data-toggle="tooltip" target="_blank" data-original-title="facebook" data-uw-node-idx="997"><i class="soap-icon-facebook" data-uw-node-idx="998"></i></a></li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom gray-area" data-uw-node-idx="999">
+            <div class="container" data-uw-node-idx="1000">
+                <div class="logo pull-left" data-uw-node-idx="1001">
+                    <a href="" title="TenderJO - home" data-uw-node-idx="1002">
+                        <img src="{{ asset('WebEn/images/logo.png') }}" alt="TenderJO" data-uw-node-idx="1003">
+                    </a>
+                </div>
+
+                <div class="copyright pull-right" data-uw-node-idx="1007">
+                    <p data-uw-node-idx="1008">جميع الحقوق محفوظة © 2020 لـِ TenderJO, LLC</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    @endsection
+
+{{--<footer class=" light " style="text-align: center">
     <div class="container" style="margin-bottom: 2px ">
         <div class="row">
             <div class="col-lg-3">
@@ -90,4 +208,4 @@
 
         </div>
     </div>
-</footer>
+</footer>--}}

@@ -58,6 +58,16 @@
             margin-right: 10px;
             float: right;
         }
+        .news-banner{
+            height: 80px;
+            margin-top: 40px;
+        }
+        @media (max-width: 777px) {
+            .news-banner-col-1{
+                height: 80px;
+                margin-top: 60px;
+            }
+        }
     </style>
 
 
@@ -80,33 +90,33 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" style="height: 80px;">
-                <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
-                     style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
-                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}"
-                         style="height: 100px;">
+    <div class="row">
+        <div class="col-md-1 news-banner-col-1"></div>
+        <div class="col-md-10 news-banner">
+            <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
+                 style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
+                <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}"
+                     style="height: 100px;">
                         <span class="d-flex align-items-center font-weight-bold"
                               style="position: absolute;top: 28px;">{{__('index.News')}}</span></div>
-                    <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
-                             onmouseover="this.stop();" onmouseout="this.start();"
-                             direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
-                             onmouseout="this.start();">
-                        @foreach($mainNews as $news)
-                            <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                                 alt="">
-                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
-                               #f5f5f5
-                               class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
-                            <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                                 alt="">
-                            <br>
-                        @endforeach
-                    </marquee>
-                </div>
+                <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
+                         onmouseover="this.stop();" onmouseout="this.start();"
+                         direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
+                         onmouseout="this.start();">
+                    @foreach($mainNews as $news)
+                        <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
+                             alt="">
+                        <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
+                           #f5f5f5
+                           class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
+                        <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
+                             alt="">
+                        <br>
+                    @endforeach
+                </marquee>
             </div>
         </div>
+        <div class="col-md-1"></div>
     </div>
 
     <section class="section-base">

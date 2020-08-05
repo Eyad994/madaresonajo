@@ -8,7 +8,7 @@ use App\Models\Premium;
 use App\Models\Region;
 use App\Models\School;
 use App\Models\SchoolType;
-use App\Models\Visitor;
+use App\Traits\VisitorTrait;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -18,22 +18,12 @@ use Illuminate\Support\Str;
 class HomeController extends Controller
 {
 
+    use VisitorTrait;
 
     public function index($locale = 'ar')
     {
-
-        $visitor = Visitor::where('ip', request()->ip())->first();
-        if (is_null($visitor))
-        {
-            Visitor::create([
-               'ip' => request()->ip()
-            ]);
-        }
-
-        $visitorCount = Visitor::all()->count();
-
+        $visitorCount = $this->storeVisitor();
         App::setLocale($locale);
-
         $schoolsQuery = DB::select(
             'SELECT  (
 SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools ,
