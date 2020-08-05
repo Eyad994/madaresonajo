@@ -1,7 +1,7 @@
 @extends('layouts.navAndFooterLinks')
 
 @section('footer')
-    <footer id="footer" class="style5" data-uw-node-idx="927">
+    <footer id="footer" class="style5" data-uw-node-idx="927" style="direction: rtl;">
         <div class="footer-wrapper" data-uw-node-idx="928">
             <div class="container" data-uw-node-idx="929">
                 <div class="row" data-uw-node-idx="930">

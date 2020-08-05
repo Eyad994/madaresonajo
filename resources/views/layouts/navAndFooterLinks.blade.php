@@ -4,7 +4,7 @@
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/responsive.css') }}"/>
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/rtl2.css') }}"/>
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/bootstrap-rtl.min.css') }}"/>
-
+<link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/fontawesome.min.css') }}"/>
 <style>
     li a {
         color: white !important;
