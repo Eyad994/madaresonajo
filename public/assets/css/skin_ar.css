@@ -9,19 +9,6 @@
 *
 */
 
-@font-face {
-    font-family: 'Jost';
-    src: url('media/fonts/Jost-Book.woff2') format('woff2'), url('media/fonts/Jost-Book.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Jost';
-    src: url('media/fonts/Jost-Medium.woff2') format('woff2'), url('media/fonts/Jost-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
 
 /* 
 
@@ -110,7 +97,7 @@ h1, h2, h3, h4, h5, h6, .accordion-list > li > a, .cnt-box-testimonials .testimo
 .quote, p b, .list-nav a, .text-color, .text-color p, .cnt-pricing-table > ul > li, nav .tab-nav li a, nav .tab-nav li.active a, nav .tab-nav li:hover a, nav .tab-nav li:not(.active):not(:hover) a,
 nav.light .col i, .menu-cnt > ul .col li a, .breadcrumb li a, .countdown, .media-box-down .caption h2, .album-title, .collapse-button a, .search-bar input[type=submit], .search-box-menu > i,
 body > nav .icon-links a i, .shop-menu-cnt > i:before, .shop-menu-cnt .cart-total, .menu-mini > .container > ul > li, .menu-btn:before {
-    color: rgb(18, 48, 74);
+    color: rgb(247, 127, 39);
 }
 
 .accordion-list > li > a:before, .cnt-box-badge .badge, .cnt-box-blog-side .blog-date, .cnt-box-blog-top .blog-date, .cnt-box-top .extra-field, .media-box-half .extra-field {
@@ -133,7 +120,7 @@ body, p, input, textarea, ::placeholder, .tab-box.tab-vertical > .tab-nav li:not
 body > nav.light:not(.menu-transparent), nav.light.menu-transparent.scroll-menu, footer {
     /*background-color: rgb(55, 81, 126);*/
    /* background-color: #ff6000;*/
-    background-color: #ff6000;
+    background-color: #fff;
 }
 
 .boxed-area.light {
@@ -194,7 +181,7 @@ nav.light a.btn-border, .dropdown > ul li:hover > a, .dropdown > ul li.active > 
 }
 
 .light p, .btn-border:hover, .media-box-full .caption .extra-field, .media-box-reveal p, .light .accordion-list > li > a, .media-box p {
-    color: rgb(236, 245, 251) !important;
+    color: #000;
 }
 
 .input-text, .input-select, .input-textarea, .table, .table td, .table th, .accordion-list > li, .menu-inner:not(.menu-inner-vertical) .dropdown ul, .table:not(.table-grid) tr,
@@ -796,7 +783,7 @@ section.section-top-overflow > .container {
 
 .section-bottom-layer {
         /*padding-bottom: 100px;*/
-    background-color: #1d556c !important;
+    background-color: #FFF ;
 }
 
 .section-bottom-layer:after, .section-bottom-layer-2:after {

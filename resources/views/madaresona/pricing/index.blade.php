@@ -169,7 +169,7 @@
                 style="direction:ltr; text-align:left;margin-bottom: 200px;">
             @endif
             <div class="container-fluid">
-                <div class="container" style="  width: 1400px;">
+                <div class="container" style=" margin-top: 100px;">
                     <div class="row ptables-head">
                         <h3 class="text-center" style="margin: 0 auto; font-weight: 600; width: 800px;">{{ __('pricing_index.pricing_text') }}</h3>
                     </div>

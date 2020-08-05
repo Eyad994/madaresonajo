@@ -19,12 +19,12 @@
     @endif
 
     <div class="bg-contact100">
-        <div class="container-contact100" style="background: #f5f5f5 !important;">
+        <div class="container-contact100" style="background: #f5f5f5 !important; ">
             <div class="wrap-contact100"
                  @if((app()->getLocale() == 'ar'))
-                 style="direction: rtl; text-align: right;">
+                 style="direction: rtl; text-align: right; margin-top: 170px">
                 @else
-                    style="direction:ltr; text-align:left;">
+                    style="direction:ltr; text-align:left; margin-top: 170px">
                 @endif
                 <div class="row">
                     @if(Session::has('success'))

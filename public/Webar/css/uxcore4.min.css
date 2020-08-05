@@ -1416,7 +1416,7 @@
     }
 
     .navbar.uxc-nav .navbar-nav > li > a:focus, .navbar.uxc-nav .navbar-nav > li > a:hover {
-        background-color: #2e8795;
+        background-color: #1e546c;
         color: #fff
     }
 }
@@ -1928,7 +1928,6 @@
     float: none;
     display: table-cell;
     margin: 0;
-    min-height: 42px;
     padding: 11px 0 0;
     vertical-align: baseline;
     zoom: 1;
@@ -2164,7 +2163,7 @@
 }
 
 #utility #sign-in .sign-in-options .col.user-account #menu-customer-name {
-    color: #2e8795;
+    color: #1e546c;
     text-decoration: underline
 }
 
@@ -2177,7 +2176,7 @@
 }
 
 #utility #sign-in .sign-in-options .col.user-account .logout {
-    color: #2e8795;
+    color: #1e546c;
     margin-left: 11px;
     text-decoration: underline
 }
@@ -2268,7 +2267,7 @@
 }
 
 .locale-options ul li a:hover, .locale-options ul li.selected a {
-    color: #2e8795 !important;
+    color: #1e546c !important;
     text-decoration: underline !important
 }
 
@@ -2343,7 +2342,7 @@
 }
 
 .currency-options .list-wrap ul li.selected a {
-    background-color: #2e8795 !important;
+    background-color: #1e546c !important;
     color: #fff !important
 }
 
@@ -2362,8 +2361,7 @@
 }
 
 #main-nav {
-    /*background-color: #fff;*/
-    background-color: #ff6000;
+    background-color: #fff;
     color: #fff;
     position: relative;
     z-index: 103;
@@ -2406,7 +2404,7 @@
 }
 
 #main-nav ul.nav-wrap > li > a {
-    color: #000;
+    color: #1e546c;
     display: block;
     line-height: 1em;
     padding: 13px 17px 11px 10px;
@@ -2503,7 +2501,7 @@
     position: absolute;
     margin-top: -10px;
     font-size: 8px;
-    color: #2e8795;
+    color: #1e546c;
     text-transform: uppercase
 }
 
@@ -2521,7 +2519,7 @@
         width: 0;
         height: 0;
         border-style: solid;
-        border-color: transparent transparent #2e8795;
+        border-color: transparent transparent #1e546c;
         border-width: 0 10px 8px;
         margin-top: -10px;
         margin-left: -9px;
@@ -2724,7 +2722,7 @@
 }
 
 #main-nav ul.nav-wrap > li .flag-new span, #main-nav ul.nav-wrap > li .flag-sale span {
-    color: #fedc45;
+    color: #f77f27;
     font-weight: 700;
     font-size: 11px;
     vertical-align: middle;
@@ -2732,7 +2730,7 @@
 }
 
 #main-nav ul.nav-wrap > li.oi-open > a, #main-nav ul.nav-wrap > li.oi-open > a:hover {
-    color: #2e8795
+    color: #1e546c
 }
 
 #main-nav ul.nav-wrap > li.oi-open > a .selected-marker, #main-nav ul.nav-wrap > li.oi-open > a:hover .selected-marker {
@@ -2742,7 +2740,7 @@
 }
 
 #main-nav ul.nav-wrap > li .sub-nav {
-    background-color: #2e8795;
+    background-color: #1e546c;
     color: #fff;
     font-weight: 400;
     height: 0;
@@ -2879,7 +2877,7 @@
 }
 
 #main-nav ul.nav-wrap > li .sub-nav .content-row .col.first:after {
-    background-color: #fedc45;
+    background-color: #f77f27;
     bottom: 0;
     content: " ";
     position: absolute;
@@ -2992,7 +2990,7 @@ a.idp-modal-close {
 .nav-banner-cta .desc strong {
     font-weight: 700;
     display: inline-block;
-    color: #fedc45
+    color: #f77f27
 }
 
 .nav-banner-cta .desc a.cta {
@@ -3028,7 +3026,7 @@ a.idp-modal-close {
 .nav-banner-cta .flag-new {
     color: #a75a2c !important;
     padding: 7px 5px 5px 10px;
-    background-color: #fedc45;
+    background-color: #f77f27;
     position: relative;
     margin-right: 20px;
     line-height: 1;
@@ -3048,7 +3046,7 @@ a.idp-modal-close {
 
 .nav-banner-cta .flag-new:before {
     border-top: 14px solid transparent;
-    border-left: 11px solid #fedc45;
+    border-left: 11px solid #f77f27;
     border-bottom: 14px solid transparent;
     right: -11px
 }
@@ -3087,7 +3085,7 @@ a.idp-modal-close {
 }
 
 #sub-menu-bar {
-    background-color: #2e8795;
+    background-color: #1e546c;
     font-size: 14px;
     position: relative;
     z-index: 1
@@ -3122,7 +3120,7 @@ a.idp-modal-close {
     display: table-cell;
     position: relative;
     padding: 12px 15px;
-    background-color: #2e8795
+    background-color: #1e546c
 }
 
 #footer-legal .footer-disclaimer, #masthead #cookie-warning, .item-domains.ux-noauth .sub-nav-manage-links, .item-getfound.ux-noauth .sub-nav-manage-links, .item-hosting.ux-noauth .sub-nav-manage-links, .item-websites.ux-noauth .sub-nav-manage-links {
@@ -3152,7 +3150,7 @@ a.idp-modal-close {
 
 #sub-menu-bar .nav-wrap li.active:before {
     content: '';
-    border-top: 9px solid #2e8795;
+    border-top: 9px solid #1e546c;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     margin: 0 auto 0 -12px;
@@ -3459,7 +3457,7 @@ a.idp-modal-close {
 
 #notifications .notifications-badge.medium, #notifications-mobile .notifications-badge.medium {
     color: #333;
-    background-color: #fedc45
+    background-color: #f77f27
 }
 
 #notifications .notifications-badge.low, #notifications-mobile .notifications-badge.low {
@@ -3611,7 +3609,7 @@ a.idp-modal-close {
 
 #notifications .notification-list .notification-list-item .priority.medium, #notifications-mobile .notification-list .notification-list-item .priority.medium {
     color: #555;
-    background-color: #fedc45
+    background-color: #f77f27
 }
 
 #notifications-mobile.open, #notifications-mobile.open .notifications-mini-bell, #notifications.open, #notifications.open .notifications-mini-bell {
@@ -3686,7 +3684,7 @@ a.idp-modal-close {
 }
 
 #footer #footer-support {
-    background-color: #2e8795;
+    background-color: #1e546c;
     text-align: center;
     padding: 30px 0
 }

@@ -48,7 +48,7 @@ return [
 
     'suppliers' => 'موردين',
     'visitors' => ' الزوار',
-    'discounts' => ' الخصومات',
+    'discounts' => 'خصم مدارسنا',
     '' => '',
 
     '' => '',

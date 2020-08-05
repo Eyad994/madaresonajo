@@ -7,7 +7,7 @@
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/fontawesome.min.css') }}"/>
 <style>
     li a {
-        color: white !important;
+        color: #000;
     }
 </style>
 

@@ -4,12 +4,6 @@
 @endsection
 @section('content')
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
-
-        body {
-            font-family: 'Cairo', sans-serif !important;
-        }
-
         @media only screen and (max-width: 991px) {
             #wrapper {
                 display: none;

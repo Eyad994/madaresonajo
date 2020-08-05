@@ -1,16 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-    <section class="section-base">
-        <h2 class="align-center">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
-                    خدمتنا
-                </div>
-            </div>
-        </h2>
-    </section>
     <section class="section-base section-color " id="services"
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">

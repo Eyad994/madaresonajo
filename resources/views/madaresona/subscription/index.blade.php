@@ -18,8 +18,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main_ar.css') }}">
     @endif>
 
-    <div class="bg-contact100">
-        <div class="container-contact100" style="background: #f5f5f5 !important;">
+    <div class="contact100" style="">
+        <div class="container-contact100" style="background: #f5f5f5 !important; padding-top: 170px;">
             <div class="wrap-contact100"
                  @if((app()->getLocale() == 'ar'))
                  style="direction: rtl; text-align: right;">

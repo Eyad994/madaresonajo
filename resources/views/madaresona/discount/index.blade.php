@@ -20,20 +20,20 @@
     <style>
         .option_c {
             height: 50px !important;
-            border: none;
-            border-radius: 25px;
-            padding: 0 50px 0 30px;
-            color: #66666682;
-            background: #e6e6e6;
+            border: none !important;
+            border-radius: 25px !important;
+            padding: 0 50px 0 30px !important;
+            color: #66666682 !important;
+            background: #e6e6e6 !important;
         }
 
         .option_c:focus {
-            box-shadow: none;
-            background: #e6e6e6;
+            box-shadow: none !important;
+            background: #e6e6e6 !important;
         }
 
         .option_c option {
-            background: #fff;
+            background: #fff !important;
         }
 
     </style>
@@ -41,9 +41,9 @@
         <div class="container-contact100" style="background: #f5f5f5 !important;">
             <div class="wrap-contact100"
                  @if((app()->getLocale() == 'ar'))
-                 style="direction: rtl; text-align: right;">
+                 style="direction: rtl; text-align: right;margin-top: 170px">
                 @else
-                    style="direction:ltr; text-align:left;">
+                    style="direction:ltr; text-align:left;margin-top: 170px">
                 @endif
                 <div class="row">
 
