@@ -41,7 +41,7 @@
                         <p data-uw-node-idx="964">سجّل بريدك الإلكتروني ليصلك كل ما تودّ معرفته عن مدرسنا</p>
                         <div class="with-icon full-width" data-uw-node-idx="965">
                             <input type="text" id="txtSubscriber" class="input-text full-width" data-uw-node-idx="966">
-                            <button id="btnSubscriber" type="button" class="icon yellow-bg white-color" data-uw-node-idx="967" style="margin-top: -12px !important;">
+                            <button id="btnSubscriber" type="button" class="icon yellow-bg white-color" data-uw-node-idx="967" style="margin-top: -17px !important;height: 35px;width: 35px;">
                                 <i id="sbciconcclass" class="soap-icon-message" data-uw-node-idx="968"></i>
                             </button>
                         </div>
@@ -60,10 +60,9 @@
                         <h2 data-uw-node-idx="977">عن مدارسنا</h2>
                         <p data-uw-node-idx="978" style="font-size: 12px;"> مدارسنا هي الخدمة الاولى على مستوى الاردن وهي خدمة فاعلة وشاملة ونسعى من خلال هذا الموقع إلى الربط بين أكبر قدر ممكن من المدارس الخاصة و المراكز و المعاهد و الجامعات و الجهات التعليمية ، الاخرى</p>
                         <address class="contact-details" data-uw-node-idx="979">
-                            <span class="contact-phone" data-uw-node-idx="980"> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px">0797902497</span> </span>
-                            <br>
-                            <span class="contact-phone" data-uw-node-idx="980"> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 20px;">info@madaresonajo.com</span> </span>
-                            <span class="contact-phone" data-uw-node-idx="980"> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">عمان-الأردن-الياسمين -شارع جبل عرفات</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block"> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px">0797902497</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block"> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 20px;">info@madaresonajo.com</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block"> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">عمان-الأردن-الياسمين -شارع جبل عرفات</span> </span>
 
                         </address>
 

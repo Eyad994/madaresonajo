@@ -1,8 +1,16 @@
 @extends('layouts.main')
 @section('sub_header')
-    @include('madaresona.partials.sub_header')
+@include('madaresona.partials.sub_header')
 @endsection
 @section('content')
+
+
+{{--
+    box-shadow: 5px 3px 8px 0px #888888;
+    height: 50px;
+    0 2px 2px rgba(0, 0, 0, 0.11)
+--}}
+
     <style>
 
         @media only screen and (max-width: 991px) {
@@ -63,83 +71,25 @@
                 margin-top: 60px;
             }
         }
+
+        .mce-item-table tr td{
+               padding: 30px !important;
+        }
+        .schools_type_title{
+            font-size: 25px;
+        }
     </style>
 
-
-    <div id="wrapper">
-        <div id="c1">
-            @foreach($suppliersAdvertisements as $advertisement)
-                <a href="{{ $advertisement->url }}">
-                    <img src="https://astonsocial.com.au/wp-content/uploads/2018/03/Facebook-Advertising.png" width="220px" height="150px" alt="">
-                </a>
-                <hr class="space">
-            @endforeach
-        </div>
-        <div id="c2">
-            @foreach($schoolsAdvertisements as $advertisement)
-                <a href="{{ $advertisement->url }}">
-                    <img src="https://astonsocial.com.au/wp-content/uploads/2018/03/Facebook-Advertising.png" width="220px" height="150px" alt="">
-                </a>
-                <hr class="space">
-            @endforeach
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-1 news-banner-col-1"></div>
-        <div class="col-md-10 news-banner">
-            <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
-                 style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
-                <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}"
-                     style="height: 100px;">
-                        <span class="d-flex align-items-center font-weight-bold"
-                              style="position: absolute;top: 28px;">{{__('index.News')}}</span></div>
-                <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
-                         onmouseover="this.stop();" onmouseout="this.start();"
-                         direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
-                         onmouseout="this.start();">
-                    @foreach($mainNews as $news)
-                        <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                             alt="">
-                        <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
-                           #f5f5f5
-                           class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
-                        <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                             alt="">
-                        <br>
-                    @endforeach
-                </marquee>
-            </div>
-        </div>
-        <div class="col-md-1"></div>
-    </div>
-
-    <section class="section-base">
+    <div style="padding: 30px">
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
         <div class="container pb-0">
-            <h2 class="align-center" style="color: #1d556c; "><span class="font-weight-bold"
-                                                                    style="text-decoration: underline; color: #ff6000; ">{{ count($specialSchools) }}</span> {{__('index.special_schools')}}
+            <h2 class="align-center" style="color: #1d556c; ">
+                {{__('index.special_schools')}}
             </h2>
-            <p class="align-center width-650"> {{__('index.proud_schools')}}</p>
-            <hr class="space"/>
-            {{--<div class="row advertisements">
-                <div class="col-md-3">
-                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img src="https://static.toiimg.com/photo/72975551.cms" width="220px" height="200px" alt="">
-                </div>
-            </div>--}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme"
@@ -149,15 +99,12 @@
                                  style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
                                 <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
                                      style="border: 1px #f1f4f9 solid">
-                                    <a class="img-box show-school" id="{{ $school->id }}"
+                                    <a class="img-box show-school" id="{{ $school->id }}" title="{{ $school->name_ar }}"
                                        href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                        slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                         <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                             alt="" style="width: 200px; height: 200px">
+                                             alt="" style="width: 120px; height: 120px">
                                     </a>
-                                    <div class="caption">
-                                        <p style="text-align: center;">{{ $school->name_ar }}</p>
-                                    </div>
                                 </div>
                             </div>
                         @endforeach
@@ -165,11 +112,9 @@
                     <div class="my-owl-nav">
 
                         <span class="my-prev-button">
-    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Prev
-  </span>
-                        <span class="my-next-button">
-    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next
-  </span>
+                            <i class="fad fa-chevron-left" aria-hidden="true"></i>
+                        </span>
+                        <span class="my-next-button"><i class="fad fa-chevron-right" aria-hidden="true"></i></span>
                     </div>
                 </div>
             </div>
@@ -193,12 +138,49 @@
                 cursor: pointer;
                 color: #ff6000;
             }
+            .owl-dots{
+                height: 15px !important;
+            }
+            .my-prev-button{
+                position: absolute !important;
+                top: 0px !important;
+                height: 168px !important;
+                background: #2b596b;
+                z-index: 1 !important;
+                left: 3px !important;
+                width: 30px !important;
+                border-radius: 5px 0px 0px 5px !important;
+                line-height: 170px !important;
+                color: #ffff !important;
+                padding-left:10px;
+                font-size: 22px;
+            }
+            .my-next-button{
+                position: absolute !important;
+                top: 0px !important;
+                height: 168px !important;
+                background: #2b596b;
+                z-index: 1 !important;
+                right: -9px !important;
+                width: 30px !important;
+                border-radius: 0px 5px 5px 0px !important;
+                line-height: 170px !important;
+                color: #ffff !important;
+                padding-left: 10px;
+                font-size: 22px;
+            }
+            .my-next-button:hover, .my-prev-button:hover{
+                background: #ff6000
+            }
         </style>
         <script>
 
             $('.owl-carousel').owlCarousel({
                 loop: true,
                 margin: 10,
+                autoWidth:true,
+                autoplayHoverPause:true,
+
                 /*navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],*/
                 navText: [
                     '<i class="fa fa-angle-left" aria-hidden="true"></i>',
@@ -230,67 +212,155 @@
                 selector.trigger('prev.owl.carousel');
             });
         </script>
-    </section>
+    </div>
 
     <section class="section-base" style="margin-bottom: 20px;">
-        <div class="container">
-            <hr style="margin: 0px;">
-        </div>
-        <h2 class="align-center">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
-                    اختار نوع المؤسسة التعليمة للبحث بكل سهولة
-                </div>
+        <div class="row">
+            <div class="col-md-2">
             </div>
-        </h2>
-        <h2 class="align-center">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 selected_education"
-                     @if((app()->getLocale() == 'ar'))
-                     style="direction: rtl; text-align: right;">
-                    @else
-                        style="direction:ltr; text-align:left;">
-                    @endif
-                    <select name="schoolType" id="schoolType" class="form-control"
-                            style="font-size: 15px;padding: 1px;">
-                        <option style="color: #000; font-weight: bold;" disabled
-                                selected>{{ __('index.education_institutions') }}</option>
-                        <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                        @foreach($schoolsType as $type)
-                            <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-        </h2>
-
-        <div class="container fade-left" style="padding: 0px !important;" id="schoolsGrid">
-            <hr class="space"/>
-            <div class="infinite-scroll">
-                <div class="row">
-                    @foreach($schools as $school)
-                        <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                            <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
-                                 style="border: 1px #f1f4f9 solid">
-                                <a class="img-box show-school" id="{{ $school->id }}"
-                                   href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
-                                   slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                         alt="" style="width: 200px; height: 200px">
-                                </a>
-                                <div class="caption">
-                                    <p style="text-align: center;">{{ $school->name_ar }}</p>
+            <div class="col-md-6">
+                <div class=" fade-left" style="padding: 0px !important;" id="schoolsGrid">
+                    <hr class="space"/>
+                    <div class="infinite-scroll">
+                        <div class="row">
+                            @foreach($schools as $school)
+                                <div class="col-md-3" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
+                                         style="border: 1px #f1f4f9 solid">
+                                        <a class="img-box show-school" id="{{ $school->id }}"
+                                           href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
+                                           slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
+                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
+                                                 alt="" style="width: 100%; height: 200px">
+                                        </a>
+                                        <div class="caption">
+                                            <p style="text-align: center;">{{ $school->name_ar }}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                    @endforeach
+                        {!! $schools->links() !!}
+                        <div class="row">
+                            <div class="col-md-12"></div>
+                        </div>
+                    </div>
                 </div>
-                {!! $schools->links() !!}
-                <div class="row">
-                    <div class="col-md-12"></div>
+            </div>
+            <div class="col-md-2" style="padding-top: 80px">
+
+                <div class="travelo-box widget-queries">
+                    <div class="row">
+                        <div class="col-md-12 selected_education"
+                             @if((app()->getLocale() == 'ar'))
+                             style="direction: rtl; text-align: right;">
+                            @else
+                                style="direction:ltr; text-align:left;">
+                            @endif
+                            <select name="schoolType" id="schoolType" class="form-control"
+                                    style="font-size: 15px;padding: 1px;">
+                                <option style="color: #000; font-weight: bold;" disabled
+                                        selected>{{ __('index.education_institutions') }}</option>
+                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                                @foreach($schoolsType as $type)
+                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 selected_education"
+                             @if((app()->getLocale() == 'ar'))
+                             style="direction: rtl; text-align: right;">
+                            @else
+                                style="direction:ltr; text-align:left;">
+                            @endif
+                            <select name="schoolType" id="schoolType" class="form-control"
+                                    style="font-size: 15px;padding: 1px;">
+                                <option style="color: #000; font-weight: bold;" disabled
+                                        selected>{{ __('index.education_institutions') }}</option>
+                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                                @foreach($schoolsType as $type)
+                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 selected_education"
+                             @if((app()->getLocale() == 'ar'))
+                             style="direction: rtl; text-align: right;">
+                            @else
+                                style="direction:ltr; text-align:left;">
+                            @endif
+                            <select name="schoolType" id="schoolType" class="form-control"
+                                    style="font-size: 15px;padding: 1px;">
+                                <option style="color: #000; font-weight: bold;" disabled
+                                        selected>{{ __('index.education_institutions') }}</option>
+                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                                @foreach($schoolsType as $type)
+                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 selected_education"
+                             @if((app()->getLocale() == 'ar'))
+                             style="direction: rtl; text-align: right;">
+                            @else
+                                style="direction:ltr; text-align:left;">
+                            @endif
+                            <select name="schoolType" id="schoolType" class="form-control"
+                                    style="font-size: 15px;padding: 1px;">
+                                <option style="color: #000; font-weight: bold;" disabled
+                                        selected>{{ __('index.education_institutions') }}</option>
+                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                                @foreach($schoolsType as $type)
+                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 selected_education"
+                             @if((app()->getLocale() == 'ar'))
+                             style="direction: rtl; text-align: right;">
+                            @else
+                                style="direction:ltr; text-align:left;">
+                            @endif
+                            <select name="schoolType" id="schoolType" class="form-control"
+                                    style="font-size: 15px;padding: 1px;">
+                                <option style="color: #000; font-weight: bold;" disabled
+                                        selected>{{ __('index.education_institutions') }}</option>
+                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                                @foreach($schoolsType as $type)
+                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 selected_education"
+                             @if((app()->getLocale() == 'ar'))
+                             style="direction: rtl; text-align: right;">
+                            @else
+                                style="direction:ltr; text-align:left;">
+                            @endif
+                            <select name="schoolType" id="schoolType" class="form-control"
+                                    style="font-size: 15px;padding: 1px;">
+                                <option style="color: #000; font-weight: bold;" disabled
+                                        selected>{{ __('index.education_institutions') }}</option>
+                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                                @foreach($schoolsType as $type)
+                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="col-md-2">
             </div>
         </div>
     </section>
@@ -309,17 +379,19 @@
                     <table class="table table-grid table-border align-center table-full-border table-md-6 mce-item-table">
                         <tbody>
                         <tr>
-                            <td>
+                            <td style="border: 1px solid #e6edf1;border-top: 1px solid #ddd;">
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.private_schools')}}</h3>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->privateSchools }}" data-speed="3000">{{ $schoolsCounts->privateSchools }}</span>
-                                            <span> </span></div>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.private_schools')}}</div>
+                                        <div class="value text-lg">
+                                            <span data-to="{{ $schoolsCounts->privateSchools }}" data-speed="3000">{{ $schoolsCounts->privateSchools }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.colleges_universities')}}</h3>
+                                    <div><div class="schools_type_title">{{__('index.colleges_universities')}}</div>
                                         <div class="value text-lg"><span data-to="{{ $schoolsCounts->universities }}" data-speed="3000">{{ $schoolsCounts->universities }}</span>
                                             <span> </span></div>
                                     </div>
@@ -327,7 +399,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.kindergartens')}}</h3>
+                                    <div><div class="schools_type_title">{{__('index.kindergartens')}}</div>
                                         <div class="value text-lg"><span data-to="{{ $schoolsCounts->kindergartens }}" data-speed="3000">{{ $schoolsCounts->kindergartens }}</span>
                                             <span> </span></div>
                                     </div>
@@ -335,7 +407,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.nurseries')}}</h3>
+                                    <div><div class="schools_type_title">{{__('index.nurseries')}}</div>
                                         <div class="value text-lg"><span data-to="{{ $schoolsCounts->nurseries }}" data-speed="3000">{{ $schoolsCounts->nurseries }}</span>
                                             <span> </span></div>
                                     </div>
@@ -343,9 +415,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td style="border: 1px solid #e6edf1;border-bottom: 1px solid #ddd;">
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.training_consulting')}}</h3>
+                                    <div><div class="schools_type_title">{{__('index.training_consulting')}}</div>
                                         <div class="value text-lg"><span data-to="{{ $schoolsCounts->training }}" data-speed="3000">{{ $schoolsCounts->training }}</span>
                                             <span> </span></div>
                                     </div>
@@ -353,7 +425,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.learning_difficulties')}}</h3>
+                                    <div><div class="schools_type_title">{{__('index.learning_difficulties')}}</div>
                                         <div class="value text-lg"><span data-to="{{ $schoolsCounts->learning }}" data-speed="3000">{{ $schoolsCounts->learning }}</span>
                                             <span> </span></div>
                                     </div>
@@ -361,7 +433,7 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.suppliers')}}</h3>
+                                    <div><div class="schools_type_title">{{__('index.suppliers')}}</div>
                                         <div class="value text-lg"><span data-to="{{ $schoolsCounts->suppliers }}" data-speed="3000">{{ $schoolsCounts->suppliers }}</span>
                                             <span> </span></div>
                                     </div>
@@ -369,9 +441,8 @@
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><h3>{{__('index.visitors')}}</h3>
-                                        <div class="value text-lg"><span data-to="{{ $visitorCount }}" data-speed="3000">{{ $visitorCount }}</span>
-                                            <span></span></div>
+                                    <div><div class="schools_type_title">{{__('index.visitors')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $visitorCount }}" data-speed="3000">{{ $visitorCount }}</span></div>
                                     </div>
                                 </div>
                             </td>
@@ -473,3 +544,83 @@
     @include('modal')
 
 @endsection
+{{--
+
+<div class="travelo-box widget-queries">
+    <i class="fa fa-filter"></i> <small> فلترة حسب  القطاع</small>
+    <ul>
+        <li><a href="TendersSearch.aspx?Sector=1">
+                <img src="App_Themes/WebAr/images/graph-b.svg" width="24">
+                حكومي
+
+                <label class="price-wrapper pull-right">
+                    <span id="b_Gooverment" class="price-per-unit" style="color:#3498DB !important">87473</span>
+
+                </label>
+            </a>
+        </li>
+        <li><a href="TendersSearch.aspx?Sector=2">
+                <img src="App_Themes/WebAr/images/graph-r.svg" width="24">
+                القطاع الخاص
+                <label class="price-wrapper pull-right">
+                    <span id="b_Private" class="price-per-unit" style="color:#C0392B !important">16749</span>
+                </label>
+            </a></li>
+        <li><a href="TendersSearch.aspx?Sector=3">
+                <img src="App_Themes/WebAr/images/graph-p.svg" width="24">
+                المنظمات الدولية
+                <label class="price-wrapper pull-right">
+                    <span id="b_international" class="price-per-unit" style="color:#9B59B6 !important">10076</span>
+                </label>
+            </a>
+        </li>
+        <li><a href="TendersSearch.aspx?Sector=4">
+                <img src="App_Themes/WebAr/images/graph-g.svg" width="24">
+                الهيئات الاجتماعية
+                <label class="price-wrapper pull-right">
+                    <span id="b_Societies" class="price-per-unit" style="color:#28B463 !important">3681</span>
+
+
+                </label>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+
+    <i class="fa fa-pie-chart" aria-hidden="true"></i> <small> عدد النتائج حسب المصدر</small>
+
+    <ul>
+        <li>
+            <img src="App_Themes/WebAr/images/www.svg" width="24">
+            محركات البحث
+
+            <label class="price-wrapper pull-right">
+                <span id="lblSearchEnginSource" class="price-per-unit" style="color:#3498DB !important">11074</span>
+
+            </label>
+
+        </li>
+        <li>
+            <img src="App_Themes/WebAr/images/crown.svg" width="24">
+            حصرياً لدينا
+            <label class="price-wrapper pull-right">
+                <span id="lblTenderJOSource" class="price-per-unit" style="color:#C0392B !important">3707</span>
+            </label>
+        </li>
+
+        <li>
+            <img src="App_Themes/WebAr/images/free.svg" width="24">
+            عطاءات مجانية
+
+            <label class="price-wrapper pull-right">
+                <span id="lblfreetndr" class="price-per-unit" style="color:#3498DB !important">232</span>
+
+            </label>
+
+        </li>
+
+    </ul>
+</div>--}}
