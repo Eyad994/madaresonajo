@@ -207,7 +207,7 @@
 
 
 </div>
-<div class="row" style="    position: relative;top: -50px;height: 5px;">
+<div class="row" style="position: relative;top: -50px;height: 5px;">
     <div class="col-md-12 news-banner">
         <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
              style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);height: 40px; {{(app()->getLocale() == 'en') ?'' :'direction: rtl;'}}">
@@ -215,7 +215,7 @@
                  style="height: 40px;">
                         <span class="d-flex align-items-center font-weight-bold"
                               style="position: absolute;top: 14px; ">{{__('index.News')}}</span></div>
-            <marquee class="news-scroll" height="40" behavior="scroll" direction="left" scrollamount="2"
+            <marquee class="news-scroll" height="40" behavior="scroll" direction="right" scrollamount="6"
                      onmouseover="this.stop();" onmouseout="this.start();"
                      direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
                      onmouseout="this.start();" style="direction: ltr; padding: 10px;">

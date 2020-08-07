@@ -295,6 +295,7 @@
                         @endforeach
                 </div>
                 @endif
+
                 @include('ads')
             </div>
             <div class="col-md-2">

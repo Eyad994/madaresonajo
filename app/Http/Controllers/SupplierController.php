@@ -7,6 +7,7 @@ use App\Models\News;
 use App\Models\School;
 use App\Models\SchoolType;
 use App\Models\Supplier;
+use App\Models\SupplierType;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class SupplierController extends Controller
     public function index()
     {
         $suppliers = Supplier::all();
-        return view('madaresona.supplier.index', compact('suppliers'));
+        $suppliersType = SupplierType::all();
+        return view('madaresona.supplier.index', compact('suppliers','suppliersType'));
 
     }
 }

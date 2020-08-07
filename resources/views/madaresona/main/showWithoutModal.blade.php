@@ -1,166 +1,166 @@
 @extends('layouts.main')
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
-    <style>
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
+<style>
 
 
-        .nav-tabs {
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-            border: none;
-            padding: 0px;
-        }
+    .nav-tabs {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        border: none;
+        padding: 0px;
+    }
 
-        .nav-tabs .nav-link {
-            border: none;
-            border-radius: 0;
-            transition: color .2s ease-out;
-            background: #fe6000;
-        }
+    .nav-tabs .nav-link {
+        border: none;
+        border-radius: 0;
+        transition: color .2s ease-out;
+        background: #fe6000;
+    }
 
-        .tabs-dark .nav-link {
-            color: #fff;
-        }
+    .tabs-dark .nav-link {
+        color: #fff;
+    }
 
-        .tabs-light .nav-link {
-            color: rgba(0, 0, 0, .5);
-        }
+    .tabs-light .nav-link {
+        color: rgba(0, 0, 0, .5);
+    }
 
-        .tabs-dark .nav-link:not(.active):hover {
-            color: #aeb0b3;
-        }
+    .tabs-dark .nav-link:not(.active):hover {
+        color: #aeb0b3;
+    }
 
-        .tabs-light .nav-link:not(.active):hover {
-            color: #495057;
-        }
+    .tabs-light .nav-link:not(.active):hover {
+        color: #495057;
+    }
 
-        .nav-pills .nav-link {
-            border-radius: 2px;
-            color: #495057;
-            transition: color .2s ease-out, box-shadow .2s;
-        }
+    .nav-pills .nav-link {
+        border-radius: 2px;
+        color: #495057;
+        transition: color .2s ease-out, box-shadow .2s;
+    }
 
-        .nav-pills .nav-link:hover {
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    .nav-pills .nav-link:hover {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 
-        }
+    }
 
-        .nav-pills .nav-item {
-            margin: 0 5px;
+    .nav-pills .nav-item {
+        margin: 0 5px;
 
-        }
+    }
 
-        .nav-pills.pills-dark .nav-link.active {
-            background-color: #343a40 !important;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-        }
+    .nav-pills.pills-dark .nav-link.active {
+        background-color: #343a40 !important;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    }
 
-        .nav-pills.pills-dark .nav-link:not(.active):hover {
-            color: #1d1e22;
-        }
+    .nav-pills.pills-dark .nav-link:not(.active):hover {
+        color: #1d1e22;
+    }
 
-        .tabs-marker .nav-link {
-            position: relative;
-        }
+    .tabs-marker .nav-link {
+        position: relative;
+    }
 
-        .tabs-marker .nav-item{
-            border-left: 2px solid #ffffff;
-            margin-left: 2px;
-        }
+    .tabs-marker .nav-item {
+        border-left: 2px solid #ffffff;
+        margin-left: 2px;
+    }
 
-        .tabs-marker .nav-link.active .marker {
-            height: 30px;
-            width: 30px;
-            left: 50%;
-            bottom: -30px;
-            transform: translatex(-50%);
-            position: absolute;
-            overflow: hidden;
-        }
+    .tabs-marker .nav-link.active .marker {
+        height: 30px;
+        width: 30px;
+        left: 50%;
+        bottom: -30px;
+        transform: translatex(-50%);
+        position: absolute;
+        overflow: hidden;
+    }
 
-        .tabs-marker .nav-link.active .marker:after {
-            content: "";
-            height: 15px;
-            width: 15px;
-            top: -8px;
-            left: 50%;
-            transform: rotate(45deg) translatex(-50%);
-            transform-origin: left;
-            background-color: #fff;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-            position: absolute;
-        }
+    .tabs-marker .nav-link.active .marker:after {
+        content: "";
+        height: 15px;
+        width: 15px;
+        top: -8px;
+        left: 50%;
+        transform: rotate(45deg) translatex(-50%);
+        transform-origin: left;
+        background-color: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        position: absolute;
+    }
 
-        .d-block.w-100 {
-            max-height: 450px !important;
-        }
+    .d-block.w-100 {
+        max-height: 450px !important;
+    }
 
-        .carousel-thumbnails .carousel-indicators img {
-            max-width: 100px;
-            height: 50px;
-            overflow: hidden;
-            display: block;
-        }
+    .carousel-thumbnails .carousel-indicators img {
+        max-width: 100px;
+        height: 50px;
+        overflow: hidden;
+        display: block;
+    }
 
-        .carousel-thumbnails .carousel-indicators li {
-            height: auto;
-            max-width: 100px;
-            width: 100px;
-            border: none;
-            box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    .carousel-thumbnails .carousel-indicators li {
+        height: auto;
+        max-width: 100px;
+        width: 100px;
+        border: none;
+        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
 
-        &
-        .active {
-            border-bottom: 4px solid #fff;
-        }
+    &
+    .active {
+        border-bottom: 4px solid #fff;
+    }
 
-        }
+    }
 
-        .scrollbar-warning::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-            background-color: #F5F5F5;
-            border-radius: 10px;
-        }
+    .scrollbar-warning::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 10px;
+    }
 
-        .scrollbar-warning::-webkit-scrollbar {
-            width: 12px;
-            background-color: #F5F5F5;
-        }
+    .scrollbar-warning::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
 
-        .scrollbar-warning::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-            background-color: #FF8800;
-        }
+    .scrollbar-warning::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #FF8800;
+    }
 
-        .scrollbar-warning {
-            scrollbar-color: #FF8800 #F5F5F5;
-        }
+    .scrollbar-warning {
+        scrollbar-color: #FF8800 #F5F5F5;
+    }
 
-        .social:hover {
-            -webkit-transform: scale(1.1);
-            -moz-transform: scale(1.1);
-            -o-transform: scale(1.1);
-        }
+    .social:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
 
-        .social {
-            -webkit-transform: scale(0.8);
-            /* Browser Variations: */
+    .social {
+        -webkit-transform: scale(0.8);
+        /* Browser Variations: */
 
-            -moz-transform: scale(0.8);
-            -o-transform: scale(0.8);
-            -webkit-transition-duration: 0.5s;
-            -moz-transition-duration: 0.5s;
-            -o-transition-duration: 0.5s;
-        }
+        -moz-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+    }
 
-    </style>
+</style>
 @section('content')
-    <section class="section-base section-color align-center" style="background-color: white ">
+    <section class="section-base section-color align-center">
 
         <div class="container">
-            <div class="row">
+            <div class="row" style="background: #fff;">
 
-                <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style="background: #f6f9fc; padding: 2px">
+                <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style=" padding: 10px">
 
                     <section
 
@@ -178,20 +178,26 @@
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
-                                   aria-controls="principle" aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}</a>
+                                   aria-controls="principle"
+                                   aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}</a>
                             </li>
                             @if(!(($school->type)== 2))
                                 <li class="nav-item waves-effect waves-light">
-                                    <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm" role="tab"
-                                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}</a>
+                                    <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm"
+                                       role="tab"
+                                       aria-controls="discountForm"
+                                       aria-selected="true">{{ __('show.discountForm') }}</a>
                                 </li>
                             @endif
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation" role="tab"
-                                   aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}</a>
+                                <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation"
+                                   role="tab"
+                                   aria-controls="transportation"
+                                   aria-selected="true">{{ __('show.transportation') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link " id="maps-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps"
+                                <a class="nav-link " id="maps-tab" data-toggle="tab" href="#maps" role="tab"
+                                   aria-controls="maps"
                                    aria-selected="true">{{ __('show.maps') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
@@ -199,79 +205,84 @@
                                    aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab"
+                                <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo"
+                                   role="tab"
                                    aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}</a>
                             </li>
                         </ul>
 
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade active show" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
+                            <div class="tab-pane fade active show" id="gallery" role="tabpanel"
+                                 aria-labelledby="gallery-tab">
 
                             {{-- ******************************************************************************************************************************** --}}
 
                             <!--Carousel Wrapper-->
 
-                                    <div class="carousel-container position-relative row" style="padding: 10px 20px;">
-                                        <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
-                                             data-ride="carousel">
-                                            <!--Slides-->
-                                            <div class="carousel-inner z-depth-4 rounded" role="listbox" style="height: 450px ">
-                                                <?php $i = 0; ?>
-                                                @foreach($gallery as $item)
-                                                    @if($i == 0)
-                                                        <div class="carousel-item active z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
-                                                        </div>
-                                                    @else
+                                <div class="carousel-container position-relative row" style="padding: 10px 20px;">
+                                    <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+                                         data-ride="carousel">
+                                        <!--Slides-->
+                                        <div class="carousel-inner z-depth-4 rounded" role="listbox"
+                                             style="height: 450px ">
+                                            <?php $i = 0; ?>
+                                            @foreach($gallery as $item)
+                                                @if($i == 0)
+                                                    <div class="carousel-item active z-depth-4 rounded">
+                                                        <img class="d-block w-100"
+                                                             src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
+                                                    </div>
+                                                @else
 
-                                                        <div class="carousel-item z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
-                                                        </div>
-                                                    @endif
-                                                    <?php $i++ ?>
-                                                @endforeach
-                                            </div>
-                                            <!--/.Slides-->
-                                            <!--Controls-->
-                                            <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                            <!--/.Controls-->
-                                            <ol class="carousel-indicators">
-                                                <?php $i = 0; ?>
-                                                @foreach($gallery as $item)
-                                                    @if($i == 0)
-                                                        <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
-                                                            class="active border border-white z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
-                                                                 class="img-fluid">
-                                                        </li>
-                                                    @else
-                                                        <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
-                                                            class="border border-white z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
-                                                                 class="img-fluid">
-                                                        </li>
-                                                    @endif
-                                                    <?php $i++ ?>
-                                                @endforeach
-                                            </ol>
+                                                    <div class="carousel-item z-depth-4 rounded">
+                                                        <img class="d-block w-100"
+                                                             src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
+                                                    </div>
+                                                @endif
+                                                <?php $i++ ?>
+                                            @endforeach
                                         </div>
-                                        <script>
-                                            $('#carousel-thumb').carousel({
-                                                interval: 3000
-                                            });
-                                        </script>
+                                        <!--/.Slides-->
+                                        <!--Controls-->
+                                        <a class="carousel-control-prev" href="#carousel-thumb" role="button"
+                                           data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-thumb" role="button"
+                                           data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                        <!--/.Controls-->
+                                        <ol class="carousel-indicators">
+                                            <?php $i = 0; ?>
+                                            @foreach($gallery as $item)
+                                                @if($i == 0)
+                                                    <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
+                                                        class="active border border-white z-depth-4 rounded">
+                                                        <img class="d-block w-100"
+                                                             src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
+                                                             class="img-fluid">
+                                                    </li>
+                                                @else
+                                                    <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
+                                                        class="border border-white z-depth-4 rounded">
+                                                        <img class="d-block w-100"
+                                                             src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
+                                                             class="img-fluid">
+                                                    </li>
+                                                @endif
+                                                <?php $i++ ?>
+                                            @endforeach
+                                        </ol>
                                     </div>
+                                    <script>
+                                        $('#carousel-thumb').carousel({
+                                            interval: 3000
+                                        });
+                                    </script>
+                                </div>
 
                                 <!--/.Carousel Wrapper-->
 
@@ -344,7 +355,8 @@
 
                             </style>
 
-                            <div class="tab-pane fade" id="discountForm" role="tabpanel" aria-labelledby="discountForm-tab">
+                            <div class="tab-pane fade" id="discountForm" role="tabpanel"
+                                 aria-labelledby="discountForm-tab">
 
                                 <div class="col-md-12">
 
@@ -415,7 +427,8 @@
                                 </div>
 
                             </div>
-                            <div class="tab-pane fade" id="transportation" role="tabpanel" aria-labelledby="transportation-tab">
+                            <div class="tab-pane fade" id="transportation" role="tabpanel"
+                                 aria-labelledby="transportation-tab">
                                 <div class="col-md-12" style="padding: 20px">
                                     <table id="tabsTable">
                                         <tr>
@@ -455,7 +468,9 @@
                                                     <i class="fad fa-cloud-download"
                                                        style="  font-size: 300px; margin-top: 60px; "></i>
                                                 </a>
-                                                <div style="font-size: 40px; font-weight: bold; color: #f66001;"> Download</div>
+                                                <div style="font-size: 40px; font-weight: bold; color: #f66001;">
+                                                    Download
+                                                </div>
 
                                             @else
                                                 <h1>No Brochure</h1>
@@ -464,7 +479,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
+                            <div class="tab-pane fade" id="contactInfo" role="tabpanel"
+                                 aria-labelledby="contactInfo-tab">
 
 
                                 <div class="col-md-12" style="text-align: center">
@@ -480,20 +496,26 @@
                                         <div class="row">
 
                                             <div class="col-md-4 form-group">
-                                                <div style="color: #2d3e52; font-weight: bold;"> {{ __('show.email') }} :</div>
+                                                <div style="color: #2d3e52; font-weight: bold;"> {{ __('show.email') }}
+                                                    :
+                                                </div>
                                             </div>
                                             <div class="col-md-8 form-group">{{ $school->contact_person_email }}</div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4 form-group">
-                                                <div style="color: #2d3e52; font-weight: bold;">{{ __('show.phone') }} :</div>
+                                                <div style="color: #2d3e52; font-weight: bold;">{{ __('show.phone') }}
+                                                    :
+                                                </div>
                                             </div>
                                             <div class="col-md-8 form-group">{{ $school->contact_person_phone }}</div>
                                         </div>
                                         @if(!empty( $school->fax) )
                                             <div class="row">
                                                 <div class="col-md-4 form-group">
-                                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.fax') }} :</div>
+                                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.fax') }}
+                                                        :
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-8 form-group">{{ $school->fax }}</div>
                                             </div>
@@ -502,7 +524,9 @@
                                             <div class="row">
 
                                                 <div class="col-md-4 form-group">
-                                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }} :</div>
+                                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }}
+                                                        :
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-8 form-group"><a #f5f5f5
                                                                                     href="http://{{ $school->website }}">{{ $school->website }}</a>
@@ -511,7 +535,9 @@
                                         @endif
                                         <div class="row">
                                             <div class="col-md-4 form-group">
-                                                <div style="color: #2d3e52; font-weight: bold;">{{ __('show.gender') }} :</div>
+                                                <div style="color: #2d3e52; font-weight: bold;">{{ __('show.gender') }}
+                                                    :
+                                                </div>
                                             </div>
                                             <div class="col-md-8 form-group">
                                                 @if(in_array(0, $genderSchool))
@@ -599,23 +625,24 @@
 
                 <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12"
                      @if((app()->getLocale() == 'ar'))
-                     style="direction: rtl; text-align: right;">
+                     style="direction: rtl; text-align: right; border-left: 7px solid #f5f5f5;">
                     @else
-                        style="direction:ltr; text-align:left;">
+                        style="direction:ltr; text-align:left; border-right: 7px solid #f5f5f5;">
                     @endif
                     <br>
-                        <style>
-                            @media(max-width: 600px)
-                            {
-                                .schoolLogo{
-                                    text-align: center !important;
-                                }
+                    <style>
+                        @media (max-width: 600px) {
+                            .schoolLogo {
+                                text-align: center !important;
                             }
-                        </style>
+                        }
+                    </style>
                     <div class="row schoolLogo">
                         <div class="col-md-12" style="    text-align: center;">
-                            <img class="rounded" style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 70px;height: 70px"
-                                 src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="">
+                            <img class="rounded"
+                                 style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 250px;height:120px"
+                                 src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
+                                 alt="">
                         </div>
                         <div class="col-md-12" style="text-align: center">
                             <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
@@ -626,8 +653,9 @@
                     </div>
                     <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);margin: 0 0 20px;"></div>
                     <div class="row">
-                        <div class="col-md-12" style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
-                            <div class="scrollbar-warning" style="height: 400px; width: 100%; overflow-y: scroll;">
+                        <div class="col-md-12"
+                             style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
+                            <div class="scrollbar-warning" style="height: 230px; width: 100%; overflow-y: scroll;">
                                 {!! (app()->getLocale() == 'en')?$school->school_details_en :$school->school_details_ar !!}
                             </div>
                         </div>
@@ -639,8 +667,10 @@
                             border-radius: 16px;
                         }
                     </style>
-                    <div class="row">
-                        <div class="col-md-4"><h5 style="color:#ff6000; font-weight: bold; padding: 0px 20px;">{{ __('show.share_us') }}</h5></div>
+                    <div class="row" style="padding: 10px 0px">
+                        <div class="col-md-4"><h5
+                                    style="color:#ff6000; font-weight: bold; padding: 0px 10px;">{{ __('show.share_us') }}</h5>
+                        </div>
                         <div class="col-md-8">
                             <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="">
                                 <a class="a2a_button_facebook z-depth-4 rounded " style="margin: 0px 5px;"></a>
@@ -655,123 +685,39 @@
 
             </div>
             <div class="row">
-                <div class="col-md-8" style="border: 1px solid #e2e2e2;box-shadow: 5px 5px 5px #bbb;padding: 20px;">
-                    <h2> الأخبار</h2>
+                <div class="col-md-8"
+                     style="border: 1px solid #e2e2e2;box-shadow: 5px 5px 5px #bbb;padding: 20px;background: #fff;">
+                    <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;"> الأخبار</h2>
+                    @foreach($news as $item)
+                    <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
 
-                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
-                            <div class="card-body">
+                            <div class="card-body" style="{{ (app()->getLocale() == 'ar') ?'direction: rtl; text-align: right;' : 'direction: ltr; text-align: left;' }}">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596694679_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596694679_news.jpg"
+                                             alt="Avatar"
+                                             style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
                                     </div>
                                     <div class="col-md-9 container">
                                         <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8">
-                                                <h5>&lrm;اختتام دورة تدريب المدربين "TOT" في مدارس الأمم الإبداعية</h5>
+                                            <div class="col-md-12">
+                                                <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
                                             </div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8"><p>&nbsp;</p><p>بإشراف و مشاركة الأستاذ محمود...</p></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10"></div>
-                                            <div class="col-md-2">
-                                                <a href="showMore/95/&lrm;اختتام-دورة-تدريب-المدربين-&quot;TOT&quot;-في-مدارس-الأمم-الإبداعية" #f5f5f5="" class="btn btn-info">
-                                                    المزيد
-                                                </a>
+                                            <div class="col-md-12">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
+                                            <div class="col-md-12"
+                                                 style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
+                                                <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
+                                                   class="btn btn-info"
+                                                >{{ __('show.more') }}</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596694586_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
-                                    </div>
-                                    <div class="col-md-9 container">
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8">
-                                                <h5>مدارس الأمم الإبداعية  بالقيم .... تحيا .... الأمم</h5>
-                                            </div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8"><p>مدارس الأمم الإبداعية<br>بالقيم .... تحيا...</p></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10"></div>
-                                            <div class="col-md-2">
-                                                <a href="showMore/94/مدارس-الأمم-الإبداعية-بالقيم-....-تحيا-....-الأمم" #f5f5f5="" class="btn btn-info">
-                                                    المزيد
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596527935_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
-                                    </div>
-                                    <div class="col-md-9 container">
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8">
-                                                <h5>&lrm;اتفاقية شراكة مع خبراء المنصات الألكترونية التعليمية شركة B 12&lrm;</h5>
-                                            </div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8"><p>&nbsp;</p><p>رئيس مجلس الإدارة الأستاذ محم...</p></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10"></div>
-                                            <div class="col-md-2">
-                                                <a href="showMore/15/&lrm;اتفاقية-شراكة-مع-خبراء-المنصات-الألكترونية-التعليمية-شركة-B-12&lrm;" #f5f5f5="" class="btn btn-info">
-                                                    المزيد
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596527751_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
-                                    </div>
-                                    <div class="col-md-9 container">
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8">
-                                                <h5>كل عام وانتم بخير مدارس الأمم الإبداعية</h5>
-                                            </div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8"><p>إضحك لدنياك<br>كل عام وانتم بخير<br>مدارس...</p></div>
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10"></div>
-                                            <div class="col-md-2">
-                                                <a href="showMore/14/كل-عام-وانتم-بخير-مدارس-الأمم-الإبداعية" #f5f5f5="" class="btn btn-info">
-                                                    المزيد
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    @endforeach
                     <h4 style="color: #5bc0de;cursor: pointer; display: none">المزيد</h4>
 
                 </div>
@@ -782,7 +728,7 @@
             </div>
         </div>
     </section>
-    <div style="margin-top: 100px;"></div>
+
 @endsection
 
 @section('script')
