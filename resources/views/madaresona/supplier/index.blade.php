@@ -1,235 +1,391 @@
 @extends('layouts.main')
-@section('sub_header')
-    @include('madaresona.partials.sub_header')
-@endsection
-@section('content')
-    <style>
-        @media only screen and (max-width: 991px) {
-            #wrapper {
-                display: none;
-            }
-        }
-
-        .news {
-            width: 160px
-        }
-
-        .news-scroll a {
-            text-decoration: none;
-            height: 40px;
-            padding-top: 10px;
-        }
-
-        .news-ahref {
-            color: white;
-        }
-
-        .news-ahref:hover {
-            color: #ff6000;
-        }
-
-        .news-img {
-            margin: 0 10px;
-        }
-
-        .selected_education {
-            background: #f5f5f5;
-            padding: 20px 30px;
-            border-radius: 10px !important;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
-        }
-
-        /********************************/
-
-        /**************************************/
-
-        #c1 {
-            float: left;
-            margin-left: 10px;
-        }
-
-        #c2 {
-            margin-right: 10px;
-            float: right;
-        }
-    </style>
-
-
-    <div id="wrapper">
-        <div id="c1">
-            @foreach($suppliersAdvertisements as $advertisement)
-                <a href="{{ $advertisement->url }}">
-                    <img src="https://astonsocial.com.au/wp-content/uploads/2018/03/Facebook-Advertising.png" width="220px" height="150px" alt="">
-                </a>
-                <hr class="space">
-            @endforeach
+<section class="section-base" style="margin-bottom: 20px; padding-top:100px ">
+    <div class="row">
+        <div class="col-md-2">
         </div>
-        <div id="c2">
-            @foreach($schoolsAdvertisements as $advertisement)
-                <a href="{{ $advertisement->url }}">
-                    <img src="https://astonsocial.com.au/wp-content/uploads/2018/03/Facebook-Advertising.png" width="220px" height="150px" alt="">
-                </a>
-                <hr class="space">
-            @endforeach
-        </div>
-    </div>
+        <div class="col-md-6">
+            <div class=" fade-left" style="padding-top: 130px !important;direction: rtl;" id="schoolsGrid">
+                    <div class="travelo-box clearfix">
+                        <div class="form-group col-xs-12 col-md-9">
+                            <div style=" width: 100%;text-align: right;color: #838383 ">الكلمة الأساسية</div>
+                            <div class="with-icon full-width">
+                                <input name="ctl00$ContentPlaceHolder1$txtBuyerProductsName" type="text" id="ctl00_ContentPlaceHolder1_txtBuyerProductsName" class="input-text full-width" placeholder="مثال : بويلر، كاميرات، حديد، اجهزة كهربائية، مضخات،..الخ">
+                            </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" style="height: 80px;">
-                <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
-                     style="background: #1d556c;margin-bottom: 30px; box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.19);">
-                    <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news {{(app()->getLocale() == 'en') ?'rounded-right' :'rounded-left'}}"
-                         style="height: 100px;">
-                        <span class="d-flex align-items-center font-weight-bold"
-                              style="position: absolute;top: 28px;">{{__('index.News')}}</span></div>
-                    <marquee class="news-scroll" height="100" behavior="scroll" direction="up" scrollamount="2"
-                             onmouseover="this.stop();" onmouseout="this.start();"
-                             direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
-                             onmouseout="this.start();">
-                        @foreach($mainNews as $news)
-                            <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                                 alt="">
-                            <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
-                               #f5f5f5
-                               class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
-                            <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                                 alt="">
-                            <br>
-                        @endforeach
-                    </marquee>
-                </div>
-            </div>
-        </div>
-    </div>
+                        </div>
+                        <div class="form-group col-xs-8 col-md-3" style="padding-top: 20px;">
+                            <label>&nbsp;</label>
+                            <a id="ctl00_ContentPlaceHolder1_btnsearch" usesubmitbehavior="true" class="button btn-medium dull-blue" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$btnsearch','')">
+                                <i class="soap-icon-search">&nbsp;</i>
+                                بحث</a>
+                        </div>
+                    </div>
+                    <div class="car-list listing-style3 car">
+                        <article class="box">
+                            <figure class="col-xs-3">
+                                <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="height: 115px;width: 160px;">
+                                </a>
+                            </figure>
+                            <div class="details col-xs-9 clearfix">
+                                <div class="col-sm-8">
+                                    <div class="clearfix">
+                                        <h4 class="box-title">
+                                            <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">Abu Moujeh Engineering and Construction</a>
 
-    <section class="section-base">
-        <link rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+                                            <small>عمان&nbsp;-&nbsp;الاردن</small>
 
-        <div class="container pb-0">
-            <h2 class="align-center" style="color: #1d556c; "><span class="font-weight-bold"
-                                                                    style="text-decoration: underline; color: #ff6000; ">{{ count($specialSchools) }}</span> {{__('index.special_schools')}}
-            </h2>
-            <p class="align-center width-650"> {{__('index.proud_schools')}}</p>
-            <hr class="space"/>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel owl-theme"
-                         style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
-                        @foreach($specialSchools as $school)
-                            <div class="col-md-10"
-                                 style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
-                                <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
-                                     style="border: 1px #f1f4f9 solid">
-                                    <a class="img-box show-school" id="{{ $school->id }}"
-                                       href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
-                                       slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                             alt="" style="width: 200px; height: 200px">
-                                    </a>
-                                    <div class="caption">
-                                        <p style="text-align: center;">{{ $school->name_ar }}</p>
+                                        </h4>
+
+                                    </div>
+                                    <div class="amenities" style="text-align: right ">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:00962799919542" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-phone circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab" target="_blank"  >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-message circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.abu-moujeh.com" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-globe circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-departure circle" ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                                <div class="col-xs-6 col-sm-2 character">
+                                    <dl class="">
+                                        <dt class="skin-color">الشخص المسؤول</dt>
+                                        <dd>م. مهند ابوموجة</dd>
+                                        <dt class="skin-color">الهاتف</dt>
+                                        <dd>0096264166064</dd>
+                                        <dt class="skin-color">المدينة</dt>
+                                        <dd>عمان</dd>
+                                    </dl>
+                                </div>
+                                <div class="action col-xs-6 col-sm-2">
+                                    <a href="SuppliersDetails.aspx?opc_id=465 " class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                </div>
                             </div>
-                        @endforeach
-                    </div>
-                    <div class="my-owl-nav">
+                        </article>
+                        <article class="box">
+                            <figure class="col-xs-3">
+                                <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="height: 115px;width: 160px;">
+                                </a>
+                            </figure>
+                            <div class="details col-xs-9 clearfix">
+                                <div class="col-sm-8">
+                                    <div class="clearfix">
+                                        <h4 class="box-title">
+                                            <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">Abu Moujeh Engineering and Construction</a>
 
-                        <span class="my-prev-button">
-    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Prev
-  </span>
-                        <span class="my-next-button">
-    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next
-  </span>
+                                            <small>عمان&nbsp;-&nbsp;الاردن</small>
+
+                                        </h4>
+
+                                    </div>
+                                    <div class="amenities" style="text-align: right ">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:00962799919542" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-phone circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab" target="_blank"  >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-message circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.abu-moujeh.com" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-globe circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-departure circle" ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-2 character">
+                                    <dl class="">
+                                        <dt class="skin-color">الشخص المسؤول</dt>
+                                        <dd>م. مهند ابوموجة</dd>
+                                        <dt class="skin-color">الهاتف</dt>
+                                        <dd>0096264166064</dd>
+                                        <dt class="skin-color">المدينة</dt>
+                                        <dd>عمان</dd>
+                                    </dl>
+                                </div>
+                                <div class="action col-xs-6 col-sm-2">
+                                    <a href="SuppliersDetails.aspx?opc_id=465 " class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="box">
+                            <figure class="col-xs-3">
+                                <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="height: 115px;width: 160px;">
+                                </a>
+                            </figure>
+                            <div class="details col-xs-9 clearfix">
+                                <div class="col-sm-8">
+                                    <div class="clearfix">
+                                        <h4 class="box-title">
+                                            <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">Abu Moujeh Engineering and Construction</a>
+
+                                            <small>عمان&nbsp;-&nbsp;الاردن</small>
+
+                                        </h4>
+
+                                    </div>
+                                    <div class="amenities" style="text-align: right ">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:00962799919542" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-phone circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab" target="_blank"  >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-message circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.abu-moujeh.com" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-globe circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-departure circle" ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-2 character">
+                                    <dl class="">
+                                        <dt class="skin-color">الشخص المسؤول</dt>
+                                        <dd>م. مهند ابوموجة</dd>
+                                        <dt class="skin-color">الهاتف</dt>
+                                        <dd>0096264166064</dd>
+                                        <dt class="skin-color">المدينة</dt>
+                                        <dd>عمان</dd>
+                                    </dl>
+                                </div>
+                                <div class="action col-xs-6 col-sm-2">
+                                    <a href="SuppliersDetails.aspx?opc_id=465 " class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                </div>
+                            </div>
+                        </article><article class="box">
+                            <figure class="col-xs-3">
+                                <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="height: 115px;width: 160px;">
+                                </a>
+                            </figure>
+                            <div class="details col-xs-9 clearfix">
+                                <div class="col-sm-8">
+                                    <div class="clearfix">
+                                        <h4 class="box-title">
+                                            <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">Abu Moujeh Engineering and Construction</a>
+
+                                            <small>عمان&nbsp;-&nbsp;الاردن</small>
+
+                                        </h4>
+
+                                    </div>
+                                    <div class="amenities" style="text-align: right ">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:00962799919542" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-phone circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab" target="_blank"  >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-message circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.abu-moujeh.com" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-globe circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-departure circle" ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-2 character">
+                                    <dl class="">
+                                        <dt class="skin-color">الشخص المسؤول</dt>
+                                        <dd>م. مهند ابوموجة</dd>
+                                        <dt class="skin-color">الهاتف</dt>
+                                        <dd>0096264166064</dd>
+                                        <dt class="skin-color">المدينة</dt>
+                                        <dd>عمان</dd>
+                                    </dl>
+                                </div>
+                                <div class="action col-xs-6 col-sm-2">
+                                    <a href="SuppliersDetails.aspx?opc_id=465 " class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="box">
+                            <figure class="col-xs-3">
+                                <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="height: 115px;width: 160px;">
+                                </a>
+                            </figure>
+                            <div class="details col-xs-9 clearfix">
+                                <div class="col-sm-8">
+                                    <div class="clearfix">
+                                        <h4 class="box-title">
+                                            <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">Abu Moujeh Engineering and Construction</a>
+
+                                            <small>عمان&nbsp;-&nbsp;الاردن</small>
+
+                                        </h4>
+
+                                    </div>
+                                    <div class="amenities" style="text-align: right ">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:00962799919542" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-phone circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab" target="_blank"  >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-message circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.abu-moujeh.com" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-globe circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-departure circle" ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-2 character">
+                                    <dl class="">
+                                        <dt class="skin-color">الشخص المسؤول</dt>
+                                        <dd>م. مهند ابوموجة</dd>
+                                        <dt class="skin-color">الهاتف</dt>
+                                        <dd>0096264166064</dd>
+                                        <dt class="skin-color">المدينة</dt>
+                                        <dd>عمان</dd>
+                                    </dl>
+                                </div>
+                                <div class="action col-xs-6 col-sm-2">
+                                    <a href="SuppliersDetails.aspx?opc_id=465 " class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                </div>
+                            </div>
+                        </article><article class="box">
+                            <figure class="col-xs-3">
+                                <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="height: 115px;width: 160px;">
+                                </a>
+                            </figure>
+                            <div class="details col-xs-9 clearfix">
+                                <div class="col-sm-8">
+                                    <div class="clearfix">
+                                        <h4 class="box-title">
+                                            <a title="Abu Moujeh Engineering and Construction" href="SuppliersDetails.aspx?opc_id=465 ">Abu Moujeh Engineering and Construction</a>
+
+                                            <small>عمان&nbsp;-&nbsp;الاردن</small>
+
+                                        </h4>
+
+                                    </div>
+                                    <div class="amenities" style="text-align: right ">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:00962799919542" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-phone circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab" target="_blank"  >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-message circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.abu-moujeh.com" target="_blank" >
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-globe circle" ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                    <i style="cursor: pointer;padding: 6px" class="soap-icon-departure circle" ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-2 character">
+                                    <dl class="">
+                                        <dt class="skin-color">الشخص المسؤول</dt>
+                                        <dd>م. مهند ابوموجة</dd>
+                                        <dt class="skin-color">الهاتف</dt>
+                                        <dd>0096264166064</dd>
+                                        <dt class="skin-color">المدينة</dt>
+                                        <dd>عمان</dd>
+                                    </dl>
+                                </div>
+                                <div class="action col-xs-6 col-sm-2">
+                                    <a href="SuppliersDetails.aspx?opc_id=465 " class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                </div>
+                            </div>
+                        </article>
+
+
+
+
                     </div>
-                </div>
+
+
+
+
+
+
             </div>
         </div>
-
-        <style>
-
-            .owl-stage {
-                padding-bottom: 10px
-            }
-
-            .my-owl-nav {
-                margin-top: 20px;
-            }
-
-            .my-owl-nav span {
-                margin: 0 4px;
-            }
-
-            .my-owl-nav span:hover {
-                cursor: pointer;
-                color: #ff6000;
-            }
-        </style>
-        <script>
-
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                /*navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],*/
-                navText: [
-                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-                ],
-                autoplay: true,
-                nav: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
-
-
-            var selector = $('.owl-carousel');
-
-            $('.my-next-button').click(function () {
-                selector.trigger('next.owl.carousel');
-            });
-
-            $('.my-prev-button').click(function () {
-                selector.trigger('prev.owl.carousel');
-            });
-        </script>
-    </section>
-
-    <section class="section-base" style="margin-bottom: 20px;">
-        <div class="container">
-            <hr style="margin: 0px;">
-        </div>
-        <h2 class="align-center">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4" style="padding: 10px 5px; color:#1d556c">
-                    اختار نوع المؤسسة التعليمة للبحث بكل سهولة
-                </div>
-            </div>
-        </h2>
-        <h2 class="align-center">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 selected_education"
-                     @if((app()->getLocale() == 'ar'))
-                     style="direction: rtl; text-align: right;">
-                    @else
-                        style="direction:ltr; text-align:left;">
-                    @endif
+        <div class="col-md-2" style="padding-top: 130px">
+            <div style="border: 1px solid #bebebe">
+                <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات التعليمية</div>
+                <div
+                        @if((app()->getLocale() == 'ar'))
+                        style="direction: rtl; text-align: right;padding: 10px;padding-top: 80px;"
+                        @else
+                        style="direction:ltr; text-align:left;padding: 10px;padding-top: 80px;"
+                        @endif
+                >
                     <select name="schoolType" id="schoolType" class="form-control"
-                            style="font-size: 15px;padding: 1px;">
+                            style="font-size: 15px;padding:0px 10px;">
                         <option style="color: #000; font-weight: bold;" disabled
                                 selected>{{ __('index.education_institutions') }}</option>
                         <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
@@ -239,121 +395,27 @@
                     </select>
                 </div>
             </div>
-        </h2>
-
-        <div class="container fade-left" style="padding: 0px !important;" id="schoolsGrid">
-            <hr class="space"/>
-            <div class="infinite-scroll">
-                <div class="row">
-                    @foreach($schools as $school)
-                        <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                            <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
-                                 style="border: 1px #f1f4f9 solid">
-                                <a class="img-box show-school" id="{{ $school->id }}"
-                                   href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
-                                   slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                         alt="" style="width: 200px; height: 200px">
-                                </a>
-                                <div class="caption">
-                                    <p style="text-align: center;">{{ $school->name_ar }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                {!! $schools->links() !!}
-                <div class="row">
-                    <div class="col-md-12"></div>
-                </div>
+            <div style="border: 1px solid #bebebe;margin-top: 50px">
+                <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
             </div>
+            <div style="border: 1px solid #bebebe;margin-top: 50px">
+                <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
+            </div>
+            <div style="border: 1px solid #bebebe;margin-top: 50px">
+                <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
+            </div>
+            <div style="border: 1px solid #bebebe;margin-top: 50px">
+                <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
+            </div>
+
         </div>
-    </section>
+        <div class="col-md-2">
+        </div>
+    </div>
+</section>
 
 
-@endsection
-@section('script')
 
-    <script type="text/javascript">
-
-        $('ul.pagination').hide();
-
-        $(function () {
-            $('.infinite-scroll').jscroll({
-                autoTrigger: true,
-                loadingHtml: '<img class="center-block" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..." />',
-                padding: 5,
-                nextSelector: '.pagination li.active + li a',
-                contentSelector: 'div.infinite-scroll',
-                callback: function () {
-                    $('ul.pagination').remove();
-                }
-            });
-
-            $('#searchForm').on('submit', function (e) {
-
-                e.preventDefault();
-                var form = $(this);
-                var url = form.attr('action');
-
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: new FormData(this),
-                    contentType: false,
-                    cache: false,
-                    processData: false,
-                    success: function (data) {
-                        //$('.infinite-scroll').destroy();
-                        $('#schoolsGrid').html(data);
-
-                        /*$('.infinite-scroll').removeData('jscroll').jscroll.destroy();*/
-                        var div = $('#schoolsGrid').offset().top;
-                        $('body, html').animate({scrollTop: div});
-                    }
-                });
-            });
-
-            $('#schoolType').on('change', function () {
-                var id = $(this).val();
-                $.ajax({
-                    type: 'GET',
-                    url: '/{{ app()->getLocale() }}/institutions/' + id,
-                    success: function (data) {
-                        $('#schoolsGrid').html(data);
-                    }
-
-                });
-            });
-
-            $('#carouselIndex').carousel({
-                interval: 3000
-            });
-
-        });
-
-        $(document).on("click", '.show-school', function (event) {
-
-            var slug = $(this).attr('slug');
-            var cleanSlug = slug.replace("-/", "");
-            var id = $(this).attr('id');
-
-            $.ajax({
-                url: '/{{ app()->getLocale() }}/school/' + id,
-                method: 'get',
-                success: function (data) {
-                    $('.modal-body').html(data);
-                    $('#modal').modal('show');
-                    window.history.pushState("", "", '/{{ app()->getLocale() }}/' + slug);
-                    $('#closeModal').on('click', function () {
-                        var myNewURL = "";
-                        window.history.pushState("", "Title", "/" + myNewURL);
-                    })
-                }
-            });
-        });
-
-    </script>
+@section('content')
     @include('modal')
-
 @endsection

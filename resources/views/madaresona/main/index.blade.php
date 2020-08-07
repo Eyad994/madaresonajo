@@ -78,6 +78,11 @@
         .schools_type_title{
             font-size: 25px;
         }
+
+        .mordon_part:hover{
+            background: #d6d8dc;
+            cursor: pointer;
+        }
     </style>
 
     <div style="padding: 30px">
@@ -248,116 +253,62 @@
                 </div>
             </div>
             <div class="col-md-2" style="padding-top: 80px">
-
-                <div class="travelo-box widget-queries">
-                    <div class="row">
-                        <div class="col-md-12 selected_education"
-                             @if((app()->getLocale() == 'ar'))
-                             style="direction: rtl; text-align: right;">
+                <div style="border: 1px solid #bebebe">
+                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات التعليمية</div>
+                    <div
+                            @if((app()->getLocale() == 'ar'))
+                            style="direction: rtl; text-align: right;padding: 10px;padding-top: 80px;"
                             @else
-                                style="direction:ltr; text-align:left;">
+                            style="direction:ltr; text-align:left;padding: 10px;padding-top: 80px;"
                             @endif
-                            <select name="schoolType" id="schoolType" class="form-control"
-                                    style="font-size: 15px;padding: 1px;">
-                                <option style="color: #000; font-weight: bold;" disabled
-                                        selected>{{ __('index.education_institutions') }}</option>
-                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                                @foreach($schoolsType as $type)
-                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                                @endforeach
-                            </select>
+                    >
+                        <select name="schoolType" id="schoolType" class="form-control"
+                                style="font-size: 15px;padding:0px 10px;">
+                            <option style="color: #000; font-weight: bold;" disabled
+                                    selected>{{ __('index.education_institutions') }}</option>
+                            <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                            @foreach($schoolsType as $type)
+                                <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div style="border: 1px solid #bebebe;margin-top: 50px">
+                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">بحث</div>
+                    <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
+                        <input type="text" name="search_text" id="search_text" class="form-control" placeholder="بحث عن المدارس ورياض الأطفال" style="border-radius: 0px;margin-right: -1px;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="button" style="margin-right: -4px">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 selected_education"
-                             @if((app()->getLocale() == 'ar'))
-                             style="direction: rtl; text-align: right;">
-                            @else
-                                style="direction:ltr; text-align:left;">
-                            @endif
-                            <select name="schoolType" id="schoolType" class="form-control"
-                                    style="font-size: 15px;padding: 1px;">
-                                <option style="color: #000; font-weight: bold;" disabled
-                                        selected>{{ __('index.education_institutions') }}</option>
-                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                                @foreach($schoolsType as $type)
-                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                </div>
+                <div style="border: 1px solid #bebebe;margin-top: 50px">
+                    <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
+                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 selected_education"
-                             @if((app()->getLocale() == 'ar'))
-                             style="direction: rtl; text-align: right;">
-                            @else
-                                style="direction:ltr; text-align:left;">
-                            @endif
-                            <select name="schoolType" id="schoolType" class="form-control"
-                                    style="font-size: 15px;padding: 1px;">
-                                <option style="color: #000; font-weight: bold;" disabled
-                                        selected>{{ __('index.education_institutions') }}</option>
-                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                                @foreach($schoolsType as $type)
-                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 selected_education"
-                             @if((app()->getLocale() == 'ar'))
-                             style="direction: rtl; text-align: right;">
-                            @else
-                                style="direction:ltr; text-align:left;">
-                            @endif
-                            <select name="schoolType" id="schoolType" class="form-control"
-                                    style="font-size: 15px;padding: 1px;">
-                                <option style="color: #000; font-weight: bold;" disabled
-                                        selected>{{ __('index.education_institutions') }}</option>
-                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                                @foreach($schoolsType as $type)
-                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 selected_education"
-                             @if((app()->getLocale() == 'ar'))
-                             style="direction: rtl; text-align: right;">
-                            @else
-                                style="direction:ltr; text-align:left;">
-                            @endif
-                            <select name="schoolType" id="schoolType" class="form-control"
-                                    style="font-size: 15px;padding: 1px;">
-                                <option style="color: #000; font-weight: bold;" disabled
-                                        selected>{{ __('index.education_institutions') }}</option>
-                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                                @foreach($schoolsType as $type)
-                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 selected_education"
-                             @if((app()->getLocale() == 'ar'))
-                             style="direction: rtl; text-align: right;">
-                            @else
-                                style="direction:ltr; text-align:left;">
-                            @endif
-                            <select name="schoolType" id="schoolType" class="form-control"
-                                    style="font-size: 15px;padding: 1px;">
-                                <option style="color: #000; font-weight: bold;" disabled
-                                        selected>{{ __('index.education_institutions') }}</option>
-                                <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
-                                @foreach($schoolsType as $type)
-                                    <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                    <div class="input-group mordon_part " style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
                     </div>
+                </div>
+                <div style="border: 1px solid #bebebe;margin-top: 50px">
+                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
                 </div>
             </div>
             <div class="col-md-2">

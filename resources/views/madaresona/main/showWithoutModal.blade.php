@@ -14,6 +14,7 @@
             border: none;
             border-radius: 0;
             transition: color .2s ease-out;
+            background: #fe6000;
         }
 
         .tabs-dark .nav-link {
@@ -45,6 +46,7 @@
 
         .nav-pills .nav-item {
             margin: 0 5px;
+
         }
 
         .nav-pills.pills-dark .nav-link.active {
@@ -58,6 +60,11 @@
 
         .tabs-marker .nav-link {
             position: relative;
+        }
+
+        .tabs-marker .nav-item{
+            border-left: 2px solid #ffffff;
+            margin-left: 2px;
         }
 
         .tabs-marker .nav-link.active .marker {
@@ -167,43 +174,33 @@
                             id="myTab" role="tablist">
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab"
-                                   aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}<span
-                                            class="marker"></span></a>
+                                   aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
-                                   aria-controls="principle" aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}<span
-                                            class="marker"></span></a>
+                                   aria-controls="principle" aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}</a>
                             </li>
                             @if(!(($school->type)== 2))
                                 <li class="nav-item waves-effect waves-light">
                                     <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm" role="tab"
-                                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}<span
-                                                class="marker"></span></a>
+                                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}</a>
                                 </li>
                             @endif
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation" role="tab"
-                                   aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}<span
-                                            class="marker"></span></a>
+                                   aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link " id="maps-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps"
-                                   aria-selected="true">{{ __('show.maps') }}<span class="marker"></span></a>
+                                   aria-selected="true">{{ __('show.maps') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link " id="brochure-tab" data-toggle="tab" href="#brochure" role="tab"
-                                   aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}<span
-                                            class="marker"></span></a>
+                                   aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}</a>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab"
-                                   aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}<span
-                                            class="marker"></span></a>
-                            </li>
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link " id="news-tab" data-toggle="tab" href="#news" role="tab"
-                                   aria-controls="news" aria-selected="true">{{ __('show.news') }}<span class="marker"></span></a>
+                                   aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}</a>
                             </li>
                         </ul>
 
@@ -284,7 +281,7 @@
 
                             <div class="tab-pane fade" id="principle" role="tabpanel" aria-labelledby="principle-tab">
 
-                                <div class="container mt-5">
+                                <div class="" style="width: 100%;padding: 20px">
                                     <div class="carousel-container">
                                         <div class="row">
                                             <div class="col-md-12">
@@ -349,7 +346,7 @@
 
                             <div class="tab-pane fade" id="discountForm" role="tabpanel" aria-labelledby="discountForm-tab">
 
-                                <div class="container mt-5">
+                                <div class="col-md-12">
 
                                     <div class="row">
                                         <div class="col-md-4">
@@ -419,7 +416,7 @@
 
                             </div>
                             <div class="tab-pane fade" id="transportation" role="tabpanel" aria-labelledby="transportation-tab">
-                                <div class="container mt-5">
+                                <div class="col-md-12" style="padding: 20px">
                                     <table id="tabsTable">
                                         <tr>
                                             <th>{{ __('show.region') }}</th>
@@ -439,19 +436,19 @@
                             </div>
                             <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab">
 
-                                <div class="container mt-5">
+                                <div class="col-md-12" style="padding-top: 50px">
                                     <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}"
                                          lng="{{ $school-> lng}}"></div>
                                 </div>
 
                             </div>
                             <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab">
-                                <div class="container mt-5">
+                                <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-12" style="text-align-last: center;">
                                             @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
                                                 <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                                     style="width:50%; border-radius: 10px;" alt="">
+                                                     style="border-radius: 10px;padding: 20px;width: 100%;" alt="">
                                             @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
                                                 <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
                                                    #f5f5f5 download="">
@@ -470,7 +467,7 @@
                             <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
 
 
-                                <div class="container mt-5" style="text-align: center">
+                                <div class="col-md-12" style="text-align: center">
                                     <h2 style="color: #2d3e52">{{ __('show.contact_information') }}</h2>
                                     <div class="" style="display: inline-block;
                                              margin-top: 20px;
@@ -535,7 +532,7 @@
                                 </div>
                                 @if(!empty( $school->facebook_link) ||!empty($school->instagram_link)||
                                 !empty( $school->twitter_link)||!empty($school->linkedin_link))
-                                    <div class="container mt-5" style="text-align: center">
+                                    <div class="col-md-12" style="text-align: center">
                                         <h2 style="color: #ff6000">{{ __('show.follow') }}</h2>
                                         <div class="" style="display: inline-block;
                                              margin-top: 20px;
@@ -592,43 +589,6 @@
                                     }
                                 </style>
 
-                                <div class="container mt-5 overflow-scroll scrollbar-warning" style="text-align: right; height: 650px;overflow-y: scroll;">
-                                    @foreach($news as $item)
-
-                                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item['img'] }}"
-                                                             alt="Avatar"
-                                                             style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
-                                                    </div>
-                                                    <div class="col-md-9 container">
-                                                        <div class="row">
-                                                            <div class="col-md-2"></div>
-                                                            <div class="col-md-8">
-                                                                <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
-                                                            </div>
-                                                            <div class="col-md-2"></div>
-                                                            <div class="col-md-2"></div>
-                                                            <div class="col-md-8">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
-                                                            <div class="col-md-2"></div>
-                                                            <div class="col-md-10"></div>
-                                                            <div class="col-md-2">
-                                                                <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" #f5f5f5
-                                                                   class="btn btn-info">
-                                                                    {{ __('show.more') }}
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    @endforeach
-                                </div>
-
                             </div>
                         </div>
 
@@ -653,20 +613,18 @@
                             }
                         </style>
                     <div class="row schoolLogo">
-                        <div class="col-md-3">
-                            <img class="rounded" style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);"
+                        <div class="col-md-12" style="    text-align: center;">
+                            <img class="rounded" style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 70px;height: 70px"
                                  src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-12" style="text-align: center">
                             <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
                             <h6 class="text-muted">{{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}
                                 , {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
                                 - {{(app()->getLocale() == 'en') ?$school->region->area_name_en:$school->region->area_name_ar }}</h6>
                         </div>
                     </div>
-                    <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);
-padding: 20px 0 10px;
-margin: 0 0 20px;"></div>
+                    <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);margin: 0 0 20px;"></div>
                     <div class="row">
                         <div class="col-md-12" style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
                             <div class="scrollbar-warning" style="height: 400px; width: 100%; overflow-y: scroll;">
@@ -695,6 +653,156 @@ margin: 0 0 20px;"></div>
                     </div>
                 </div>
 
+            </div>
+            <div class="row">
+                <div class="col-md-8" style="border: 1px solid #e2e2e2;box-shadow: 5px 5px 5px #bbb;padding: 20px;">
+                    <h2> الأخبار</h2>
+
+                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596694679_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                    </div>
+                                    <div class="col-md-9 container">
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <h5>&lrm;اختتام دورة تدريب المدربين "TOT" في مدارس الأمم الإبداعية</h5>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8"><p>&nbsp;</p><p>بإشراف و مشاركة الأستاذ محمود...</p></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-10"></div>
+                                            <div class="col-md-2">
+                                                <a href="showMore/95/&lrm;اختتام-دورة-تدريب-المدربين-&quot;TOT&quot;-في-مدارس-الأمم-الإبداعية" #f5f5f5="" class="btn btn-info">
+                                                    المزيد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596694586_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                    </div>
+                                    <div class="col-md-9 container">
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <h5>مدارس الأمم الإبداعية  بالقيم .... تحيا .... الأمم</h5>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8"><p>مدارس الأمم الإبداعية<br>بالقيم .... تحيا...</p></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-10"></div>
+                                            <div class="col-md-2">
+                                                <a href="showMore/94/مدارس-الأمم-الإبداعية-بالقيم-....-تحيا-....-الأمم" #f5f5f5="" class="btn btn-info">
+                                                    المزيد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596527935_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                    </div>
+                                    <div class="col-md-9 container">
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <h5>&lrm;اتفاقية شراكة مع خبراء المنصات الألكترونية التعليمية شركة B 12&lrm;</h5>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8"><p>&nbsp;</p><p>رئيس مجلس الإدارة الأستاذ محم...</p></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-10"></div>
+                                            <div class="col-md-2">
+                                                <a href="showMore/15/&lrm;اتفاقية-شراكة-مع-خبراء-المنصات-الألكترونية-التعليمية-شركة-B-12&lrm;" #f5f5f5="" class="btn btn-info">
+                                                    المزيد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596527751_news.jpg" alt="Avatar" style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                    </div>
+                                    <div class="col-md-9 container">
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <h5>كل عام وانتم بخير مدارس الأمم الإبداعية</h5>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8"><p>إضحك لدنياك<br>كل عام وانتم بخير<br>مدارس...</p></div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-10"></div>
+                                            <div class="col-md-2">
+                                                <a href="showMore/14/كل-عام-وانتم-بخير-مدارس-الأمم-الإبداعية" #f5f5f5="" class="btn btn-info">
+                                                    المزيد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <h4 style="color: #5bc0de;cursor: pointer">المزيد</h4>
+
+                </div>
+                <div class="col-md-4">
+                    <div style="border: 1px solid #bebebe;">
+                        <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
+                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
+                        </div>
+                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
+                        </div>
+                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
+                        </div>
+                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
+                        </div>
+                        <div class="input-group mordon_part " style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
+                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
+                        </div>
+                    </div>
+                    <div style="border: 1px solid #bebebe;margin-top: 50px">
+                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

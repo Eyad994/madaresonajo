@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c51ba15b-8494-414e-83c9-db22b2e456c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/madaresonajo.iml" afterPath="$PROJECT_DIR$/.idea/madaresonajo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/partials/footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/partials/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php" afterPath="$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php" />
-    </list>
+    <list default="true" id="c51ba15b-8494-414e-83c9-db22b2e456c6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -654,7 +647,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../oratech" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -773,12 +766,12 @@
       <workItem from="1596624731210" duration="55000" />
       <workItem from="1596624798902" duration="4897000" />
       <workItem from="1596632261830" duration="3279000" />
-      <workItem from="1596727511923" duration="16589000" />
+      <workItem from="1596727511923" duration="17201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43992000" />
+    <option name="totallyTimeSpent" value="44604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

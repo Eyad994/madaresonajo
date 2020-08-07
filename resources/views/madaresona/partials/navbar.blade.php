@@ -650,7 +650,7 @@
                                     </a>
                                 </li>
                                 <li class="item-products" data-uw-node-idx="150">
-                                    <a href="{{ route('home', app()->getLocale()) }}" class="font-primary-bold" data-uw-node-idx="151">
+                                    <a href="{{ route('mainSupplier', app()->getLocale()) }}" class="font-primary-bold" data-uw-node-idx="151">
                                         <i class="fad fa-building" data-uw-node-idx="152"></i>
                                         {{ __('index.suppliers') }}
                                     </a>

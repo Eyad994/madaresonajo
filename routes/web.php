@@ -59,4 +59,5 @@ Route::group([
     Route::post('store/contactUs', 'PricingController@store')->name('storeContactUs');
     Route::get('{slug}', 'SchoolController@showWithoutModal');
     Route::get('showMore/{id}/{title}', 'SchoolController@showMore');
+
 });
