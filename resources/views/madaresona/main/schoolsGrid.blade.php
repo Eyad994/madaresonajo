@@ -1,16 +1,16 @@
-<div class="container" style="padding: 0px !important;">
+
     <hr class="space"/>
     <div class="infinite-scroll">
         <div class="row">
             @foreach($schools as $school)
-                <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
-                         style="border: 1px #f1f4f9 solid">
-                        <a class="img-box show-school" id="{{ $school->id }}"
-                           href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
+                <div class="col-md-3" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
+                    style="border: 1px #f1f4f9 solid">
+                        <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
+                           href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                 alt="" style="width: 200px; height: 200px">
+                                 alt="" style="width: 100%; height: 200px">
                         </a>
                         <div class="caption">
                             <p style="text-align: center;">{{ $school->name_ar }}</p>
@@ -29,7 +29,6 @@
         </div>
         {{--{!! $schools->links() !!}--}}
     </div>
-</div>
 
 <div class="row">
     <div class="col-md-12"></div>

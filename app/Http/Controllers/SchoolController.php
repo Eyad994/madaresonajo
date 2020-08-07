@@ -42,7 +42,6 @@ class SchoolController extends Controller
 
     public function show($lang, $slug)
     {
-
         //$cleanSlug = str_replace('-', ' ', $slug);
 
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))

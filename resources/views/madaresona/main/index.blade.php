@@ -102,10 +102,10 @@
                         @foreach($specialSchools as $school)
                             <div class="col-md-10"
                                  style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
-                                <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
+                                <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"
                                      style="border: 1px #f1f4f9 solid">
-                                    <a class="img-box show-school" id="{{ $school->id }}" title="{{ $school->name_ar }}"
-                                       href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
+                                    <a class="img-box {{--show-school--}}" id="{{ $school->id }}" title="{{ $school->name_ar }}"
+                                       href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                        slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                         <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
                                              alt="" style="width: 120px; height: 120px">
@@ -230,10 +230,10 @@
                         <div class="row">
                             @foreach($schools as $school)
                                 <div class="col-md-3" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" data-href="#"
+                                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
                                          style="border: 1px #f1f4f9 solid">
-                                        <a class="img-box show-school" id="{{ $school->id }}"
-                                           href="school/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
+                                        <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
+                                           href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
                                                  alt="" style="width: 100%; height: 200px">
@@ -284,32 +284,18 @@
                         </div>
                     </div>
                 </div>
+                @if(count($specialSuppliers) > 0)
                 <div style="border: 1px solid #bebebe;margin-top: 50px">
                     <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
-                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                    </div>
-                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                    </div>
-                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                    </div>
-                    <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                    </div>
-                    <div class="input-group mordon_part " style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                        <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                    </div>
+                    @foreach($specialSuppliers as $supplier)
+                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                            <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}" style="width: 25px;height: 25px;float: right">
+                            <span style="float: right;padding-right: 15px;padding-top: 5px;">{{ app()->getLocale() == 'ar' ? $supplier->name_ar : $supplier->name_en }}</span>
+                        </div>
+                        @endforeach
                 </div>
-                <div style="border: 1px solid #bebebe;margin-top: 50px">
-                    <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
-                </div>
+                @endif
+                @include('ads')
             </div>
             <div class="col-md-2">
             </div>

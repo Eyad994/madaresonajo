@@ -8,6 +8,7 @@ use App\Models\Premium;
 use App\Models\Region;
 use App\Models\School;
 use App\Models\SchoolType;
+use App\Models\Supplier;
 use App\Traits\VisitorTrait;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -40,8 +41,11 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
         $schools = School::where('active', 1)->orderBy('school_order')->paginate(4);
         $specialSchools = School::where('active', 1)->where('special', 1)->get();
         $newsArray = News::where('news_type', 2)->where('active', 1)->orderBy('order')->get();
-        $schoolsAdvertisements = Advertisement::where('type', 1)->where('active', 1)->orderBy('order')->get();
-        $suppliersAdvertisements = Advertisement::where('type', 2)->where('active', 1)->orderBy('order')->get();
+        /*$schoolsAdvertisements = Advertisement::where('type', 1)->where('active', 1)->orderBy('order')->get();
+        $suppliersAdvertisements = Advertisement::where('type', 2)->where('active', 1)->orderBy('order')->get();*/
+        $ads = Advertisement::where('active', 1)->orderBy('order')->get();
+
+        $specialSuppliers = Supplier::where('special', 1)->where('active', 1)->get();
 
         $mainNews = array();
         foreach ($newsArray as $key => $index) {
@@ -70,7 +74,8 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
 
         $schoolsType = SchoolType::all();
         return view('madaresona.main.index', compact('schools', 'specialSchools', 'mainNews', 'schoolsType',
-            'schoolsCounts', 'visitorCount', 'schoolsAdvertisements', 'suppliersAdvertisements'));
+            'schoolsCounts', 'visitorCount', 'ads',
+            'specialSuppliers'));
     }
 
     public function refreshCarousel()

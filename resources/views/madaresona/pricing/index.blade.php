@@ -1,167 +1,249 @@
 @extends('layouts.main')
-
 <style>
-    .price-sec {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 100px 0px;
-    }
-
-    .price-sec .ptables-head {
-        font-family: 'Domine', serif;
-        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
-        padding: 30px 0;
-        margin: 0px 0px 100px 0px;
-        border-radius: 15px;
-        background: linear-gradient(25deg, #1d556c 15%, transparent 0%),
-        linear-gradient(-25deg, #ff6000 15%, transparent 0%),
-        linear-gradient(-150deg, #1d556c 15%, transparent 0%),
-        linear-gradient(150deg, #ff6000 15%, transparent 0%);
-
-    }
-
-    @media all and (max-width: 600px) {
-        .ptables-head h1 {
-            font-size: 30px;
-        }
-    }
-
-
-    .price-sec .price-table {
-        margin: 5px 0px;
-    }
-
-    .price-sec .price-table .card {
-        position: relative;
-        max-width: 330px;
-        height: auto;
-        background: #f5f5f5;
-        border-radius: 15px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
-        transition: .5s;
-        overflow: hidden;
-    }
-
-    .price-sec .price-table .card:hover {
-        transform: scale(1.1);
-    }
-
-    .price-table:nth-child(1) .card,
-    .price-table:nth-child(1) .card .title i {
-        background: #f5f5f5;
-
-    }
-
-    .price-table:nth-child(2) .card,
-    .price-table:nth-child(2) .card .title i {
-        background:#f5f5f5;
-
-    }
-
-    .price-table:nth-child(3) .card,
-    .price-table:nth-child(3) .card .title i {
-        background: #f5f5f5;
-
-    }
-
-    .price-table .card:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 40%;
-        background: rgba(255, 255, 255, .1);
-        z-index: 1;
-        transform: skewY(-5deg) scale(1.5);
-
-    }
-
-    .price-table .title i {
-        color: #000;
-        font-size: 60px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 100px;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, .2)
-    }
-
-    .price-table .title h2 {
-        position: relative;
-        margin: 20px 0 0;
-        padding: 0;
-        color: #000;
-        font-weight: bold;
-        font-size: 28px;
-        z-index: 2;
-    }
-
-    .price-table .price {
-        position: relative;
-        z-index: 2;
-    }
-
-    .price-table .price h4 {
-        margin: 0;
-        padding: 20px 0;
-        color: #000;
-        font-size: 60px;
-
-    }
-
-    .option {
-        position: relative;
-        z-index: 2;
-    }
-
-    .option ul {
-        margin: 0;
-        padding: 0;
-
-    }
-
-    .option ul li {
-        margin: 0 0 10px;
-        padding: 0px 15px;
-        list-style: none;
-        color: #000;
-        font-size: 16px;
-    }
-
-    .card a {
-        position: relative;
-        font-weight: bold;
-        z-index: 2;
-        background: #1e546b;
+    .main-head {
+        background: #0D1440;
+        box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
+        padding: 1rem;
+        margin-bottom: 0;
+        margin-top: 5rem;
         color: #fff;
-        width: 150px;
-        height: 40px;
-        line-height: 40px;
-        display: block;
-        text-align: center;
-        margin: 20px auto 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 4px;
         font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
-        border-radius: 40px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-
     }
 
-    .card a:hover {
+    .pricing-table {
+        background: #fff;
+        box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
+        padding: 2rem;
+        border-radius: 4px;
+        transition: .3s;
+    }
+
+    .pricing-table:hover {
+        box-shadow: 0px 1px 10px -4px rgba(0, 0, 0, .15);
+    }
+
+    .pricing-table .pricing-label {
+        border-radius: 2px;
+        padding: .25rem .5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .pricing-table h2 {
+        color: #3b3b3b;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .pricing-table h5 {
+        color: #B3B3B3;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .pricing-table .pricing-features {
+        margin-top: 2rem;
+    }
+
+    .pricing-table .pricing-features .feature {
+        font-size: 14px;
+        margin: .5rem 0;
+        color: #B3B3B3;
+    }
+
+    .pricing-table .pricing-features .feature span {
+        display: inline-block;
+        float: right;
+        color: #3b3b3b;
+        font-weight: 500;
+    }
+
+    .pricing-table 	.price-tag {
+        margin-top: 2rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .pricing-table .price-tag .symbol {
+        font-size: 24px;
+    }
+
+    .pricing-table .price-tag .amount {
+        letter-spacing: -2px;
+        font-size: 64px;
+    }
+
+    .pricing-table .price-tag .after {
+        color: #3b3b3b;
+        font-weight: 500;
+    }
+
+    .pricing-table .price-button {
+        display: block;
+        color: #fff;
+        margin-top: 2rem;
+        padding: .75rem;
+        border-radius: 2px;
+        text-align: center;
+        font-weight: 500;
+        transition: .3s;
+    }
+
+    .pricing-table .price-button:hover {
         text-decoration: none;
-        background: #f66001;
-        color:#1e546b;
+    }
+
+    .purple .pricing-label {
+        background: #cad2ff;
+        color: #627afe;
+    }
+
+    .purple .price-tag {
+        color: #627afe;
+    }
+
+    .purple .price-button {
+        background: #627afe;
+    }
+
+    .purple .price-button:hover {
+        background: #546dfe;
+    }
+
+    .turquoise .pricing-label {
+        background: #b9edee;
+        color: #44cdd2;
+    }
+
+    .turquoise .price-tag {
+        color: #44cdd2;
+    }
+
+    .turquoise .price-button {
+        background: #44cdd2;
+    }
+
+    .turquoise .price-button:hover {
+        background: #2dbcc4;
+    }
+
+    .red .pricing-label {
+        background: #ffc4c4;
+        color: #ff5e5e;
+    }
+
+    .red .price-tag {
+        color: #ff5e5e;
+    }
+
+    .red .price-button {
+        background: #ff5e5e;
+    }
+
+    .red .price-button:hover {
+        background: #f23c3c;
     }
 </style>
+
 @section('content')
 
-    <div class="container" >
+    <div class="container"
+         @if((app()->getLocale() == 'ar'))
+         style="direction: rtl; text-align: right;margin-top: 200px; margin-bottom: 200px;"
+        @else
+            style="direction:ltr; text-align:left;margin-top: 200px;  margin-bottom: 200px;">
+        @endif
+        >
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <h2 class="main-head">{{ __('pricing_index.pricing_text') }}</h2>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="pricing-table turquoise flex-column">
+                    <!-- Table Head -->
+                    <div class="pricing-label">تجريبي</div>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">{{ __('pricing_index.number_users') }} : 1</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 1</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }}</div>
+
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol"></span>
+                        <span class="amount"></span>
+                        <span class="after"></span>
+                    </div>
+                    <!-- Button -->
+                    <a class="price-button" style="margin-top: 70px" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex">
+                <div class="pricing-table turquoise flex-column">
+                    <!-- Table Head -->
+                    <div class="pricing-label">اساسي</div>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.edit_information_profile_school') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }}</div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol"></span>
+                        <span class="amount"></span>
+                        <span class="after"></span>
+                    </div>
+                    <!-- Button -->
+                    <a class="price-button" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="pricing-table purple flex-column">
+                    <!-- Table Head -->
+                    <div class="pricing-label">متقدم</div>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.edit_information_profile_school') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }}</div>
+                        <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }}</div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol"></span>
+                        <span class="amount"></span>
+                        <span class="after"></span>
+                    </div>
+                    <!-- Button -->
+                    <a class="price-button" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {{--<div class="container" >
         <section class="price-sec"
                  @if((app()->getLocale() == 'ar'))
                  style="direction: rtl; text-align: right;margin-bottom: 200px;">
@@ -180,9 +262,9 @@
                                     <i class="fa fa-paper-plane" style="color: #f660015e;"></i>
                                     <h2>تجريبي</h2>
                                 </div>
-                                {{-- <div class="price">
+                                --}}{{-- <div class="price">
                                     <h4><sup>$</sup>500</h4>
-                                </div>--}}
+                                </div>--}}{{--
                                 <div class="option">
                                     <ul>
                                         <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 1</li>
@@ -246,5 +328,5 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div>--}}
 @endsection

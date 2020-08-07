@@ -215,19 +215,16 @@
                  style="height: 40px;">
                         <span class="d-flex align-items-center font-weight-bold"
                               style="position: absolute;top: 14px; ">{{__('index.News')}}</span></div>
-            <marquee class="news-scroll" height="40" behavior="scroll" direction="up" scrollamount="2"
+            <marquee class="news-scroll" height="40" behavior="scroll" direction="left" scrollamount="2"
                      onmouseover="this.stop();" onmouseout="this.start();"
                      direction="{{(app()->getLocale() == 'en') ?'left' :'right'}}" onmouseover="this.stop();"
-                     onmouseout="this.start();">
+                     onmouseout="this.start();" style="direction: ltr; padding: 10px;">
                 @foreach($mainNews as $news)
-                    <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
-                         alt="">
                     <a href="{{ app()->getLocale() }}/showMore/{{ $news['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news['title_en']) : trim($news['title_ar'])) }}"
                        #f5f5f5
                        class="news-ahref">{{ app()->getLocale() == 'ar' ? $news['title_ar'] : $news['title_en'] }}</a>
                     <img class="news-img" src="{{ asset('assets/images/favicon.png') }}" width="15" height="15"
                          alt="">
-                    <br>
                 @endforeach
             </marquee>
         </div>

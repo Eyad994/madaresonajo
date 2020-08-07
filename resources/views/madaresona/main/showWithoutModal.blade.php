@@ -210,8 +210,8 @@
                             {{-- ******************************************************************************************************************************** --}}
 
                             <!--Carousel Wrapper-->
-                                <div class="container mt-5">
-                                    <div class="carousel-container position-relative row">
+
+                                    <div class="carousel-container position-relative row" style="padding: 10px 20px;">
                                         <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
                                              data-ride="carousel">
                                             <!--Slides-->
@@ -272,7 +272,7 @@
                                             });
                                         </script>
                                     </div>
-                                </div>
+
                                 <!--/.Carousel Wrapper-->
 
                                 {{-- ******************************************************************************************************************************** --}}
@@ -772,36 +772,12 @@
                                 </div>
                             </div>
                         </div>
-                    <h4 style="color: #5bc0de;cursor: pointer">المزيد</h4>
+                    <h4 style="color: #5bc0de;cursor: pointer; display: none">المزيد</h4>
 
                 </div>
                 <div class="col-md-4">
-                    <div style="border: 1px solid #bebebe;">
-                        <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
-                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                        </div>
-                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                        </div>
-                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                        </div>
-                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                        </div>
-                        <div class="input-group mordon_part " style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                            <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 25px;height: 25px;float: right">
-                            <span style="float: right;padding-right: 15px;padding-top: 5px;">اسم المورد</span>
-                        </div>
-                    </div>
-                    <div style="border: 1px solid #bebebe;margin-top: 50px">
-                        <img src="https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png" style="width: 100%;">
-                    </div>
+                    @include('suppliers')
+                    @include('ads')
                 </div>
             </div>
         </div>
