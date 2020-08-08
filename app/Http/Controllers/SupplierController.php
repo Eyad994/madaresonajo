@@ -24,7 +24,7 @@ class SupplierController extends Controller
     public function show($lang , $id, $slug)
     {
 
-        $suppliers = Supplier::where('id',$id)->first();
-        return view('madaresona.supplier.show', compact('suppliers'));
+        $supplier = Supplier::where('id',$id)->first();
+        return view('madaresona.supplier.show', compact('supplier'));
     }
 }

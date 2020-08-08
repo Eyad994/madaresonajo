@@ -15,7 +15,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade in active" id="Suppliers-Overview-Tab">
                                 <h4 id="ctl00_ContentPlaceHolder1_bCompanyNAme" class="box-title" style="text-align: right;font-size: 20px;font-weight: bold;">
-                                    Abu Moujeh Engineering and Construction
+                                    {{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}
                                 </h4>
 
                                 <hr style="margin: 20px 0">
@@ -24,21 +24,20 @@
                                         <br>
                                         <br>
                                         <figure>
-                                            <img src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg" id="ctl00_ContentPlaceHolder1_imgLogoCompany" width="270" height="160" style="margin: 5px; max-width: 270px; ">
+                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}" id="ctl00_ContentPlaceHolder1_imgLogoCompany" width="270" height="160" style="margin: 5px; max-width: 270px; ">
                                         </figure>
 
                                         <div class="details">
-                                            <h4 id="ctl00_ContentPlaceHolder1_bGM" class="box-title">م. مهند ابوموجة</h4>
-                                            <small><i class="soap-icon-places"></i>&nbsp;<span id="ctl00_ContentPlaceHolder1_bCountry">الاردن</span></small>
+                                            <small><i class="soap-icon-places"></i>&nbsp;<span id="ctl00_ContentPlaceHolder1_bCountry"> {{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}</span></small>
                                             ،
                                             &nbsp;
-                                            <small><i class="soap-icon-departure"></i>&nbsp;<span id="ctl00_ContentPlaceHolder1_bCity">عمان</span></small>
+                                            <small><i class="soap-icon-departure"></i>&nbsp;<span id="ctl00_ContentPlaceHolder1_bCity">{{(app()->getLocale() == 'en')? $supplier->city->city_name_en :$supplier->city->city_name_ar}}</span></small>
 
 
-                                            <div class="feedback">
+                                            {{--<div class="feedback">
                                                 <div title="" class="five-stars-container" data-toggle="tooltip" data-placement="bottom" data-original-title="4 stars"><span class="five-stars" style="width: 91%;"></span></div>
                                                 <span class="review"><b>270</b> التقييمات</span>
-                                            </div>
+                                            </div>--}}
                                         </div>
 
                                         <a href="#Suppliers-Contacts-Tab" onclick="TapActive()" data-toggle="tab" class="goto-writereview-pane button green btn-small full-width">مراسلة المورد</a>
@@ -47,11 +46,11 @@
                                             <br>
                                         </div>
                                         <ul class="social-icons full-width">
-                                            <li class="facebook"><a style="padding-top: 7px" href="DataFiles/Product/201401191537191.jpg" id="ctl00_ContentPlaceHolder1_txtfacebooklink" title="" target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="soap-icon-facebook"></i></a></li>
-                                            <li class="twitter"><a style="padding-top: 7px" href="DataFiles/Product/201401191537332.jpg" id="ctl00_ContentPlaceHolder1_txttwitterlink" title="" target="_blank" data-toggle="tooltip" data-original-title="twitter"><i class="soap-icon-twitter"></i></a></li>
-                                            <li class="linkedin"><a style="padding-top: 7px" href="DataFiles/Product/201401191538453.jpg" id="ctl00_ContentPlaceHolder1_txtInstegramlink" title="" target="_blank" data-toggle="tooltip" data-original-title="instagram"><i class="soap-icon-instagram"></i></a></li>
-                                            <li class="linkedin"><a style="padding-top: 7px" href="DataFiles/Product/AbuMoujehEngineeringandConstruction201401191539174.jpg" id="ctl00_ContentPlaceHolder1_txtLinkedinlink" title="" target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="soap-icon-linkedin"></i></a></li>
-                                            <li class="googleplus" ><a style="padding-top: 7px" href="DataFiles/Product/AbuMoujehEngineeringandConstruction201401191539395.jpg" id="ctl00_ContentPlaceHolder1_txtGooglePluselink" title="" target="_blank" data-toggle="tooltip" data-original-title="googleplus"><i class="soap-icon-googleplus"></i></a></li>
+                                            <li class="facebook"><a style="padding-top: 7px" href="{{$supplier->facebook_link}}" id="ctl00_ContentPlaceHolder1_txtfacebooklink" title="" target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="soap-icon-facebook"></i></a></li>
+                                            <li class="twitter"><a style="padding-top: 7px" href="{{$supplier->twitter_link}}" id="ctl00_ContentPlaceHolder1_txttwitterlink" title="" target="_blank" data-toggle="tooltip" data-original-title="twitter"><i class="soap-icon-twitter"></i></a></li>
+                                            <li class="linkedin"><a style="padding-top: 7px" href="{{$supplier->instagram_link}}" id="ctl00_ContentPlaceHolder1_txtInstegramlink" title="" target="_blank" data-toggle="tooltip" data-original-title="instagram"><i class="soap-icon-instagram"></i></a></li>
+                                            <li class="linkedin"><a style="padding-top: 7px" href="{{$supplier->linkedin_link}}" id="ctl00_ContentPlaceHolder1_txtLinkedinlink" title="" target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="soap-icon-linkedin"></i></a></li>
+                                            <li class="googleplus" ><a style="padding-top: 7px" href="{{$supplier->googleplus_link}}" id="ctl00_ContentPlaceHolder1_txtGooglePluselink" title="" target="_blank" data-toggle="tooltip" data-original-title="googleplus"><i class="soap-icon-googleplus"></i></a></li>
 
                                         </ul>
 
@@ -64,36 +63,36 @@
                                             <ul class="contact-address">
                                                 <li class="address" style="padding-top: 0px;text-align: right">
                                                     <i class="soap-icon-address circle" style="padding: 7px"></i>
-                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">العنوان</h5>
 
-                                                    <p id="ctl00_ContentPlaceHolder1_bAddress">عمان- الجويدة-ش 60 - مقابل صوامع حبوب الجويدة</p>
-                                                    <p id="ctl00_ContentPlaceHolder1_bBOX" style="margin-top: 0px"> 925 عمان 11592 الاردن</p>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">العنوان</h5>
+                                                    <p id="ctl00_ContentPlaceHolder1_bAddress">{{$supplier->location}}</p>
+
                                                 </li>
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-address circle" style="padding: 7px"></i>
                                                     <h5 class="title" style="margin-top: 0px;font-size: 18px">الهاتف</h5>
-                                                    <p id="ctl00_ContentPlaceHolder1_bPhone">0096264166064</p>
+                                                    <p id="ctl00_ContentPlaceHolder1_bPhone">{{$supplier->phone}}</p>
                                                 </li>
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-phone circle" style="padding: 7px"></i>
                                                     <h5 class="title" style="margin-top: 0px;font-size: 18px">فاكس</h5>
-                                                    <p id="ctl00_ContentPlaceHolder1_bFax">0096264166063</p>
+                                                    <p id="ctl00_ContentPlaceHolder1_bFax">{{$supplier->fax}}</p>
                                                 </li>
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-phone circle" style="padding: 7px"></i>
                                                     <h5 class="title" style="margin-top: 0px;font-size: 18px">الهاتف النقال</h5>
-                                                    <p id="ctl00_ContentPlaceHolder1_bMobile">00962799919542</p>
+                                                    <p id="ctl00_ContentPlaceHolder1_bMobile">{{$supplier->mobile}}</p>
                                                 </li>
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-message circle" style="padding: 7px"></i>
                                                     <h5 class="title" style="margin-top: 0px;font-size: 18px">البريد الإلكتروني</h5>
 
-                                                    <p id="ctl00_ContentPlaceHolder1_bEmail">info@abu-moujeh.com</p>
+                                                    <p id="ctl00_ContentPlaceHolder1_bEmail">{{$supplier->email}}</p>
                                                 </li>
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-globe circle" style="padding: 7px"></i>
                                                     <h5 class="title" style="margin-top: 0px;font-size: 18px">الموقع الالكتروني</h5>
-                                                    <p id="ctl00_ContentPlaceHolder1_bWebsite">www.abu-moujeh.com</p>
+                                                    <p id="ctl00_ContentPlaceHolder1_bWebsite">{{$supplier->website}}</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -103,14 +102,14 @@
                                 <br>
                                 <div class="long-description" style="direction: rtl;text-align: right;">
                                     <h4 style="font-weight: bold">نظرة عامة</h4>
-                                    <p id="ctl00_ContentPlaceHolder1_bDeitiles" style="text-align: justify;margin-top: 0px">بدأت الشركة اعمالها في مجالات الهندسه والمقاولات والانشاءات المعدنية في الاردن بتميز وحرفيه عاليه ومواصفات عالمية باعمالها المتنوعه في مختلف القطاعات الحكوميه والعسكريه والمدنيه وحازت على رضا عملائها بشهادات تقدير وتميز نفخر ونعتز بها.</p>
+                                    <p id="ctl00_ContentPlaceHolder1_bDeitiles" style="text-align: justify;margin-top: 0px">{{(app()->getLocale() == 'ar') ?$supplier->supplier_details_ar :$supplier->supplier_details_en }}</p>
                                 </div>
                                 <div style="width: 100%">
                                     <h4 style="font-weight: bold;text-align: right">المنتجات والخدمات</h4>
-                                    <span class="info-success" style="float: right;margin-right: 10px"> تصميم وانشاء الهناجر والمكاتب الهندسية</span>
-                                    <span class="info-success" style="float: right;margin-right: 10px"> تصميم وبناء البريقاب</span>
-                                    <span class="info-success" style="float: right;margin-right: 10px">الاعمال الخشبيه الخاصه و  اعمال الفيبر جلاس</span>
-                                    <span class="info-success" style="float: right;margin-right: 10px">كافة الاشغال المعدنية</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;"> تصميم وانشاء الهناجر والمكاتب الهندسية</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;"> تصميم وبناء البريقاب</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;">الاعمال الخشبيه الخاصه و  اعمال الفيبر جلاس</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;">كافة الاشغال المعدنية</span>
                                 </div>
                             </div>
                             <div class="tab-pane" id="Suppliers-Contacts-Tab">
@@ -155,14 +154,13 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="form-group row">
+                                    {{--<div class="form-group row">
                                         <div class="full-width">
                                             <div class="col-md-10">
                                                 <div id="reCAPTCHA"><div><iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeIpgYTAAAAAAZVDRQrOnglSzeFOjQReY4uChZZ&amp;hl=ar&amp;v=IU7gZ7o6RDdDE6U4Y1YJJWnN&amp;t=40016" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr style="margin: 20px 0">
+                                    </div>--}}
                                     <div class="form-group row" style="text-align: right">
                                         <div class="full-width">
 

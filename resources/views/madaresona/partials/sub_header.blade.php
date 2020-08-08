@@ -1,16 +1,16 @@
 <div class="section-image section-full-width-right light no-padding-top section-bottom-layer" style="top: 40px; background-image: url({{ asset('banner.jpg') }});height: 490px;margin-top: 100px; margin-right: -15px;">
 
-    <div class="container" style="margin-right: 0px;padding-right: 20px">
+    <div class="" style="{{(app()->getLocale()) == 'ar'?'margin-right: 0px; padding: 20px;direction: rtl;':'margin-left: 0px; padding: 20px;direction: lrt;'}}">
 
             <form action="{{ route('search', app()->getLocale()) }}" method="POST" id="searchForm">
             @csrf
 
         <div class="row" style="padding-top: 100px">
-            <div class="col-md-6"></div>
-            <div class="col-md-6">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
                 <div style="width: 20%;float: right">
                     <div class="input-group-prepend" style="margin-right: 3px;">
-                        <select name="search_select" class="form-control select-banner" id="search_select" style="direction: rtl;border-radius: 0px 5px 5px 0px;">
+                        <select name="search_select" class="form-control select-banner" id="search_select" style="border-radius: 0px 5px 5px 0px;">
                             <option value="1">الإسم</option>
                             <option value="2">العنوان</option>
                             <option value="3">نوع المنهاج</option>
@@ -56,15 +56,14 @@
             {{--/*****************************************/--}}
         </div>
                 <div class="row">
-                    <div class="col-md-6 location" style="display: none"></div>
-                    <div class="col-md-6 location" style="display: none ;">
+                    <div class="col-md-8 location" style="display: none"></div>
+                    <div class="col-md-4 location" style="display: none ;">
                         <div class="row" style="padding: 0px 20px">
-                            <div class="order-2 order-md-12 form-group" style="width: 50%;">
-                                <select name="region_id" id="region_id" class="form-control select-banner" style="padding-left: 10px;border-radius: 5px 0px 0px 5px !important;" disabled>
-                                    <option disabled selected>المنطقة</option>
+                            <div class="order-0 order-md-12 form-group" style="width: 20%;">
+                                <select name="country" id="country" class="form-control select-banner" style="border-radius: 0px 5px 5px 0px;">
+                                    <option value="1">الأردن</option>
                                 </select>
                             </div>
-
                             <div class="order-1 order-md-12 form-group" style="width: 30%; ">
                                 <select name="city_id" id="city_id" class="form-control select-banner" style="border-radius:0px!important;">
                                     <option disabled selected>المدينة</option>
@@ -73,19 +72,22 @@
                                     @endforeach
                                 </select>
                             </div>
-
-                            <div class="order-0 order-md-12 form-group" style="width: 20%;">
-                                <select name="country" id="country" class="form-control select-banner" style="border-radius: 0px 5px 5px 0px;">
-                                    <option value="1">الأردن</option>
+                            <div class="order-2 order-md-12 form-group" style="width: 50%;">
+                                <select name="region_id" id="region_id" class="form-control select-banner" style="padding-left: 10px;border-radius: 5px 0px 0px 5px !important;" disabled>
+                                    <option disabled selected>المنطقة</option>
                                 </select>
                             </div>
+
+
+
+
                         </div>
                     </div>
 
                 </div>
                 <div class="row">
-                    <div class="col-md-6 schoolType" style="display: none;"></div>
-                    <div class="col-md-6 schoolType" style="display: none ;">
+                    <div class="col-md-8 schoolType" style="display: none;"></div>
+                    <div class="col-md-4 schoolType" style="display: none ;">
                         <div class="row" style="padding: 0px 20px">
                             <select name="school_type" id="school_type" class="form-control select-banner">
                                 <option selected disabled>نوع المنهاج</option>
@@ -98,17 +100,9 @@
 
                 </div>
                 <div class="row">
-                    <div class="col-md-6 schoolClass" style="display: none"></div>
-                    <div class="col-md-6 schoolClass" style="display: none ;">
+                    <div class="col-md-8 schoolClass" style="display: none"></div>
+                    <div class="col-md-4 schoolClass" style="display: none ;">
                         <div class="row" style="padding: 0px 20px">
-                            <div class="order-2 order-md-12 form-group" style="width: 20%;">
-                                <input type="number" class="form-control" name="to_price" placeholder="إلى" style="text-align: right;border-radius: 5px 0px 0px 5px !important;">
-                            </div>
-
-                            <div class="order-1 order-md-12 form-group" style="width: 20%; ">
-                                <input type="number" class="form-control" name="from_price" placeholder="من" style="text-align: right;border-radius: 0px !important;">
-                            </div>
-
                             <div class="order-0 order-md-12 form-group" style="width: 60%;">
                                 <select name="school_class" id="school_class" class="form-control select-banner" style="border-radius: 0px 5px 5px 0px !important;">
                                     <option selected disabled>اختر الصف</option>
@@ -117,14 +111,24 @@
                                     @endforeach
                                 </select>
                             </div>
+
+                            <div class="order-1 order-md-12 form-group" style="width: 20%; ">
+                                <input type="number" class="form-control" name="from_price" placeholder="من" style="text-align: right;border-radius: 0px !important;">
+                            </div>
+                            <div class="order-2 order-md-12 form-group" style="width: 20%;">
+                                <input type="number" class="form-control" name="to_price" placeholder="إلى" style="text-align: right;border-radius: 5px 0px 0px 5px !important;">
+                            </div>
+
+
+
                         </div>
                     </div>
 
                 </div>
                 <div class="row">
-                    <div class="col-md-6" ></div>
-                    <div class="col-md-1" ></div>
-                    <div class="col-md-4" >
+                    <div class="col-md-8" ></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2" >
                         <div class="row" style="padding: 0px 20px">
                             <div class="input-group-prepend" style="width: 100%">
                                 <button type="submit" class="btn btn-info" id="inputGroupPrepend2" style="top: 10px;width: 100%; background: #fd460c;border-color: #fd460c;">

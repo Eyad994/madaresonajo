@@ -1,4 +1,13 @@
+@font-face {
+    font-family: 'GE Flow';
+    src: url('/public/assets/fonts/GEFlow.woff2');format('woff2'),url('/public/assets/fonts/GEFlow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+html, body, textarea,p {
+    font-family: 'GE Flow' !important;
+}
 input.input100 {
     height: 50px;
     border-radius: 25px;

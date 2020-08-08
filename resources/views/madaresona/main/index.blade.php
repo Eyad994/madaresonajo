@@ -276,7 +276,7 @@
                 <div style="border: 1px solid #bebebe;margin-top: 50px">
                     <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">بحث</div>
                     <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
-                        <input type="text" name="search_text" id="search_text" class="form-control" placeholder="بحث عن المدارس ورياض الأطفال" style="border-radius: 0px;margin-right: -1px;">
+                        <input type="text" name="search_text" id="search_text" class="form-control" placeholder="بحث " style="border-radius: 0px;margin-right: -1px;">
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="button" style="margin-right: -4px">
                                 <i class="glyphicon glyphicon-search"></i>
