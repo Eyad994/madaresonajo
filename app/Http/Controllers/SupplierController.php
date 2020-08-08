@@ -21,10 +21,10 @@ class SupplierController extends Controller
 
     }
 
-    public function show()
+    public function show($lang , $id, $slug)
     {
-        $suppliers = Supplier::all();
-        $suppliersType = SupplierType::all();
-        return view('madaresona.supplier.show', compact('suppliers','suppliersType'));
+
+        $suppliers = Supplier::where('id',$id)->first();
+        return view('madaresona.supplier.show', compact('suppliers'));
     }
 }

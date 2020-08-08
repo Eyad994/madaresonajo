@@ -88,7 +88,7 @@
                                     </dl>
                                 </div>
                                 <div class="action col-xs-6 col-sm-2">
-                                    <a href="SuppliersDetails.aspx?opc_id=465 "
+                                    <a href="{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}"
                                        class="button btn-small yellow full-width"> اقرأ المزيد </a>
                                 </div>
                             </div>

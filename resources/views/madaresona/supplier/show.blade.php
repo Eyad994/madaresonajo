@@ -1,5 +1,5 @@
 @extends('layouts.main')
-    <section class="section-base" style="margin-bottom: 20px; padding-top:100px ">
+    <section class="section-base" style="margin-bottom: 20px; padding-top:170px; background-color: #f5f5f5; ">
         @php $dir = (app()->getLocale() == 'ar') ?"direction: rtl;":"direction: ltr;" @endphp
         <div class="container" style="{{$dir}}" >
             <div class="row">
@@ -189,70 +189,7 @@
                                         <h2>المنتجات</h2>
                                         <hr style="margin: 20px 0">
                                     </div>
-                                    <div class="carousel-container position-relative row" style="padding: 10px 20px;">
-                                        <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
-                                             data-ride="carousel">
-                                            <!--Slides-->
-                                            {{--<div class="carousel-inner z-depth-4 rounded" role="listbox"
-                                                 style="height: 450px ">
-                                                <?php $i = 0; ?>
-                                                @foreach($gallery as $item)
-                                                    @if($i == 0)
-                                                        <div class="carousel-item active z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
-                                                        </div>
-                                                    @else
 
-                                                        <div class="carousel-item z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
-                                                        </div>
-                                                    @endif
-                                                    <?php $i++ ?>
-                                                @endforeach
-                                            </div>--}}
-                                            <!--/.Slides-->
-                                            <!--Controls-->
-                                            <a class="carousel-control-prev" href="#carousel-thumb" role="button"
-                                               data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#carousel-thumb" role="button"
-                                               data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                            <!--/.Controls-->
-                                            <ol class="carousel-indicators">
-                                               {{-- <?php $i = 0; ?>
-                                                @foreach($gallery as $item)
-                                                    @if($i == 0)
-                                                        <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
-                                                            class="active border border-white z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
-                                                                 class="img-fluid">
-                                                        </li>
-                                                    @else
-                                                        <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
-                                                            class="border border-white z-depth-4 rounded">
-                                                            <img class="d-block w-100"
-                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
-                                                                 class="img-fluid">
-                                                        </li>
-                                                    @endif
-                                                    <?php $i++ ?>
-                                                @endforeach--}}
-                                            </ol>
-                                        </div>
-                                        <script>
-                                           /* $('#carousel-thumb').carousel({
-                                                interval: 3000
-                                            });*/
-                                        </script>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -260,15 +197,7 @@
                 </div>
                 <div class="sidebar col-md-3">
 
-
-                    <!-- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -->
-                    <div style="padding-top: 30px">
-                        <img src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg" id="ctl00_ContentPlaceHolder1_imgLogoCompany" width="270" height="160" style="margin: 5px; max-width: 270px; ">
-                    </div>
-                    <!-- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -->
-
-
-                    <div id="ctl00_ContentPlaceHolder1_rslist" class="travelo-box">
+                    <div id="ctl00_ContentPlaceHolder1_rslist" class="travelo-box" style="margin-top: 70px;">
                         <div class="box-title">
                             <div class="image-box style14" style="text-align: right">
                                 <h4>الشركات ذات صلة</h4>
@@ -317,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-
+                    @include('ads')
 
                 </div>
         </div>

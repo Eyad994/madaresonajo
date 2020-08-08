@@ -34,7 +34,7 @@ Route::group([
     /***************************Supplier**************************************/
     Route::prefix('supplier')->group(function (){
        Route::get('index', 'SupplierController@index')->name('mainSupplier');
-       Route::get('show', 'SupplierController@show')->name('showSupplier');
+       Route::get('/data/{id}/{slug}', 'SupplierController@show')->name('showSupplier');
     });
     /*****************************************************************/
     Route::post('search', 'HomeController@search')->name('search');

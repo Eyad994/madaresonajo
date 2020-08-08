@@ -1,7 +1,7 @@
 @extends('layouts.main')
 <style>
     .main-head {
-        background: #0D1440;
+        background: #1d556c;
         box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
         padding: 1rem;
         margin-bottom: 0;
@@ -99,8 +99,8 @@
     }
 
     .purple .pricing-label {
-        background: #cad2ff;
-        color: #627afe;
+        background: #ff7f27;
+        color: #ffffff;
     }
 
     .purple .price-tag {
@@ -108,16 +108,16 @@
     }
 
     .purple .price-button {
-        background: #627afe;
+        background: #1d556c;
     }
 
     .purple .price-button:hover {
-        background: #546dfe;
+        background: #ff7f27;
     }
 
     .turquoise .pricing-label {
-        background: #b9edee;
-        color: #44cdd2;
+        background: #ff7f27;
+        color: #ffffff;
     }
 
     .turquoise .price-tag {
@@ -125,11 +125,11 @@
     }
 
     .turquoise .price-button {
-        background: #44cdd2;
+        background: #1d556c;
     }
 
     .turquoise .price-button:hover {
-        background: #2dbcc4;
+        background: #1d556c;
     }
 
     .red .pricing-label {
@@ -161,7 +161,7 @@
         >
         <div class="row">
             <div class="col-md-12 mb-5">
-                <h2 class="main-head">{{ __('pricing_index.pricing_text') }}</h2>
+                <h3 class="main-head">{{ __('pricing_index.pricing_text') }} :</h3>
             </div>
             <div class="col-md-4 d-flex">
                 <div class="pricing-table turquoise flex-column">
@@ -184,7 +184,7 @@
                         <span class="after"></span>
                     </div>
                     <!-- Button -->
-                    <a class="price-button" style="margin-top: 70px" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
+                    <a class="price-button" style="margin-top: 110px" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
                 </div>
             </div>
 
