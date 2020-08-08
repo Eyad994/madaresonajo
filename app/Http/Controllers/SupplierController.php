@@ -20,4 +20,11 @@ class SupplierController extends Controller
         return view('madaresona.supplier.index', compact('suppliers','suppliersType'));
 
     }
+
+    public function show()
+    {
+        $suppliers = Supplier::all();
+        $suppliersType = SupplierType::all();
+        return view('madaresona.supplier.show', compact('suppliers','suppliersType'));
+    }
 }

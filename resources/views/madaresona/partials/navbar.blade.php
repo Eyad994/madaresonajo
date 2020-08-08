@@ -1,8 +1,40 @@
 @extends('layouts.navAndFooterLinks')
 @section('nav')
+
+    <style>
+        .header_mobile_menu{
+            display: none !important;
+        }
+        .menu_items li{
+            padding: 0px 50px;
+        }
+        @media (max-width: 1000px) {
+            #main-nav{
+                height: 50px;
+                box-shadow: 5px 5px 5px #bbb;
+            }
+            .mobile-header{
+                float: right;
+            }
+            .header_menu{
+                display: none !important;
+            }
+            .header_mobile_menu{
+                display: block !important;
+                width: 45px;
+                height: 40px;
+                float: right;
+            }
+            .item-logo{
+                float:left;
+            }
+            .discount_btn{
+                margin-top: -20px;
+            }
+        }
+    </style>
     <nav class="menu-classic menu-fixed align-right light" style="direction: rtl">
         <header id="uxh" data-uw-node-idx="26">
-
             <div id="logoutDIV" data-uw-node-idx="27">
                 <div id="masthead" data-uw-node-idx="28">
                     <div id="utility" data-uw-node-idx="29" class="userway-s1-selected" style="">
@@ -291,10 +323,154 @@
         </header>
         <div class="containerNav">
             <div id="main-nav" data-uw-node-idx="140" class="" style="">
-                <div class="container" data-uw-node-idx="141">
+                <div class="container mobile-header" data-uw-node-idx="141">
                     <div class="row" data-uw-node-idx="142">
                         <div class="col-md-12 col" data-uw-node-idx="143">
                             <ul class="nav-wrap" data-uw-node-idx="144">
+                                <li class="item-domains ux-noauth2 header_mobile_menu" data-uw-node-idx="153">
+
+                                    <a href="#" data-eid="uxp.eld.sales_header.sales.product_nav.domains.link.click"
+                                       data-openit="{&quot;addclass&quot;:{&quot;selector&quot;:&quot;#main-nav .item-domains&quot;,&quot;class&quot;:&quot;oi-open&quot;},&quot;event&quot;:&quot;click&quot;,&quot;mask&quot;:&quot;#main-nav .item-domains .sub-nav&quot;,&quot;guide&quot;:&quot;.content-wrap&quot;,&quot;animate&quot;:&quot;height&quot;,&quot;speed&quot;:&quot;200&quot;,&quot;group&quot;:&quot;pc-header&quot;,&quot;offclick&quot;:&quot;true&quot;}"
+                                       class="font-primary-bold oi-pc-header" data-uw-node-idx="154">
+                                        <div class="selected-marker" data-uw-node-idx="155"></div>
+                                        <i class="fas fa-bars" style="fon" data-uw-node-idx="156"></i>
+
+                                    </a>
+                                    <div class="sub-nav" data-uw-node-idx="157">
+                                        <ul class="menu_items">
+                                            <li>
+                                                <a href="{{ route('home') }}" class="font-primary-bold" data-uw-node-idx="151">
+                                                    <i class="fad fa-home" data-uw-node-idx="152"></i>
+                                                    {{ __('index.home') }}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('news', app()->getLocale()) }}" class="font-primary-bold" data-uw-node-idx="151">
+                                                    <i class="fad fa-newspaper" data-uw-node-idx="152"></i>
+                                                    {{ __('index.News') }}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-eid="uxp.eld.sales_header.sales.product_nav.websites.link.click"
+                                                   data-openit="{&quot;addclass&quot;:{&quot;selector&quot;:&quot;#main-nav .item-websites&quot;,&quot;class&quot;:&quot;oi-open&quot;},&quot;event&quot;:&quot;click&quot;,&quot;mask&quot;:&quot;#main-nav .item-websites .sub-nav&quot;,&quot;guide&quot;:&quot;.content-wrap&quot;,&quot;animate&quot;:&quot;height&quot;,&quot;speed&quot;:&quot;200&quot;,&quot;group&quot;:&quot;pc-header&quot;,&quot;offclick&quot;:&quot;true&quot;}"
+                                                   class="font-primary-bold oi-pc-header" data-uw-node-idx="257">
+                                                    <div class="selected-marker" data-uw-node-idx="258"></div>
+                                                    <i class="soap-icon-bottom" data-uw-node-idx="259"></i>
+                                                    {{ __('index.subscription') }}
+                                                </a>
+                                                <div class="sub-nav" data-uw-node-idx="260">
+                                                    <div class="content-wrap" data-uw-node-idx="261">
+                                                        <div class="container" data-uw-node-idx="262">
+                                                            <div class="row" data-uw-node-idx="263">
+                                                                <div class="col-md-12" data-uw-node-idx="264">
+                                                                    <h3 data-uw-node-idx="265">{{ __('index.subscription') }}  </h3>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row content-row" data-uw-node-idx="266">
+                                                                <div class="col-md-4 col first" data-uw-node-idx="267">
+                                                                    <p data-uw-node-idx="268">
+                                                                        انضم الآن إلى عائلة مدارسنا وتمتع بميزات العضوية ، من أكبر وأدق مصدر معلومات للمدارس الخاصة ورياض الاطفال والحضانات في الاردن !
+
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-md-4 col-sm-4 HostingLinks" data-uw-node-idx="269">
+                                                                    <ul class="subnav-ul" data-uw-node-idx="271">
+                                                                        <li data-uw-node-idx="272"><a href="{{ route('faSubscribing', app()->getLocale()) }}"
+                                                                                                      data-uw-node-idx="273"><i
+                                                                                        class="soap-icon-minus"
+                                                                                        data-uw-node-idx="274"></i>&nbsp;{{ __('index.membership_Benefits_classic') }}</a></li>
+                                                                        <li data-uw-node-idx="275"><a href="{{ route('pricing', app()->getLocale()) }}"
+                                                                                                      data-uw-node-idx="276"><i
+                                                                                        class="soap-icon-minus"
+                                                                                        data-uw-node-idx="277"></i>&nbsp;{{ __('index.fees_and_payment_methods_gird') }}  </a></li>
+                                                                        <li data-uw-node-idx="278"><a href="{{ route('newSubscription', app()->getLocale()) }}"
+                                                                                                      data-uw-node-idx="279"><i
+                                                                                        class="soap-icon-minus"
+                                                                                        data-uw-node-idx="280"></i>&nbsp;{{ __('index.new_subscribers_post') }}  </a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a href="#" data-eid="uxp.eld.sales_header.sales.product_nav.hosting.link.click"
+                                                   data-openit="{&quot;addclass&quot;:{&quot;selector&quot;:&quot;#main-nav .item-hosting&quot;,&quot;class&quot;:&quot;oi-open&quot;},&quot;event&quot;:&quot;click&quot;,&quot;mask&quot;:&quot;#main-nav .item-hosting .sub-nav&quot;,&quot;guide&quot;:&quot;.content-wrap&quot;,&quot;animate&quot;:&quot;height&quot;,&quot;speed&quot;:&quot;200&quot;,&quot;group&quot;:&quot;pc-header&quot;,&quot;offclick&quot;:&quot;true&quot;}"
+                                                   class="font-primary-bold oi-pc-header" data-uw-node-idx="297">
+                                                    <div class="selected-marker" data-uw-node-idx="298"></div>
+                                                    <i class="soap-icon-bottom" data-uw-node-idx="299"></i>
+                                                    {{ __('index.help') }}
+                                                </a>
+                                                <div class="sub-nav" data-uw-node-idx="300">
+                                                    <div class="content-wrap" data-uw-node-idx="301">
+                                                        <div class="container" data-uw-node-idx="302">
+                                                            <div class="row" data-uw-node-idx="303">
+                                                                <div class="col-md-12" data-uw-node-idx="304">
+                                                                    <h3 data-uw-node-idx="305">{{ __('index.help') }}</h3>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row content-row" data-uw-node-idx="306">
+                                                                <div class="col-md-4 col first" data-uw-node-idx="307">
+                                                                    <p data-uw-node-idx="308"> إذا كنت تبحث عن مزيد من المساعدة أو لديك سؤال يرجى الاتصال بنا</p>
+                                                                </div>
+                                                                <div class="col-md-4 col-sm-4 HostingLinks" data-uw-node-idx="309">
+                                                                    <ul class="subnav-ul" data-uw-node-idx="310">
+                                                                        <li data-uw-node-idx="311"><a href="{{ route('newSuggestion', app()->getLocale()) }}"
+                                                                                                      data-uw-node-idx="312"><i
+                                                                                        class="soap-icon-minus"
+                                                                                        data-uw-node-idx="313"></i>&nbsp;{{ __('index.feedback') }}</a> &nbsp;&nbsp;
+                                                                        {{--<i class="fab fa-youtube"
+                                                                                                         data-uw-node-idx="314"></i>&nbsp;<a
+                                                                                href="https://youtu.be/LMFv8KeSufM"
+                                                                                target="_blank" data-uw-node-idx="315"><span
+                                                                                    class="flag-sale" data-uw-node-idx="316">فيديو توضيحي</span></a>
+                                                                    </li>--}}
+                                                                        <li data-uw-node-idx="317"><a
+                                                                                    href="{{ route('faq', app()->getLocale()) }}"
+                                                                                    data-uw-node-idx="318"><i
+                                                                                        class="soap-icon-minus"
+                                                                                        data-uw-node-idx="319"></i>{{ __('index.faqs') }}</a></li>
+                                                                        <li data-uw-node-idx="324"><a href="{{ route('contactUs', app()->getLocale()) }}"
+                                                                                                      data-uw-node-idx="325"><i
+                                                                                        class="soap-icon-minus"
+                                                                                        data-uw-node-idx="326"></i>&nbsp;{{ __('index.contact_us') }}</a>&nbsp;<span class="flag-sale"
+                                                                                                                                                                     data-uw-node-idx="327">&nbsp;</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div></li>
+                                                <li>
+                                                    <a href="http://www.josmsservice.com/madaresona/" class="font-primary-bold" data-uw-node-idx="151">
+                                                        <i class="fad fa-sms" data-uw-node-idx="152"></i>
+                                                        {{ __('index.sms_platform') }}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('services', app()->getLocale())  }}" class="font-primary-bold" data-uw-node-idx="151">
+                                                        <i class="fad fa-ball-pile" data-uw-node-idx="152"></i>
+                                                        {{ __('index.services') }}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://job.madaresonajo.com" class="font-primary-bold" data-uw-node-idx="151">
+                                                        <i class="fad fa-briefcase" data-uw-node-idx="152"></i>
+                                                        {{ __('index.madaresona_jobs') }}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('mainSupplier', app()->getLocale()) }}" class="font-primary-bold" data-uw-node-idx="151">
+                                                        <i class="fad fa-building" data-uw-node-idx="152"></i>
+                                                        {{ __('index.suppliers') }}
+                                                    </a>
+                                                </li>
+
+
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li class="item-logo" data-uw-node-idx="145">
                                     <a href="{{ route('home') }}" data-uw-node-idx="146">
                                         {{--<div class="logo-locale" data-uw-node-idx="147">الأردن</div>--}}
@@ -314,228 +490,6 @@
                                         <i class="fad fa-newspaper" data-uw-node-idx="152"></i>
                                         {{ __('index.News') }}
                                     </a>
-                                </li>
-                                <li class="item-domains ux-noauth" data-uw-node-idx="153">
-
-                                    <a href="#" data-eid="uxp.eld.sales_header.sales.product_nav.domains.link.click"
-                                       data-openit="{&quot;addclass&quot;:{&quot;selector&quot;:&quot;#main-nav .item-domains&quot;,&quot;class&quot;:&quot;oi-open&quot;},&quot;event&quot;:&quot;click&quot;,&quot;mask&quot;:&quot;#main-nav .item-domains .sub-nav&quot;,&quot;guide&quot;:&quot;.content-wrap&quot;,&quot;animate&quot;:&quot;height&quot;,&quot;speed&quot;:&quot;200&quot;,&quot;group&quot;:&quot;pc-header&quot;,&quot;offclick&quot;:&quot;true&quot;}"
-                                       class="font-primary-bold oi-pc-header" data-uw-node-idx="154">
-                                        <div class="selected-marker" data-uw-node-idx="155"></div>
-                                        <i class="fas fa-chevron-down" data-uw-node-idx="156"></i>
-                                        جميع الخدمات
-                                    </a>
-                                    <div class="sub-nav" data-uw-node-idx="157">
-                                        <div class="content-wrap" data-uw-node-idx="158">
-                                            <div class="container" data-uw-node-idx="159">
-                                                <div class="row" data-uw-node-idx="160">
-                                                    <div class="col-sm-3 col-xs-12" data-uw-node-idx="161">
-                                                        <h3 class="font-base" data-uw-node-idx="162"><a
-                                                                    href="{{ route('home') }}"
-                                                                    data-uw-node-idx="163">الرئيسية</a></h3>
-                                                    </div>
-                                                    <div class="col-sm-3 col-xs-12" data-uw-node-idx="164">
-                                                        <h3 data-toggle="collapse" data-target="#DomainsCollapse"
-                                                            class="font-primary-bold" data-uw-node-idx="165">البحث في</h3>
-                                                        <ul id="DomainsCollapse" class="row subnav-row collapse"
-                                                            data-uw-node-idx="166">
-                                                            <li class="col-sm-12" data-uw-node-idx="167">
-                                                                <h4 class="font-base" data-uw-node-idx="168">خيارات
-                                                                    البحث</h4>
-                                                                <ul data-uw-node-idx="169">
-                                                                    <li data-uw-node-idx="170"><a
-                                                                                href="TendersSearch.html"
-                                                                                data-uw-node-idx="171"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="172"></i>&nbsp;البحث
-                                                                            من خلال المجالات الرئيسية</a></li>
-                                                                    <li data-uw-node-idx="173"><a href="Categories.html"
-                                                                                                  data-uw-node-idx="174"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="175"></i>&nbsp;البحث
-                                                                            من خلال المجالات الفرعية</a></li>
-                                                                    <li data-uw-node-idx="176"><a href="BuyersList.html"
-                                                                                                  data-uw-node-idx="177"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="178"></i>&nbsp;البحث
-                                                                            من خلال الجهات الناشرة</a></li>
-                                                                    <li data-uw-node-idx="179"><a
-                                                                                href="AdvancedSearch.html"
-                                                                                data-uw-node-idx="180"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="181"></i>&nbsp;بحث
-                                                                            متقدم</a></li>
-                                                                    <li data-uw-node-idx="182"><a
-                                                                                href="UserLogin8aa3.html"
-                                                                                data-uw-node-idx="183"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="184"></i>&nbsp;القائمة
-                                                                            المفضلة</a></li>
-                                                                    <li data-uw-node-idx="185"><a href="Newsletter.html"
-                                                                                                  data-uw-node-idx="186"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="187"></i>&nbsp;النشرة
-                                                                            اليومية</a></li>
-                                                                    <li data-uw-node-idx="188"><a href="BuyersList.html"
-                                                                                                  data-uw-node-idx="189"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="190"></i>&nbsp;الجهات
-                                                                            الناشرة</a></li>
-                                                                </ul>
-                                                            </li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-2 col-xs-12" data-uw-node-idx="191">
-                                                        <h3 data-toggle="collapse" data-target="#WebsitesCollapse"
-                                                            class="font-primary-bold" data-uw-node-idx="192">
-                                                            الاشتراكات</h3>
-                                                        <ul id="WebsitesCollapse" class="row subnav-row collapse"
-                                                            data-uw-node-idx="193">
-                                                            <li class="col-sm-12" data-uw-node-idx="194">
-                                                                <ul data-uw-node-idx="195">
-                                                                    <li data-uw-node-idx="196"><a href="Services.html"
-                                                                                                  data-uw-node-idx="197"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="198"></i>&nbsp;مميزات
-                                                                            الاشتراك</a> &nbsp;&nbsp; <i
-                                                                                class="fab fa-youtube"
-                                                                                data-uw-node-idx="199"></i>&nbsp;<a
-                                                                                href="https://youtu.be/LMFv8KeSufM"
-                                                                                target="_blank" data-uw-node-idx="200">
-                                                                            <span class="flag-sale"
-                                                                                  data-uw-node-idx="201"><span
-                                                                                        data-uw-node-idx="202">فيديو توضيحي</span></span></a>
-                                                                    </li>
-                                                                    <li data-uw-node-idx="203"><a
-                                                                                href="SubscriptionDetails.html"
-                                                                                data-uw-node-idx="204"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="205"></i>&nbsp;رسوم
-                                                                            الاشتراك</a></li>
-                                                                    <li data-uw-node-idx="206"><a
-                                                                                href="UserLoginfc8d.html"
-                                                                                data-uw-node-idx="207"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="208"></i>&nbsp;خيارات
-                                                                            الدفع&nbsp; <i class="fa fa-credit-card-alt"
-                                                                                           aria-hidden="true"
-                                                                                           data-uw-node-idx="209"></i></a>
-                                                                    </li>
-                                                                    <li data-uw-node-idx="210"><a
-                                                                                href="Registration.html"
-                                                                                data-uw-node-idx="211"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="212"></i>&nbsp;طلب
-                                                                            اشتراك جديد&nbsp;<small
-                                                                                    style="color: #fedc45;"
-                                                                                    data-uw-node-idx="213">لمدة اسبوع
-                                                                                مجاناً
-                                                                            </small>
-                                                                        </a></li>
-                                                                    <li data-uw-node-idx="214"><a href="Ads.html"
-                                                                                                  data-uw-node-idx="215"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="216"></i>&nbsp;اعلن
-                                                                            معنا&nbsp;<i class="fas fa-bullhorn"
-                                                                                         data-uw-node-idx="217"></i></a>
-                                                                    </li>
-                                                                    <li data-uw-node-idx="218"><a href="Clients.html"
-                                                                                                  data-uw-node-idx="219"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="220"></i>&nbsp;عملائنا</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-2 col-xs-12" data-uw-node-idx="221">
-                                                        <h3 data-toggle="collapse" data-target="#HostingCollapse"
-                                                            class="font-primary-bold" data-uw-node-idx="222">الشركات
-                                                            المميزة</h3>
-                                                        <ul id="HostingCollapse" class="row subnav-row collapse"
-                                                            data-uw-node-idx="223">
-                                                            <li class="col-sm-12" data-uw-node-idx="224">
-                                                                <ul data-uw-node-idx="225">
-
-                                                                    <li data-uw-node-idx="226"><a
-                                                                                href="SuppliersList.html"
-                                                                                data-uw-node-idx="227"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="228"></i>&nbsp;قائمة
-                                                                            الشركات المميزة</a></li>
-                                                                    <li data-uw-node-idx="229"><a
-                                                                                href="userlogin796c.html"
-                                                                                data-uw-node-idx="230"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="231"></i>&nbsp;اضف
-                                                                            منشأتك</a></li>
-
-
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3 col-xs-12" data-uw-node-idx="232">
-                                                        <h3 data-toggle="collapse" data-target="#WebSecurityCollapse"
-                                                            class="font-primary-bold collapsed" data-uw-node-idx="233">
-                                                            الاحصائيات والتقارير</h3>
-                                                        <ul id="WebSecurityCollapse" class="row subnav-row collapse"
-                                                            style="height: 0px;" data-uw-node-idx="234">
-                                                            <li class="col-sm-12" data-uw-node-idx="235">
-                                                                <ul data-uw-node-idx="236">
-                                                                    <li data-uw-node-idx="237"><a
-                                                                                href="http://statistics.tenderjo.com/"
-                                                                                target="_blank"
-                                                                                data-uw-node-idx="238"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="239"></i>&nbsp;الاحصائيات
-                                                                            والتقارير</a>&nbsp;<span class="flag-sale"
-                                                                                                     data-uw-node-idx="240">-&nbsp;<span
-                                                                                    data-uw-node-idx="241">2014-2019</span></span>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="col-sm-2 col-xs-12" data-uw-node-idx="242">
-                                                        <h3 data-toggle="collapse" data-target="#GetFoundCollapse"
-                                                            class="font-primary-bold collapsed" data-uw-node-idx="243">
-                                                            مساعدة</h3>
-                                                        <ul id="GetFoundCollapse" class="row subnav-row collapse"
-                                                            style="height: 0px;" data-uw-node-idx="244">
-                                                            <li class="col-sm-12" data-uw-node-idx="245">
-                                                                <ul data-uw-node-idx="246">
-                                                                    <li data-uw-node-idx="247">
-                                                                        <a href="feedback.html"
-                                                                           data-uw-node-idx="248"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="249"></i>&nbsp;اقتراحات
-                                                                            وملاحظات</a>
-                                                                    </li>
-                                                                    <li data-uw-node-idx="250">
-                                                                        <a href="FAQs.html" data-uw-node-idx="251"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="252"></i>&nbsp;اسئلة
-                                                                            متكررة</a>
-                                                                    </li>
-                                                                    <li data-uw-node-idx="253">
-                                                                        <a href="Contacts.html"
-                                                                           data-uw-node-idx="254"><i
-                                                                                    class="soap-icon-minus"
-                                                                                    data-uw-node-idx="255"></i>&nbsp;اتصل
-                                                                            بنا</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </li>
                                 <li class="item-websites ux-noauth" data-uw-node-idx="256">
                                     <a href="#" data-eid="uxp.eld.sales_header.sales.product_nav.websites.link.click"
@@ -657,7 +611,7 @@
                                 </li>
 
                                 <li class="item-hotdeals ux-noauth" data-uw-node-idx="407">
-                                    <a href="{{ route('discounts', app()->getLocale()) }}" class="button btn-medium orange"
+                                    <a href="{{ route('discounts', app()->getLocale()) }}" class="button btn-medium orange discount_btn"
                                        data-uw-node-idx="408"><i class="fad fa-user-tag" data-uw-node-idx="409"></i>&nbsp;{{ __('index.discounts') }}</a>
 
 

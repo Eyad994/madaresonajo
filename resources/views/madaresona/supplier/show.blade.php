@@ -1,718 +1,328 @@
-<style>
+@extends('layouts.main')
+    <section class="section-base" style="margin-bottom: 20px; padding-top:100px ">
+        @php $dir = (app()->getLocale() == 'ar') ?"direction: rtl;":"direction: ltr;" @endphp
+        <div class="container" style="{{$dir}}" >
+            <div class="row">
+                <div id="main" class="col-md-9">
+                    <div id="cruise-features" class="tab-container">
+                        <ul class="tabs">
+
+                            <li id="Suppliers-Overview-li" class="active"><a href="#Suppliers-Overview-Tab" data-toggle="tab">معلومات عامة</a></li>
+
+                            <li id="Suppliers-Contacts-li"><a href="#Suppliers-Contacts-Tab" data-toggle="tab">مراسلة المورد</a></li>
+                            <li id="Suppliers-Products-li"><a href="#Suppliers-Products-Tab" data-toggle="tab">المنتجات</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="Suppliers-Overview-Tab">
+                                <h4 id="ctl00_ContentPlaceHolder1_bCompanyNAme" class="box-title" style="text-align: right;font-size: 20px;font-weight: bold;">
+                                    Abu Moujeh Engineering and Construction
+                                </h4>
+
+                                <hr style="margin: 20px 0">
+                                <div class="main-rating table-wrapper full-width hidden-table-sms intro">
+                                    <article class="image-box box cruise listing-style1 photo table-cell col-sm-4">
+                                        <br>
+                                        <br>
+                                        <figure>
+                                            <img src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg" id="ctl00_ContentPlaceHolder1_imgLogoCompany" width="270" height="160" style="margin: 5px; max-width: 270px; ">
+                                        </figure>
+
+                                        <div class="details">
+                                            <h4 id="ctl00_ContentPlaceHolder1_bGM" class="box-title">م. مهند ابوموجة</h4>
+                                            <small><i class="soap-icon-places"></i>&nbsp;<span id="ctl00_ContentPlaceHolder1_bCountry">الاردن</span></small>
+                                            ،
+                                            &nbsp;
+                                            <small><i class="soap-icon-departure"></i>&nbsp;<span id="ctl00_ContentPlaceHolder1_bCity">عمان</span></small>
 
 
-    .nav-tabs {
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-        border: none;
-        padding: 0px;
-    }
-
-    .nav-tabs .nav-link {
-        border: none;
-        border-radius: 0;
-        transition: color .2s ease-out;
-    }
-
-    .tabs-dark .nav-link {
-        color: #fff;
-    }
-
-    .tabs-light .nav-link {
-        color: rgba(0, 0, 0, .5);
-    }
-
-    .tabs-dark .nav-link:not(.active):hover {
-        color: #aeb0b3;
-    }
-
-    .tabs-light .nav-link:not(.active):hover {
-        color: #495057;
-    }
-
-    .nav-pills .nav-link {
-        border-radius: 2px;
-        color: #495057;
-        transition: color .2s ease-out, box-shadow .2s;
-    }
-
-    .nav-pills .nav-link:hover {
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-
-    }
-
-    .nav-pills .nav-item {
-        margin: 0 5px;
-    }
-
-    .nav-pills.pills-dark .nav-link.active {
-        background-color: #343a40 !important;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-pills.pills-dark .nav-link:not(.active):hover {
-        color: #1d1e22;
-    }
-
-    .tabs-marker .nav-link {
-        position: relative;
-    }
-
-    .tabs-marker .nav-link.active .marker {
-        height: 30px;
-        width: 30px;
-        left: 50%;
-        bottom: -30px;
-        transform: translatex(-50%);
-        position: absolute;
-        overflow: hidden;
-    }
-
-    .tabs-marker .nav-link.active .marker:after {
-        content: "";
-        height: 15px;
-        width: 15px;
-        top: -8px;
-        left: 50%;
-        transform: rotate(45deg) translatex(-50%);
-        transform-origin: left;
-        background-color: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-        position: absolute;
-    }
-
-    .d-block.w-100 {
-        max-height: 450px !important;
-    }
-
-    .carousel-thumbnails .carousel-indicators img {
-        max-width: 100px;
-        height: 50px;
-        overflow: hidden;
-        display: block;
-    }
-
-    .carousel-thumbnails .carousel-indicators li {
-        height: auto;
-        max-width: 100px;
-        width: 100px;
-        border: none;
-        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-
-    &
-    .active {
-        border-bottom: 4px solid #fff;
-    }
-
-    }
-
-    .scrollbar-warning::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-        background-color: #F5F5F5;
-        border-radius: 10px;
-    }
-
-    .scrollbar-warning::-webkit-scrollbar {
-        width: 12px;
-        background-color: #F5F5F5;
-    }
-
-    .scrollbar-warning::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-        background-color: #FF8800;
-    }
-
-    .scrollbar-warning {
-        scrollbar-color: #FF8800 #F5F5F5;
-    }
-
-    .social:hover {
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -o-transform: scale(1.1);
-    }
-
-    .social {
-        -webkit-transform: scale(0.8);
-        /* Browser Variations: */
-
-        -moz-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        -webkit-transition-duration: 0.5s;
-        -moz-transition-duration: 0.5s;
-        -o-transition-duration: 0.5s;
-    }
-
-
-</style>
-
-<div class="row">
-
-    <div class="col-xl-8 mb-4 mb-xl-0 order-1 order-md-12" style="background: #f6f9fc; padding: 2px">
-
-        <section
-
-                @if((app()->getLocale() == 'ar'))
-                style="direction: rtl; text-align: right;">
-            @else
-                style="direction:ltr; text-align:left;">
-            @endif
-            <ul class="nav nav-tabs tabs-marker tabs-dark"
-                style="background-color: #ff6000; border-radius: 5px;font-weight: bold; "
-                id="myTab" role="tablist">
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link active" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab"
-                       aria-controls="gallery" aria-selected="false">{{ __('show.gallery') }}<span
-                                class="marker"></span></a>
-                </li>
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
-                       aria-controls="principle" aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}<span
-                                class="marker"></span></a>
-                </li>
-                @if(!(($school->type)== 2))
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link " id="discountForm-tab" data-toggle="tab" href="#discountForm" role="tab"
-                       aria-controls="discountForm" aria-selected="true">{{ __('show.discountForm') }}<span
-                                class="marker"></span></a>
-                </li>
-                @endif
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link " id="transportation-tab" data-toggle="tab" href="#transportation" role="tab"
-                       aria-controls="transportation" aria-selected="true">{{ __('show.transportation') }}<span
-                                class="marker"></span></a>
-                </li>
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link " id="maps-tab" data-toggle="tab" href="#maps" role="tab" aria-controls="maps"
-                       aria-selected="true">{{ __('show.maps') }}<span class="marker"></span></a>
-                </li>
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link " id="brochure-tab" data-toggle="tab" href="#brochure" role="tab"
-                       aria-controls="brochure" aria-selected="true">{{ __('show.brochure') }}<span
-                                class="marker"></span></a>
-                </li>
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link " id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab"
-                       aria-controls="contactInfo" aria-selected="true">{{ __('show.contactInfo') }}<span
-                                class="marker"></span></a>
-                </li>
-                <li class="nav-item waves-effect waves-light">
-                    <a class="nav-link " id="news-tab" data-toggle="tab" href="#news" role="tab"
-                       aria-controls="news" aria-selected="true">{{ __('show.news') }}<span class="marker"></span></a>
-                </li>
-            </ul>
-
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade active show" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
-
-                {{-- ******************************************************************************************************************************** --}}
-
-                <!--Carousel Wrapper-->
-                    <div class="container mt-5">
-                        <div class="carousel-container position-relative row">
-                            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
-                                 data-ride="carousel">
-                                <!--Slides-->
-                                <div class="carousel-inner z-depth-4 rounded" role="listbox" style="height: 450px ">
-                                    <?php $i = 0; ?>
-                                    @foreach($gallery as $item)
-                                        @if($i == 0)
-                                            <div class="carousel-item active z-depth-4 rounded">
-                                                <img class="d-block w-100"
-                                                     src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
+                                            <div class="feedback">
+                                                <div title="" class="five-stars-container" data-toggle="tooltip" data-placement="bottom" data-original-title="4 stars"><span class="five-stars" style="width: 91%;"></span></div>
+                                                <span class="review"><b>270</b> التقييمات</span>
                                             </div>
-                                        @else
-
-                                            <div class="carousel-item z-depth-4 rounded">
-                                                <img class="d-block w-100"
-                                                     src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
-                                            </div>
-                                        @endif
-                                        <?php $i++ ?>
-                                    @endforeach
-                                </div>
-                                <!--/.Slides-->
-                                <!--Controls-->
-                                <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                                <!--/.Controls-->
-                                <ol class="carousel-indicators">
-                                    <?php $i = 0; ?>
-                                    @foreach($gallery as $item)
-                                        @if($i == 0)
-                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
-                                                class="active border border-white z-depth-4 rounded">
-                                                <img class="d-block w-100"
-                                                     src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
-                                                     class="img-fluid">
-                                            </li>
-                                        @else
-                                            <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
-                                                class="border border-white z-depth-4 rounded">
-                                                <img class="d-block w-100"
-                                                     src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
-                                                     class="img-fluid">
-                                            </li>
-                                        @endif
-                                        <?php $i++ ?>
-                                    @endforeach
-                                </ol>
-                            </div>
-                            <script>
-                                $('#carousel-thumb').carousel({
-                                    interval: 3000
-                                });
-                            </script>
-                        </div>
-                    </div>
-                    <!--/.Carousel Wrapper-->
-
-                    {{-- ******************************************************************************************************************************** --}}
-
-                </div>
-
-                <div class="tab-pane fade" id="principle" role="tabpanel" aria-labelledby="principle-tab">
-
-                    <div class="container mt-5">
-                        <div class="carousel-container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="overflow-scroll scrollbar-warning"
-                                         style="height: 450px; overflow-y: scroll; ">
-                                        {!! (app()->getLocale() == 'en') ? $school->principle_en:$school->principle_ar !!}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <style>
-                    #tabsTable {
-                        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                        border-collapse: collapse;
-                        border-spacing: 0 1em;
-                        width: 100%;
-                        text-align: center;
-                    }
-
-                    #tabsTable td, #tabsTable th {
-                        border: 1px solid #ddd;
-                        padding: 8px;
-                    }
-
-                    #tabsTable tr:nth-child(even) {
-                        background-color: #f2f2f2;
-                    }
-
-                    #tabsTable tr:hover {
-                        background-color: #ddd;
-                    }
-
-                    #tabsTable th {
-                        padding: 18px 10px !important;
-                        background-color: #1d556c;
-                        color: white;
-                        border: none;
-                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                        border-radius: 5px;
-                    }
-
-                    #tabsTable td {
-                        border: none;
-                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-                        0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                        border-radius: 5px;
-                    }
-
-                    .div_cheak {
-                        padding: 5px 10px;
-                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-                        0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                        font-size: 13px;
-                        font-weight: bold;
-                    }
-
-
-                </style>
-
-                <div class="tab-pane fade" id="discountForm" role="tabpanel" aria-labelledby="discountForm-tab">
-
-                    <div class="container mt-5">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div dir="row">
-                                    <h4 style="color: #2d3e52;font-weight: bold; font-size: 17px;padding: 10px 0px;">{{ __('show.discounts') }}</h4>
-                                    <div class="col-md-12" style="margin: 0px;padding: 0px;">
-                                        @if($school->discounts_brothers == 1)
-                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
-                                                {{ __('show.brothers') }}
-                                            </div>
-                                        @endif
-                                        @if($school->discounts_quran == 1)
-                                            <div class=" form-group shadow-lg bg-white rounded div_cheak">
-                                                {{ __('show.quran') }}
-                                            </div>
-                                        @endif
-                                        @if($school->discounts_sport == 1)
-                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
-                                                {{ __('show.sport') }}
-                                            </div>
-                                        @endif
-                                        @if($school->discounts_superior == 1)
-                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
-                                                {{ __('show.superior') }}
-                                            </div>
-                                        @endif
-
-                                    </div>
-                                    <h4 style="color: #2d3e52;font-weight: bold; font-size: 17px;padding: 10px 0px;">{{ __('show.the_curriculum') }}</h4>
-                                    <div class="col-md-12" style="margin: 0px;padding: 0px;">
-
-                                        @if($school->curriculum_ls_local == 1)
-                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
-                                                {{ __('show.local') }}
-                                            </div>
-                                        @endif
-                                        @if($school->curriculum_ls_public == 1)
-                                            <div class="form-group shadow-lg bg-white rounded div_cheak">
-                                                {{ __('show.public') }}
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="col-md-12">
-                                    <h4 style="color: #2d3e52;font-weight: bold; font-size: 17px;padding: 10px 0px;">{{ __('show.price') }}</h4>
-                                    <table id="tabsTable">
-                                        <tr style="border-radius: 5px">
-                                            <th>{{ __('show.class') }}</th>
-                                            <th>{{ __('show.price') }}</th>
-                                            <th>{{ __('show.curriculum') }}</th>
-                                        </tr>
-                                        @foreach($premiums as $item)
-                                            <tr>
-                                                <td>{{ (app()->getLocale() == 'en') ?$item->schoolClass->class_en:$item->schoolClass->class_ar}}</td>
-                                                <td>{{ $item->price }}</td>
-                                                <td>{{ $item->curriculum == 0 ? __('show.local_program')  : __('show.international_program') }}</td>
-                                            </tr>
-                                        @endforeach
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="tab-pane fade" id="transportation" role="tabpanel" aria-labelledby="transportation-tab">
-                    <div class="container mt-5">
-                        <table id="tabsTable">
-                            <tr>
-                                <th>{{ __('show.region') }}</th>
-                                <th>{{ __('show.one_way') }}</th>
-                                <th>{{ __('show.two_way') }}</th>
-                            </tr>
-                            @foreach($transportations as $transportation)
-                                <tr>
-                                    <td>{{ (app()->getLocale() == 'en') ?$transportation->region_en:$transportation->region_ar }}</td>
-                                    <td>{{ $transportation->one_way }}</td>
-                                    <td>{{ $transportation->two_way }}</td>
-
-                                </tr>
-                            @endforeach
-                        </table>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="maps" role="tabpanel" aria-labelledby="maps-tab">
-
-                    <div class="container mt-5">
-                        <div id="map" style="height: 400px; width: 100%;" lat="{{ $school-> lat}}"
-                             lng="{{ $school-> lng}}"></div>
-                    </div>
-
-                </div>
-                <div class="tab-pane fade" id="brochure" role="tabpanel" aria-labelledby="brochure-tab">
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-md-12" style="text-align-last: center;">
-                                @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
-                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                         style="width:50%; border-radius: 10px;" alt="">
-                                @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
-                                    <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                       #f5f5f5 download="">
-                                        <i class="fad fa-cloud-download"
-                                           style="  font-size: 300px; margin-top: 60px; "></i>
-                                    </a>
-                                    <div style="font-size: 40px; font-weight: bold; color: #f66001;"> Download</div>
-
-                                @else
-                                    <h1>No Brochure</h1>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
-
-
-                    <div class="container mt-5" style="text-align: center">
-                        <h2 style="color: #2d3e52">{{ __('show.contact_information') }}</h2>
-                        <div class="" style="display: inline-block;
-                                             margin-top: 20px;
-                                             width: 50%;
-                                             text-align: start;
-                                             padding: 20px 40px;
-                                             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-                                                         0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                                             border-radius: 10px;">
-                            <div class="row">
-
-                                <div class="col-md-4 form-group">
-                                    <div style="color: #2d3e52; font-weight: bold;"> {{ __('show.email') }} :</div>
-                                </div>
-                                <div class="col-md-8 form-group">{{ $school->contact_person_email }}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 form-group">
-                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.phone') }} :</div>
-                                </div>
-                                <div class="col-md-8 form-group">{{ $school->contact_person_phone }}</div>
-                            </div>
-                            @if(!empty( $school->fax) )
-                                <div class="row">
-                                    <div class="col-md-4 form-group">
-                                        <div style="color: #2d3e52; font-weight: bold;">{{ __('show.fax') }} :</div>
-                                    </div>
-                                    <div class="col-md-8 form-group">{{ $school->fax }}</div>
-                                </div>
-                            @endif
-                            @if(!empty( $school->website) )
-                                <div class="row">
-
-                                    <div class="col-md-4 form-group">
-                                        <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }} :</div>
-                                    </div>
-                                    <div class="col-md-8 form-group"><a #f5f5f5
-                                                                        href="http://{{ $school->website }}">{{ $school->website }}</a>
-                                    </div>
-                                </div>
-                            @endif
-                            <div class="row">
-                                <div class="col-md-4 form-group">
-                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.gender') }} :</div>
-                                </div>
-                                <div class="col-md-8 form-group">
-                                    @if(in_array(0, $genderSchool))
-                                        <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
-                                            {{ __('show.female') }}</span>
-                                    @endif
-                                    @if(in_array(1, $genderSchool))
-                                        <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
-                                            {{ __('show.male') }}</span>
-                                    @endif
-                                    @if(in_array(2, $genderSchool))
-                                        <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
-                                            {{ __('show.mixed') }}</span>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @if(!empty( $school->facebook_link) ||!empty($school->instagram_link)||
-                    !empty( $school->twitter_link)||!empty($school->linkedin_link))
-                        <div class="container mt-5" style="text-align: center">
-                            <h2 style="color: #ff6000">{{ __('show.follow') }}</h2>
-                            <div class="" style="display: inline-block;
-                                             margin-top: 20px;
-                                             text-align: center;
-                                             padding: 6px 40px;
-                                             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-                                              0 1px 5px 0 rgba(0, 0, 0, 0.2);
-                                             border-radius: 10px;">
-                                <div class="row">
-
-                                    <div class="text-center center-block">
-                                        @if(!empty( $school->facebook_link) )
-                                            <a href="{{ $school->facebook_link}}" target="_blank"><i
-                                                        class="fab fa-facebook-square fa-3x social"
-                                                        style="color: #4267B2;"></i></a>
-                                        @endif
-                                        @if(!empty( $school->instagram_link) )
-                                            <a href="{{ $school->instagram_link}}" target="_blank"><i
-                                                        class="fab fa-instagram-square fa-3x social"
-                                                        style="color: #8a49a1;"></i></a>
-                                        @endif
-                                        @if(!empty( $school->twitter_link) )
-                                            <a href="{{ $school->twitter_link}}" target="_blank"><i
-                                                        class="fab fa-twitter-square fa-3x social"
-                                                        style="color: #1DA1F2;"></i></a>
-                                        @endif
-                                        @if(!empty( $school->linkedin_link) )
-                                            <a href="{{ $school->linkedin_link}}" target="_blank"><i
-                                                        class="fab fa-linkedin fa-3x social"
-                                                        style="color: #2867B2;"></i></a>
-                                        @endif
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    @endif
-                </div>
-                <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
-
-                    <style>
-                        .card {
-                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                            transition: 0.3s;
-                            width: 100%;
-                        }
-
-                        .card:hover {
-                            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-                        }
-
-                        .container {
-                            padding: 2px 16px;
-                        }
-                    </style>
-
-                    <div class="container mt-5 overflow-scroll scrollbar-warning" style="text-align: right; height: 650px;overflow-y: scroll;">
-                        @foreach($news as $item)
-
-                            <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;الموردين">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/news/{{ $item['img'] }}"
-                                                 alt="Avatar"
-                                                 style="width: 60%; margin-top: 20px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
                                         </div>
-                                        <div class="col-md-9 container">
-                                            <div class="row">
-                                                <div class="col-md-2"></div>
-                                                <div class="col-md-8">
-                                                    <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
-                                                </div>
-                                                <div class="col-md-2"></div>
-                                                <div class="col-md-2"></div>
-                                                <div class="col-md-8">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
-                                                <div class="col-md-2"></div>
-                                                <div class="col-md-10"></div>
-                                                <div class="col-md-2">
-                                                    <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}" #f5f5f5
-                                                       class="btn btn-info">
-                                                        {{ __('show.more') }}
-                                                    </a>
+
+                                        <a href="#Suppliers-Contacts-Tab" onclick="TapActive()" data-toggle="tab" class="goto-writereview-pane button green btn-small full-width">مراسلة المورد</a>
+
+                                        <div class="clerar">
+                                            <br>
+                                        </div>
+                                        <ul class="social-icons full-width">
+                                            <li class="facebook"><a style="padding-top: 7px" href="DataFiles/Product/201401191537191.jpg" id="ctl00_ContentPlaceHolder1_txtfacebooklink" title="" target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="soap-icon-facebook"></i></a></li>
+                                            <li class="twitter"><a style="padding-top: 7px" href="DataFiles/Product/201401191537332.jpg" id="ctl00_ContentPlaceHolder1_txttwitterlink" title="" target="_blank" data-toggle="tooltip" data-original-title="twitter"><i class="soap-icon-twitter"></i></a></li>
+                                            <li class="linkedin"><a style="padding-top: 7px" href="DataFiles/Product/201401191538453.jpg" id="ctl00_ContentPlaceHolder1_txtInstegramlink" title="" target="_blank" data-toggle="tooltip" data-original-title="instagram"><i class="soap-icon-instagram"></i></a></li>
+                                            <li class="linkedin"><a style="padding-top: 7px" href="DataFiles/Product/AbuMoujehEngineeringandConstruction201401191539174.jpg" id="ctl00_ContentPlaceHolder1_txtLinkedinlink" title="" target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="soap-icon-linkedin"></i></a></li>
+                                            <li class="googleplus" ><a style="padding-top: 7px" href="DataFiles/Product/AbuMoujehEngineeringandConstruction201401191539395.jpg" id="ctl00_ContentPlaceHolder1_txtGooglePluselink" title="" target="_blank" data-toggle="tooltip" data-original-title="googleplus"><i class="soap-icon-googleplus"></i></a></li>
+
+                                        </ul>
+
+                                    </article>
+                                    <div class="table-cell col-sm-8">
+
+
+                                        <div class="travelo-box contact-us-box">
+
+                                            <ul class="contact-address">
+                                                <li class="address" style="padding-top: 0px;text-align: right">
+                                                    <i class="soap-icon-address circle" style="padding: 7px"></i>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">العنوان</h5>
+
+                                                    <p id="ctl00_ContentPlaceHolder1_bAddress">عمان- الجويدة-ش 60 - مقابل صوامع حبوب الجويدة</p>
+                                                    <p id="ctl00_ContentPlaceHolder1_bBOX" style="margin-top: 0px"> 925 عمان 11592 الاردن</p>
+                                                </li>
+                                                <li class="address" style="text-align: right">
+                                                    <i class="soap-icon-address circle" style="padding: 7px"></i>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">الهاتف</h5>
+                                                    <p id="ctl00_ContentPlaceHolder1_bPhone">0096264166064</p>
+                                                </li>
+                                                <li class="address" style="text-align: right">
+                                                    <i class="soap-icon-phone circle" style="padding: 7px"></i>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">فاكس</h5>
+                                                    <p id="ctl00_ContentPlaceHolder1_bFax">0096264166063</p>
+                                                </li>
+                                                <li class="address" style="text-align: right">
+                                                    <i class="soap-icon-phone circle" style="padding: 7px"></i>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">الهاتف النقال</h5>
+                                                    <p id="ctl00_ContentPlaceHolder1_bMobile">00962799919542</p>
+                                                </li>
+                                                <li class="address" style="text-align: right">
+                                                    <i class="soap-icon-message circle" style="padding: 7px"></i>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">البريد الإلكتروني</h5>
+
+                                                    <p id="ctl00_ContentPlaceHolder1_bEmail">info@abu-moujeh.com</p>
+                                                </li>
+                                                <li class="address" style="text-align: right">
+                                                    <i class="soap-icon-globe circle" style="padding: 7px"></i>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">الموقع الالكتروني</h5>
+                                                    <p id="ctl00_ContentPlaceHolder1_bWebsite">www.abu-moujeh.com</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="long-description" style="direction: rtl;text-align: right;">
+                                    <h4 style="font-weight: bold">نظرة عامة</h4>
+                                    <p id="ctl00_ContentPlaceHolder1_bDeitiles" style="text-align: justify;margin-top: 0px">بدأت الشركة اعمالها في مجالات الهندسه والمقاولات والانشاءات المعدنية في الاردن بتميز وحرفيه عاليه ومواصفات عالمية باعمالها المتنوعه في مختلف القطاعات الحكوميه والعسكريه والمدنيه وحازت على رضا عملائها بشهادات تقدير وتميز نفخر ونعتز بها.</p>
+                                </div>
+                                <div style="width: 100%">
+                                    <h4 style="font-weight: bold;text-align: right">المنتجات والخدمات</h4>
+                                    <span class="info-success" style="float: right;margin-right: 10px"> تصميم وانشاء الهناجر والمكاتب الهندسية</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px"> تصميم وبناء البريقاب</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px">الاعمال الخشبيه الخاصه و  اعمال الفيبر جلاس</span>
+                                    <span class="info-success" style="float: right;margin-right: 10px">كافة الاشغال المعدنية</span>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="Suppliers-Contacts-Tab">
+                                <div class="booking-section">
+
+                                    <div class="person-information" style="text-align: right;">
+                                        <h2>الرجاء اكمال النموذج ادناه لمراسة المورد</h2>
+                                        <hr style="margin: 20px 0">
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 col-md-5">
+                                                <span>الاسم</span>
+                                                <span id="ctl00_ContentPlaceHolder1_txtEventsNameValidator" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                <input name="ctl00$ContentPlaceHolder1$txtName" type="text" id="ctl00_ContentPlaceHolder1_txtName" class="input-text full-width">
+
+
+                                            </div>
+                                            <div class="col-sm-6 col-md-5">
+                                                <span>البريد الإلكتروني</span>
+                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                <input name="ctl00$ContentPlaceHolder1$txtEMAIL" type="text" id="ctl00_ContentPlaceHolder1_txtEMAIL" class="input-text full-width">
+                                                <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1" class="errorlbl" style="color:Red;visibility:hidden;">البريد الإلكتروني غير صحيح</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-10">
+                                                <span>الموضوع</span>
+                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                <input name="ctl00$ContentPlaceHolder1$txtSubject" type="text" id="ctl00_ContentPlaceHolder1_txtSubject" class="input-text full-width">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="booking-hotel">
+                                        <div class="form-group row">
+                                            <div class="col-md-10" style="text-align: right">
+                                                <span> ادخل محتوى الرسالة</span>
+                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                <textarea name="ctl00$ContentPlaceHolder1$txtBody" rows="10" cols="20" id="ctl00_ContentPlaceHolder1_txtBody" class="full-width"></textarea>
+                                                <small>الحد الاعلى 600 حرف</small>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group row">
+                                        <div class="full-width">
+                                            <div class="col-md-10">
+                                                <div id="reCAPTCHA"><div><iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeIpgYTAAAAAAZVDRQrOnglSzeFOjQReY4uChZZ&amp;hl=ar&amp;v=IU7gZ7o6RDdDE6U4Y1YJJWnN&amp;t=40016" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="margin: 20px 0">
+                                    <div class="form-group row" style="text-align: right">
+                                        <div class="full-width">
+
+                                            <a onclick="return ValidateSuppliersContact();" id="ctl00_ContentPlaceHolder1_btnSave" usesubmitbehavior="true" class="button btn-large dull-blue" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSave&quot;, &quot;&quot;, true, &quot;supplierdetails&quot;, &quot;&quot;, false, true))">
+                                                <i class="soap-icon-recommend">&nbsp;</i>
+                                                ارسال</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="full-width">
+                                            <div class="form-group">
+                                                <div id="ctl00_ContentPlaceHolder1_AlertErrorDivSuppliersContact" class="alert alert-notice" style="visibility: hidden">
+                                                    <span id="ctl00_ContentPlaceHolder1_AlertErrorLableSuppliersContact"></span>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab-pane" id="Suppliers-Products-Tab">
+                                <div class="booking-section">
+                                    <div class="person-information" style="text-align: right;">
+                                        <h2>المنتجات</h2>
+                                        <hr style="margin: 20px 0">
+                                    </div>
+                                    <div class="carousel-container position-relative row" style="padding: 10px 20px;">
+                                        <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+                                             data-ride="carousel">
+                                            <!--Slides-->
+                                            {{--<div class="carousel-inner z-depth-4 rounded" role="listbox"
+                                                 style="height: 450px ">
+                                                <?php $i = 0; ?>
+                                                @foreach($gallery as $item)
+                                                    @if($i == 0)
+                                                        <div class="carousel-item active z-depth-4 rounded">
+                                                            <img class="d-block w-100"
+                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
+                                                        </div>
+                                                    @else
 
-                        @endforeach
+                                                        <div class="carousel-item z-depth-4 rounded">
+                                                            <img class="d-block w-100"
+                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
+                                                        </div>
+                                                    @endif
+                                                    <?php $i++ ?>
+                                                @endforeach
+                                            </div>--}}
+                                            <!--/.Slides-->
+                                            <!--Controls-->
+                                            <a class="carousel-control-prev" href="#carousel-thumb" role="button"
+                                               data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carousel-thumb" role="button"
+                                               data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                            <!--/.Controls-->
+                                            <ol class="carousel-indicators">
+                                               {{-- <?php $i = 0; ?>
+                                                @foreach($gallery as $item)
+                                                    @if($i == 0)
+                                                        <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
+                                                            class="active border border-white z-depth-4 rounded">
+                                                            <img class="d-block w-100"
+                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
+                                                                 class="img-fluid">
+                                                        </li>
+                                                    @else
+                                                        <li data-target="#carousel-thumb" data-slide-to="{{ $i }}"
+                                                            class="border border-white z-depth-4 rounded">
+                                                            <img class="d-block w-100"
+                                                                 src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}"
+                                                                 class="img-fluid">
+                                                        </li>
+                                                    @endif
+                                                    <?php $i++ ?>
+                                                @endforeach--}}
+                                            </ol>
+                                        </div>
+                                        <script>
+                                           /* $('#carousel-thumb').carousel({
+                                                interval: 3000
+                                            });*/
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar col-md-3">
+
+
+                    <!-- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -->
+                    <div style="padding-top: 30px">
+                        <img src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg" id="ctl00_ContentPlaceHolder1_imgLogoCompany" width="270" height="160" style="margin: 5px; max-width: 270px; ">
+                    </div>
+                    <!-- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -- ADS -->
+
+
+                    <div id="ctl00_ContentPlaceHolder1_rslist" class="travelo-box">
+                        <div class="box-title">
+                            <div class="image-box style14" style="text-align: right">
+                                <h4>الشركات ذات صلة</h4>
+                                <article class="box">
+                                    <figure class="animated flipInX" data-animation-type="flipInX" style="animation-duration: 1s; visibility: visible;">
+                                        <a title="نجم للهندسة و التعهدات" target="_blank" href="SuppliersDetails.aspx?opc_id=1543 ">
+                                            <img style="border: 1px solid #bebebe;width: 63px;height: 59px" src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg">
+                                        </a>
+                                    </figure>
+                                    <div class="details">
+                                        <h6 class="box-title">
+                                            <a href="SuppliersDetails.aspx?opc_id=1543" target="_blank" title="نجم للهندسة و التعهدات">
+                                                نجم للهندسة و التعهدات
+                                            </a>
+                                            <br>
+                                            <small>عمان ، الاردن</small>
+
+                                        </h6>
+                                    </div>
+                                </article>
+
+
+
+
+
+                                <article class="box">
+                                    <figure class="animated flipInX" data-animation-type="flipInX" style="animation-duration: 1s; visibility: visible;">
+                                        <a title="شركة المنشآت الحديدية ذ.م.م" target="_blank" href="SuppliersDetails.aspx?opc_id=674 ">
+                                            <img style="border: 1px solid #bebebe;width: 63px;height: 59px" src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg">
+                                        </a>
+                                    </figure>
+                                    <div class="details">
+                                        <h6 class="box-title">
+                                            <a href="SuppliersDetails.aspx?opc_id=674" target="_blank" title="شركة المنشآت الحديدية ذ.م.م">
+                                                شركة المنشآت الحديدية ذ.م.م
+                                            </a>
+                                            <br>
+                                            <small>عمان ، الاردن</small>
+
+                                        </h6>
+                                    </div>
+                                </article>
+
+
+
+                            </div>
+                        </div>
                     </div>
 
+
                 </div>
-            </div>
-
-        </section>
-        <!-- Section: Live preview -->
-
-    </div>
-
-    <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12"
-         @if((app()->getLocale() == 'ar'))
-         style="direction: rtl; text-align: right;">
-        @else
-            style="direction:ltr; text-align:left;">
-        @endif
-        <br>
-            <style>
-                @media(max-width: 600px)
-                {
-                    .schoolLogo{
-                        text-align: center !important;
-                    }
-                }
-            </style>
-        <div class="row schoolLogo">
-            <div class="col-md-3">
-                <img class="rounded" style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);"
-                     src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="">
-            </div>
-            <div class="col-md-9">
-                <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
-                <h6 class="text-muted">{{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}
-                    , {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
-                    - {{(app()->getLocale() == 'en') ?$school->region->area_name_en:$school->region->area_name_ar }}</h6>
-            </div>
         </div>
-        <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);
-padding: 20px 0 10px;
-margin: 0 0 20px;"></div>
-        <div class="row">
-            <div class="col-md-12" style="border-bottom: 1px solid rgba(76, 87, 102, .1); padding-bottom:20px; ">
-                <div class="scrollbar-warning" style="height: 400px; width: 100%; overflow-y: scroll;">
-                    {!! (app()->getLocale() == 'en')?$school->school_details_en :$school->school_details_ar !!}
-                </div>
-            </div>
         </div>
-        <br>
-
-        <style>
-            .a2a_svg.a2a_s__default {
-                border-radius: 16px;
-            }
-        </style>
-        <div class="row">
-            <div class="col-md-4"><h5 style="color:#ff6000; font-weight: bold; padding: 0px 20px;">{{ __('show.share_us') }}</h5></div>
-            <div class="col-md-8">
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="">
-                    <a class="a2a_button_facebook z-depth-4 rounded " style="margin: 0px 5px;"></a>
-                    <a class="a2a_button_twitter" style="margin: 0px 5px;"></a>
-                    <a class="a2a_button_google_gmail" style="margin: 0px 5px;"></a>
-                    <a class="a2a_button_whatsapp" style="margin: 0px 5px;"></a>
-                </div>
-                <script async src="https://static.addtoany.com/menu/page.js"></script>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<script>
-    document.documentElement.setAttribute("lang", "en");
-    document.documentElement.removeAttribute("class");
-    initMap();
-
-    function initMap() {
-        lat = parseFloat($("#map").attr("lat"));
-        lng = parseFloat($("#map").attr("lng"));
-// The location of Uluru
-        var uluru = {lat: lat, lng: lng};
-// The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 17, center: uluru});
-// The marker, positioned at Uluru
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map,
-            "icon": '{{ asset('assets/images/school.png') }}',
-            title: 'title'
-        });
-    }
-</script>
-
-{{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f0cf05e633f30bf"></script>--}}
+    </section>
+@section('content')
+    @include('modal')
+@endsection
