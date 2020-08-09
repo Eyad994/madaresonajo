@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Suggestion;
+use App\Traits\VisitorTrait;
 use Illuminate\Http\Request;
 
 class PricingController extends Controller
 {
+    use VisitorTrait;
+
+    public function __construct()
+    {
+
+        $this->storeVisitor();
+    }
+
     public function index()
     {
         return view('madaresona.pricing.index');

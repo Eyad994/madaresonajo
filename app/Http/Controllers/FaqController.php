@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use App\Traits\VisitorTrait;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
+    use VisitorTrait;
+
+    public function __construct()
+    {
+
+        $this->storeVisitor();
+    }
+
     public function index()
     {
         $faqs1 = Faq::where('type_id', 1)->get();

@@ -6,11 +6,20 @@ use App\Models\City;
 use App\Models\Discount;
 use App\Models\Region;
 use App\Models\SchoolClass;
+use App\Traits\VisitorTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class DiscountController extends Controller
 {
+    use VisitorTrait;
+
+    public function __construct()
+    {
+
+        $this->storeVisitor();
+    }
+
     public function index()
     {
         $schoolClasses = SchoolClass::all();

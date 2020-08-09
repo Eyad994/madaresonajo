@@ -8,11 +8,20 @@ use App\Models\School;
 use App\Models\SchoolType;
 use App\Models\Supplier;
 use App\Models\SupplierType;
+use App\Traits\VisitorTrait;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class SupplierController extends Controller
 {
+    use VisitorTrait;
+
+    public function __construct()
+    {
+
+        $this->storeVisitor();
+    }
+
     public function index()
     {
         $suppliers = Supplier::all();
