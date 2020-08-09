@@ -108,7 +108,7 @@
                                     <a class="img-box {{--show-school--}}" id="{{ $school->id }}" title="{{ $school->name_ar }}"
                                        href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                        slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="" style="width: 100px; height: 100px; opacity: .5 !important;">
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="" style="width: 100px; height: 100px;">
                                     </a>
                                 </div>
                             </div>
@@ -276,9 +276,9 @@
                 <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
                     <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">بحث</div>
                     <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
-                        <input type="text" name="search_text" id="search_text" class="form-control" placeholder="بحث " style="border-radius: 0px;margin-right: -1px;">
+                        <input type="text" name="sub_search" id="sub_search" class="form-control" placeholder="بحث " style="border-radius: 0px;margin-right: -1px;">
                         <div class="input-group-btn">
-                            <button class="btn btn-default" type="button" style="margin-right: -4px">
+                            <button class="btn btn-default" id="search_button" type="button" style="margin-right: -4px">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </div>
@@ -406,7 +406,7 @@
         $(function () {
             $('.infinite-scroll').jscroll({
                 autoTrigger: true,
-                loadingHtml: '<img class="center-block" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..." />',
+                loadingHtml: '<img class="center-block" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..."/>',
                 padding: 5,
                 nextSelector: '.pagination li.active + li a',
                 contentSelector: 'div.infinite-scroll',
@@ -435,6 +435,20 @@
                         /*$('.infinite-scroll').removeData('jscroll').jscroll.destroy();*/
                         var div = $('#schoolsGrid').offset().top;
                         $('body, html').animate({scrollTop: div});
+                    }
+                });
+            });
+
+            $('#search_button').on('click', function (e) {
+                var text = $('#sub_search').val();
+                $.ajax({
+                    type: "GET",
+                    url: '/ar/sub_search/'+text,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (data) {
+                        $('#schoolsGrid').html(data);
                     }
                 });
             });

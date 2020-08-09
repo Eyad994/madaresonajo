@@ -145,6 +145,14 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
 
     }
 
+    public function subSearch($lang, $text){
+
+        $schools = School::where('active', 1)
+            ->where('name_en', 'like', '%' . $text . '%')
+            ->orWhere('name_ar', 'like', '%' . $text . '%')->get();
+        return view('madaresona.main.schoolsGrid', compact('schools'));
+    }
+
     public function educationalInstitutions($lang, $id)
     {
         if ($id == 0) {

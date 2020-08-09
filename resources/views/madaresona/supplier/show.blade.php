@@ -5,6 +5,9 @@
             <div class="row">
                 <div id="main" class="col-md-9">
                     <div id="cruise-features" class="tab-container">
+                        @if(Session::has('success'))
+                            <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}</p>
+                        @endif
                         <ul class="tabs">
 
                             <li id="Suppliers-Overview-li" class="active"><a href="#Suppliers-Overview-Tab" data-toggle="tab">معلومات عامة</a></li>
@@ -98,88 +101,80 @@
                                         </div>
                                     </div>
                                 </div>
-                                <br>
-                                <br>
                                 <div class="long-description" style="direction: rtl;text-align: right;">
                                     <h4 style="font-weight: bold">نظرة عامة</h4>
                                     <p id="ctl00_ContentPlaceHolder1_bDeitiles" style="text-align: justify;margin-top: 0px">{{(app()->getLocale() == 'ar') ?$supplier->supplier_details_ar :$supplier->supplier_details_en }}</p>
                                 </div>
                                 <div style="width: 100%">
                                     <h4 style="font-weight: bold;text-align: right">المنتجات والخدمات</h4>
-                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;"> تصميم وانشاء الهناجر والمكاتب الهندسية</span>
-                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;"> تصميم وبناء البريقاب</span>
-                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;">الاعمال الخشبيه الخاصه و  اعمال الفيبر جلاس</span>
-                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;">كافة الاشغال المعدنية</span>
+                                    @foreach($supplierServices as $supplierService)
+                                    <span class="info-success" style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;">{{ $supplierService->name_ar }}</span>
+                                        @endforeach
                                 </div>
                             </div>
                             <div class="tab-pane" id="Suppliers-Contacts-Tab">
-                                <div class="booking-section">
+                                <form action="{{ route('storeSupplier', app()->getLocale()) }}" method="POST" >
+                                    @csrf
 
-                                    <div class="person-information" style="text-align: right;">
-                                        <h2>الرجاء اكمال النموذج ادناه لمراسة المورد</h2>
-                                        <hr style="margin: 20px 0">
-                                        <div class="form-group row">
-                                            <div class="col-sm-6 col-md-5">
-                                                <span>الاسم</span>
-                                                <span id="ctl00_ContentPlaceHolder1_txtEventsNameValidator" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
-                                                <input name="ctl00$ContentPlaceHolder1$txtName" type="text" id="ctl00_ContentPlaceHolder1_txtName" class="input-text full-width">
+                                    <input type="hidden" name="user_id" value="{{ $supplier->id }}">
+                                    <div class="booking-section">
+
+                                        <div class="person-information" style="text-align: right;">
+                                            <h2>الرجاء اكمال النموذج ادناه لمراسة المورد</h2>
+                                            <hr style="margin: 20px 0">
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 col-md-5">
+                                                    <span>الاسم</span>
+                                                    <span id="name" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                    <input name="name" type="text" id="ctl00_ContentPlaceHolder1_txtName" class="form-control">
 
 
+                                                </div>
+                                                <div class="col-sm-6 col-md-5">
+                                                    <span>البريد الإلكتروني</span>
+                                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                    <input name="email" type="text" id="email" class="form-control">
+                                                    <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1" class="errorlbl" style="color:Red;visibility:hidden;">البريد الإلكتروني غير صحيح</span>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-6 col-md-5">
-                                                <span>البريد الإلكتروني</span>
-                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
-                                                <input name="ctl00$ContentPlaceHolder1$txtEMAIL" type="text" id="ctl00_ContentPlaceHolder1_txtEMAIL" class="input-text full-width">
-                                                <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1" class="errorlbl" style="color:Red;visibility:hidden;">البريد الإلكتروني غير صحيح</span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="col-md-10">
-                                                <span>الموضوع</span>
-                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
-                                                <input name="ctl00$ContentPlaceHolder1$txtSubject" type="text" id="ctl00_ContentPlaceHolder1_txtSubject" class="input-text full-width">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="booking-hotel">
-                                        <div class="form-group row">
-                                            <div class="col-md-10" style="text-align: right">
-                                                <span> ادخل محتوى الرسالة</span>
-                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
-                                                <textarea name="ctl00$ContentPlaceHolder1$txtBody" rows="10" cols="20" id="ctl00_ContentPlaceHolder1_txtBody" class="full-width"></textarea>
-                                                <small>الحد الاعلى 600 حرف</small>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    {{--<div class="form-group row">
-                                        <div class="full-width">
-                                            <div class="col-md-10">
-                                                <div id="reCAPTCHA"><div><iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeIpgYTAAAAAAZVDRQrOnglSzeFOjQReY4uChZZ&amp;hl=ar&amp;v=IU7gZ7o6RDdDE6U4Y1YJJWnN&amp;t=40016" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
-                                            </div>
-                                        </div>
-                                    </div>--}}
-                                    <div class="form-group row" style="text-align: right">
-                                        <div class="full-width">
-
-                                            <a onclick="return ValidateSuppliersContact();" id="ctl00_ContentPlaceHolder1_btnSave" usesubmitbehavior="true" class="button btn-large dull-blue" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSave&quot;, &quot;&quot;, true, &quot;supplierdetails&quot;, &quot;&quot;, false, true))">
-                                                <i class="soap-icon-recommend">&nbsp;</i>
-                                                ارسال</a>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="full-width">
-                                            <div class="form-group">
-                                                <div id="ctl00_ContentPlaceHolder1_AlertErrorDivSuppliersContact" class="alert alert-notice" style="visibility: hidden">
-                                                    <span id="ctl00_ContentPlaceHolder1_AlertErrorLableSuppliersContact"></span>
+                                            <div class="form-group row">
+                                                <div class="col-md-10">
+                                                    <span>الموضوع</span>
+                                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                    <input name="subject" type="text" id="subject" class="form-control">
 
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="booking-hotel">
+                                            <div class="form-group row">
+                                                <div class="col-md-10" style="text-align: right">
+                                                    <span> ادخل محتوى الرسالة</span>
+                                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3" class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                    <textarea name="message" rows="10" cols="20" id="subject_text" class="form-control"></textarea>
+                                                    <small>الحد الاعلى 600 حرف</small>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        {{--<div class="form-group row">
+                                            <div class="full-width">
+                                                <div class="col-md-10">
+                                                    <div id="reCAPTCHA"><div><iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeIpgYTAAAAAAZVDRQrOnglSzeFOjQReY4uChZZ&amp;hl=ar&amp;v=IU7gZ7o6RDdDE6U4Y1YJJWnN&amp;t=40016" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
+                                                </div>
+                                            </div>
+                                        </div>--}}
+                                        <div class="form-group row" style="text-align: right">
+                                            <div class="full-width">
+                                                <button style="color: white;" type="submit" class="button btn-large dull-blue" >
+                                                    <i class="soap-icon-recommend">&nbsp;</i>
+                                                    ارسال</button>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                </div>
+                                </form>
                             </div>
                             <div class="tab-pane" id="Suppliers-Products-Tab">
                                 <div class="booking-section">
@@ -199,48 +194,23 @@
                         <div class="box-title">
                             <div class="image-box style14" style="text-align: right">
                                 <h4>الشركات ذات صلة</h4>
+                                @foreach($relatedSuppliers as $relatedSupplier)
                                 <article class="box">
                                     <figure class="animated flipInX" data-animation-type="flipInX" style="animation-duration: 1s; visibility: visible;">
-                                        <a title="نجم للهندسة و التعهدات" target="_blank" href="SuppliersDetails.aspx?opc_id=1543 ">
+                                        <a title="{{ $relatedSupplier->name_ar }}" target="_blank" href="#">
                                             <img style="border: 1px solid #bebebe;width: 63px;height: 59px" src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg">
                                         </a>
                                     </figure>
                                     <div class="details">
                                         <h6 class="box-title">
-                                            <a href="SuppliersDetails.aspx?opc_id=1543" target="_blank" title="نجم للهندسة و التعهدات">
-                                                نجم للهندسة و التعهدات
-                                            </a>
+                                            <a href="#" target="_blank" title="نجم للهندسة و التعهدات">{{ $relatedSupplier->name_ar }}</a>
                                             <br>
                                             <small>عمان ، الاردن</small>
 
                                         </h6>
                                     </div>
                                 </article>
-
-
-
-
-
-                                <article class="box">
-                                    <figure class="animated flipInX" data-animation-type="flipInX" style="animation-duration: 1s; visibility: visible;">
-                                        <a title="شركة المنشآت الحديدية ذ.م.م" target="_blank" href="SuppliersDetails.aspx?opc_id=674 ">
-                                            <img style="border: 1px solid #bebebe;width: 63px;height: 59px" src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg">
-                                        </a>
-                                    </figure>
-                                    <div class="details">
-                                        <h6 class="box-title">
-                                            <a href="SuppliersDetails.aspx?opc_id=674" target="_blank" title="شركة المنشآت الحديدية ذ.م.م">
-                                                شركة المنشآت الحديدية ذ.م.م
-                                            </a>
-                                            <br>
-                                            <small>عمان ، الاردن</small>
-
-                                        </h6>
-                                    </div>
-                                </article>
-
-
-
+                                    @endforeach
                             </div>
                         </div>
                     </div>

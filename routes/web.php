@@ -35,9 +35,14 @@ Route::group([
     Route::prefix('supplier')->group(function (){
        Route::get('index', 'SupplierController@index')->name('mainSupplier');
        Route::get('/data/{id}/{slug}', 'SupplierController@show')->name('showSupplier');
+       Route::post('store/supplier', 'SupplierController@store')->name('storeSupplier');
     });
     /*****************************************************************/
     Route::post('search', 'HomeController@search')->name('search');
+    Route::get('sub_search/{text}', 'HomeController@subSearch')->name('sub_search');
+    Route::get('news_search/{text}', 'NewsController@newsSearch')->name('newsSearch');
+    Route::get('supplier_search/{text}', 'SupplierController@search')->name('supplierSearch');
+    Route::get('getSupplierType/{id}', 'SupplierController@supplierType')->name('supplierType');
     Route::get('institutions/{id}', 'HomeController@educationalInstitutions')->name('institutions');
     Route::get('news', 'SchoolController@news')->name('news');
     Route::get('newSubscription', 'SchoolController@newSubscription')->name('newSubscription');

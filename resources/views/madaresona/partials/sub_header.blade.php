@@ -26,34 +26,10 @@
                         </button>
                     </div>
                 </div>
-                {{--<label for="validationDefaultUsername">Username</label>--}}
-
-                {{--<div class="input-group">
-                    <div style="width: 350px;float: right;margin-top: -70px">
-                        <span><i class="fa fa-search"></i></span>
-                        <input type="text" name="search_text" id="search_text" class="form-control"
-                               style="text-align: right; font-size: 14px; border: 0px; outline: 0px; width: 95%; margin-top: 10px;"
-                               placeholder="بحث عن المدارس ورياض الأطفال">
-                        --}}{{--<div class="input-group-prepend">
-                            <button type="submit" class="btn btn-info" id="inputGroupPrepend2" style="top: 10px;"></button>
-                        </div>--}}{{--
-                    </div>
-                    <div style="width: 100px;float: right">
-                    <div class="input-group-prepend" style="margin-right: 3px;">
-                        <select name="search_select" class="form-control select-banner" id="search_select" style="direction: rtl">
-                            <option value="1">الإسم</option>
-                            <option value="2">العنوان</option>
-                            <option value="3">نوع المنهاج</option>
-                            <option value="4">الرسوم</option>
-                        </select>
-                    </div>
-                    </div>
-                </div>--}}
             </div>
 
             <div class="col-md-12 search-bar-banner"></div>
             <br>
-            {{--/*****************************************/--}}
         </div>
                 <div class="row">
                     <div class="col-md-8 location" style="display: none"></div>
@@ -77,9 +53,6 @@
                                     <option disabled selected>المنطقة</option>
                                 </select>
                             </div>
-
-
-
 
                         </div>
                     </div>
@@ -161,7 +134,6 @@
                     </div>
                 </div>
             </div>
-            {{--/*****************************************/--}}
 
         </div>
         </form>
@@ -184,31 +156,6 @@
             }
         }
     </style>
-
-    {{--<div class="row bannerLogo" >
-        <div class="col-md-5"></div>
-        <div class="col-md-6 bannerLogoImg">
-            <img src="{{ asset('bannerLogo.png') }}" alt=""
-                 data-mce-src="images/phone-wall.png">
-        </div>
-        <div class="col-md-1"></div>
-    </div>--}}
-    {{--<div class="row ">
-        <div class='col-lg-6 col-md-6 col-sm-6  '>
-
-            --}}{{--<hr class="space">
-            <hr class="space-lg">
-            <p><a class="btn btn-sm btn-circle shadow-1 full-width-sm" href="https://1.envato.market/Dmj52"
-                  #f5f5f5 rel="noopener" data-mce-href="https://1.envato.market/Dmj52">Purchase
-                    now</a><span class="space">&nbsp;</span> <a class="btn-text active scroll-to hidden-sm"
-                                                                href="#demos" data-mce-href="#demos">View
-                    demos</a></p>--}}{{--
-        </div>
-        <div class='col-lg-6 col-md-6 col-sm-6'></div>
-        --}}{{--<img class="width-min-900" src="{{ asset('assets/images/phone-walla5e7.png') }}" alt=""
-                data-mce-src="images/phone-wall.png">--}}{{--
-    </div>--}}
-
 
 </div>
 <div class="row" style="position: relative;top: -50px;height: 5px;">

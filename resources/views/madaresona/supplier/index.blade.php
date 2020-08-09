@@ -7,24 +7,24 @@
             <div class=" fade-left" style="padding-top: 130px !important;direction: rtl;" id="schoolsGrid">
                 <div class="travelo-box clearfix">
                     <div class="form-group col-xs-12 col-md-9">
-                        <div style=" width: 100%;text-align: right;color: #838383 ">البحث </div>
+                        <div style=" width: 100%;text-align: right;color: #838383 ">البحث</div>
                         <div class="with-icon full-width">
-                            <input name="ctl00$ContentPlaceHolder1$txtBuyerProductsName" type="text"
-                                   id="ctl00_ContentPlaceHolder1_txtBuyerProductsName" class="input-text full-width"
+                            <input name="search_text" type="text"
+                                   id="search_text" class="form-control"
                                    placeholder=" ابحث هنا ">
                         </div>
 
                     </div>
                     <div class="form-group col-xs-8 col-md-3" style="padding-top: 20px;">
                         <label>&nbsp;</label>
-                        <a id="ctl00_ContentPlaceHolder1_btnsearch" usesubmitbehavior="true"
+                        <a id="search_button"
                            class="button btn-medium dull-blue"
-                           href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$btnsearch','')">
+                           href="#">
                             <i class="soap-icon-search">&nbsp;</i>
                             بحث</a>
                     </div>
                 </div>
-                <div class="car-list listing-style3 car">
+                <div class="car-list listing-style3 car" id="supplierGrid">
 
                     @foreach($suppliers as $supplier)
                         <article class="box">
@@ -41,7 +41,8 @@
                                         <h4 class="box-title">
                                             <a title="{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}"
                                                href="# ">{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}</a>
-                                            <small>{{(app()->getLocale() == 'en')? $supplier->city->city_name_en :$supplier->city->city_name_ar}}&nbsp;- {{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}</small>
+                                            <small>{{(app()->getLocale() == 'en')? $supplier->city->city_name_en :$supplier->city->city_name_ar}}
+                                                &nbsp;- {{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}</small>
                                         </h4>
 
                                     </div>
@@ -84,7 +85,7 @@
                                         <dt class="skin-color">المنطقة</dt>
                                         <dd>{{(app()->getLocale() == 'en') ?$supplier->region->area_name_en:$supplier->region->area_name_ar }}</dd>
                                         <dt class="skin-color" style="font-size: 9px;">البريد الالكتروني</dt>
-                                        <dd>asd@asd.com</dd>
+                                        <dd>{{ $supplier->email }}</dd>
                                     </dl>
                                 </div>
                                 <div class="action col-xs-6 col-sm-2">
@@ -132,4 +133,36 @@
 
 @section('content')
     @include('modal')
+@endsection
+
+@section('script')
+
+    <script>
+
+        $('#search_button').on('click', function () {
+            var text = $('#search_text').val();
+            $.ajax({
+                type: 'get',
+                url: '/ar/supplier_search/'+ text,
+                success: function (data) {
+                    $('#supplierGrid').html(data);
+                }
+            })
+        });
+
+
+        $('#supplierType').on('change', function () {
+            var id = $('#supplierType').val();
+            $.ajax({
+                type: 'get',
+                url: '/ar/getSupplierType/'+id,
+                success: function (data) {
+                    $('#supplierGrid').html(data);
+                }
+            })
+
+        })
+
+    </script>
+
 @endsection
