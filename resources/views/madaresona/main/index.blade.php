@@ -221,8 +221,8 @@
 
     <section class="section-base" style="margin-bottom: 20px;">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-7">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
                 <div class=" fade-left" style="padding: 0px !important;" id="schoolsGrid">
                     <hr class="space"/>
                     <div class="infinite-scroll">

@@ -3,7 +3,7 @@
     <div class="infinite-scroll">
         <div class="row">
             @foreach($schools as $school)
-                <div class="col-md-3" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
                     <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
                     style="border: 1px #f1f4f9 solid">
                         <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
