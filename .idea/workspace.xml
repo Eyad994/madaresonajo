@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c51ba15b-8494-414e-83c9-db22b2e456c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/schoolsGrid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/schoolsGrid.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skin_ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/skin_ar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/schoolsGrid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
@@ -112,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PricingController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="17" />
+            <state relative-caret-position="362">
+              <caret line="2164" column="25" selection-start-line="2164" selection-start-column="25" selection-end-line="2164" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -189,7 +188,6 @@
         <option value="$PROJECT_DIR$/storage/framework/views/f33fb2d21d6e2c942c5f7ec3a69a2d1f9ce8e33a.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
         <option value="$PROJECT_DIR$/public/Webar/css/uxcore4.min.css" />
-        <option value="$PROJECT_DIR$/public/assets/css/skin_ar.css" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/contactUs.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/help/suggestion.blade.php" />
@@ -218,6 +216,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/schoolsGrid.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/skin_ar.css" />
       </list>
     </option>
   </component>
@@ -362,6 +361,30 @@
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
               <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="contact" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -476,12 +499,12 @@
       <workItem from="1596835743982" duration="29000" />
       <workItem from="1596835784055" duration="6659000" />
       <workItem from="1596876955917" duration="10067000" />
-      <workItem from="1596887986399" duration="14863000" />
+      <workItem from="1596887986399" duration="15394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84390000" />
+    <option name="totallyTimeSpent" value="84921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -620,13 +643,6 @@
         <state relative-caret-position="731">
           <caret line="43" column="176" selection-start-line="43" selection-start-column="176" selection-end-line="43" selection-end-column="176" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="2152" column="1" lean-forward="true" selection-start-line="2152" selection-start-column="1" selection-end-line="2152" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -877,6 +893,13 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="2164" column="25" selection-start-line="2164" selection-start-column="25" selection-end-line="2164" selection-end-column="25" />
         </state>
       </provider>
     </entry>
