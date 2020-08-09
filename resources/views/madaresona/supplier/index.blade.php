@@ -31,7 +31,7 @@
                             <figure class="col-xs-3">
                                 <a title="Abu Moujeh Engineering and Construction"
                                    href="SuppliersDetails.aspx?opc_id=465 ">
-                                    <img src="{{ env('IMAGE_URL') }}{{--https://dashboard.madaresonajo.com/images/Talayie Alhema Islamic Academy/1593673338.png--}}"
+                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}"
                                          style="height: 115px;width: 160px;">
                                 </a>
                             </figure>

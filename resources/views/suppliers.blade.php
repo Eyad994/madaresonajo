@@ -5,7 +5,7 @@
     }
 </style>
 @if(count($specialSuppliers) > 0)
-    <div style=" box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; background: #fff;">
+    <div style=" box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; background: #fff;border-radius: 10px">
         <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
         @foreach($specialSuppliers as $supplier)
             <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">

@@ -253,7 +253,7 @@
                 </div>
             </div>
             <div class="col-md-2" style="padding-top: 80px">
-                <div style="border: 1px solid #bebebe">
+                <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                     <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات التعليمية</div>
                     <div
                             @if((app()->getLocale() == 'ar'))
@@ -273,7 +273,7 @@
                         </select>
                     </div>
                 </div>
-                <div style="border: 1px solid #bebebe;margin-top: 50px">
+                <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
                     <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">بحث</div>
                     <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
                         <input type="text" name="search_text" id="search_text" class="form-control" placeholder="بحث " style="border-radius: 0px;margin-right: -1px;">
@@ -285,7 +285,7 @@
                     </div>
                 </div>
                 @if(count($specialSuppliers) > 0)
-                <div style="border: 1px solid #bebebe;margin-top: 50px">
+                <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
                     <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
                     @foreach($specialSuppliers as $supplier)
                         <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">

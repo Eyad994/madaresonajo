@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c51ba15b-8494-414e-83c9-db22b2e456c6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Webar/css/style16.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Webar/css/style16.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/contact/css/main_ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact/css/main_ar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ads.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ads.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/suppliers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/suppliers.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,59 +25,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
-              <caret line="278" column="117" selection-start-line="278" selection-start-column="117" selection-end-line="278" selection-end-column="117" />
+            <state relative-caret-position="280">
+              <caret line="285" column="22" lean-forward="true" selection-start-line="275" selection-start-column="14" selection-end-line="285" selection-end-column="22" />
               <folding>
+                <element signature="e#9272#9297#0#HTML" expanded="true" />
+                <element signature="e#9320#9353#0#HTML" expanded="true" />
+                <element signature="e#10666#10716#0#HTML" expanded="true" />
+                <element signature="e#10661#11474#0#HTML" />
                 <element signature="e#10776#10828#0#HTML" expanded="true" />
+                <element signature="e#11546#11596#0#HTML" expanded="true" />
+                <element signature="e#20784#23493#0#Blade" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/suppliers.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="112" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="112" />
+              <folding>
+                <element signature="e#144#269#0#HTML" expanded="true" />
+                <element signature="e#299#351#0#HTML" expanded="true" />
+                <element signature="e#662#707#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="12" selection-start-line="3" selection-end-line="4" />
+              <folding>
+                <element signature="e#60#184#0#HTML" expanded="true" />
+                <element signature="e#262#302#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
+            <state relative-caret-position="3078">
               <caret line="162" column="46" selection-start-line="162" selection-start-column="46" selection-end-line="162" selection-end-column="46" />
-              <folding>
-                <element signature="e#59#106#0#HTML" expanded="true" />
-                <element signature="e#1340#1362#0#HTML" expanded="true" />
-                <element signature="e#1908#1947#0#HTML" expanded="true" />
-                <element signature="e#9673#9716#0#HTML" expanded="true" />
-                <element signature="e#9449#9522#0#HTML" expanded="true" />
-                <element signature="e#9633#9706#0#HTML" expanded="true" />
-                <element signature="e#9799#9872#0#HTML" expanded="true" />
-                <element signature="e#9987#10060#0#HTML" expanded="true" />
-                <element signature="e#16943#16965#0#HTML" expanded="true" />
-                <element signature="e#22399#22428#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/contact/css/main.css">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1002">
-              <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+            <state relative-caret-position="429">
+              <caret line="73" column="62" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/contact/css/main_ar.css">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Webar/css/style16.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret column="1464" selection-start-column="1464" selection-end-column="1464" />
+            <state relative-caret-position="480">
+              <caret line="703" column="76" lean-forward="true" selection-start-line="703" selection-start-column="76" selection-end-line="703" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -85,40 +97,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-              <folding>
-                <element signature="e#55#102#0#HTML" expanded="true" />
-                <element signature="e#2045#2080#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="133" lean-forward="true" selection-start-line="2" selection-start-column="133" selection-end-line="2" selection-end-column="133" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="450">
+              <caret line="33" column="131" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="131" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="150" column="101" lean-forward="true" selection-start-line="150" selection-start-column="101" selection-end-line="150" selection-end-column="101" />
+            <state relative-caret-position="228">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+              <folding>
+                <element signature="e#50#74#0#HTML" expanded="true" />
+                <element signature="e#56#77#0#HTML" expanded="true" />
+                <element signature="e#409#1438#0#HTML" />
+                <element signature="e#457#563#0#HTML" expanded="true" />
+                <element signature="e#452#1337#0#HTML" />
+                <element signature="e#627#679#0#HTML" expanded="true" />
+                <element signature="e#2586#5274#0#HTML" />
+                <element signature="e#450#570#0#HTML" expanded="true" />
+                <element signature="e#2747#2816#0#HTML" expanded="true" />
+                <element signature="e#748#885#0#HTML" expanded="true" />
+                <element signature="e#2570#2591#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,17 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="112" column="73" lean-forward="true" selection-start-line="112" selection-start-column="73" selection-end-line="112" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/partials/navbar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="462" column="51" selection-start-line="462" selection-start-column="51" selection-end-line="462" selection-end-column="51" />
+            <state relative-caret-position="323">
+              <caret line="145" column="150" selection-start-line="145" selection-start-column="150" selection-end-line="145" selection-end-column="150" />
             </state>
           </provider>
         </entry>
@@ -151,7 +144,6 @@
       <find>price</find>
       <find>price-button</find>
       <find>schoolsGrid</find>
-      <find>ads</find>
       <find>supplier</find>
       <find>mordon_part</find>
       <find>scrollamount</find>
@@ -172,9 +164,10 @@
       <find>.info-success</find>
       <find>#98ce44</find>
       <find>a.button.green,button.green</find>
-      <find>Suppliers-Contacts-Tab</find>
       <find>1.0833em</find>
+      <find>Suppliers-Contacts-Tab</find>
       <find>بحث</find>
+      <find>ads</find>
     </findStrings>
     <replaceStrings>
       <replace>#1e546c</replace>
@@ -224,12 +217,16 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
         <option value="$PROJECT_DIR$/public/contact/css/main_ar.css" />
         <option value="$PROJECT_DIR$/public/Webar/css/style16.css" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/suppliers.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/ads.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" />
       </list>
     </option>
   </component>
@@ -336,8 +333,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="70" />
-    <option name="y" value="114" />
+    <option name="x" value="2000" />
+    <option name="y" value="331" />
     <option name="width" value="1840" />
     <option name="height" value="789" />
   </component>
@@ -395,7 +392,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="madaresona" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
@@ -403,7 +400,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="madaresona" type="462c0819:PsiDirectoryNode" />
-              <item name="pricing" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
@@ -488,15 +485,15 @@
       <workItem from="1596835743982" duration="29000" />
       <workItem from="1596835784055" duration="6659000" />
       <workItem from="1596876955917" duration="10067000" />
-      <workItem from="1596887986399" duration="8311000" />
+      <workItem from="1596887986399" duration="11336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77838000" />
+    <option name="totallyTimeSpent" value="80863000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
+    <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2271715" />
@@ -514,7 +511,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.23307437" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.23307437" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -642,14 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="88" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -672,24 +661,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/showMore.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="98" selection-start-line="2" selection-start-column="98" selection-end-line="2" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -731,39 +706,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="725" column="18" selection-start-line="725" selection-start-column="18" selection-end-line="725" selection-end-column="35" />
-          <folding>
-            <element signature="e#3877#35034#0#HTML" />
-            <element signature="e#35052#38672#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/suppliers.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-          <folding>
-            <element signature="e#55#102#0#HTML" expanded="true" />
-            <element signature="e#2045#2080#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,53 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="162" column="46" selection-start-line="162" selection-start-column="46" selection-end-line="162" selection-end-column="46" />
-          <folding>
-            <element signature="e#59#106#0#HTML" expanded="true" />
-            <element signature="e#1340#1362#0#HTML" expanded="true" />
-            <element signature="e#1908#1947#0#HTML" expanded="true" />
-            <element signature="e#9673#9716#0#HTML" expanded="true" />
-            <element signature="e#9449#9522#0#HTML" expanded="true" />
-            <element signature="e#9633#9706#0#HTML" expanded="true" />
-            <element signature="e#9799#9872#0#HTML" expanded="true" />
-            <element signature="e#9987#10060#0#HTML" expanded="true" />
-            <element signature="e#16943#16965#0#HTML" expanded="true" />
-            <element signature="e#22399#22428#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/contact/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1002">
-          <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/contact/css/main_ar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Webar/css/style16.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret column="1464" selection-start-column="1464" selection-end-column="1464" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="278" column="117" selection-start-line="278" selection-start-column="117" selection-end-line="278" selection-end-column="117" />
-          <folding>
-            <element signature="e#10776#10828#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,10 +734,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+    <entry file="file://$PROJECT_DIR$/public/contact/css/main_ar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="112" column="73" lean-forward="true" selection-start-line="112" selection-start-column="73" selection-end-line="112" selection-end-column="73" />
+        <state relative-caret-position="228">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -852,6 +755,107 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contact/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="12" selection-start-line="3" selection-end-line="4" />
+          <folding>
+            <element signature="e#60#184#0#HTML" expanded="true" />
+            <element signature="e#262#302#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="145" column="150" selection-start-line="145" selection-start-column="150" selection-end-line="145" selection-end-column="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="73" column="62" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="285" column="22" lean-forward="true" selection-start-line="275" selection-start-column="14" selection-end-line="285" selection-end-column="22" />
+          <folding>
+            <element signature="e#9272#9297#0#HTML" expanded="true" />
+            <element signature="e#9320#9353#0#HTML" expanded="true" />
+            <element signature="e#10666#10716#0#HTML" expanded="true" />
+            <element signature="e#10661#11474#0#HTML" />
+            <element signature="e#10776#10828#0#HTML" expanded="true" />
+            <element signature="e#11546#11596#0#HTML" expanded="true" />
+            <element signature="e#20784#23493#0#Blade" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#50#74#0#HTML" expanded="true" />
+            <element signature="e#56#77#0#HTML" expanded="true" />
+            <element signature="e#409#1438#0#HTML" />
+            <element signature="e#457#563#0#HTML" expanded="true" />
+            <element signature="e#452#1337#0#HTML" />
+            <element signature="e#627#679#0#HTML" expanded="true" />
+            <element signature="e#2586#5274#0#HTML" />
+            <element signature="e#450#570#0#HTML" expanded="true" />
+            <element signature="e#2747#2816#0#HTML" expanded="true" />
+            <element signature="e#748#885#0#HTML" expanded="true" />
+            <element signature="e#2570#2591#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="703" column="76" lean-forward="true" selection-start-line="703" selection-start-column="76" selection-end-line="703" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/suppliers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="112" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="112" />
+          <folding>
+            <element signature="e#144#269#0#HTML" expanded="true" />
+            <element signature="e#299#351#0#HTML" expanded="true" />
+            <element signature="e#662#707#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="131" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="162" column="46" selection-start-line="162" selection-start-column="46" selection-end-line="162" selection-end-column="46" />
         </state>
       </provider>
     </entry>
