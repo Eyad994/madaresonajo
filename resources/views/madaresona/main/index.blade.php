@@ -96,7 +96,8 @@
                 {{__('index.special_schools')}}
             </h2>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
                     <div class="owl-carousel owl-theme"
                          style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
                         @foreach($specialSchools as $school)
@@ -107,8 +108,7 @@
                                     <a class="img-box {{--show-school--}}" id="{{ $school->id }}" title="{{ $school->name_ar }}"
                                        href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                        slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                             alt="" style="width: 120px; height: 120px">
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="" style="width: 100px; height: 100px; opacity: .5 !important;">
                                     </a>
                                 </div>
                             </div>
@@ -122,6 +122,7 @@
                         <span class="my-next-button"><i class="fad fa-chevron-right" aria-hidden="true"></i></span>
                     </div>
                 </div>
+                <div class="col-md-1"></div>
             </div>
         </div>
 
@@ -149,13 +150,13 @@
             .my-prev-button{
                 position: absolute !important;
                 top: 0px !important;
-                height: 168px !important;
+                height: 149px !important;
                 background: #2b596b;
                 z-index: 1 !important;
                 left: 3px !important;
                 width: 30px !important;
                 border-radius: 5px 0px 0px 5px !important;
-                line-height: 170px !important;
+                line-height: 149px !important;
                 color: #ffff !important;
                 padding-left:10px;
                 font-size: 22px;
@@ -163,13 +164,13 @@
             .my-next-button{
                 position: absolute !important;
                 top: 0px !important;
-                height: 168px !important;
+                height: 149px !important;
                 background: #2b596b;
                 z-index: 1 !important;
                 right: -9px !important;
                 width: 30px !important;
                 border-radius: 0px 5px 5px 0px !important;
-                line-height: 170px !important;
+                line-height: 149px !important;
                 color: #ffff !important;
                 padding-left: 10px;
                 font-size: 22px;
@@ -235,7 +236,7 @@
                                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                                 alt="" style="width: 100%; height: 200px">
+                                                 alt="" style="width: 100%; height: 200px;">
                                         </a>
                                         <div class="caption">
                                             <p style="text-align: center;">{{ $school->name_ar }}</p>
