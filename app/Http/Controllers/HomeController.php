@@ -21,15 +21,9 @@ class HomeController extends Controller
 
     use VisitorTrait;
 
-    public function __construct()
-    {
-
-        $this->storeVisitor();
-    }
-
     public function index($locale = 'ar')
     {
-
+        $visitorCount = $this->storeVisitor();
         App::setLocale($locale);
         $schoolsQuery = DB::select(
             'SELECT  (
