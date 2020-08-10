@@ -1,16 +1,16 @@
 
     <hr class="space"/>
     <div class="infinite-scroll">
-        <div class="row">
+        <div class="row" style=" {{(app()->getLocale() == 'ar') ?'text-align: right; direction: rtl;':''}}">
             @foreach($schools as $school)
-                <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                <div class="col-md-2" style="margin-top: 20px;">
                     <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
-                    style="border: 1px #f1f4f9 solid">
+                    style="border: 1px #fff solid; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                         <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                 alt="" style="width: 100%; height: 200px">
+                                 alt="" style="width: 100%; height: 180px">
                         </a>
                         <div class="caption">
                             <p style="text-align: center;">{{ $school->name_ar }}</p>

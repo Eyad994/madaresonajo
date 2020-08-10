@@ -61,15 +61,9 @@
             margin-right: 10px;
             float: right;
         }
-        .news-banner{
-            height: 80px;
-            margin-top: 40px;
-        }
+
         @media (max-width: 777px) {
-            .news-banner-col-1{
-                height: 80px;
-                margin-top: 60px;
-            }
+
         }
 
         .mce-item-table tr td{
@@ -149,9 +143,9 @@
             }
             .my-prev-button{
                 position: absolute !important;
-                top: 0px !important;
-                height: 149px !important;
-                background: #2b596b;
+                top: -1px !important;
+                height: 150px !important;
+                background: #d4d1d1;
                 z-index: 1 !important;
                 left: 3px !important;
                 width: 30px !important;
@@ -163,20 +157,21 @@
             }
             .my-next-button{
                 position: absolute !important;
-                top: 0px !important;
-                height: 149px !important;
-                background: #2b596b;
+                top: -1px !important;
+                height: 150px !important;
+                background: #d4d1d1;
                 z-index: 1 !important;
                 right: -9px !important;
                 width: 30px !important;
                 border-radius: 0px 5px 5px 0px !important;
                 line-height: 149px !important;
-                color: #ffff !important;
+                color: #000 !important;
                 padding-left: 10px;
                 font-size: 22px;
             }
             .my-next-button:hover, .my-prev-button:hover{
-                background: #ff6000
+                background: #2b596b;
+                color: #fff !important;
             }
         </style>
         <script>
@@ -231,12 +226,12 @@
                             @foreach($schools as $school)
                                 <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
                                     <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
-                                         style="border: 1px #f1f4f9 solid">
+                                         style="border: 1px #fff solid; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                                         <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
                                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                                 alt="" style="width: 100%; height: 200px;">
+                                                 alt="" style="width: 100%; height: 180px;">
                                         </a>
                                         <div class="caption">
                                             <p style="text-align: center;">{{ $school->name_ar }}</p>
@@ -388,7 +383,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div >
         </div>
     </section>
 
@@ -406,7 +401,7 @@
         $(function () {
             $('.infinite-scroll').jscroll({
                 autoTrigger: true,
-                loadingHtml: '<img class="center-block" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..."/>',
+                loadingHtml: '<img class="center-block" style="width: 100px;height: 100px;" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..."/>',
                 padding: 5,
                 nextSelector: '.pagination li.active + li a',
                 contentSelector: 'div.infinite-scroll',
