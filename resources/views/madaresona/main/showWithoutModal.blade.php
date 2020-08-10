@@ -694,7 +694,7 @@
                             <div class="card-body" style="{{ (app()->getLocale() == 'ar') ?'direction: rtl; text-align: right;' : 'direction: ltr; text-align: left;' }}">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }}"
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/news/{{ $item['img'] }}"
                                              alt="Avatar" style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
                                     </div>
                                     <div class="col-md-9 container">

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c51ba15b-8494-414e-83c9-db22b2e456c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/madaresonajo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/madaresonajo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +20,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="8588">
               <caret line="452" column="19" selection-start-line="452" selection-start-column="19" selection-end-line="452" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="95" column="64" lean-forward="true" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -57,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="697" column="58" selection-start-line="697" selection-start-column="58" selection-end-line="697" selection-end-column="58" />
+            <state relative-caret-position="147">
+              <caret line="696" column="98" selection-start-line="696" selection-start-column="98" selection-end-line="696" selection-end-column="98" />
               <folding>
                 <element signature="e#39707#39861#0#HTML" expanded="true" />
                 <element signature="e#40604#40690#0#HTML" expanded="true" />
@@ -316,6 +322,24 @@
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
               <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,12 +443,12 @@
       <workItem from="1596632261830" duration="3279000" />
       <workItem from="1596727511923" duration="17201000" />
       <workItem from="1597002321983" duration="7529000" />
-      <workItem from="1597042372874" duration="835000" />
+      <workItem from="1597042372874" duration="1195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94516000" />
+    <option name="totallyTimeSpent" value="94876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -669,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3342">
-          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -768,10 +785,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="95" column="64" lean-forward="true" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="697" column="58" selection-start-line="697" selection-start-column="58" selection-end-line="697" selection-end-column="58" />
+        <state relative-caret-position="147">
+          <caret line="696" column="98" selection-start-line="696" selection-start-column="98" selection-end-line="696" selection-end-column="98" />
           <folding>
             <element signature="e#39707#39861#0#HTML" expanded="true" />
             <element signature="e#40604#40690#0#HTML" expanded="true" />
