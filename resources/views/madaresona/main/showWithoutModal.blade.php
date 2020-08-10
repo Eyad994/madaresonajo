@@ -705,7 +705,7 @@
                                             <div class="col-md-12">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
                                             <div class="col-md-12"
                                                  style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
-                                                <a href="/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
+                                                <a href="/{{app()->getLocale()}}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
                                                    class="btn btn-info"
                                                 >{{ __('show.more') }}</a>
                                             </div>
