@@ -93,7 +93,7 @@ class SchoolController extends Controller
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
         $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
-        $news = News::where('user_id', $school->user_id)->get();
+        $news = News::where('user_id', $school->user_id)-> latest()->get();
         $transportations = Transportation::where('school_id', $school->id)->get();
         $premiums = Premium::where('school_id', $school->id)->get();
 
@@ -111,7 +111,7 @@ class SchoolController extends Controller
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
         $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
-        $news = News::where('user_id', $school->user_id)->orderBy('order', 'asc')->get();
+        $news = News::where('user_id', $school->user_id)->latest()->get();
         $transportations = Transportation::where('school_id', $school->id)->get();
         $premiums = Premium::where('school_id', $school->id)->get();
 
@@ -129,7 +129,7 @@ class SchoolController extends Controller
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
         $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
-        $news = News::where('user_id', $school->user_id)->orderBy('order', 'asc')->get();
+        $news = News::where('user_id', $school->user_id)->latest()->get();
         $transportations = Transportation::where('school_id', $school->id)->get();
         $premiums = Premium::where('school_id', $school->id)->get();
 
