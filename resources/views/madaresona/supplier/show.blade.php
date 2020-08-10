@@ -259,13 +259,12 @@
                                     <figure class="animated flipInX" data-animation-type="flipInX"
                                             style="animation-duration: 1s; visibility: visible;">
                                         <a title="{{ $relatedSupplier->name_ar }}" target="_blank" href="#">
-                                            <img style="border: 1px solid #bebebe;width: 63px;height: 59px"
-                                                 src="https://www.tenderjo.com/DataFiles/LOGO/AbuMoujehEngineeringandConstruction20160526100800Abu-Moujeh-Engineering-and-Construction.jpg">
+                                            <img style="border: 1px solid #bebebe;width: 63px;height: 59px" src="{{ env('IMAGE_URL') }}/images/{{ $relatedSupplier->name_en }}/{{ $relatedSupplier->supplier_logo }}">
                                         </a>
                                     </figure>
                                     <div class="details">
                                         <h6 class="box-title">
-                                            <a href="#" target="_blank"
+                                            <a href="/{{ app()->getLocale() }}/supplier/data/{{$relatedSupplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($relatedSupplier->name_en) : trim($relatedSupplier->name_ar)) }}" target="_blank"
                                                title="{{ $relatedSupplier->name_ar }}">{{ $relatedSupplier->name_ar }}</a>
                                             <br>
                                             <small>عمان ، الاردن</small>

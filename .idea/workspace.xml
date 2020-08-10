@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
+            <state relative-caret-position="367">
+              <caret line="266" column="233" selection-start-line="266" selection-start-column="233" selection-end-line="266" selection-end-column="233" />
               <folding>
                 <element signature="e#7772#7792#0#HTML" expanded="true" />
               </folding>
@@ -35,6 +35,15 @@
               <folding>
                 <element signature="e#35916#35997#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="91" column="218" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="218" />
             </state>
           </provider>
         </entry>
@@ -392,18 +401,18 @@
       <workItem from="1597002321983" duration="7529000" />
       <workItem from="1597042372874" duration="3733000" />
       <workItem from="1597048957224" duration="69000" />
-      <workItem from="1597065904634" duration="1270000" />
+      <workItem from="1597065904634" duration="1540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98753000" />
+    <option name="totallyTimeSpent" value="99023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26002228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26002228" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -415,7 +424,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23751387" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23751387" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -697,24 +706,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3021">
-          <caret line="159" column="50" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="54" column="80" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -735,10 +730,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="54" column="80" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="91" column="218" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="218" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
+        <state relative-caret-position="367">
+          <caret line="266" column="233" selection-start-line="266" selection-start-column="233" selection-end-line="266" selection-end-column="233" />
           <folding>
             <element signature="e#7772#7792#0#HTML" expanded="true" />
           </folding>
