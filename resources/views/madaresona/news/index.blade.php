@@ -32,7 +32,7 @@
                     <div class="col-md-8" id="news_grid"
                          style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;padding: 20px;border-radius: 10px">
                         <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> الأخبار</h2>
-                            {{-- @foreach($news as $item)
+                             @foreach($news as $item)
                                  <div class="card"
                                       style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                                      <div class="card-body">
@@ -60,7 +60,7 @@
                                          </div>
                                      </div>
                                  </div>
-                            @endforeach--}}
+                            @endforeach
                         <h4 style="color: #5bc0de;cursor: pointer; display: none">المزيد</h4>
 
                     </div>

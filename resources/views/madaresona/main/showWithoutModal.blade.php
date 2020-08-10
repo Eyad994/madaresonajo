@@ -694,9 +694,8 @@
                             <div class="card-body" style="{{ (app()->getLocale() == 'ar') ?'direction: rtl; text-align: right;' : 'direction: ltr; text-align: left;' }}">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="https://dashboard.madaresonajo.com/images/AL OMAM SCHOOLS/news/1596694679_news.jpg"
-                                             alt="Avatar"
-                                             style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }}"
+                                             alt="Avatar" style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
                                     </div>
                                     <div class="col-md-9 container">
                                         <div class="row">
@@ -706,7 +705,7 @@
                                             <div class="col-md-12">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
                                             <div class="col-md-12"
                                                  style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
-                                                <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
+                                                <a href="/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
                                                    class="btn btn-info"
                                                 >{{ __('show.more') }}</a>
                                             </div>
