@@ -103,7 +103,7 @@
                                 </div>
                                 <div class="long-description" style="direction: rtl;text-align: right;">
                                     <h4 style="font-weight: bold">نظرة عامة</h4>
-                                    <p id="ctl00_ContentPlaceHolder1_bDeitiles" style="text-align: justify;margin-top: 0px">{{(app()->getLocale() == 'ar') ?$supplier->supplier_details_ar :$supplier->supplier_details_en }}</p>
+                                    <p id="ctl00_ContentPlaceHolder1_bDeitiles" style="text-align: justify;margin-top: 0px">{!!(app()->getLocale() == 'ar') ?$supplier->supplier_details_ar :$supplier->supplier_details_en !!}</p>
                                 </div>
                                 <div style="width: 100%">
                                     <h4 style="font-weight: bold;text-align: right">المنتجات والخدمات</h4>
@@ -203,7 +203,7 @@
                                     </figure>
                                     <div class="details">
                                         <h6 class="box-title">
-                                            <a href="#" target="_blank" title="نجم للهندسة و التعهدات">{{ $relatedSupplier->name_ar }}</a>
+                                            <a href="#" target="_blank" title="{{ $relatedSupplier->name_ar }}">{{ $relatedSupplier->name_ar }}</a>
                                             <br>
                                             <small>عمان ، الاردن</small>
 
