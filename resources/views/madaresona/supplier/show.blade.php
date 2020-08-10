@@ -264,7 +264,7 @@
                                     </figure>
                                     <div class="details">
                                         <h6 class="box-title">
-                                            <a href="/{{ app()->getLocale() }}/supplier/data/{{$relatedSupplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($relatedSupplier->name_en) : trim($relatedSupplier->name_ar)) }}" target="_blank"
+                                            <a href="/{{ app()->getLocale() }}/supplier/data/{{$relatedSupplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($relatedSupplier->name_en) : trim($relatedSupplier->name_ar)) }}"
                                                title="{{ $relatedSupplier->name_ar }}">{{ $relatedSupplier->name_ar }}</a>
                                             <br>
                                             <small>عمان ، الاردن</small>
