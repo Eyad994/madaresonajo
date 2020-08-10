@@ -640,7 +640,7 @@
                     <div class="row schoolLogo">
                         <div class="col-md-12" style="    text-align: center;">
                             <img class="rounded"
-                                 style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 250px;height:120px"
+                                 style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 160px;height:120px"
                                  src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
                                  alt="">
                         </div>
