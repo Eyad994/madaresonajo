@@ -18,13 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="102" column="54" selection-start-line="102" selection-start-column="54" selection-end-line="102" selection-end-column="54" />
-              <caret line="110" column="54" selection-start-line="110" selection-start-column="54" selection-end-line="110" selection-end-column="54" />
-              <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
-              <caret line="125" column="54" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
-              <caret line="133" column="54" selection-start-line="133" selection-start-column="54" selection-end-line="133" selection-end-column="54" />
-              <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+            <state relative-caret-position="177">
+              <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
               <folding>
                 <element signature="e#7772#7792#0#HTML" expanded="true" />
               </folding>
@@ -48,7 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.info-success</find>
       <find>#98ce44</find>
       <find>a.button.green,button.green</find>
       <find>1.0833em</find>
@@ -78,6 +72,7 @@
       <find>href=&quot;#Suppliers-Contacts-Tab&quot;</find>
       <find>info-success</find>
       <find>image-box style14</find>
+      <find>&lt;br&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>#1e546c</replace>
@@ -397,12 +392,12 @@
       <workItem from="1597002321983" duration="7529000" />
       <workItem from="1597042372874" duration="3733000" />
       <workItem from="1597048957224" duration="69000" />
-      <workItem from="1597065904634" duration="1185000" />
+      <workItem from="1597065904634" duration="1270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98668000" />
+    <option name="totallyTimeSpent" value="98753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -742,13 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="102" column="54" selection-start-line="102" selection-start-column="54" selection-end-line="102" selection-end-column="54" />
-          <caret line="110" column="54" selection-start-line="110" selection-start-column="54" selection-end-line="110" selection-end-column="54" />
-          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
-          <caret line="125" column="54" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
-          <caret line="133" column="54" selection-start-line="133" selection-start-column="54" selection-end-line="133" selection-end-column="54" />
-          <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+        <state relative-caret-position="177">
+          <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
           <folding>
             <element signature="e#7772#7792#0#HTML" expanded="true" />
           </folding>

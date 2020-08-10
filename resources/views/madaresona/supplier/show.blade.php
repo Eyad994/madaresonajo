@@ -28,8 +28,6 @@
                             <hr style="margin: 20px 0">
                             <div class="main-rating table-wrapper full-width hidden-table-sms intro">
                                 <article class="image-box box cruise listing-style1 photo table-cell col-sm-4">
-                                    <br>
-                                    <br>
                                     <figure>
                                         <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}"
                                              id="ctl00_ContentPlaceHolder1_imgLogoCompany" width="270" height="160"
