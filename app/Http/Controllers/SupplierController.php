@@ -36,7 +36,7 @@ class SupplierController extends Controller
         $supplier = Supplier::where('id',$id)->first();
         $supplierTypes = explode(',', $supplier->supplier_type);
         $supplierServices = SupplierType::whereIn('id', $supplierTypes)->get();
-        $relatedSuppliers = Supplier::whereIn('supplier_type', $supplierTypes)->take(5)->get();
+        $relatedSuppliers = Supplier::where('id', '!=', $id)->whereIn('supplier_type', $supplierTypes)->take(5)->get();
 
         return view('madaresona.supplier.show', compact('supplier', 'supplierServices', 'relatedSuppliers'));
     }
