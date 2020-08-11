@@ -29,19 +29,19 @@
                     @foreach($suppliers as $supplier)
                         <article class="box">
                             <figure class="col-xs-3">
-                                <a title="Abu Moujeh Engineering and Construction"
+                                <a
                                    href="SuppliersDetails.aspx?opc_id=465 ">
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}"
                                          style="height: 115px;width: 160px;">
                                 </a>
                             </figure>
                             <div class="details col-xs-9 clearfix">
-                                <div class="col-sm-8">
+                                <div class="col-sm-6">
                                     <div class="clearfix">
                                         <h4 class="box-title">
                                             <a title="{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}"
                                                href="# ">{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}</a>
-                                            <small>{{(app()->getLocale() == 'en')? $supplier->city->city_name_en :$supplier->city->city_name_ar}}
+                                            <small style=" {{(app()->getLocale() == 'ar') ? 'text-align: right;':''}}">{{(app()->getLocale() == 'en')? $supplier->city->city_name_en :$supplier->city->city_name_ar}}
                                                 &nbsp;- {{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}</small>
                                         </h4>
 
@@ -76,7 +76,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xs-6 col-sm-2 character">
+                                <div class="col-xs-8 col-sm-4 character">
                                     <dl class="" style="text-align: right;">
                                         {{--<dt class="skin-color">الشخص المسؤول</dt>
                                         <dd>م. مهند ابوموجة</dd>--}}
