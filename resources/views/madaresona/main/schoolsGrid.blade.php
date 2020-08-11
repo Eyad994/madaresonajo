@@ -10,9 +10,9 @@
                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                 alt="" style="width: 100%; height: 160px">
+                                 alt="" style="width: 100%; height: 150px">
                         </a>
-                        <div class="caption">
+                        <div class="caption" style="background: #d6d8dc;">
                             <p style="text-align: center;">{{ $school->name_ar }}</p>
                         </div>
                     </div>

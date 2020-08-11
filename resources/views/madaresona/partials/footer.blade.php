@@ -7,16 +7,19 @@
                     <div class="col-sm-6 col-md-5" data-uw-node-idx="931">
                         <h2 data-uw-node-idx="932">إختصارات</h2>
                         <ul class="discover triangle hover row" data-uw-node-idx="933">
-                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="" data-uw-node-idx="935">رؤيتنا</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="936"><a href="" data-uw-node-idx="937">أهدافنا</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="938"><a href="" data-uw-node-idx="939">رسالتنا</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="940"><a href="" data-uw-node-idx="941">الشروط والأحكام</a></li>
-
-
-
+                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('vision', app()->getLocale()) }}" data-uw-node-idx="935">رؤيتنا</a></li>
                             <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('newSubscription', app()->getLocale()) }}" data-uw-node-idx="935">اشتراك جديد</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('newSuggestion', app()->getLocale()) }}" data-uw-node-idx="937">اقتراحات و ملاحظات</a></li>
+
+                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('message', app()->getLocale()) }}" data-uw-node-idx="939">رسالتنا</a></li>
                             <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('faq', app()->getLocale()) }}" data-uw-node-idx="939">اسئلة متكررة</a></li>
+
+
+
+
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('objective', app()->getLocale()) }}" data-uw-node-idx="937">أهدافنا</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('newSuggestion', app()->getLocale()) }}" data-uw-node-idx="937">اقتراحات و ملاحظات</a></li>
+
+                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('termsConditions', app()->getLocale()) }}" data-uw-node-idx="941">الشروط والأحكام</a></li>
                             <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('pricing', app()->getLocale()) }}" data-uw-node-idx="941">الرسوم و طرق الدفع</a></li>
 
                         </ul>

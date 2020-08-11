@@ -30,6 +30,10 @@ Route::group([
     Route::get('/', 'HomeController@index')->where('locale', 'ar|en');
 
     Route::get('/getRegions/{id}', 'HomeController@getRegions');
+    Route::get('message', 'HomeController@message')->name('message');
+    Route::get('objective', 'HomeController@objective')->name('objective');
+    Route::get('terms-conditions', 'HomeController@termsConditions')->name('termsConditions');
+    Route::get('vision', 'HomeController@vision')->name('vision');
 
     /***************************Supplier**************************************/
     Route::prefix('supplier')->group(function (){

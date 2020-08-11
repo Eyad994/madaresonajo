@@ -1,15 +1,15 @@
 @extends('layouts.main')
 @section('sub_header')
-@include('madaresona.partials.sub_header')
+    @include('madaresona.partials.sub_header')
 @endsection
 @section('content')
 
 
-{{--
-    box-shadow: 5px 3px 8px 0px #888888;
-    height: 50px;
-    0 2px 2px rgba(0, 0, 0, 0.11)
---}}
+    {{--
+        box-shadow: 5px 3px 8px 0px #888888;
+        height: 50px;
+        0 2px 2px rgba(0, 0, 0, 0.11)
+    --}}
 
     <style>
 
@@ -45,7 +45,7 @@
             background: #f5f5f5;
             padding: 20px 30px;
             border-radius: 10px !important;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
         }
 
         /********************************/
@@ -66,187 +66,68 @@
 
         }
 
-        .mce-item-table tr td{
-               padding: 30px !important;
+        .mce-item-table tr td {
+            padding: 30px !important;
         }
-        .schools_type_title{
+
+        .schools_type_title {
             font-size: 25px;
         }
 
-        .mordon_part:hover{
+        .mordon_part:hover {
             background: #d6d8dc;
             cursor: pointer;
         }
     </style>
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet" type="text/css"/>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-        <div class="container pb-0">
-            <h2 class="align-center" style="color: #1d556c; ">
-                {{__('index.special_schools')}}
-            </h2>
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="owl-carousel owl-theme"
-                         style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
-                        @foreach($specialSchools as $school)
-                            <div class="col-md-10"
-                                 style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
-                                <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"
-                                     style="border: 1px #f1f4f9 solid">
-                                    <a class="img-box {{--show-school--}}" id="{{ $school->id }}" title="{{ $school->name_ar }}"
-                                       href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
-                                       slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="school_logo" style="width: 100px; height:75px;">
-                                    </a>
-                                </div>
+    <div class="section-base" style="margin-top: 30px;">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <h2 class="align-center" style="color: #1d556c; padding: 10px;font-weight: bold; ">
+                    {{__('index.special_schools')}}
+                </h2>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <div class="owl-carousel owl-theme"
+                     style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
+                    @foreach($specialSchools as $school)
+                        <div class="col-md-10"
+                             style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
+                            <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"
+                                 style="border: 1px #f1f4f9 solid">
+                                <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
+                                   title="{{ $school->name_ar }}"
+                                   href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
+                                   slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
+                                    <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
+                                         alt="school_logo" style="width: 100px; height:75px;">
+                                </a>
                             </div>
-                        @endforeach
-                    </div>
-                    <div class="my-owl-nav">
+                        </div>
+                    @endforeach
+                </div>
+                <div class="my-owl-nav">
 
                         <span class="my-prev-button">
                             <i class="fad fa-chevron-left" aria-hidden="true"></i>
                         </span>
-                        <span class="my-next-button"><i class="fad fa-chevron-right" aria-hidden="true"></i></span>
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-
-        <style>
-
-            .owl-stage {
-                padding-bottom: 10px
-            }
-
-            .my-owl-nav {
-                margin-top: 20px;
-            }
-
-            .my-owl-nav span {
-                margin: 0 4px;
-            }
-
-            .my-owl-nav span:hover {
-                cursor: pointer;
-                color: #ff6000;
-            }
-            .owl-dots{
-                height: 15px !important;
-            }
-            .my-prev-button{
-                position: absolute !important;
-                top: -1px !important;
-                height: 124px !important;
-                background: #d4d1d1;
-                z-index: 1 !important;
-                left: 3px !important;
-                width: 20px !important;
-                border-radius: 5px 0px 0px 5px !important;
-                line-height: 124px !important;
-                color: #000 !important;
-                padding-left: 7px;
-                font-size: 16px;
-            }
-            .my-next-button{
-                position: absolute !important;
-                top: -1px !important;
-                height: 124px !important;
-                background: #d4d1d1;
-                z-index: 1 !important;
-                right: 2px !important;
-                width: 20px !important;
-                border-radius: 0px 5px 5px 0px !important;
-                line-height: 124px !important;
-                color: #000 !important;
-                padding-left: 7px;
-                font-size: 16px;
-            }
-            .my-next-button:hover, .my-prev-button:hover{
-                background: #2b596b;
-                color: #fff !important;
-            }
-        </style>
-        <script>
-
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                autoWidth:true,
-                autoplayHoverPause:true,
-
-                /*navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],*/
-                navText: [
-                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-                ],
-                autoplay: true,
-                nav: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
-
-
-            var selector = $('.owl-carousel');
-
-            $('.my-next-button').click(function () {
-                selector.trigger('next.owl.carousel');
-            });
-
-            $('.my-prev-button').click(function () {
-                selector.trigger('prev.owl.carousel');
-            });
-        </script>
-    </div>
-
-    <section class="section-base" style="margin-bottom: 20px;">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-8">
-                <div class=" fade-left" style="padding: 0px !important;" id="schoolsGrid">
-                    <hr class="space"/>
-                    <div class="infinite-scroll">
-                        <div class="row">
-                            @foreach($schools as $school)
-                                <div class="col-md-2" style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
-                                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
-                                         style="border: 1px #fff solid; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
-                                        <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
-                                           href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
-                                           slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                                 alt="" style="width: 100%; height: 160px;">
-                                        </a>
-                                        <div class="caption">
-                                            <p style="text-align: center;">{{ $school->name_ar }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        {!! $schools->links() !!}
-                        <div class="row">
-                            <div class="col-md-12"></div>
-                        </div>
-                    </div>
+                    <span class="my-next-button"><i class="fad fa-chevron-right" aria-hidden="true"></i></span>
                 </div>
             </div>
-            <div class="col-md-2" style="padding-top: 80px">
+            <div class="col-md-2">
                 <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
-                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات التعليمية</div>
+                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات
+                        التعليمية
+                    </div>
                     <div
                             @if((app()->getLocale() == 'ar'))
                             style="direction: rtl; text-align: right;padding: 10px;padding-top: 80px;"
@@ -265,28 +146,172 @@
                         </select>
                     </div>
                 </div>
-                <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <style>
+
+        .owl-stage {
+            padding-bottom: 10px
+        }
+
+        .my-owl-nav {
+            margin-top: 20px;
+        }
+
+        .my-owl-nav span {
+            margin: 0 4px;
+        }
+
+        .my-owl-nav span:hover {
+            cursor: pointer;
+            color: #ff6000;
+        }
+
+        .owl-dots {
+            height: 15px !important;
+        }
+
+        .my-prev-button {
+            position: absolute !important;
+            top: -1px !important;
+            height: 124px !important;
+            background: #d4d1d1;
+            z-index: 1 !important;
+            left: 11px !important;
+            width: 20px !important;
+            border-radius: 5px 0px 0px 5px !important;
+            line-height: 124px !important;
+            color: #000 !important;
+            padding-left: 7px;
+            font-size: 16px;
+        }
+
+        .my-next-button {
+            position: absolute !important;
+            top: -1px !important;
+            height: 124px !important;
+            background: #d4d1d1;
+            z-index: 1 !important;
+            right: 11px !important;
+            width: 20px !important;
+            border-radius: 0px 5px 5px 0px !important;
+            line-height: 124px !important;
+            color: #000 !important;
+            padding-left: 7px;
+            font-size: 16px;
+        }
+
+        .my-next-button:hover, .my-prev-button:hover {
+            background: #2b596b;
+            color: #fff !important;
+        }
+    </style>
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoWidth: true,
+            autoplayHoverPause: true,
+
+            /*navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],*/
+            navText: [
+                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+            ],
+            autoplay: true,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+
+
+        var selector = $('.owl-carousel');
+
+        $('.my-next-button').click(function () {
+            selector.trigger('next.owl.carousel');
+        });
+
+        $('.my-prev-button').click(function () {
+            selector.trigger('prev.owl.carousel');
+        });
+    </script>
+    </div>
+
+    <section class="section-base" style="margin-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <div class=" fade-left" style="padding: 0px !important;" id="schoolsGrid">
+                    <div class="infinite-scroll">
+                        <div class="row">
+                            @foreach($schools as $school)
+                                <div class="col-md-2"
+                                     style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
+                                    <div class="cnt-box cnt-box-info boxed z-depth-4 rounded" {{--data-href="#"--}}
+                                    style="border: 1px #fff solid; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
+                                        <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
+                                           href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
+                                           slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
+                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
+                                                 alt="" style="width: 100%; height: 150px;">
+                                        </a>
+                                        <div class="caption" style="background: #d6d8dc;">
+                                            <p style="text-align: center;">{{ $school->name_ar }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        {!! $schools->links() !!}
+                        <div class="row">
+                            <div class="col-md-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2" style="padding-top: 20px">
+                <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                     <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">بحث</div>
                     <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
-                        <input type="text" name="sub_search" id="sub_search" class="form-control" placeholder="بحث " style="border-radius: 0px;margin-right: -1px;">
+                        <input type="text" name="sub_search" id="sub_search" class="form-control" placeholder="بحث "
+                               style="border-radius: 0px;margin-right: -1px;">
                         <div class="input-group-btn">
-                            <button class="btn btn-default" id="search_button" type="button" disabled style="margin-right: -4px">
+                            <button class="btn btn-default" id="search_button" type="button" disabled
+                                    style="margin-right: -4px">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </div>
                     </div>
                 </div>
                 @if(count($specialSuppliers) > 0)
-                <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
-                    <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
-                    @foreach($specialSuppliers as $supplier)
-                        <a  href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}" class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
-                            <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}" style="width: 25px;height: 25px;float: right">
-                            <span style="float: right;padding-right: 15px;padding-top: 5px;">{{ app()->getLocale() == 'ar' ? $supplier->name_ar : $supplier->name_en }}</span>
+                    <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
+                        <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">
+                            الموردون
+                        </div>
+                        @foreach($specialSuppliers as $supplier)
+                            <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}"
+                               class="input-group mordon_part"
+                               style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                                <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}"
+                                     style="width: 25px;height: 25px;float: right">
+                                <span style="float: right;padding-right: 15px;padding-top: 5px;">{{ app()->getLocale() == 'ar' ? $supplier->name_ar : $supplier->name_en }}</span>
 
-                        </a>
+                            </a>
                         @endforeach
-                </div>
+                    </div>
                 @endif
 
                 @include('ads')
@@ -315,31 +340,38 @@
                                     <div>
                                         <div class="schools_type_title">{{__('index.private_schools')}}</div>
                                         <div class="value text-lg">
-                                            <span data-to="{{ $schoolsCounts->privateSchools }}" data-speed="3000">{{ $schoolsCounts->privateSchools }}</span>
+                                            <span data-to="{{ $schoolsCounts->privateSchools }}"
+                                                  data-speed="3000">{{ $schoolsCounts->privateSchools }}</span>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.colleges_universities')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->universities }}" data-speed="3000">{{ $schoolsCounts->universities }}</span>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.colleges_universities')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->universities }}"
+                                                                         data-speed="3000">{{ $schoolsCounts->universities }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.kindergartens')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->kindergartens }}" data-speed="3000">{{ $schoolsCounts->kindergartens }}</span>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.kindergartens')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->kindergartens }}"
+                                                                         data-speed="3000">{{ $schoolsCounts->kindergartens }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.nurseries')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->nurseries }}" data-speed="3000">{{ $schoolsCounts->nurseries }}</span>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.nurseries')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->nurseries }}"
+                                                                         data-speed="3000">{{ $schoolsCounts->nurseries }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
@@ -348,32 +380,41 @@
                         <tr>
                             <td style="border: 1px solid #e6edf1;border-bottom: 1px solid #ddd;">
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.training_consulting')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->training }}" data-speed="3000">{{ $schoolsCounts->training }}</span>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.training_consulting')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->training }}"
+                                                                         data-speed="3000">{{ $schoolsCounts->training }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.learning_difficulties')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->learning }}" data-speed="3000">{{ $schoolsCounts->learning }}</span>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.learning_difficulties')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->learning }}"
+                                                                         data-speed="3000">{{ $schoolsCounts->learning }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.suppliers')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->suppliers }}" data-speed="3000">{{ $schoolsCounts->suppliers }}</span>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.suppliers')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $schoolsCounts->suppliers }}"
+                                                                         data-speed="3000">{{ $schoolsCounts->suppliers }}</span>
                                             <span> </span></div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="counter counter-icon">
-                                    <div><div class="schools_type_title">{{__('index.visitors')}}</div>
-                                        <div class="value text-lg"><span data-to="{{ $visitorCount }}" data-speed="3000">{{ $visitorCount }}</span></div>
+                                    <div>
+                                        <div class="schools_type_title">{{__('index.visitors')}}</div>
+                                        <div class="value text-lg"><span data-to="{{ $visitorCount }}"
+                                                                         data-speed="3000">{{ $visitorCount }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </td>
@@ -381,7 +422,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div >
+            </div>
         </div>
     </section>
 
@@ -434,21 +475,21 @@
 
             $('#search_text').keyup(function () {
                 var text = $('#search_text').val();
-                    $.ajax({
-                        type: "GET",
-                        url: '/ar/sub_search/'+text,
-                        success: function (data) {
-                            console.log(data);
-                            $('#schoolsGrid').html(data);
-                        }
-                    });
+                $.ajax({
+                    type: "GET",
+                    url: '/ar/sub_search/' + text,
+                    success: function (data) {
+                        console.log(data);
+                        $('#schoolsGrid').html(data);
+                    }
+                });
             });
 
             $('#sub_search').keyup(function () {
                 var text = $('#sub_search').val();
                 $.ajax({
                     type: "GET",
-                    url: '/ar/sub_search/'+text,
+                    url: '/ar/sub_search/' + text,
                     contentType: false,
                     cache: false,
                     processData: false,

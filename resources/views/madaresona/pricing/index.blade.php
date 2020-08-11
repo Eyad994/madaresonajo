@@ -48,6 +48,7 @@
 
     .pricing-table .pricing-features {
         margin-top: 2rem;
+        height: 320px;
     }
 
     .pricing-table .pricing-features .feature {
@@ -161,7 +162,11 @@
         >
         <div class="row">
             <div class="col-md-12 mb-5">
-                <h3 class="main-head">{{ __('pricing_index.pricing_text') }} :</h3>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h3 class="main-head" style="text-align: center;">{{ __('pricing_index.pricing_text') }} </h3>
+                </div>
+                <div class="col-md-2"></div>
             </div>
             <div class="col-md-4 d-flex">
                 <div class="pricing-table turquoise flex-column">
@@ -184,7 +189,7 @@
                         <span class="after"></span>
                     </div>
                     <!-- Button -->
-                    <a class="price-button" style="margin-top: 110px" href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
+                    <a class="price-button"  href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
                 </div>
             </div>
 

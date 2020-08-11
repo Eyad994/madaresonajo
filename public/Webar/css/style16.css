@@ -2880,7 +2880,7 @@ blockquote.style2:after, blockquote.style2:before {
 }
 
 .contact-details .contact-phone {
-    color: #2d3e52;
+    color: #000;
     font-size: 1.6667em
 }
 
@@ -9356,7 +9356,7 @@ ul.search-tabs li a:hover {
     font-weight: 700;
     font-size: 18px;
     color: #1e546c;
-    border-top: 5px solid #bebebe
+    border-top: 2px solid #bebebe
 }
 
 .search-results-title > i {

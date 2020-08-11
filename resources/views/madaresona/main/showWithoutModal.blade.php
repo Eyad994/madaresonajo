@@ -461,7 +461,7 @@
                                         <div class="col-md-12" style="text-align-last: center;">
                                             @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
                                                 <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                                     style="border-radius: 10px;padding: 20px;width: 100%;" alt="">
+                                                     style="border-radius: 10px;padding: 20px;width: auto; height: 300px;" alt="">
                                             @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
                                                 <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
                                                    #f5f5f5 download="">
@@ -686,7 +686,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8"
-                     style="border: 1px solid #e2e2e2;box-shadow: 5px 5px 5px #bbb;padding: 20px;background: #fff;">
+                     style="box-shadow: 0 2px 2px rgba(0, 0, 0, 0.11); padding: 20px;background: #fff;">
                     <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;"> الأخبار</h2>
                     @foreach($news as $item)
                     <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
