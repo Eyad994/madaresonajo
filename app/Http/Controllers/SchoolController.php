@@ -12,6 +12,9 @@ use App\Models\Transportation;
 use App\Traits\VisitorTrait;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Validator;
 
@@ -183,6 +186,8 @@ class SchoolController extends Controller
 
         }
 
+        $news = $this->paginate($news);
+
         return view('madaresona.news.index', compact('news'));
     }
 
@@ -233,5 +238,13 @@ class SchoolController extends Controller
         ]);
 
         return back()->with(['success' => 'تم ارسال الاقتراح بنجاح']);
+    }
+
+
+    public function paginate($items, $perPage = 5, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
     }
 }
