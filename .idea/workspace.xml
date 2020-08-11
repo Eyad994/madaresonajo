@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c51ba15b-8494-414e-83c9-db22b2e456c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/ads.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ads.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skin_ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/skin_ar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +34,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="1444" column="26" selection-start-line="1444" selection-start-column="26" selection-end-line="1444" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
@@ -41,19 +50,6 @@
               <folding>
                 <element signature="e#81#218#0#HTML" expanded="true" />
                 <element signature="e#269#309#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/suppliers.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              <folding>
-                <element signature="e#675#757#0#HTML" expanded="true" />
-                <element signature="e#884#929#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search-results-titlehome</find>
       <find>searchForm</find>
       <find>@include</find>
       <find>inputGroupPrepend2</find>
@@ -170,6 +165,7 @@
       <find>.my-prev-button</find>
       <find>my-next-button</find>
       <find>infinite-scroll</find>
+      <find>rgb(88, 119, 14</find>
     </findStrings>
     <replaceStrings>
       <replace>#1e546c</replace>
@@ -219,7 +215,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/skin_ar.css" />
         <option value="$PROJECT_DIR$/public/assets/css/skin.css" />
         <option value="$PROJECT_DIR$/public/Webar/css/style16.css" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/partials/sub_header.blade.php" />
@@ -234,6 +229,7 @@
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/schoolsGrid.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ads.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/skin_ar.css" />
       </list>
     </option>
   </component>
@@ -536,18 +532,18 @@
       <workItem from="1597048957224" duration="69000" />
       <workItem from="1597065904634" duration="8585000" />
       <workItem from="1597096605183" duration="6435000" />
-      <workItem from="1597131327717" duration="7415000" />
+      <workItem from="1597131327717" duration="7547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119918000" />
+    <option name="totallyTimeSpent" value="120050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26726058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26726058" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -559,7 +555,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30410653" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30410653" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -758,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45638">
-          <caret line="2402" column="26" selection-start-line="2402" selection-start-column="26" selection-end-line="2402" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/services.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -895,6 +884,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="e#81#218#0#HTML" expanded="true" />
+            <element signature="e#269#309#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -911,14 +911,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding>
-            <element signature="e#81#218#0#HTML" expanded="true" />
-            <element signature="e#269#309#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="1444" column="26" selection-start-line="1444" selection-start-column="26" selection-end-line="1444" selection-end-column="26" />
         </state>
       </provider>
     </entry>
