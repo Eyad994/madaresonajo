@@ -74,8 +74,15 @@
 
     <script>
 
-        $('#search_button').on('click', function () {
-            var text = $('#search_text').val();
+        $('#search_text').keyup(function(){
+
+            if ($('#search_text').val().length == 0)
+            {
+                var text = null;
+            } else  {
+                var text = $('#search_text').val();
+            }
+
             $.ajax({
                 type: "GET",
                 url: '/ar/news_search/' + text,
@@ -84,7 +91,9 @@
                     $('#news_grid').html(data);
                 }
             });
-        })
+        });
+
+
 
     </script>
 

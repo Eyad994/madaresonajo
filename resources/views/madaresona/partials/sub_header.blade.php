@@ -1,6 +1,6 @@
 <div>
     <div class="section-image section-full-width-right light no-padding-top section-bottom-layer"
-         style="top: 40px; background-image: url({{ asset('banner.jpg') }});height:350px;margin-top: 100px; margin-right: -15px;">
+         style="top: 40px; background-image: url({{ asset('banner.jpg') }});height:350px;margin-top: 100px; margin-right: 0;">
 
         <div class=""
              style="{{(app()->getLocale()) == 'ar'?'margin-right: 0px; padding: 20px;direction: rtl;':'margin-left: 0px; padding: 20px;direction: lrt;'}}">
@@ -27,7 +27,7 @@
                                    placeholder="بحث عن المدارس ورياض الأطفال"
                                    style="border-radius: 0px;margin-right: -1px;">
                             <div class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-default" disabled="" type="button">
                                     <i class="glyphicon glyphicon-search"></i>
                                 </button>
                             </div>
@@ -182,7 +182,7 @@
 </style>
 
 </div>
-<div class="row" style="position: relative;top: -50px;height: 5px;">
+<div class="row" style="position: relative;top: -50px;height: 5px; margin-right: 0">
     <div class="col-md-12 news-banner" style="padding: 0px !important;">
         <div class="d-flex justify-content-between align-items-center breaking-news  rounded"
              style="background: #1d556c;margin-bottom: 30px; box-shadow:0 2px 2px rgba(0, 0, 0, 0.11);height: 40px; {{(app()->getLocale() == 'en') ?'' :'direction: rtl;'}}">

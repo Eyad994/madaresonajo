@@ -270,7 +270,7 @@
                     <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
                         <input type="text" name="sub_search" id="sub_search" class="form-control" placeholder="بحث " style="border-radius: 0px;margin-right: -1px;">
                         <div class="input-group-btn">
-                            <button class="btn btn-default" id="search_button" type="button" style="margin-right: -4px">
+                            <button class="btn btn-default" id="search_button" type="button" disabled style="margin-right: -4px">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </div>
@@ -432,7 +432,19 @@
                 });
             });
 
-            $('#search_button').on('click', function (e) {
+            $('#search_text').keyup(function () {
+                var text = $('#search_text').val();
+                    $.ajax({
+                        type: "GET",
+                        url: '/ar/sub_search/'+text,
+                        success: function (data) {
+                            console.log(data);
+                            $('#schoolsGrid').html(data);
+                        }
+                    });
+            });
+
+            $('#sub_search').keyup(function () {
                 var text = $('#sub_search').val();
                 $.ajax({
                     type: "GET",
@@ -444,7 +456,7 @@
                         $('#schoolsGrid').html(data);
                     }
                 });
-            });
+            })
 
             $('#schoolType').on('change', function () {
                 var id = $(this).val();
