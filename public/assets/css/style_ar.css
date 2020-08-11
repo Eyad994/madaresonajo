@@ -9,3 +9,8 @@ html, body, textarea {
     font-family: 'GE Flow' !important;
     background: #f5f5f5 !important;
 }
+
+a , input
+{
+    font-family: 'GE Flow' !important;
+}

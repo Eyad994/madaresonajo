@@ -102,7 +102,7 @@
                                     <a class="img-box {{--show-school--}}" id="{{ $school->id }}" title="{{ $school->name_ar }}"
                                        href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                        slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="" style="width: 100px; height: 100px;">
+                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" alt="" style="width: 100px; height:75px;">
                                     </a>
                                 </div>
                             </div>
@@ -144,30 +144,30 @@
             .my-prev-button{
                 position: absolute !important;
                 top: -1px !important;
-                height: 150px !important;
+                height: 124px !important;
                 background: #d4d1d1;
                 z-index: 1 !important;
                 left: 3px !important;
-                width: 30px !important;
+                width: 20px !important;
                 border-radius: 5px 0px 0px 5px !important;
-                line-height: 149px !important;
-                color: #ffff !important;
-                padding-left:10px;
-                font-size: 22px;
+                line-height: 124px !important;
+                color: #000 !important;
+                padding-left: 7px;
+                font-size: 16px;
             }
             .my-next-button{
                 position: absolute !important;
                 top: -1px !important;
-                height: 150px !important;
+                height: 124px !important;
                 background: #d4d1d1;
                 z-index: 1 !important;
-                right: -9px !important;
-                width: 30px !important;
+                right: 2px !important;
+                width: 20px !important;
                 border-radius: 0px 5px 5px 0px !important;
-                line-height: 149px !important;
+                line-height: 124px !important;
                 color: #000 !important;
-                padding-left: 10px;
-                font-size: 22px;
+                padding-left: 7px;
+                font-size: 16px;
             }
             .my-next-button:hover, .my-prev-button:hover{
                 background: #2b596b;
@@ -231,7 +231,7 @@
                                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                                 alt="" style="width: 100%; height: 180px;">
+                                                 alt="" style="width: 100%; height: 160px;">
                                         </a>
                                         <div class="caption">
                                             <p style="text-align: center;">{{ $school->name_ar }}</p>
@@ -283,10 +283,11 @@
                 <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
                     <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">الموردون</div>
                     @foreach($specialSuppliers as $supplier)
-                        <div class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                        <a  href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}" class="input-group mordon_part" style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
                             <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}" style="width: 25px;height: 25px;float: right">
                             <span style="float: right;padding-right: 15px;padding-top: 5px;">{{ app()->getLocale() == 'ar' ? $supplier->name_ar : $supplier->name_en }}</span>
-                        </div>
+
+                        </a>
                         @endforeach
                 </div>
                 @endif
@@ -401,7 +402,7 @@
         $(function () {
             $('.infinite-scroll').jscroll({
                 autoTrigger: true,
-                loadingHtml: '<img class="center-block" style="width: 100px;height: 100px;" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..."/>',
+                loadingHtml: '<img class="center-block" style="width: 50px;height: 50px;" src="{{ asset('assets/images/Spin-1s-200px.svg') }}" alt="Loading..."/>',
                 padding: 5,
                 nextSelector: '.pagination li.active + li a',
                 contentSelector: 'div.infinite-scroll',

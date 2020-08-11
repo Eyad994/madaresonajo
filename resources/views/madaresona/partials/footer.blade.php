@@ -59,10 +59,10 @@
                     <div class="col-sm-6 col-md-3" data-uw-node-idx="976">
                         <h2 data-uw-node-idx="977">عن مدارسنا</h2>
                         <p data-uw-node-idx="978" style="font-size: 12px;"> مدارسنا هي الخدمة الاولى على مستوى الاردن وهي خدمة فاعلة وشاملة ونسعى من خلال هذا الموقع إلى الربط بين أكبر قدر ممكن من المدارس الخاصة و المراكز و المعاهد و الجامعات و الجهات التعليمية ، الاخرى</p>
-                        <address class="contact-details" data-uw-node-idx="979">
-                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block"> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px">0797902497</span> </span>
-                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block"> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 20px;">info@madaresonajo.com</span> </span>
-                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block"> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">عمان-الأردن-الياسمين -شارع جبل عرفات</span> </span>
+                        <address class="contact-details" data-uw-node-idx="979"  style="font-size: 12px">
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px; font-size: 14px;">0797902497</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 14px;">info@madaresonajo.com</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">عمان-الأردن-الياسمين -شارع جبل عرفات</span> </span>
 
                         </address>
 
