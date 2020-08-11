@@ -29,18 +29,16 @@
                         @include('suppliers')
                         @include('ads')
                     </div>
-                    <div class="col-md-8" id="news_grid"
-                         style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;padding: 20px;border-radius: 10px">
+                    <div class="col-md-8" id="news_grid" style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;padding: 20px;border-radius: 10px">
                         <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> الأخبار</h2>
                              @foreach($news as $item)
-                                 <div class="card"
-                                      style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
+                                 <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                                      <div class="card-body">
                                          <div class="row">
                                              <div class="col-md-3">
                                                  <img src="@if($item['news_type'] == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school_name'] }}/news/{{ $item['img'] }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $item['img'] }} @endif"
                                                       alt="Avatar"
-                                                      style="width:380px; height: 140px; sbox-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;">
+                                                      style="width:380px; height: 140px; sbox-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;"/>
                                              </div>
                                              <div class="col-md-9 container">
                                                  <div class="row">
@@ -62,7 +60,6 @@
                                  </div>
                             @endforeach
                         <h4 style="color: #5bc0de;cursor: pointer; display: none">المزيد</h4>
-
                     </div>
 
                 </div>
