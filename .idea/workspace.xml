@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="76">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
               <folding>
                 <element signature="e#81#218#0#HTML" expanded="true" />
                 <element signature="e#269#309#0#HTML" expanded="true" />
@@ -536,12 +536,12 @@
       <workItem from="1597048957224" duration="69000" />
       <workItem from="1597065904634" duration="8585000" />
       <workItem from="1597096605183" duration="6435000" />
-      <workItem from="1597131327717" duration="7167000" />
+      <workItem from="1597131327717" duration="7260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119670000" />
+    <option name="totallyTimeSpent" value="119763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
@@ -913,8 +913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ads.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="76">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding>
             <element signature="e#81#218#0#HTML" expanded="true" />
             <element signature="e#269#309#0#HTML" expanded="true" />
