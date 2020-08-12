@@ -186,7 +186,7 @@ class SchoolController extends Controller
 
         }
 
-        $news = $this->paginate($news, 2);
+        $news = $this->paginate($news);
 
         return view('madaresona.news.index', compact('news'));
     }

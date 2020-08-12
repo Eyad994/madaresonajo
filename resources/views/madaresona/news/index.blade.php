@@ -67,7 +67,9 @@
                             @endforeach
                         </div>
 
-                        <h4 class="see-more" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="color: #5bc0de;cursor: pointer; font-weight: bold;">{{ __('show.more') }}</h4>
+                        <div class="col-md-12" style="text-align: center">
+                            <h4 class="see-more btn btn-primary" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
+                        </div>
                     </div>
 
                 </div>
