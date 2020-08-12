@@ -2789,7 +2789,7 @@
 
     #main-nav ul.nav-wrap > li .sub-nav li {
         line-height: 0em;
-        height: 24px;
+        height: 24;
     }
 
     #main-nav ul.nav-wrap > li .sub-nav li:last-child {

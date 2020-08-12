@@ -268,7 +268,7 @@
                                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
                                                  alt="" style="width: 100%; height: 150px;">
                                         </a>
-                                        <div class="caption" style="background: #d6d8dc;">
+                                        <div class="caption" style="background: #d6d8dc24;">
                                             <p style="text-align: center;">{{ $school->name_ar }}</p>
                                         </div>
                                     </div>
