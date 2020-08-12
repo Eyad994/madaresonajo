@@ -33,9 +33,10 @@
                          style="box-shadow: 0 2px 3px rgb(0, 0, 0);padding: 20px;border-radius: 10px">
                         <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> الأخبار</h2>
                         <div id="showMoreNews">
+
                             @foreach($news as $item)
-                                <div class="card"
-                                     style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
+
+                                <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-3">
@@ -45,18 +46,12 @@
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-10">
                                                         <h5 style="color: #000">{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
                                                     </div>
-                                                    <div class="col-md-12">
-                                                        <div style="color:#303030 !important;">
-                                                            @if((app()->getLocale() == 'ar') && strlen($item['text_ar']) > 45)
-                                                                {!! Illuminate\Support\Str::limit( $item['text_ar'] , $limit = 45, $end = '...') .strlen($item['text_ar']) !!}
-                                                            @endif
-                                                        </div>
-                                                    </div>
+                                                    <div class="col-md-2"></div>
                                                     <div class="col-md-12" style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
-                                                        <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
+                                                        <a style="margin-top: 50px;" href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
                                                            class="btn btn-info">{{ __('show.more') }}</a>
                                                     </div>
                                                 </div>
@@ -67,7 +62,7 @@
                             @endforeach
                         </div>
 
-                        <div class="col-md-12" style="text-align: center">
+                        <div class="col-md-12" style="text-align: center; ">
                             <h4 class="see-more btn btn-primary" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
                         </div>
                     </div>

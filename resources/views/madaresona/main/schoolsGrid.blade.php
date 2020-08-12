@@ -1,4 +1,3 @@
-
     <hr class="space"/>
     <div class="infinite-scroll">
         <div class="row" style=" {{(app()->getLocale() == 'ar') ?'text-align: right; direction: rtl;':''}}">
@@ -21,11 +20,11 @@
             @if(count($schools) == 0)
                 <div class="col-md-5"></div>
                 <div style="text-align: center">
-                    <i class="fad fa-meh-blank" style="font-size: 100px; color: #f66001; margin-bottom:20px;"></i>
-                    <h1 style="font-family: initial;"><b style="text-decoration: underline; color: red">{{ __('index.no') }}</b>{{ __('index.results') }}</h1>
-
+                    <div style="    width: 200px;background: #f8d7da;padding: 20px;border-radius: 5px;font-size: 25px;">
+                                لا يوجد نتائج
+                    </div>
                 </div>
-                @endif
+            @endif
         </div>
         {{--{!! $schools->links() !!}--}}
     </div>

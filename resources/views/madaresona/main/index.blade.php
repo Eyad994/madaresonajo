@@ -84,7 +84,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <div class="section-base" style="margin-top: 30px;">
-        <div class="row">
+        <div class="row" style="margin-left: 0px;margin-right: 0px">
             <div class="col-md-1"></div>
             <div class="col-md-8">
                 <h2 class="align-center" style="color: #1d556c; padding: 10px;font-weight: bold; ">
@@ -94,7 +94,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-1"></div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-left: 0px;margin-right: 0px">
             <div class="col-md-1"></div>
             <div class="col-md-8">
                 <div class="owl-carousel owl-theme"
@@ -323,15 +323,17 @@
 
     <section class="section-base section-color" style="margin-top: 20px ">
 
+        {{--
         <div class="container"
              @if((app()->getLocale() == 'ar'))
              style="direction: rtl; text-align: right;">
             @else
                 style="direction:ltr; text-align:left;">
             @endif
-
+--}}
             <div class="row ">
-                <div class='col-lg-12'>
+                <div class='col-md-1'></div>
+                <div class='col-md-8'>
                     <table class="table table-grid table-border align-center table-full-border table-md-6 mce-item-table">
                         <tbody>
                         <tr>
@@ -422,7 +424,9 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+                <div class='col-md-2'></div>
+                <div class="col-md-1"></div>
+           {{-- </div>--}}
         </div>
     </section>
 
