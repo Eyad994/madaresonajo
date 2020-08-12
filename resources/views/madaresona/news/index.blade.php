@@ -67,9 +67,7 @@
                             @endforeach
                         </div>
 
-                        <div class="col-md-12" style="text-align-last: center; margin-top: 20px;">
-                            <button style="width: 50%;" class="see-more btn btn-primary" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" >{{ __('show.more') }}</button>
-                        </div>
+                        <h4 class="see-more" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="color: #5bc0de;cursor: pointer; font-weight: bold;">{{ __('show.more') }}</h4>
                     </div>
 
                 </div>
@@ -94,7 +92,6 @@
          url: $href,
          method: 'get',
          success: function (response) {
-             console.log(response);
          $html = $(response).find("#showMoreNews").html();
          $div.append($html);
          }
