@@ -43,25 +43,21 @@
                                                      alt="Avatar"
                                                      style="width:380px; height: 110px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); border-radius: 10px;"/>
                                             </div>
-                                            <div class="col-md-9 container">
+                                            <div class="col-md-9">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <h5 style="color: #000">{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <div style="color:#303030 !important;">@if((app()->getLocale() == 'ar') && strlen($item['text_ar']) > 45)
-
+                                                        <div style="color:#303030 !important;">
+                                                            @if((app()->getLocale() == 'ar') && strlen($item['text_ar']) > 45)
                                                                 {!! Illuminate\Support\Str::limit( $item['text_ar'] , $limit = 45, $end = '...') .strlen($item['text_ar']) !!}
-
                                                             @endif
-
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12"
-                                                         style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
+                                                    <div class="col-md-12" style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
                                                         <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
-                                                           class="btn btn-info"
-                                                        >{{ __('show.more') }}</a>
+                                                           class="btn btn-info">{{ __('show.more') }}</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -108,17 +104,6 @@
          $(this).attr('data-page', (parseInt($page) + 1)); //update page #
          });
 
-        /*var $news = $("#showMoreNews");
-        var $ul = $("ul.pagination");
-        $ul.hide(); // Prevent the default Laravel paginator from showing, but we need the links...
-
-        $(".see-more").click(function() {
-            $.get($ul.find("a[rel='next']").attr("href"), function(response) {
-                $news.append(
-                    $(response).find("#showMoreNews").html()
-                );
-            });
-        });*/
 
 
         $('#search_text').keyup(function () {
@@ -133,7 +118,6 @@
                 type: "GET",
                 url: '/ar/news_search/' + text,
                 success: function (data) {
-                    console.log(data);
                     $('#news_grid').html(data);
                 }
             });
