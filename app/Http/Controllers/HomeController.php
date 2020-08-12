@@ -39,6 +39,14 @@ class HomeController extends Controller
 
     public function index($locale = 'ar')
 {
+
+    $schools = School::where('active', 1)->orderBy('school_order')->paginate(24);
+    if (request()->ajax())
+    {
+        if (request()->page > 1){
+            $schools = School::where('active', 1)->orderBy('school_order')->paginate(6);
+        }
+    }
     $visitorCount = $this->storeVisitor();
     App::setLocale($locale);
     $schoolsQuery = DB::select(
@@ -54,7 +62,6 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
 
     $schoolsCounts = $schoolsQuery[0];
 
-    $schools = School::where('active', 1)->orderBy('school_order')->paginate(6);
     $specialSchools = School::where('active', 1)->where('special', 1)->get();
     $newsArray = News::where('news_type', 2)->where('active', 1)->orderBy('order')->get();
     /*$schoolsAdvertisements = Advertisement::where('type', 1)->where('active', 1)->orderBy('order')->get();

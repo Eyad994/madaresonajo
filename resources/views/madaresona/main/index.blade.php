@@ -104,7 +104,7 @@
                              style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
                             <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"
                                  style="border: 1px #f1f4f9 solid">
-                                <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
+                                <a class="img-box {{--show-school--}} special-image" id="{{ $school->id }}"
                                    title="{{ $school->name_ar }}"
                                    href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                    slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">

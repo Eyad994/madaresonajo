@@ -4110,12 +4110,17 @@ IMAGE BOX - COMPONENT
 -------------------------------------------------------------------
 */
 
+.special-image{
+    opacity: 0.5;
+}
+
 .img-box {
     position: relative;
     overflow: hidden;
     display: block;
     border-radius: 3px;
     transition: all .5s;
+
 }
 
 .img-box:before {
