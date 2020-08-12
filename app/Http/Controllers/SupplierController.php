@@ -7,6 +7,7 @@ use App\Models\News;
 use App\Models\School;
 use App\Models\SchoolType;
 use App\Models\Supplier;
+use App\Models\SupplierGallery;
 use App\Models\SupplierMessage;
 use App\Models\SupplierType;
 use App\Traits\VisitorTrait;
@@ -33,12 +34,13 @@ class SupplierController extends Controller
 
     public function show($lang , $id, $slug)
     {
+        $galleries = SupplierGallery::where('supplier_id', $id)->get();
         $supplier = Supplier::where('id',$id)->first();
         $supplierTypes = explode(',', $supplier->supplier_type);
         $supplierServices = SupplierType::whereIn('id', $supplierTypes)->get();
         $relatedSuppliers = Supplier::where('id', '!=', $id)->whereIn('supplier_type', $supplierTypes)->take(5)->get();
 
-        return view('madaresona.supplier.show', compact('supplier', 'supplierServices', 'relatedSuppliers'));
+        return view('madaresona.supplier.show', compact('supplier', 'supplierServices', 'relatedSuppliers', 'galleries'));
     }
 
     public function search($lang, $text)
@@ -63,6 +65,7 @@ class SupplierController extends Controller
     public function store(Request $request)
     {
         SupplierMessage::create($request->except('_token'));
+
         return back()->with(['success' => 'تم الارسال بنجاح']);
     }
 }

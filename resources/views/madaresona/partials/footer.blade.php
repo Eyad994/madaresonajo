@@ -28,9 +28,7 @@
                         <br>
                         <h6 data-uw-node-idx="950">
                             <i class="fas fa-map-marked-alt" data-uw-node-idx="951"></i>
-                            &nbsp;
                             فروعنا
-
                         </h6>
                         <a href="{{ route('home', app()->getLocale()) }}" data-uw-node-idx="952" title="الاردن">
                             <img src="{{ asset('assets/images/flags/jo-s.png') }}" data-uw-node-idx="953">
@@ -42,12 +40,56 @@
                     <div class="col-sm-6 col-md-4" data-uw-node-idx="962">
                         <h2 data-uw-node-idx="963">القائمة البريدية</h2>
                         <p data-uw-node-idx="964">سجّل بريدك الإلكتروني ليصلك كل ما تودّ معرفته عن مدرسنا</p>
-                        <div class="with-icon full-width" data-uw-node-idx="965">
-                            <input type="text" id="txtSubscriber" class="input-text full-width" data-uw-node-idx="966">
-                            <button id="btnSubscriber" type="button" class="icon yellow-bg white-color" data-uw-node-idx="967" style="margin-top: -17px !important;height: 35px;width: 35px;">
-                                <i id="sbciconcclass" class="soap-icon-message" data-uw-node-idx="968"></i>
-                            </button>
-                        </div>
+                        <form action="{{ route('subscribe', app()->getLocale()) }}" method="POST" id="formSubscribeEmail">
+                            @csrf
+                            <div class="with-icon full-width" data-uw-node-idx="965">
+                                <input type="email" id="txtSubscriber" required name="email" class="form-control" data-uw-node-idx="966">
+                                <button id="btnSubscriber" type="submit" class="icon yellow-bg white-color" data-uw-node-idx="967" style="margin-top: -17px !important;height: 35px;width: 35px;">
+                                    <i id="sbciconcclass" class="soap-icon-message" data-uw-node-idx="968"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <script>
+
+                            $('#formSubscribeEmail').submit(function (e) {
+                                e.preventDefault();
+                                var form = $(this);
+                                var url = form.attr('action');
+                                $.ajax({
+                                    type: "POST",
+                                    url: url,
+                                    data: new FormData(this),
+                                    dataType: "json",
+                                    contentType: false,
+                                    cache: false,
+                                    processData: false,
+                                    success: function (data) {
+                                        if (data.status === 422) {
+                                            console.log(data);
+                                            var error_html = '';
+
+                                            for (let value of Object.values(data.errors)) {
+                                                error_html += '<div style="background: #f8d7da;padding: 20px;border-radius: 5px; font-size: 20px; font-weight: bold;">' + "الإيميل مسجل من قبل" + '</div>';
+                                            }
+                                            Swal.fire({
+                                                icon: 'error',
+                                                html: error_html
+                                            })
+                                        } else {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: data.message,
+                                                showConfirmButton: false,
+                                                timer: 1500
+                                            });
+                                        }
+                                    }
+                                });
+
+                            });
+
+                        </script>
                         <div class="clearer" data-uw-node-idx="969">
                             <br>
                         </div>
@@ -56,7 +98,11 @@
                             <hr>
                         </div>
 
-
+                        @if(Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                {{ Session::get('success') }}
+                            </div>
+                            @endif
 
                     </div>
                     <div class="col-sm-6 col-md-3" data-uw-node-idx="976">
@@ -101,3 +147,4 @@
 
     @endsection
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

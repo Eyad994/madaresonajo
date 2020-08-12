@@ -27,6 +27,7 @@ Route::group([
     'where' => ['locale' => '[a-zA-Z]{2}'],
     'middleware' => 'setlocale'], function () {
 
+    Route::post('subscribe', 'EmailSubscriptionController@subscribe')->name('subscribe');
     Route::get('/', 'HomeController@index')->where('locale', 'ar|en');
 
     Route::get('/getRegions/{id}', 'HomeController@getRegions');

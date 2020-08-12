@@ -49,10 +49,18 @@
                                                     <div class="col-md-10">
                                                         <h5 style="color: #000">{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
                                                     </div>
-                                                    <div class="col-md-2"></div>
-                                                    <div class="col-md-12" style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
-                                                        <a style="margin-top: 50px;" href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
-                                                           class="btn btn-info">{{ __('show.more') }}</a>
+                                                    <div class="col-md-12">
+                                                        <div style="color:#303030 !important;">@if((app()->getLocale() == 'ar') && strlen($item['text_ar']) > 45)
+
+                                                                {!! strip_tags(Illuminate\Support\Str::limit( $item['text_ar'] , $limit = 45, $end = '...') ) !!}
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12"
+                                                         style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
+                                                        <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
+                                                           class="btn btn-info"
+                                                        >{{ __('show.more') }}</a>
                                                     </div>
                                                 </div>
                                             </div>

@@ -44,7 +44,7 @@ class HomeController extends Controller
     if (request()->ajax())
     {
         if (request()->page > 1){
-            $schools = School::where('active', 1)->orderBy('school_order')->paginate(6);
+            $schools = School::where('active', 1)->orderBy('school_order')->paginate(12);
         }
     }
     $visitorCount = $this->storeVisitor();

@@ -12,59 +12,6 @@
         .accordion-toggle{
             font-weight: bold;
         }
-        /*#accordion .panel {
-            border-radius: 10px;
-            border: 0;
-            margin-top: 0px;
-        }
-
-        #accordion a {
-            display: block;
-            padding: 10px 15px;
-            border-bottom: 1px solid #fff;
-            text-decoration: none;
-        }
-
-        #accordion .panel-heading a.collapsed:hover,
-        #accordion .panel-heading a.collapsed:focus {
-            background-color: #ff6000;
-            color: white !important;
-            transition: all 0.2s ease-in;
-        }
-
-        #accordion .panel-heading a.collapsed:hover::before,
-        #accordion .panel-heading a.collapsed:focus::before {
-            color: white;
-        }
-
-        #accordion .panel-heading {
-            padding: 0;
-            border-radius: 0px;
-            text-align: center;
-        }
-
-        #accordion .panel-heading a:not(.collapsed) {
-            color: white;
-            background-color: #2d3e52;
-            transition: all 0.2s ease-in;
-        }
-
-        !* Add Indicator fontawesome icon to the left *!
-        #accordion .panel-heading .accordion-toggle::before {
-            font-family: 'FontAwesome';
-            content: '\f00d';
-            float: left;
-            color: white;
-            font-weight: lighter;
-            transform: rotate(0deg);
-            transition: all 0.2s ease-in;
-        }
-
-        #accordion .panel-heading .accordion-toggle.collapsed::before {
-            color: #444;
-            transform: rotate(-135deg);
-            transition: all 0.2s ease-in;
-        }*/
         .faq-title
         {
             color: #2d3e52;
@@ -95,7 +42,7 @@
                                    data-parent="#accordion">{{ app()->getLocale() == 'ar' ? $faq->question_ar : $faq->question_en }}</a>
                             </h4>
                         </div>
-                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse in">
+                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse ">
                             <div class="panel-body">
                                 <p>{!! app()->getLocale() == 'ar' ? $faq->answer_ar : $faq->answer_en !!}</p>
                             </div>
@@ -115,7 +62,7 @@
                                    data-parent="#accordion">{{ app()->getLocale() == 'ar' ? $faq->question_ar : $faq->question_en }}</a>
                             </h4>
                         </div>
-                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse in">
+                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>{!! app()->getLocale() == 'ar' ? $faq->answer_ar : $faq->answer_en !!}</p>
                             </div>
@@ -132,7 +79,7 @@
                                    data-parent="#accordion">{{ app()->getLocale() == 'ar' ? $faq->question_ar : $faq->question_en }}</a>
                             </h4>
                         </div>
-                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse in">
+                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>{!! app()->getLocale() == 'ar' ? $faq->answer_ar : $faq->answer_en !!}</p>
                             </div>
@@ -149,7 +96,7 @@
                                    data-parent="#accordion">{{ app()->getLocale() == 'ar' ? $faq->question_ar : $faq->question_en }}</a>
                             </h4>
                         </div>
-                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse in">
+                        <div id="panelBody{{$faq->id}}" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>{!! app()->getLocale() == 'ar' ? $faq->answer_ar : $faq->answer_en !!}</p>
                             </div>

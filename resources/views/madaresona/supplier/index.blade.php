@@ -49,26 +49,27 @@
                                     <div class="amenities" style="text-align: right ">
                                         <ul>
                                             <li>
-                                                <a href="tel:00962799919542" target="_blank">
+                                                <a href="tel:{{ $supplier->phone }}" target="_blank">
                                                     <i style="cursor: pointer;padding: 6px"
                                                        class="soap-icon-phone circle"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="SuppliersDetails.aspx?opc_id=465#Suppliers-Contacts-Tab"
+                                                <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}#Suppliers-Contacts-Tab"
                                                    target="_blank">
                                                     <i style="cursor: pointer;padding: 6px"
                                                        class="soap-icon-message circle"></i>
                                                 </a>
+
                                             </li>
                                             <li>
-                                                <a href="http://www.abu-moujeh.com" target="_blank">
+                                                <a href="{{ $supplier->website }}" target="_blank">
                                                     <i style="cursor: pointer;padding: 6px"
                                                        class="soap-icon-globe circle"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="SuppliersDetails.aspx?opc_id=465" target="_blank">
+                                                <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}#Suppliers-Contacts-Tab" target="_blank">
                                                     <i style="cursor: pointer;padding: 6px"
                                                        class="soap-icon-departure circle"></i>
                                                 </a>

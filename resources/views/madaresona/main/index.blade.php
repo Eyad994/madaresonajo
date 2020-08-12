@@ -123,7 +123,7 @@
                     <span class="my-next-button"><i class="fad fa-chevron-right" aria-hidden="true"></i></span>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-left:12px;">
                 <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
                     <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات
                         التعليمية

@@ -1,4 +1,5 @@
 @extends('layouts.main')
+
 <section class="section-base" style="margin-bottom: 20px; padding-top:170px; background-color: #f5f5f5; ">
     @php $dir = (app()->getLocale() == 'ar') ?"direction: rtl;":"direction: ltr;" @endphp
     <div class="container" style="{{$dir}}">
@@ -6,7 +7,7 @@
             <div id="main" class="col-md-9">
                 <div id="cruise-features" class="tab-container">
                     @if(Session::has('success'))
-                        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}</p>
+                        <p class="alert {{ Session::get('alert-class', 'alert-success') }}">{{ Session::get('success') }}</p>
                     @endif
                     <ul class="tabs">
 
@@ -241,6 +242,28 @@
                                 <div class="person-information" style="text-align: right;">
                                     <h2>المنتجات</h2>
                                     <hr style="margin: 20px 0">
+
+                                    <style>
+                                        img.mfp-img{
+                                            max-height: 700px !important;
+                                        }
+                                    </style>
+                                        <div class="tz-gallery">
+
+                                            <div class="row">
+
+                                                @foreach($galleries as $gallery)
+                                                    <div class="col-sm-6 col-md-4">
+                                                        <a class="lightbox" href="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/gallery/{{ $gallery->img }}">
+                                                            <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/gallery/{{ $gallery->img }}" alt="Tunnel">
+                                                        </a>
+                                                    </div>
+                                                    @endforeach
+
+                                            </div>
+
+                                        </div>
+
                                 </div>
 
                             </div>

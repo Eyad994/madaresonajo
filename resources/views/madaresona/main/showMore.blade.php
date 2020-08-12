@@ -70,9 +70,9 @@
                 <div class="row">
 
                     @foreach($relatedNews as $item)
-                        <div class="col-lg-3 d-flex align-items-stretch">
+                        <div class="col-lg-2 d-flex align-items-stretch">
                             <div class="card" style="width:250px; border-radius: 10px;">
-                                <img class="card-img-top"
+                                <img class="card-img-top" style="height: 200px !important;"
                                      src="@if($item->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school']['name_en'] }}/news/{{ $item->img }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $item->img }} @endif"
                                      alt="img">
                                 <div class="card-body d-flex flex-column">
