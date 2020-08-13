@@ -266,7 +266,7 @@
                                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                             <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
-                                                 alt="" style="width: 100%; height: 150px;">
+                                                 alt="" style="width: 100%; height: 140px;">
                                         </a>
                                         <div class="caption" style="background: #d6d8dc24;">
                                             <p style="text-align: center;">{{ $school->name_ar }}</p>
