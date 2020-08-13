@@ -256,7 +256,7 @@
                                                 <div class="col-sm-6 col-md-4">
                                                     <a class="lightbox"
                                                        href="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/gallery/{{ $gallery->img }}">
-                                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/gallery/{{ $gallery->img }}"
+                                                        <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/gallery/{{ $gallery->img }}" style="height: 200px;"
                                                              alt="Tunnel">
                                                     </a>
                                                 </div>
