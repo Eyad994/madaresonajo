@@ -280,12 +280,11 @@
                             <div class="image-box style14" style="text-align: right">
                                 <h4>الشركات ذات صلة</h4>
                                 @foreach($relatedSuppliers as $relatedSupplier)
-                                    <article class="box" href="/{{ app()->getLocale() }}/supplier/data/{{$relatedSupplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($relatedSupplier->name_en) : trim($relatedSupplier->name_ar)) }}">
+                                    <article class="box" >
                                         <figure class="animated flipInX" data-animation-type="flipInX"
                                                 style="animation-duration: 1s; visibility: visible;">
-                                            <a title="{{ $relatedSupplier->name_ar }}" target="_blank" href="#">
-                                                <img style="border: 1px solid #bebebe;width: 63px;height: 59px"
-                                                     src="{{ env('IMAGE_URL') }}/images/{{ $relatedSupplier->name_en }}/{{ $relatedSupplier->supplier_logo }}">
+                                            <a title="{{ $relatedSupplier->name_ar }}" target="_blank" href="/{{ app()->getLocale() }}/supplier/data/{{$relatedSupplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($relatedSupplier->name_en) : trim($relatedSupplier->name_ar)) }}">
+                                                <img style="border: 1px solid #bebebe;width: 63px;height: 59px" src="{{ env('IMAGE_URL') }}/images/{{ $relatedSupplier->name_en }}/{{ $relatedSupplier->supplier_logo }}">
                                             </a>
                                         </figure>
                                         <div class="details">
