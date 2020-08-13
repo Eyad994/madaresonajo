@@ -33,18 +33,18 @@
                        </div>
                        @endif
                     <div class="col-md-4" style="bottom: 15px;">
-                        <div class="col-md-12" style="text-align: center">
-                            <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
-                            <hr>
+                        <div class="col-md-12" style="text-align: center;margin-bottom: 40px ">
+                            <img src="{{ asset('assets/images/subscription.jpg') }}" style="height: 200px; width: 200px;box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;" alt="IMG">
                         </div>
-                        <div class="row form-group">
+                        <div class="row mb-10">
                             <div class="col-md-12" style="bottom: 20px; ">
                                 <h3 class="h4"><i class="fad fa-home" style="color: #ff6000"></i> العنوان</h3>
                                 <p style="margin-top: 5px; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">عمان-الأردن الياسمين -شارع جبل عرفات
                                     مجمع المحتسب التجاري- بناء رقم 83 - الطابق الثاني</p>
                             </div>
                         </div>
-                        <div class="row form-group">
+                        <div class="row mb-10">
                             <div class="col-md-12" style="bottom: 20px;">
                                 <h3 class="h4"><i class="fad fa-phone" style="color: #ff6000"></i> الهاتف</h3>
                                 <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962062006896</p>
@@ -52,13 +52,13 @@
                                 <p style="margin-top: 5px; direction:ltr;{{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962790452034</p>
                             </div>
                         </div>
-                        <div class="row form-group">
+                        <div class="row mb-10">
                             <div class="col-md-12" style="bottom: 20px; ">
                                 <h3 class="h4"><i class="fad fa-fax" style="color: #ff6000"></i> فاكس</h3>
                                 <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962062006896</p>
                             </div>
                         </div>
-                        <div class="row form-group">
+                        <div class="row mb-10">
                             <div class="col-md-12" style="bottom: 20px;">
                                 <h3 class="h4"><i class="fad fa-envelope" style="color: #ff6000"></i> البريد الالكتروني
                                 </h3>
