@@ -1,4 +1,4 @@
-    <hr class="space"/>
+
     <div class="infinite-scroll">
         <div class="row" style=" {{(app()->getLocale() == 'ar') ?'text-align: right; direction: rtl;':''}}">
             @foreach($schools as $school)

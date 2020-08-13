@@ -72,13 +72,13 @@
                     @foreach($relatedNews as $item)
                         <div class="col-lg-2 d-flex align-items-stretch">
                             <div class="card" style="width:250px; border-radius: 10px;">
-                                <img class="card-img-top" style="height: 200px !important;"
+                                <img class="card-img-top" style="height: 150px !important;"
                                      src="@if($item->news_type == 1) {{ env('IMAGE_URL') }}/images/{{ $item['school']['name_en'] }}/news/{{ $item->img }} @else {{ env('IMAGE_URL') }}/images/Main News/{{ $item->img }} @endif"
                                      alt="img">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'], $limit = 45, $end = '...') !!}</h5>
                                     <a href="/{{ app()->getLocale() }}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
-                                       class="btn btn-primary mt-auto" >المزيد</a>
+                                       class="btn btn-secondary mt-auto" >المزيد</a>
                                 </div>
                             </div>
                         </div>

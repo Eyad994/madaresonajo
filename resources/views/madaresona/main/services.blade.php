@@ -37,18 +37,18 @@
                                 data-mce-href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK">Check
                                  seo score</a>--}}</div>
                         <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000"><img
-                                    class="margin-23 img_services" src="{{ asset('assets/images/services_1.png') }}"
+                                    class="margin-23 img_services" src="{{ asset('assets/images/services_1.jpg') }}"
                                     alt=""
-                                    data-mce-src="images/intro/seo.png"></div>
+                                    data-mce-src="images/intro/seo.jpg"></div>
                     </div>
                     <hr class="space-lg">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000">
                             <img
                                     class="timer img_services"
-                                    src="{{ asset('assets/images/services_3.png') }}"
+                                    src="{{ asset('assets/images/services_3.jpg') }}"
                                     alt=""
-                                    data-mce-src="images/intro/themekit.png">
+                                    data-mce-src="images/intro/themekit.jpg">
                         </div>
                         <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
                              data-time="1000"><h2
@@ -67,17 +67,17 @@
                         </div>
                         <div class="col-lg-6 col-md-6 align-right" data-anima="fade-right" data-time="1000">
                             <img
-                                    class="margin-23 img_services" src="{{ asset('assets/images/services_2.png') }}"
+                                    class="margin-23 img_services" src="{{ asset('assets/images/services_2.jpg') }}"
                                     alt=""
-                                    data-mce-src="images/intro/seo.png"></div>
+                                    data-mce-src="images/intro/seo.jpg"></div>
                     </div>
                     <hr class="space-lg">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><img
                                     class="timer img_services"
-                                    src="{{ asset('assets/images/services_4.png') }}"
+                                    src="{{ asset('assets/images/services_4.jpg') }}"
                                     alt=""
-                                    data-mce-src="images/intro/themekit.png">
+                                    data-mce-src="images/intro/themekit.jpg">
                         </div>
                         <div class="col-lg-6 col-md-6 order-sm-first align-left-sm align-right" data-anima="fade-right"
                              data-time="1000"><h2 class="themekit-header title_header">{{__('index.social_media')}}</h2>

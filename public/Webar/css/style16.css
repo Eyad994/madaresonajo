@@ -3023,7 +3023,7 @@ ul.arrow li:before {
 ul.triangle li:before {
     content: "\f04b";
     margin-right: 10px;
-    color: #d9d9d9;
+    color: #000;
     display: block;
     float: left;
     font-size: 7px;
@@ -12035,8 +12035,9 @@ button.ui-button::-moz-focus-inner {
 }
 
 #footer.style5 > .footer-wrapper {
-    background: url(../images/themes/footer/style05/sky.png) center bottom no-repeat;
-    padding-bottom: 0
+    background: url(https://madaresonajo.com/footer.jpg) center bottom no-repeat;
+    padding-bottom: 0;
+    background-size:cover;
 }
 
 #footer.style5 > .footer-wrapper > .container:first-child {

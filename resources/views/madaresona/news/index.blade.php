@@ -30,7 +30,7 @@
                         @include('ads')
                     </div>
                     <div class="col-md-8" id="news_grid"
-                         style="box-shadow: 0 2px 3px rgb(0, 0, 0);padding: 20px;border-radius: 10px">
+                         style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.48);padding: 20px;border-radius: 10px">
                         <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> الأخبار</h2>
                         <div id="showMoreNews">
 
@@ -59,7 +59,7 @@
                                                     <div class="col-md-12"
                                                          style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
                                                         <a href="showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
-                                                           class="btn btn-info"
+                                                           class="btn btn-secondary"
                                                         >{{ __('show.more') }}</a>
                                                     </div>
                                                 </div>
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="col-md-12" style="text-align: center; ">
-                            <h4 class="see-more btn btn-primary" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
+                            <h4 class="see-more btn btn-secondary" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
                         </div>
                     </div>
 
