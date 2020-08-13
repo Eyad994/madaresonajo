@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f84a3d-3866-48d0-ac05-364a8eec2ede" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +18,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="323" column="70" selection-start-line="323" selection-start-column="70" selection-end-line="323" selection-end-column="70" />
+            <state relative-caret-position="135">
+              <caret line="335" column="59" selection-start-line="335" selection-start-column="59" selection-end-line="335" selection-end-column="59" />
               <folding>
                 <element signature="e#10026#10061#0#HTML" expanded="true" />
+                <element signature="e#13267#13314#0#HTML" expanded="true" />
+                <element signature="e#13677#13700#0#HTML" expanded="true" />
                 <element signature="e#13873#13934#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -394,7 +395,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16245000" />
+    <option name="totallyTimeSpent" value="16389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
@@ -605,10 +606,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="323" column="70" selection-start-line="323" selection-start-column="70" selection-end-line="323" selection-end-column="70" />
+        <state relative-caret-position="135">
+          <caret line="335" column="59" selection-start-line="335" selection-start-column="59" selection-end-line="335" selection-end-column="59" />
           <folding>
             <element signature="e#10026#10061#0#HTML" expanded="true" />
+            <element signature="e#13267#13314#0#HTML" expanded="true" />
+            <element signature="e#13677#13700#0#HTML" expanded="true" />
             <element signature="e#13873#13934#0#HTML" expanded="true" />
           </folding>
         </state>

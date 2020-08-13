@@ -321,7 +321,7 @@
         </div>
     </section>
 
-    <section class="section-base section-color" style="margin-top: 100px ">
+    <section class="section-base section-color" style="margin-top: 100px; margin-bottom: 50px;">
 
         {{--
         <div class="container"
@@ -333,7 +333,7 @@
 --}}
             <div class="row ">
                 <div class='col-md-1'></div>
-                <div class='col-md-8'>
+                <div class='col-md-8'style="direction: rtl;">
                     <table class="table table-grid table-border align-center table-full-border table-md-6 mce-item-table">
                         <tbody>
                         <tr>
