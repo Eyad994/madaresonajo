@@ -5746,6 +5746,11 @@ Small devices (landscape phones, less than 768px)
 -------------------------------------------------------------------
 */
 
+@media (max-width: 776px) {
+    .footer-wrapper{
+        background-size: unset !important;
+    }
+}
 @media (max-width: 600px) {
 
     .search-bar-banner {
@@ -5753,7 +5758,7 @@ Small devices (landscape phones, less than 768px)
     }
 
     [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
         /*width: 240px;
         margin-left: 120px;*/
     }
@@ -5776,7 +5781,7 @@ Small devices (landscape phones, less than 768px)
     -------------------------------------------------------------------
     */
     [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
         /*width: 240px;
         margin-left: 120px;*/
     }

@@ -1,4 +1,8 @@
 @extends('layouts.main')
+<meta property="og:title"         content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}" />
+<meta property="og:image"         content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" />
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="200">
 
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
 <style>

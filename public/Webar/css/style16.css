@@ -9347,14 +9347,14 @@ ul.search-tabs li a:hover {
 
 .search-results-title, .search-results-titlehome {
     background: #fff;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     margin: 0;
     line-height: 3.4em
 }
 
 .search-results-titlehome {
     font-weight: 700;
-    font-size: 18px;
+    /*font-size: 18px;*/
     color: #1e546c;
     border-top: 2px solid #bebebe
 }
