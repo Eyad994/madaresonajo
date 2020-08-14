@@ -1,5 +1,6 @@
 @extends('layouts.main')
-
+<meta property="og:url"           content="https://madaresonajo.com/{{ app()->getLocale() }}/supplier/data/{{ $supplier->id }}/{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}" />
+<meta property="og:title"         content="{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}" />
 <section class="section-base" style="margin-bottom: 20px; padding-top:170px; background-color: #f5f5f5; ">
     @php $dir = (app()->getLocale() == 'ar') ?"direction: rtl;":"direction: ltr;" @endphp
     <div class="container" style="{{$dir}}">

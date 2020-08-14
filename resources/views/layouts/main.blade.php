@@ -19,7 +19,7 @@
     <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان" />
     <meta property="og:url"           content="https://madaresonajo.com/" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="دليل مدارسنا التعليمي" />
+    {{--<meta property="og:title"         content="دليل مدارسنا التعليمي" />--}}
     <meta property="og:image"         content="{{ asset('assets/images/favicon.png') }}" />
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="200">
