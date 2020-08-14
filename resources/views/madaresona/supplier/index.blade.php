@@ -101,6 +101,11 @@
 
                     </div>
 
+                    @if($suppliersCount > 10)
+                        <div class="col-md-12" style="text-align: center; ">
+                            <h4 class="see-more btn btn-secondary" data-page="2" data-link="/ar/supplier/index?page=" data-div="#supplierGrid" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
+                        </div>
+                        @endif
                 </div>
             </div>
             <div class="col-md-2" style="padding-top: 130px">
@@ -143,6 +148,27 @@
 @section('script')
 
     <script>
+
+        $(".see-more").click(function() {
+            $div = $($(this).attr('data-div')); //div to append
+            $link = $(this).attr('data-link'); //current URL
+
+            $page = $(this).attr('data-page'); //get the next page #
+            $href = $link + $page; //complete URL
+
+            $.ajax({
+                url: $href,
+                method: 'get',
+                success: function (response) {
+
+                    $html = $(response).find("#supplierGrid").html();
+                    $div.append($html);
+                }
+            });
+
+
+            $(this).attr('data-page', (parseInt($page) + 1)); //update page #
+        });
 
         $('#search_button').on('click', function () {
             var text = $('#search_text').val();

@@ -69,10 +69,11 @@
                                 </div>
                             @endforeach
                         </div>
-
+                        @if($newsCount >= 10)
                         <div class="col-md-12" style="text-align: center; ">
                             <h4 class="see-more btn btn-secondary" data-page="2" data-link="/ar/news?page=" data-div="#showMoreNews" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
                         </div>
+                            @endif
                     </div>
 
                 </div>

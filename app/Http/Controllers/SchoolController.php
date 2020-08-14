@@ -187,8 +187,9 @@ class SchoolController extends Controller
         }
 
         $news = $this->paginate($news);
+        $newsCount = News::where('active', 1)->count();
 
-        return view('madaresona.news.index', compact('news'));
+        return view('madaresona.news.index', compact('news', 'newsCount'));
     }
 
     public function newSubscription()

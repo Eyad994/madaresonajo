@@ -26,9 +26,10 @@ class SupplierController extends Controller
 
     public function index()
     {
-        $suppliers = Supplier::all();
+        $suppliers = Supplier::where('active', 1)->paginate(10);
+        $suppliersCount = Supplier::where('active', 1)->count();
         $suppliersType = SupplierType::all();
-        return view('madaresona.supplier.index', compact('suppliers','suppliersType'));
+        return view('madaresona.supplier.index', compact('suppliers','suppliersType', 'suppliersCount'));
 
     }
 
