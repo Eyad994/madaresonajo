@@ -42,7 +42,8 @@
                                         <div class="clearfix">
                                             <h4 class="box-title">
                                                 <a title="{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}"
-                                                   href="# ">{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}</a>
+                                                   href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}">
+                                                    {{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}</a>
                                                 <small style=" {{(app()->getLocale() == 'ar') ? 'text-align: right;':''}}">{{(app()->getLocale() == 'en')? $supplier->city->city_name_en :$supplier->city->city_name_ar}}
                                                     &nbsp;- {{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}</small>
                                             </h4>
@@ -52,27 +53,28 @@
                                             <ul>
                                                 <li>
                                                     <a href="tel:{{ $supplier->phone }}" target="_blank">
-                                                        <i style="cursor: pointer;padding: 6px"
+                                                        <i style="cursor: pointer;"
                                                            class="soap-icon-phone circle"></i>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}#Suppliers-Contacts-Tab"
                                                        target="_blank">
-                                                        <i style="cursor: pointer;padding: 6px"
+                                                        <i style="cursor: pointer;"
                                                            class="soap-icon-message circle"></i>
                                                     </a>
 
                                                 </li>
                                                 <li>
                                                     <a href="{{ $supplier->website }}" target="_blank">
-                                                        <i style="cursor: pointer;padding: 6px"
+                                                        <i style="cursor: pointer;"
                                                            class="soap-icon-globe circle"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}#Suppliers-Contacts-Tab" target="_blank">
-                                                        <i style="cursor: pointer;padding: 6px"
+                                                    <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}#Suppliers-Contacts-Tab"
+                                                       target="_blank">
+                                                        <i style="cursor: pointer;"
                                                            class="soap-icon-departure circle"></i>
                                                     </a>
                                                 </li>
@@ -103,9 +105,10 @@
 
                     @if($suppliersCount > 10)
                         <div class="col-md-12" style="text-align: center; ">
-                            <h4 class="see-more btn btn-secondary" data-page="2" data-link="/ar/supplier/index?page=" data-div="#supplierGrid" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
+                            <h4 class="see-more btn btn-secondary" data-page="2" data-link="/ar/supplier/index?page="
+                                data-div="#supplierGrid" style="width: 50%; margin-top: 20px">{{ __('show.more') }}</h4>
                         </div>
-                        @endif
+                    @endif
                 </div>
             </div>
             <div class="col-md-2" style="padding-top: 130px">
@@ -136,7 +139,7 @@
             </div>
         </div>
     </section>
-    @endsection
+@endsection
 
 {{--
 
@@ -149,7 +152,7 @@
 
     <script>
 
-        $(".see-more").click(function() {
+        $(".see-more").click(function () {
             $div = $($(this).attr('data-div')); //div to append
             $link = $(this).attr('data-link'); //current URL
 
@@ -174,7 +177,7 @@
             var text = $('#search_text').val();
             $.ajax({
                 type: 'get',
-                url: '/ar/supplier_search/'+ text,
+                url: '/ar/supplier_search/' + text,
                 success: function (data) {
                     $('#supplierGrid').html(data);
                 }
@@ -186,7 +189,7 @@
             var id = $('#supplierType').val();
             $.ajax({
                 type: 'get',
-                url: '/ar/getSupplierType/'+id,
+                url: '/ar/getSupplierType/' + id,
                 success: function (data) {
                     $('#supplierGrid').html(data);
                 }
