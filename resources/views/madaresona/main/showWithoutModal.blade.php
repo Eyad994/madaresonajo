@@ -2,9 +2,7 @@
 <meta property="og:url"           content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}" />
 <meta property="og:title"         content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}" />
 <meta property="og:image"         content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" />
-<meta property="og:image:width" content="300">
-<meta property="og:image:height" content="200">
-
+<meta name="description" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}">
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
 <style>
 
