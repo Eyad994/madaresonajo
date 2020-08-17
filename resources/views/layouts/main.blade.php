@@ -9,20 +9,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="دليل مدارسنا التعليمي " />
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="keywords" content="دليل مدارسنا التعليمي "/>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
     <meta id="ctl00_metaTag" name="keywords" content="دليل , مدرسة ، مدارس ، وظيفة ، تعليم، معلم ، تسجيل المدارس، المدارس الخاصة، المدارس الاردنية المدارس الخاص ,المدارس الخاصة,المدارس الامريكية في عمان , المدارس الخاصة في الاردن , المدارس الخاصة في عمان ,مدارس ,مدارس الحصاد ,, pioneers , pioneers in Jordan ,المراكز التعليمية في الاردن, الدليل التعليمي, حضانات الاردن,روضة سلسال ,دليل حضانات الاردن , دليل مدارسنا التعليمي ,دليل الطالب الاردني , دليل المراكز التعليميه , مراكز الاردن التعليمية , اكاديمية راما للتدريب ,التعليم في الاردن ,دليل المراكز التعليمية , مركز مهارات للتدريب , مراكز تعليمية عمان , دليل المراكز التعليمية الاردن, directory,jordan education , jordan guide , madaresona jo Jordan,الدراسة في الاردن , دليل مدارسنا الالكتروني , دليل مدارسنا الشامل, مدرسين الاردن ,معلمين في الاردن , وظائف للملعمين في الاردن
               مدارس النظم الحديث , المدارس الانجليزية ,مدارس الشويفات ,مدارس البكالوريا ,الشويفات , الانجليزية , دار الارقم , شركة مدارسنا ,مدارسنا , خدمات الالكترونية ,خدمات تسويقية للمدارس الخاصة في الاردن ,خدمات تسويقية للمدارس الخاصة في عمان , تفاصيل المدارس الخاصة , نشاطات المدارس الخاصة , أخبار المدارس الخاصة ,اخبار المدارس الخاصة ,خدمات المدارس الخاصة ,نشاطات المدارس الخاصة ,المدارس الاردنية
-              ,مدارس الاردن ,خدمات الالكترونية ,مدارسنا ,المدارس الموجودة في الياسمين pioneers,pioneers in jordan,المراكز التعليمية في الاردن قطر,الدليل التعليمي,حضانات الاردن , روضة سلسال , دليل حضانات الاردن , دليل مدارسنا التعليمي , دليل الطالب الاردني , دليل المراكز التعليميه , مراكز الاردن التعليمية , اكاديمية راما للتدريب , التعليم في الاردن , دليل المراكز التعليمية , مركز مهارات للتدريب , مراكز تعليمية عمان , دليل المراكز التعليمية الاردن , ذوي الإحتياجات الخاصة , directory ,jordan education , jordan guide , madaresonajo Jordan ,الدراسة في الاردن,دليل مدارسنا الالكتروني , دليل مدارسنا الشامل , مدرسين الاردن ,معلمين في الاردن , وظائف للملعمين في الاردن &lt;,المدارس الموجودة في عمان ,,نشاط المدارس الخاصة ,تفاصيل , خدمة قطاع التعليم بكافة عناصره من مدرسة ,تابع أخبار ونشاطات مدرستك , مدارسنا , اخبار مدارس , تصفح نبذة شاملة عن جميع مدارس عمان , أظهر ابداع وتميز مدرستك , طلب توظيف خاص للملعمين في قطاع التعليم الخاص , وظيفتك بلمسة واحدة , معلمين , قدم السيرة الذاتية مجانا ,لتصل الى كافة قطاع التعليم الخاص في الاردن , أخبار الوزارة و المديريات ,,مفاهيم تربوية , اهم المدارس الخاصة وكليات المجتمع في عمان ,طلبتنا , مدارس , نقابة المدارس الخاصة, وجامعة ومعهد، إلى معلم وإداري وطالب ومتعلم، وتذليل العقبات أمام الربط بين تلك العناصر والمساهمة في تقدم المدارس الخاصة " />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان" />
-    {{--<meta property="og:url"           content="https://madaresonajo.com/" />--}}
-    <meta property="og:type"          content="website" />
-    {{--<meta property="og:title"         content="دليل مدارسنا التعليمي" />--}}
-    <meta property="og:image"         content="{{ asset('assets/images/favicon.png') }}" />
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="200">
+              ,مدارس الاردن ,خدمات الالكترونية ,مدارسنا ,المدارس الموجودة في الياسمين pioneers,pioneers in jordan,المراكز التعليمية في الاردن قطر,الدليل التعليمي,حضانات الاردن , روضة سلسال , دليل حضانات الاردن , دليل مدارسنا التعليمي , دليل الطالب الاردني , دليل المراكز التعليميه , مراكز الاردن التعليمية , اكاديمية راما للتدريب , التعليم في الاردن , دليل المراكز التعليمية , مركز مهارات للتدريب , مراكز تعليمية عمان , دليل المراكز التعليمية الاردن , ذوي الإحتياجات الخاصة , directory ,jordan education , jordan guide , madaresonajo Jordan ,الدراسة في الاردن,دليل مدارسنا الالكتروني , دليل مدارسنا الشامل , مدرسين الاردن ,معلمين في الاردن , وظائف للملعمين في الاردن &lt;,المدارس الموجودة في عمان ,,نشاط المدارس الخاصة ,تفاصيل , خدمة قطاع التعليم بكافة عناصره من مدرسة ,تابع أخبار ونشاطات مدرستك , مدارسنا , اخبار مدارس , تصفح نبذة شاملة عن جميع مدارس عمان , أظهر ابداع وتميز مدرستك , طلب توظيف خاص للملعمين في قطاع التعليم الخاص , وظيفتك بلمسة واحدة , معلمين , قدم السيرة الذاتية مجانا ,لتصل الى كافة قطاع التعليم الخاص في الاردن , أخبار الوزارة و المديريات ,,مفاهيم تربوية , اهم المدارس الخاصة وكليات المجتمع في عمان ,طلبتنا , مدارس , نقابة المدارس الخاصة, وجامعة ومعهد، إلى معلم وإداري وطالب ومتعلم، وتذليل العقبات أمام الربط بين تلك العناصر والمساهمة في تقدم المدارس الخاصة "/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" itemprop="description"
+          content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان"/>
+    @if(!((Request::segment(2))=='school-data'||(Request::segment(3))=='data'||(Request::segment(2))=='showMore'))
+        <meta property="og:url" content="https://madaresonajo.com/"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="دليل مدارسنا التعليمي"/>
+        <meta property="og:image" content="{{ asset('assets/images/favicon.png') }}"/>
+        <meta property="og:image:width" content="300">
+        <meta property="og:image:height" content="200">
+    @endif
+
     {{--<link href="cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />--}}
     {{--<link href="components/com_k2/css/k2574e.css?v=2.9.0" rel="stylesheet" type="text/css" />--}}
     <link href="{{ asset('assets/css/bootstrap-grid.css') }}" rel="stylesheet" type="text/css"/>
@@ -36,7 +40,7 @@
     <link href="{{ asset('assets/css/skin/skin.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/media/icons/iconsmind/line-icons.min.css') }}" rel="stylesheet" type="text/css"/>
 
-@if((app()->getLocale() == 'en'))
+    @if((app()->getLocale() == 'en'))
         <link href="{{ asset('assets/css/skin.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css"/>
 
@@ -114,14 +118,14 @@
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/582a3ab88147e4684e43b8b0/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/582a3ab88147e4684e43b8b0/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
 </script>
 <!--End of Tawk.to Script-->
@@ -129,7 +133,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63566876-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'UA-63566876-1');
