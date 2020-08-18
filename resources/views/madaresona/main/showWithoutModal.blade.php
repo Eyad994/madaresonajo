@@ -514,7 +514,7 @@
                                                     :
                                                 </div>
                                             </div>
-                                            <div class="col-md-8 form-group">{{ $school->contact_person_phone }}</div>
+                                            <div class="col-md-8 form-group">{{ $school->phone }}</div>
                                         </div>
                                         @if(!empty( $school->fax) )
                                             <div class="row">

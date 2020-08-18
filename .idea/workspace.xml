@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
-              <caret line="516" column="109" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="109" />
+              <caret line="516" column="89" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="89" />
               <folding>
                 <element signature="e#42270#42323#0#HTML" expanded="true" />
               </folding>
@@ -352,12 +352,12 @@
       <workItem from="1597426223560" duration="5237000" />
       <workItem from="1597432005432" duration="60000" />
       <workItem from="1597562011104" duration="2064000" />
-      <workItem from="1597700121474" duration="7758000" />
+      <workItem from="1597700121474" duration="8032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31679000" />
+    <option name="totallyTimeSpent" value="31953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -640,7 +640,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="516" column="109" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="109" />
+          <caret line="516" column="89" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="89" />
           <folding>
             <element signature="e#42270#42323#0#HTML" expanded="true" />
           </folding>
