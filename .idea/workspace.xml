@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f84a3d-3866-48d0-ac05-364a8eec2ede" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="418">
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -60,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
@@ -149,7 +149,6 @@
         <option value="$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/navAndFooterLinks.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style_ar.css" />
@@ -157,6 +156,7 @@
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" />
       </list>
     </option>
   </component>
@@ -409,12 +409,12 @@
       <workItem from="1597426223560" duration="5237000" />
       <workItem from="1597432005432" duration="60000" />
       <workItem from="1597562011104" duration="2064000" />
-      <workItem from="1597700121474" duration="3755000" />
+      <workItem from="1597700121474" duration="4095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27676000" />
+    <option name="totallyTimeSpent" value="28016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -628,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -681,6 +674,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="115" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
         </state>
       </provider>
     </entry>
