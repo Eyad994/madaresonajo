@@ -16,15 +16,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SchoolController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3344">
-              <caret line="190" selection-start-line="190" selection-end-line="190" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -63,11 +54,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+            <state relative-caret-position="364">
+              <caret line="516" column="109" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="109" />
               <folding>
                 <element signature="e#42270#42323#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Advertisement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="e#30#43#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Faq.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -99,15 +111,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/style_ar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -127,6 +130,7 @@
       <find>meta</find>
       <find>figure</find>
       <find>text-align: center;</find>
+      <find>email</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Eyad\Documents\Laravel Projects\madaresonajo\resources\views\madaresona</dir>
@@ -287,77 +291,13 @@
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
               <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
               <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="skin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="madaresona" type="462c0819:PsiDirectoryNode" />
-              <item name="supplier" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,12 +352,12 @@
       <workItem from="1597426223560" duration="5237000" />
       <workItem from="1597432005432" duration="60000" />
       <workItem from="1597562011104" duration="2064000" />
-      <workItem from="1597700121474" duration="5638000" />
+      <workItem from="1597700121474" duration="7758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29559000" />
+    <option name="totallyTimeSpent" value="31679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -435,8 +375,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.24750277" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50055677" side_tool="true" weight="0.24750277" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4994432" visible="true" weight="0.24750277" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -680,10 +620,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Advertisement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#30#43#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Faq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        <state relative-caret-position="364">
+          <caret line="516" column="109" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="109" />
           <folding>
             <element signature="e#42270#42323#0#HTML" expanded="true" />
           </folding>

@@ -506,7 +506,7 @@
                                                     :
                                                 </div>
                                             </div>
-                                            <div class="col-md-8 form-group">{{ $school->contact_person_email }}</div>
+                                            <div class="col-md-8 form-group">{{ $school->email_school }}</div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4 form-group">
