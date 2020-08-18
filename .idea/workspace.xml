@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="116" selection-start-line="2" selection-start-column="116" selection-end-line="2" selection-end-column="116" />
+            <state relative-caret-position="95">
+              <caret line="5" column="107" selection-start-line="5" selection-start-column="107" selection-end-line="5" selection-end-column="107" />
               <folding>
                 <element signature="e#42270#42323#0#HTML" expanded="true" />
               </folding>
@@ -412,12 +412,12 @@
       <workItem from="1597426223560" duration="5237000" />
       <workItem from="1597432005432" duration="60000" />
       <workItem from="1597562011104" duration="2064000" />
-      <workItem from="1597700121474" duration="4520000" />
+      <workItem from="1597700121474" duration="4891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28441000" />
+    <option name="totallyTimeSpent" value="28812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
@@ -682,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="116" selection-start-line="2" selection-start-column="116" selection-end-line="2" selection-end-column="116" />
+        <state relative-caret-position="95">
+          <caret line="5" column="107" selection-start-line="5" selection-start-column="107" selection-end-line="5" selection-end-column="107" />
           <folding>
             <element signature="e#42270#42323#0#HTML" expanded="true" />
           </folding>
