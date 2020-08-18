@@ -4,6 +4,8 @@
 <meta property="og:image"         content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" />
 <meta name="description" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}">
 <meta name="twitter:card" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}" />
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="200">
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
 <style>
 
