@@ -26,10 +26,9 @@
                                 </div>
                             </div>
                         </div>
-
+                        @include('suppliers')
+                        @include('ads')
                     </div>
-                    @include('suppliers')
-                    @include('ads')
                     <div class="col-md-8" id="news_grid"
                          style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.48);padding: 20px;border-radius: 10px">
                         <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> الأخبار</h2>
