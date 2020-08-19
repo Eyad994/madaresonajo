@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f84a3d-3866-48d0-ac05-364a8eec2ede" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style_ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style_ar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,49 +17,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="29" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="230" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="230" />
+              <caret line="1" column="230" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="230" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9671">
+              <caret line="516" column="89" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="97" column="37" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1368" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="5750" column="42" selection-start-line="5750" selection-start-column="42" selection-end-line="5750" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/style_ar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="516" column="89" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="89" />
-              <folding>
-                <element signature="e#42270#42323#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="19">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -66,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Advertisement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="152">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding>
                 <element signature="e#30#43#0#PHP" expanded="true" />
               </folding>
@@ -79,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/app/Models/Faq.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -88,16 +93,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5035">
-              <caret line="265" column="183" lean-forward="true" selection-start-line="265" selection-start-column="167" selection-end-line="265" selection-end-column="183" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <caret line="265" column="183" selection-start-line="265" selection-start-column="167" selection-end-line="265" selection-end-column="183" />
             </state>
           </provider>
         </entry>
@@ -131,9 +127,11 @@
       <find>figure</find>
       <find>text-align: center;</find>
       <find>email</find>
+      <find>font-family: 'GE Flow';</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Eyad\Documents\Laravel Projects\madaresonajo\resources\views\madaresona</dir>
+      <dir>$PROJECT_DIR$/public/assets</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -158,12 +156,12 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/navAndFooterLinks.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SchoolController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/style_ar.css" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/supplier/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/style_ar.css" />
       </list>
     </option>
   </component>
@@ -270,7 +268,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1990" />
+    <option name="x" value="70" />
     <option name="y" value="27" />
     <option name="width" value="1850" />
     <option name="height" value="1053" />
@@ -281,6 +279,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,19 +295,17 @@
             <path>
               <item name="madaresonajo" type="b2602c69:ProjectViewProjectNode" />
               <item name="madaresonajo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../carStation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -352,18 +349,19 @@
       <workItem from="1597426223560" duration="5237000" />
       <workItem from="1597432005432" duration="60000" />
       <workItem from="1597562011104" duration="2064000" />
-      <workItem from="1597700121474" duration="8032000" />
+      <workItem from="1597700121474" duration="9395000" />
+      <workItem from="1597861392101" duration="333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31953000" />
+    <option name="totallyTimeSpent" value="33649000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1990" y="27" width="1850" height="1053" extended-state="6" />
+    <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20935412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21213809" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -376,7 +374,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50055677" side_tool="true" weight="0.24750277" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4994432" visible="true" weight="0.24750277" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994432" visible="true" weight="0.24861266" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -460,14 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="5750" column="42" selection-start-line="5750" selection-start-column="42" selection-end-line="5750" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/supplierGrid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-721">
@@ -543,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -564,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style_ar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupplierController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -578,10 +554,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        <state relative-caret-position="532">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -595,35 +578,21 @@
     <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showMore.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="230" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="230" />
+          <caret line="1" column="230" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="230" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5035">
-          <caret line="265" column="183" lean-forward="true" selection-start-line="265" selection-start-column="167" selection-end-line="265" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="29" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="55" />
+        <state relative-caret-position="9671">
+          <caret line="516" column="89" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Advertisement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="152">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
             <element signature="e#30#43#0#PHP" expanded="true" />
           </folding>
@@ -633,17 +602,47 @@
     <entry file="file://$PROJECT_DIR$/app/Models/Faq.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="516" column="89" selection-start-line="516" selection-start-column="89" selection-end-line="516" selection-end-column="89" />
-          <folding>
-            <element signature="e#42270#42323#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="5035">
+          <caret line="265" column="183" selection-start-line="265" selection-start-column="167" selection-end-line="265" selection-end-column="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/supplier/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/skin_ar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1368" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="5750" column="42" selection-start-line="5750" selection-start-column="42" selection-end-line="5750" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style_ar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
