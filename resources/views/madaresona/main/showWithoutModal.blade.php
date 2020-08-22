@@ -1,13 +1,17 @@
 @extends('layouts.main')
-<title>{{ $school->name_en}} | {{$school->name_ar}}</title>
-<meta property="og:title"         content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}" />
-<meta property="og:url"           content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}" />
-<meta property="og:image"         content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}" />
-<meta name="description" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}">
-<meta name="twitter:card" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}" />
-<meta property="og:image:width" content="300">
-<meta property="og:image:height" content="200">
-<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
+<head>
+    <title>{{ $school->name_en}} | {{$school->name_ar}}</title>
+    <meta property="og:title" content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}"/>
+    <meta property="og:url"
+          content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"/>
+    <meta property="og:image"
+          content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"/>
+    <meta name="description" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}">
+    <meta name="twitter:card" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}"/>
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="200">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
+</head>
 <style>
 
 
@@ -468,7 +472,8 @@
                                         <div class="col-md-12" style="text-align-last: center;">
                                             @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
                                                 <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
-                                                     style="border-radius: 10px;padding: 20px;width: auto; height: 300px;" alt="">
+                                                     style="border-radius: 10px;padding: 20px;width: auto; height: 300px;"
+                                                     alt="">
                                             @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
                                                 <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
                                                    #f5f5f5 download="">
@@ -696,13 +701,16 @@
                      style="box-shadow: 0 2px 2px rgba(0, 0, 0, 0.11); padding: 20px;background: #fff;">
                     <h2 style="padding: 0px 0px 10px 0px; color: #1d556c;"> الأخبار</h2>
                     @foreach($news as $item)
-                    <div class="card" style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
+                        <div class="card"
+                             style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
 
-                            <div class="card-body" style="{{ (app()->getLocale() == 'ar') ?'direction: rtl; text-align: right;' : 'direction: ltr; text-align: left;' }}">
+                            <div class="card-body"
+                                 style="{{ (app()->getLocale() == 'ar') ?'direction: rtl; text-align: right;' : 'direction: ltr; text-align: left;' }}">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <img src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/news/{{ $item['img'] }}"
-                                             alt="Avatar" style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
+                                             alt="Avatar"
+                                             style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
                                     </div>
                                     <div class="col-md-9 container">
                                         <div class="row">
@@ -722,7 +730,7 @@
                             </div>
 
 
-                    </div>
+                        </div>
                     @endforeach
                     <h4 style="color: #5bc0de;cursor: pointer; display: none">المزيد</h4>
 
