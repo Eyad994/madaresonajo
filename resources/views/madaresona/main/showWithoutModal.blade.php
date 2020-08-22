@@ -1,4 +1,3 @@
-@extends('layouts.main')
 <head>
     <title>{{ $school->name_en}} | {{$school->name_ar}}</title>
     <meta property="og:title" content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}"/>
@@ -12,6 +11,7 @@
     <meta property="og:image:height" content="200">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
 </head>
+@extends('layouts.main')
 <style>
 
 
