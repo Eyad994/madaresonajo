@@ -171,7 +171,7 @@
             <div class="col-md-4 d-flex">
                 <div class="pricing-table turquoise flex-column">
                     <!-- Table Head -->
-                    <div class="pricing-label">تجريبي</div>
+                    <div class="pricing-label">{{ __('pricing_index.experiential') }}</div>
                     <!-- Features -->
                     <div class="pricing-features">
                         <div class="feature">{{ __('pricing_index.number_users') }} : 1</div>
@@ -196,7 +196,7 @@
             <div class="col-md-4 d-flex">
                 <div class="pricing-table turquoise flex-column">
                     <!-- Table Head -->
-                    <div class="pricing-label">اساسي</div>
+                    <div class="pricing-label">{{ __('pricing_index.basic') }}</div>
                     <!-- Features -->
                     <div class="pricing-features">
                         <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</div>
@@ -221,7 +221,7 @@
             <div class="col-md-4 d-flex">
                 <div class="pricing-table purple flex-column">
                     <!-- Table Head -->
-                    <div class="pricing-label">متقدم</div>
+                    <div class="pricing-label">{{ __('pricing_index.advanced') }}</div>
                     <!-- Features -->
                     <div class="pricing-features">
                         <div class="feature"><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</div>
@@ -247,91 +247,4 @@
 
         </div>
     </div>
-
-    {{--<div class="container" >
-        <section class="price-sec"
-                 @if((app()->getLocale() == 'ar'))
-                 style="direction: rtl; text-align: right;margin-bottom: 200px;">
-            @else
-                style="direction:ltr; text-align:left;margin-bottom: 200px;">
-            @endif
-            <div class="container-fluid">
-                <div class="container" style=" margin-top: 100px;">
-                    <div class="row ptables-head">
-                        <h3 class="text-center" style="margin: 0 auto; font-weight: 600; width: 800px;">{{ __('pricing_index.pricing_text') }}</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 price-table">
-                            <div class="card text-center" style=" height: 100%;">
-                                <div class="title">
-                                    <i class="fa fa-paper-plane" style="color: #f660015e;"></i>
-                                    <h2>تجريبي</h2>
-                                </div>
-                                --}}{{-- <div class="price">
-                                    <h4><sup>$</sup>500</h4>
-                                </div>--}}{{--
-                                <div class="option">
-                                    <ul>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 1</li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }} </li>
-                                        <li style="margin-bottom: 68px;"><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }} </li>
-                                    </ul>
-                                </div>
-                                <a href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
-                            </div>
-                        </div>
-                        <!-- (1) ===================================-->
-                        <div class="col-sm-4 price-table">
-                            <div class="card text-center">
-                                <div class="title">
-                                    <i class="fa fa-plane" style="color: #f6600199;"></i>
-                                    <h2>اساسي</h2>
-                                </div>
-                                <div class="option">
-                                    <ul>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.edit_information_profile_school') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }} </li>
-                                    </ul>
-                                </div>
-                                <a href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
-                            </div>
-                        </div>
-                        <!-- (2) ===================================-->
-                        <div class="col-sm-4 price-table">
-                            <div class="card text-center">
-                                <div class="title">
-                                    <i class="fa fa-rocket" style="color: #f66001;"></i>
-                                    <h2>متقدم</h2>
-                                </div>
-
-                                <div class="option">
-                                    <ul>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.number_users') }} : 2</li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.advertisement_employment') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_cv') }}</li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.daily_activities') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.edit_information_profile_school') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.facilitate_new_students') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.entry_teachers') }} </li>
-                                        <li><i class="fa fa-check"></i>{{ __('pricing_index.send_school_profile') }} </li>
-                                    </ul>
-                                </div>
-                                <a href="{{ route('contactUs', app()->getLocale()) }}">{{ __('pricing_index.click_here') }}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>--}}
 @endsection

@@ -29,8 +29,8 @@
                          style=" direction: {{(app()->getLocale() == 'ar') ? 'ltr':'rtl'}} ;">
                         <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000"><h2
                                     class="themekit-header title_header title_header">{{__('index.text_messages')}}</h2>
-                            <p>هي من الأدوات الأساسية التي تساعد الشركات في تسويق منتجاتها أو خدماتها وذلك لجذب عملاء جدد أو بغرض إشهار الإسم التجاري أو إيصال معلومات أو إرسال تنبيهات للعملاء.</p>
-                            <p>إن شركة مدارسنا  تعتبر مزودة لخدمة الإرسال فقط ولا تقوم ببيع أرقام أو بيانات، حيث تستطيع من خلال النظام حفظ الأرقام الخاصة بعملائك حسب التصنيفات التي تناسب عملك، وما يميز النظام هو سهولة الإستخدام من خلال أجهزة الحاسب الآلي والأجهزة اللوحية والهواتف الذكية.</p>
+                            <p>{{__('index.services_ms1')}}</p>
+                            <p>{{__('index.services_ms2')}}</p>
                             {{-- <a class="btn-text"
                                 href="https://gtmetrix.com/reports/templates.themekit.dev/Z0YhikoK"
                                 #f5f5f5 rel="noopener"

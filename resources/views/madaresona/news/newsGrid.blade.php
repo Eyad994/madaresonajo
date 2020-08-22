@@ -1,4 +1,4 @@
-<h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> الأخبار</h2>
+<h2 style="padding: 0px 0px 10px 0px; color: #1d556c;text-align: center;"> {{__('index.News')}}</h2>
 @foreach($news as $item)
     <div class="card"
          style="margin-top: 10px; border-radius: 10px !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">

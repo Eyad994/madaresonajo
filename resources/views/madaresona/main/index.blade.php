@@ -5,12 +5,6 @@
 @section('content')
 
 
-    {{--
-        box-shadow: 5px 3px 8px 0px #888888;
-        height: 50px;
-        0 2px 2px rgba(0, 0, 0, 0.11)
-    --}}
-
     <style>
 
         @media only screen and (max-width: 991px) {
@@ -125,8 +119,8 @@
             </div>
             <div class="col-md-2" style="margin-left:12px;">
                 <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
-                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">المؤسسات
-                        التعليمية
+                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">
+                        {{__('index.education_institutions')}}
                     </div>
                     <div
                             @if((app()->getLocale() == 'ar'))
@@ -139,7 +133,7 @@
                                 style="font-size: 15px;padding:0px 10px;">
                             <option style="color: #000; font-weight: bold;" disabled
                                     selected>{{ __('index.education_institutions') }}</option>
-                            <option value="0">{{ app()->getLocale() == 'ar' ? 'الكل' : 'All' }}</option>
+                            <option value="0"> {{__('index.all')}}</option>
                             @foreach($schoolsType as $type)
                                 <option value="{{ $type->id }}">{{ (app()->getLocale() == 'en') ? $type->name_en :  $type->name_ar}}</option>
                             @endforeach
@@ -546,83 +540,4 @@
     @include('modal')
 
 @endsection
-{{--
 
-<div class="travelo-box widget-queries">
-    <i class="fa fa-filter"></i> <small> فلترة حسب  القطاع</small>
-    <ul>
-        <li><a href="TendersSearch.aspx?Sector=1">
-                <img src="App_Themes/WebAr/images/graph-b.svg" width="24">
-                حكومي
-
-                <label class="price-wrapper pull-right">
-                    <span id="b_Gooverment" class="price-per-unit" style="color:#3498DB !important">87473</span>
-
-                </label>
-            </a>
-        </li>
-        <li><a href="TendersSearch.aspx?Sector=2">
-                <img src="App_Themes/WebAr/images/graph-r.svg" width="24">
-                القطاع الخاص
-                <label class="price-wrapper pull-right">
-                    <span id="b_Private" class="price-per-unit" style="color:#C0392B !important">16749</span>
-                </label>
-            </a></li>
-        <li><a href="TendersSearch.aspx?Sector=3">
-                <img src="App_Themes/WebAr/images/graph-p.svg" width="24">
-                المنظمات الدولية
-                <label class="price-wrapper pull-right">
-                    <span id="b_international" class="price-per-unit" style="color:#9B59B6 !important">10076</span>
-                </label>
-            </a>
-        </li>
-        <li><a href="TendersSearch.aspx?Sector=4">
-                <img src="App_Themes/WebAr/images/graph-g.svg" width="24">
-                الهيئات الاجتماعية
-                <label class="price-wrapper pull-right">
-                    <span id="b_Societies" class="price-per-unit" style="color:#28B463 !important">3681</span>
-
-
-                </label>
-
-            </a>
-
-        </li>
-
-    </ul>
-
-
-    <i class="fa fa-pie-chart" aria-hidden="true"></i> <small> عدد النتائج حسب المصدر</small>
-
-    <ul>
-        <li>
-            <img src="App_Themes/WebAr/images/www.svg" width="24">
-            محركات البحث
-
-            <label class="price-wrapper pull-right">
-                <span id="lblSearchEnginSource" class="price-per-unit" style="color:#3498DB !important">11074</span>
-
-            </label>
-
-        </li>
-        <li>
-            <img src="App_Themes/WebAr/images/crown.svg" width="24">
-            حصرياً لدينا
-            <label class="price-wrapper pull-right">
-                <span id="lblTenderJOSource" class="price-per-unit" style="color:#C0392B !important">3707</span>
-            </label>
-        </li>
-
-        <li>
-            <img src="App_Themes/WebAr/images/free.svg" width="24">
-            عطاءات مجانية
-
-            <label class="price-wrapper pull-right">
-                <span id="lblfreetndr" class="price-per-unit" style="color:#3498DB !important">232</span>
-
-            </label>
-
-        </li>
-
-    </ul>
-</div>--}}

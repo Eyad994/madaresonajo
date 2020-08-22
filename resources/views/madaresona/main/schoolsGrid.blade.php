@@ -21,12 +21,11 @@
                 <div class="col-md-5"></div>
                 <div style="text-align: center">
                     <div style="    width: 200px;background: #f8d7da;padding: 20px;border-radius: 5px;font-size: 25px;">
-                                لا يوجد نتائج
+                        {{__('index.no_results')}}
                     </div>
                 </div>
             @endif
         </div>
-        {{--{!! $schools->links() !!}--}}
     </div>
 
 <div class="row">

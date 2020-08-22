@@ -54,34 +54,7 @@
                             <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
                             <hr>
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fad fa-home" style="color: #ff6000"></i> العنوان</h3>
-                                <p style="margin-top: 5px; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">عمان-الأردن الياسمين -شارع جبل
-                                    مجمع المحتسب التجاري- بناء رقم 83 - الطابق الثاني</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fad fa-phone" style="color: #ff6000"></i> الهاتف</h3>
-                                <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962062006896</p>
-                                <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962797902497</p>
-                                <p style="margin-top: 5px; direction:ltr;{{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962790452034</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px; ">
-                                <h3 class="h4"><i class="fad fa-fax" style="color: #ff6000"></i> فاكس</h3>
-                                <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">+962062006896</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fad fa-envelope" style="color: #ff6000"></i> البريد الالكتروني
-                                </h3>
-                                <p style="margin-top: 5px;{{(app()->getLocale() == 'ar') ? 'margin-right:30px;':'margin-left:30px;'}}">Info@madaresonajo.com</p>
-                            </div>
-                        </div>
+                        @include('address_info')
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-6">
@@ -90,12 +63,11 @@
                             action="{{ route('storeContactUs', app()->getLocale()) }}" method="POST">
                             @csrf
 					<span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}">
-						ارسل رسالة
+						{{__('index.massage_send')}}
 					</span>
-                            <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم
-                                بالرد في غضون 24 ساعة عمل</h4>
+                            <h4 class="contact100-form-sub_title">{{__('index.massage_send_tex1')}}</h4>
                             <div class="wrap-input100 validate-input" data-validate="Name is required">
-                                <input class="input100" type="text" name="name" placeholder="الاسم" value="{{ old('name') }}">
+                                <input class="input100" type="text" name="name" placeholder="{{__('index.name')}}" value="{{ old('name') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-user" aria-hidden="true"></i>
@@ -108,7 +80,7 @@
                             @endif
 
                             <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                                <input class="input100" type="text" name="phone_number" placeholder="الهاتف " value="{{ old('phone_number') }}">
+                                <input class="input100" type="text" name="phone_number" placeholder="{{__('index.phone')}} " value="{{ old('phone_number') }}">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-phone" aria-hidden="true"></i>
@@ -121,7 +93,7 @@
                             @endif
                             <div class="wrap-input100 validate-input"
                                  data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني" value="{{ old('email_user') }}" >
+                                <input class="input100" type="text" name="email_user" placeholder="{{__('index.email')}}" value="{{ old('email_user') }}" >
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
 							<i class="fad fa-envelope" aria-hidden="true"></i>
@@ -134,7 +106,7 @@
                             @endif
 
                             <div class="wrap-input100 validate-input" data-validate="Message is required">
-                                <textarea class="input100" name="message" placeholder="الرسالة ...">{{ old('message') }}</textarea>
+                                <textarea class="input100" name="message" placeholder="{{__('index.massage')}} ...">{{ old('message') }}</textarea>
                                 <span class="focus-input100"></span>
                             </div>
                             @if($errors->has('message'))
@@ -145,7 +117,7 @@
 
                             <div class="container-contact100-form-btn">
                                 <button class="contact100-form-btn">
-                                    ارسل
+                                    {{__('index.send')}}
                                 </button>
                             </div>
                         </form>

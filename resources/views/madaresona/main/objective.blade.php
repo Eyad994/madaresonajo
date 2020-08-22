@@ -26,17 +26,17 @@
     <div class="container-contact100" style="background: #f5f5f5 !important; padding-top: 170px; padding-bottom: 100px;">
         <div id="terms_and_conditinos" style="text-align: right; direction: rtl; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.38); border-radius: 5px;">
 
-            <h2 style="text-align: center; padding-bottom: 20px; color: #ff7f27; font-weight: bold;"> أهدافنا</h2>
+            <h2 style="text-align: center; padding-bottom: 20px; color: #ff7f27; font-weight: bold;">  {{__('index.objective')}}</h2>
             <p>
-                التطلع والوصول لرضا موظفينا وعملائنا من كافة المؤسسات التعليمية
+                {{__('index.tex_objective1')}}
                 <br>
-                استحداث التكنولوجيا التي تسهم في نشر الفكر العربي عالميآ وتصحيح المفاهيم المغلوطه للامة العربية
+                {{__('index.tex_objective2')}}
                 <br>
-                ان تخدم بخدماتنا الجميع وتتوافق مع رغبات العملاء.
+                {{__('index.tex_objective3')}}
                 <br>
-                التركيز على أهمية الولاء المشترك بين العميل وبيننا
+                {{__('index.tex_objective4')}}
                 <br>
-                الاهتمام باراء العملاء والتعامل معهم بجدية
+                {{__('index.tex_objective5')}}
             </p>
         </div>
     </div>
