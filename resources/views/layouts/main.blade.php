@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  dir="ltr">
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
 
 <!-- Mirrored from chipblue.net/joomla/codrop/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Jul 2020 21:41:50 GMT -->
 <!-- Added by HTTrack -->
