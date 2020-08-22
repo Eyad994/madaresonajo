@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f84a3d-3866-48d0-ac05-364a8eec2ede" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" selection-start-column="14" selection-end-column="15" />
+            <state relative-caret-position="133">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -143,8 +143,8 @@
         <option value="$PROJECT_DIR$/resources/views/madaresona/pricing/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/index.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/subscription/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
       </list>
     </option>
   </component>
@@ -383,12 +383,12 @@
       <workItem from="1597942176917" duration="9000" />
       <workItem from="1597942196340" duration="2748000" />
       <workItem from="1598104901165" duration="11000" />
-      <workItem from="1598135374764" duration="705000" />
+      <workItem from="1598135374764" duration="857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41386000" />
+    <option name="totallyTimeSpent" value="41538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
@@ -757,17 +757,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="15" selection-start-column="14" selection-end-column="15" />
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/madaresona/main/showWithoutModal.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="133">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
