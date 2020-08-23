@@ -1,8 +1,13 @@
-<meta property="og:title"         content="{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}" />
-<meta property="og:image"         content="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}" />
-<meta property="og:image:width"   content="300">
-<meta property="og:image:height"  content="200">
 @extends('layouts.main')
+<head>
+    <title>{{$supplier->name_ar }} | {{$supplier->name_en }}</title>
+    <meta property="og:title"         content="{{(app()->getLocale() == 'ar') ?$supplier->name_ar :$supplier->name_en }}" />
+    <meta property="og:image"         content="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}" />
+    <meta property="og:image:width"   content="300">
+    <meta property="og:image:height"  content="200">
+</head>
+
+
 <section class="section-base" style="margin-bottom: 20px; padding-top:170px; background-color: #f5f5f5; ">
     @php $dir = (app()->getLocale() == 'ar') ?"direction: rtl;":"direction: ltr;" @endphp
     <div class="container" style="{{$dir}}">
