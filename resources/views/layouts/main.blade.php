@@ -5,7 +5,7 @@
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
-    <title>MadaresonaJO - دليل مدارسنا</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     @if(!((Request::segment(2))=='school-data'||(Request::segment(3))=='data'||(Request::segment(2))=='showMore'))
+        <title>MadaresonaJO - دليل مدارسنا</title>
         <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان"/>
         <meta property="og:url" content="https://madaresonajo.com/"/>
         <meta property="og:type" content="website"/>
