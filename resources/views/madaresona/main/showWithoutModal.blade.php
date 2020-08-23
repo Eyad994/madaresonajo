@@ -1,19 +1,16 @@
-<head>
-    <title>{{ $school->name_en}} | {{$school->name_ar}}</title>
-    <meta property="og:title" content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}"/>
-    <meta property="og:url"
-          content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"/>
-    <meta property="og:image"
-          content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"/>
-    <meta name="description" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}">
-    <meta name="twitter:card" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}"/>
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="200">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
-</head>
 @extends('layouts.main')
+<title>{{ $school->name_en}} | {{$school->name_ar}}</title>
+<meta property="og:title" content="{{(app()->getLocale() == 'ar') ?$school->name_ar :$school->name_en }}"/>
+<meta property="og:url"
+      content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"/>
+<meta property="og:image"
+      content="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"/>
+<meta name="description" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}">
+<meta name="twitter:card" content="{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar}}"/>
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="200">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
 <style>
-
 
     .nav-tabs {
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
