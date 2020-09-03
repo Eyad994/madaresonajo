@@ -15,16 +15,16 @@
                             <div class="input-group-prepend" style="margin-right: 3px;">
                                 <select name="search_select" class="form-control select-banner" id="search_select"
                                         style="border-radius: 0px 5px 5px 0px;">
-                                    <option value="1">الإسم</option>
-                                    <option value="2">العنوان</option>
-                                    <option value="3">نوع المنهاج</option>
-                                    <option value="4">الرسوم</option>
+                                    <option value="1">{{__('index.name')}}</option>
+                                    <option value="2">{{__('index.address')}}</option>
+                                    <option value="3">{{__('index.curriculum_type')}}</option>
+                                    <option value="4">{{__('index.fees')}}</option>
                                 </select>
                             </div>
                         </div>
                         <div class="input-group" style="direction: rtl;width: 80%">
                             <input type="text" name="search_text" id="search_text" class="form-control"
-                                   placeholder="بحث عن المدارس ورياض الأطفال"
+                                   placeholder="{{__('index.search_for_schools')}}"
                                    style="border-radius: 0px;margin-right: -1px;">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" disabled="" type="button">
@@ -44,13 +44,13 @@
                             <div class="order-0 order-md-12 form-group" style="width: 20%;">
                                 <select name="country" id="country" class="form-control select-banner"
                                         style="border-radius: 0px 5px 5px 0px;">
-                                    <option value="1">الأردن</option>
+                                    <option value="1">{{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}</option>
                                 </select>
                             </div>
                             <div class="order-1 order-md-12 form-group" style="width: 30%; ">
                                 <select name="city_id" id="city_id" class="form-control select-banner"
                                         style="border-radius:0px!important;">
-                                    <option disabled selected>المدينة</option>
+                                    <option disabled selected>{{__('index.city')}}</option>
                                     @foreach($cities as $city)
                                         <option value="{{ $city->id }}">{{ $city->city_name_ar }}</option>
                                     @endforeach
@@ -59,7 +59,7 @@
                             <div class="order-2 order-md-12 form-group" style="width: 50%;">
                                 <select name="region_id" id="region_id" class="form-control select-banner"
                                         style="padding-left: 10px;border-radius: 5px 0px 0px 5px !important;" disabled>
-                                    <option disabled selected>المنطقة</option>
+                                    <option disabled selected>{{__('index.region')}}</option>
                                 </select>
                             </div>
 
@@ -72,9 +72,9 @@
                     <div class="col-md-4 schoolType" style="display: none ;">
                         <div class="row" style="padding: 0px 20px">
                             <select name="school_type" id="school_type" class="form-control select-banner">
-                                <option selected disabled>نوع المنهاج</option>
-                                <option value="0">محلي</option>
-                                <option value="1">دولي</option>
+                                <option selected disabled>{{__('index.curriculum_type')}} </option>
+                                <option value="0">{{__('index.local')}}</option>
+                                <option value="1">{{__('index.international')}}</option>
                             </select>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             <div class="order-0 order-md-12 form-group" style="width: 60%;">
                                 <select name="school_class" id="school_class" class="form-control select-banner"
                                         style="border-radius: 0px 5px 5px 0px !important;">
-                                    <option selected disabled>اختر الصف</option>
+                                    <option selected disabled> {{__('index.choose_class')}}</option>
                                     @foreach($schoolClasses as $class)
                                         <option value="{{ $class->id }}">{{ $class->class_en }}</option>
                                     @endforeach
@@ -96,11 +96,11 @@
                             </div>
 
                             <div class="order-1 order-md-12 form-group" style="width: 20%; ">
-                                <input type="number" class="form-control" name="from_price" placeholder="من"
+                                <input type="number" class="form-control" name="from_price" placeholder=" {{__('index.from')}}"
                                        style="text-align: right;border-radius: 0px !important;">
                             </div>
                             <div class="order-2 order-md-12 form-group" style="width: 20%;">
-                                <input type="number" class="form-control" name="to_price" placeholder="إلى"
+                                <input type="number" class="form-control" name="to_price" placeholder=" {{__('index.to')}}"
                                        style="text-align: right;border-radius: 5px 0px 0px 5px !important;">
                             </div>
 
@@ -116,8 +116,7 @@
                         <div class="row" style="padding: 0px 20px">
                             <div class="input-group-prepend" style="width: 100%">
                                 <button type="submit" class="btn btn-info" id="inputGroupPrepend2"
-                                        style="top: 10px;width: 100%; background: #fd460c;border-color: #fd460c;">
-                                    بحث
+                                        style="top: 10px;width: 100%; background: #fd460c;border-color: #fd460c;">{{__('index.search')}}
                                 </button>
                             </div>
                         </div>

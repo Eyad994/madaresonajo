@@ -3189,17 +3189,6 @@ a.idp-modal-close {
     position: relative !important
 }
 
-.ux-tray.has-options .ux-tray-toggle:after {
-    content: '\e87d';
-    color: inherit;
-    font-family: soap-icons;
-    font-size: 14px;
-    font-weight: 700;
-    margin-right: 3px;
-    vertical-align: top;
-    position: relative;
-    top: .1em
-}
 
 .ux-tray.has-options.oi-open .ux-tray-toggle:after {
     content: '\e870'

@@ -20,11 +20,10 @@
                     <ul class="tabs">
 
                         <li id="Suppliers-Overview-li" class="active"><a href="#Suppliers-Overview-Tab"
-                                                                         data-toggle="tab">معلومات عامة</a></li>
+                                                                         data-toggle="tab">{{__('index.general_information')}}</a></li>
 
-                        <li id="Suppliers-Contacts-li"><a href="#Suppliers-Contacts-Tab" data-toggle="tab">مراسلة
-                                المورد</a></li>
-                        <li id="Suppliers-Products-li"><a href="#Suppliers-Products-Tab" data-toggle="tab">المنتجات</a>
+                        <li id="Suppliers-Contacts-li"><a href="#Suppliers-Contacts-Tab" data-toggle="tab"> {{__('index.conversation_supplier')}}</a></li>
+                        <li id="Suppliers-Products-li"><a href="#Suppliers-Products-Tab" data-toggle="tab">{{__('index.products')}}</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -61,7 +60,7 @@
                                     </div>
 
                                     <a href="#Suppliers-Contacts-Tab" onclick="TapActive()" data-toggle="tab"
-                                       class="goto-writereview-pane button green btn-small full-width">مراسلة المورد</a>
+                                       class="goto-writereview-pane button green btn-small full-width">{{__('index.conversation_supplier')}}</a>
 
                                     <div class="clerar">
                                         <br>
@@ -110,8 +109,7 @@
                                             @if(!empty($supplier->location))
                                                 <li class="address" style="padding-top: 0px;text-align: right">
                                                     <i class="soap-icon-address circle" style="padding: 7px"></i>
-                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">
-                                                        العنوان</h5>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">{{__('index.address')}}</h5>
                                                     <p id="ctl00_ContentPlaceHolder1_bAddress">{{$supplier->location}}</p>
                                                 </li>
                                             @endif
@@ -119,30 +117,28 @@
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-address circle" style="padding: 7px"></i>
                                                     <h5 class="title" style="margin-top: 0px;font-size: 18px">
-                                                        الهاتف</h5>
+                                                        {{__('index.phone')}}</h5>
                                                     <p id="ctl00_ContentPlaceHolder1_bPhone">{{$supplier->phone}}</p>
                                                 </li>
                                             @endif
                                             @if(!empty($supplier->fax))
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-phone circle" style="padding: 7px"></i>
-                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">فاكس</h5>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">{{__('index.fax')}}</h5>
                                                     <p id="ctl00_ContentPlaceHolder1_bFax">{{$supplier->fax}}</p>
                                                 </li>
                                             @endif
                                             @if(!empty($supplier->mobile))
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-phone circle" style="padding: 7px"></i>
-                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">الهاتف
-                                                        النقال</h5>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">{{__('index.phone2')}}</h5>
                                                     <p id="ctl00_ContentPlaceHolder1_bMobile">{{$supplier->mobile}}</p>
                                                 </li>
                                             @endif
                                             @if(!empty($supplier->email))
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-message circle" style="padding: 7px"></i>
-                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">البريد
-                                                        الإلكتروني</h5>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">{{__('index.email')}}</h5>
 
                                                     <p id="ctl00_ContentPlaceHolder1_bEmail">{{$supplier->email}}</p>
                                                 </li>
@@ -150,8 +146,7 @@
                                             @if(!empty($supplier->website))
                                                 <li class="address" style="text-align: right">
                                                     <i class="soap-icon-globe circle" style="padding: 7px"></i>
-                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">الموقع
-                                                        الالكتروني</h5>
+                                                    <h5 class="title" style="margin-top: 0px;font-size: 18px">{{__('index.website')}}</h5>
                                                     <p id="ctl00_ContentPlaceHolder1_bWebsite">{{$supplier->website}}</p>
                                                 </li>
                                             @endif
@@ -160,12 +155,12 @@
                                 </div>
                             </div>
                             <div class="long-description" style="direction: rtl;text-align: right;">
-                                <h4 style="font-weight: bold">نظرة عامة</h4>
+                                <h4 style="font-weight: bold">{{__('index.overview')}}</h4>
                                 <p id="ctl00_ContentPlaceHolder1_bDeitiles"
                                    style="text-align: justify;margin-top: 0px">{!!(app()->getLocale() == 'ar') ?$supplier->supplier_details_ar :$supplier->supplier_details_en !!}</p>
                             </div>
                             <div style="width: 100%">
-                                <h4 style="font-weight: bold;text-align: right">المنتجات والخدمات</h4>
+                                <h4 style="font-weight: bold;text-align: right">{{__('index.products_services')}}</h4>
                                 @foreach($supplierServices as $supplierService)
                                     <span class="info-success"
                                           style="float: right;margin-right: 10px;margin-top: 5px;    padding: 5px;">{{ $supplierService->name_ar }}</span>
@@ -180,32 +175,32 @@
                                 <div class="booking-section">
 
                                     <div class="person-information" style="text-align: right;">
-                                        <h2>الرجاء اكمال النموذج ادناه لمراسة المورد</h2>
+                                        <h2>{{__('index.tex100')}}</h2>
                                         <hr style="margin: 20px 0">
                                         <div class="form-group row">
                                             <div class="col-sm-6 col-md-5">
-                                                <span>الاسم</span>
+                                                <span>{{__('index.name')}}</span>
                                                 <span id="name" class="errorlbl pull-right"
-                                                      style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                      style="color:Red;visibility:hidden;">{{__('index.required_field')}}</span>
                                                 <input name="name" type="text" id="ctl00_ContentPlaceHolder1_txtName"
                                                        class="form-control">
 
 
                                             </div>
                                             <div class="col-sm-6 col-md-5">
-                                                <span>البريد الإلكتروني</span>
+                                                <span>{{__('index.email')}}</span>
                                                 <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1"
-                                                      class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                      class="errorlbl pull-right" style="color:Red;visibility:hidden;">{{__('index.required_field')}}</span>
                                                 <input name="email" type="text" id="email" class="form-control">
                                                 <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1"
-                                                      class="errorlbl" style="color:Red;visibility:hidden;">البريد الإلكتروني غير صحيح</span>
+                                                      class="errorlbl" style="color:Red;visibility:hidden;">{{__('index.email')}}  {{__('index.incorrect')}}  </span>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-md-10">
-                                                <span>الموضوع</span>
+                                                <span>{{__('index.topic')}}</span>
                                                 <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2"
-                                                      class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                      class="errorlbl pull-right" style="color:Red;visibility:hidden;">{{__('index.required_field')}}</span>
                                                 <input name="subject" type="text" id="subject" class="form-control">
 
                                             </div>
@@ -214,12 +209,12 @@
                                     <div class="booking-hotel">
                                         <div class="form-group row">
                                             <div class="col-md-10" style="text-align: right">
-                                                <span> ادخل محتوى الرسالة</span>
+                                                <span>{{__('index.message_content')}}</span>
                                                 <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3"
-                                                      class="errorlbl pull-right" style="color:Red;visibility:hidden;">حقل مطلوب</span>
+                                                      class="errorlbl pull-right" style="color:Red;visibility:hidden;">{{__('index.required_field')}}</span>
                                                 <textarea name="message" rows="10" cols="20" id="subject_text"
                                                           class="form-control"></textarea>
-                                                <small>الحد الاعلى 600 حرف</small>
+                                                <small>{{__('index.maximum_characters')}}</small>
 
                                             </div>
                                         </div>
@@ -237,7 +232,7 @@
                                             <button style="color: white;" type="submit"
                                                     class="button btn-large dull-blue">
                                                 <i class="soap-icon-recommend">&nbsp;</i>
-                                                ارسال
+                                                {{__('index.send')}}
                                             </button>
                                         </div>
                                     </div>
@@ -248,7 +243,7 @@
                         <div class="tab-pane" id="Suppliers-Products-Tab">
                             <div class="booking-section">
                                 <div class="person-information" style="text-align: right;">
-                                    <h2>المنتجات</h2>
+                                    <h2>{{__('index.products')}}</h2>
                                     <hr style="margin: 20px 0">
 
                                     <style>
@@ -286,7 +281,7 @@
                     <div id="ctl00_ContentPlaceHolder1_rslist" class="travelo-box" style="margin-top: 70px;">
                         <div class="box-title">
                             <div class="image-box style14" style="text-align: right">
-                                <h4>الشركات ذات صلة</h4>
+                                <h4>{{__('index.related_companies')}}</h4>
                                 @foreach($relatedSuppliers as $relatedSupplier)
                                     <article class="box" >
                                         <figure class="animated flipInX" data-animation-type="flipInX"

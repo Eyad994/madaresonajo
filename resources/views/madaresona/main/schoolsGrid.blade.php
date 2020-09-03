@@ -12,7 +12,7 @@
                                  alt="" style="width: 100%; height: 140px">
                         </a>
                         <div class="caption" style="background: #d6d8dc;">
-                            <p style="text-align: center;">{{ $school->name_ar }}</p>
+                            <p style="text-align: center;"> {{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar }}</p>
                         </div>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
             @if(count($schools) == 0)
                 <div class="col-md-5"></div>
                 <div style="text-align: center">
-                    <div style="    width: 200px;background: #f8d7da;padding: 20px;border-radius: 5px;font-size: 25px;">
+                    <div style="width: 200px;background: #f8d7da;padding: 20px;border-radius: 5px;font-size: 25px;">
                         {{__('index.no_results')}}
                     </div>
                 </div>

@@ -131,8 +131,7 @@ body, p, input, textarea, ::placeholder, .tab-box.tab-vertical > .tab-nav li:not
 }
 
 body > nav.light:not(.menu-transparent), nav.light.menu-transparent.scroll-menu, footer {
-    /*background-color: rgb(55, 81, 126);*/
-    background-color: #ff6000;
+
 }
 
 .boxed-area.light {

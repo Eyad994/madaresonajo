@@ -9,21 +9,21 @@
                 <div class=" fade-left" style="padding-top: 130px !important;direction: rtl;" id="schoolsGrid">
                     <div class="travelo-box clearfix">
                         <div class="form-group col-xs-12 col-md-9">
-                            <div style=" width: 100%;text-align: right;color: #838383 ">البحث</div>
+                            <div style=" width: 100%;text-align: right;color: #838383 "> {{__('index.search')}}</div>
                             <div class="with-icon full-width">
                                 <input name="search_text" type="text"
                                        id="search_text" class="form-control"
-                                       placeholder=" ابحث هنا ">
+                                       placeholder=" {{__('index.search_here')}} ">
                             </div>
 
                         </div>
                         <div class="form-group col-xs-8 col-md-3" style="padding-top: 20px;">
-                            <label>&nbsp;</label>
+                            <label></label>
                             <a id="search_button"
                                class="button btn-medium dull-blue"
                                href="#">
                                 <i class="soap-icon-search">&nbsp;</i>
-                                بحث</a>
+                                {{__('index.search_here')}}</a>
                         </div>
                     </div>
                     <div class="car-list listing-style3 car" id="supplierGrid">
@@ -83,19 +83,17 @@
                                     </div>
                                     <div class="col-xs-8 col-sm-4 character">
                                         <dl class="" style="text-align: right;">
-                                            {{--<dt class="skin-color">الشخص المسؤول</dt>
-                                            <dd>م. مهند ابوموجة</dd>--}}
-                                            <dt class="skin-color">الهاتف</dt>
+                                            <dt class="skin-color">{{__('index.phone')}}</dt>
                                             <dd>{{$supplier->phone}}</dd>
-                                            <dt class="skin-color">المنطقة</dt>
+                                            <dt class="skin-color">{{__('index.region')}}</dt>
                                             <dd>{{(app()->getLocale() == 'en') ?$supplier->region->area_name_en:$supplier->region->area_name_ar }}</dd>
-                                            <dt class="skin-color" style="font-size: 9px;">البريد الالكتروني</dt>
+                                            <dt class="skin-color" style="font-size: 9px;">{{__('index.email')}}</dt>
                                             <dd>{{ $supplier->email }}</dd>
                                         </dl>
                                     </div>
                                     <div class="action col-xs-6 col-sm-2">
                                         <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}"
-                                           class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                                           class="button btn-small yellow full-width"> {{__('index.read_more')}} </a>
                                     </div>
                                 </div>
                             </article>

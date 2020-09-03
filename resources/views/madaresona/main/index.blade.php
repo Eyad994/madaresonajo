@@ -99,7 +99,7 @@
                             <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"
                                  style="border: 1px #f1f4f9 solid">
                                 <a class="img-box {{--show-school--}} special-image" id="{{ $school->id }}"
-                                   title="{{ $school->name_ar }}"
+                                   title="{{app()->getLocale() == 'en' ?$school->name_en: $school->name_ar }}"
                                    href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                    slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
                                     <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
@@ -250,7 +250,7 @@
             <div class="col-md-8">
                 <div class=" fade-left" style="padding: 0px !important;" id="schoolsGrid">
                     <div class="infinite-scroll">
-                        <div class="row">
+                        <div class="row" {{(app()->getLocale() == 'ar') ?'text-align: right; direction: rtl;':''}}>
                             @foreach($schools as $school)
                                 <div class="col-md-2"
                                      style="margin-top: 20px;">  {{--width: 240px; margin-left: 120px;--}}
@@ -263,7 +263,7 @@
                                                  alt="" style="width: 100%; height: 140px;">
                                         </a>
                                         <div class="caption" style="background: #d6d8dc24;">
-                                            <p style="text-align: center;">{{ $school->name_ar }}</p>
+                                            <p style="text-align: center;">{{app()->getLocale() == 'en' ? $school->name_en : $school->name_ar }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -278,9 +278,9 @@
             </div>
             <div class="col-md-2" style="padding-top: 20px">
                 <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;">
-                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">بحث</div>
+                    <div class="search-results-titlehome" style="text-align: center;float: right;width: 100%;">{{__('index.search')}}</div>
                     <div class="input-group" style="direction: rtl;width: 100%;padding: 10px">
-                        <input type="text" name="sub_search" id="sub_search" class="form-control" placeholder="بحث "
+                        <input type="text" name="sub_search" id="sub_search" class="form-control" placeholder="{{__('index.search')}} "
                                style="border-radius: 0px;margin-right: -1px;">
                         <div class="input-group-btn">
                             <button class="btn btn-default" id="search_button" type="button" disabled
@@ -292,16 +292,18 @@
                 </div>
                 @if(count($specialSuppliers) > 0)
                     <div style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;margin-top: 50px">
-                        <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">
-                            الموردون
-                        </div>
+                        <div class="search-results-titlehome " style="text-align: center;float: right;width: 100%;">{{__('index.suppliers')}}</div>
                         @foreach($specialSuppliers as $supplier)
                             <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}"
                                class="input-group mordon_part"
-                               style="direction: rtl;width: 100%;padding: 10px;border-bottom: 1px solid #bebebe;">
+                               @if((app()->getLocale() == 'ar'))
+                               style="width: 100%;padding:10px;border-bottom: 1px solid #bebebe; direction: rtl; text-align: right"
+                               @else
+                               style="width: 100%;padding:10px;border-bottom: 1px solid #bebebe; direction:ltr; text-align:left"
+                                    @endif>
                                 <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}"
-                                     style="width: 25px;height: 25px;float: right">
-                                <span style="float: right;padding-right: 15px;padding-top: 5px;">{{ app()->getLocale() == 'ar' ? $supplier->name_ar : $supplier->name_en }}</span>
+                                     style="width: 25px;height: 25px;">
+                                <span style="padding-right: 15px;padding-left: 15px; padding-top: 5px;">{{ app()->getLocale() == 'ar' ? $supplier->name_ar : $supplier->name_en }}</span>
 
                             </a>
                         @endforeach
