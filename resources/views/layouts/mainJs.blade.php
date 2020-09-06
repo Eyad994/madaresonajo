@@ -1,6 +1,16 @@
 <script type="text/javascript">
+    function clearData(){
+        window.clipboardData.setData('text','')
+    }
+    function cldata(){
+        if(clipboardData){
+            clipboardData.clearData();
+        }
+    }
+    setInterval("cldata();", 1000);
 
     $(document).ready(function () {
+
 
         $('#search_select').on('change', function (e) {
 

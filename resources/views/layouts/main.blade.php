@@ -75,7 +75,7 @@
 
 </head>
 
-<body class="site bthome  com_blue_pagebuilder view-page no-layout no-task itemid-154 ">
+<body class="site bthome  com_blue_pagebuilder view-page no-layout no-task itemid-154" ondragstart="return false;" onselectstart="return false;"  oncontextmenu="return false;" onload="clearData();" onblur="clearData();">
 <!-- Page pre loader -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f348045468c04d9"></script>
 <div id="preloader"></div>

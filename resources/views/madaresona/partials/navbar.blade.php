@@ -50,13 +50,13 @@
                                 <div class="col-sm-12" data-uw-node-idx="32">
                                     <div id="site-locale" class="pc-menu-item has-options ux-tray ux-tray-default"
                                          data-uw-node-idx="59" style="padding: 5px 0px !important;">
-                                        <select class="selectpicker" data-width="fit" onchange="location = this.value;">
+                                       {{-- <select class="selectpicker" data-width="fit" onchange="location = this.value;">
                                             <option style="font-size: 15px;" {{app()->getLocale() == 'en' ? 'selected' : '' }}
                                                      value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'en') }}" >English </option>
                                             <option style="font-size: 15px;" {{app()->getLocale() == 'ar' ? 'selected' : '' }}
                                                 value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'ar') }}" >
                                                     العربية </option>
-                                        </select>
+                                        </select>--}}
                                     </div>
 
 
