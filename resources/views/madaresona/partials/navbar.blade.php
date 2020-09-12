@@ -50,13 +50,13 @@
                                 <div class="col-sm-12" data-uw-node-idx="32">
                                     <div id="site-locale" class="pc-menu-item has-options ux-tray ux-tray-default"
                                          data-uw-node-idx="59" style="padding: 5px 0px !important;">
-                                       {{-- <select class="selectpicker" data-width="fit" onchange="location = this.value;">
+                                        <select class="selectpicker" data-width="fit" onchange="location = this.value;">
                                             <option style="font-size: 15px;" {{app()->getLocale() == 'en' ? 'selected' : '' }}
                                                      value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'en') }}" >English </option>
                                             <option style="font-size: 15px;" {{app()->getLocale() == 'ar' ? 'selected' : '' }}
                                                 value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'ar') }}" >
                                                     العربية </option>
-                                        </select>--}}
+                                        </select>
                                     </div>
 
 
@@ -134,7 +134,7 @@
                                        data-openit="{&quot;addclass&quot;:{&quot;selector&quot;:&quot;#main-nav .item-domains&quot;,&quot;class&quot;:&quot;oi-open&quot;},&quot;event&quot;:&quot;click&quot;,&quot;mask&quot;:&quot;#main-nav .item-domains .sub-nav&quot;,&quot;guide&quot;:&quot;.content-wrap&quot;,&quot;animate&quot;:&quot;height&quot;,&quot;speed&quot;:&quot;200&quot;,&quot;group&quot;:&quot;pc-header&quot;,&quot;offclick&quot;:&quot;true&quot;}"
                                        class="font-primary-bold oi-pc-header" data-uw-node-idx="154">
                                         <div class="selected-marker" data-uw-node-idx="155"></div>
-                                        <i class="fas fa-bars" style="fon" data-uw-node-idx="156"></i>
+                                        <i class="fas fa-bars" style="" data-uw-node-idx="156"></i>
 
                                     </a>
                                     <div class="sub-nav" data-uw-node-idx="157">

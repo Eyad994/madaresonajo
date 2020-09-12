@@ -106,7 +106,7 @@ class SchoolController extends Controller
     public function showWithoutModalOut($locale = 'ar', $id, $slug)
     {
 
-        App::setLocale($locale);
+            App::setLocale($locale);
         $cleanSlug = str_replace('-', ' ', $slug);
         $cleanSlug = rtrim($cleanSlug);
         $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
