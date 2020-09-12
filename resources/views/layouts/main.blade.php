@@ -58,7 +58,6 @@
     <script src="{{ asset('assets/media/jui/js/jquery-migrate.min4c8f.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/media/k2/assets/js/k2.frontend9dbe.js') }}" type="text/javascript"></script>
 
-
     <!-- Standard Favicon-->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}">
 
@@ -84,6 +83,8 @@
     <div id="system-message-container">
     </div>
     @yield('sub_header')
+
+    @include('madaresona.main.modal')
     {{--<div class="row">
         <div class="col-md-10"></div>
         <div class="col-md-2">
@@ -143,6 +144,7 @@
 
     gtag('config', 'UA-63566876-1');
 </script>
+
 </body>
 
 </html>

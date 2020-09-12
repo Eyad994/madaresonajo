@@ -1,15 +1,24 @@
 <script type="text/javascript">
-    function clearData(){
-        window.clipboardData.setData('text','')
+    function clearData() {
+        window.clipboardData.setData('text', '')
     }
-    function cldata(){
-        if(clipboardData){
+    function cldata() {
+        if (clipboardData) {
             clipboardData.clearData();
         }
     }
     setInterval("cldata();", 1000);
 
+    window.onload = function () {
+        if (localStorage.getItem("hasCodeRunBefore") === null) {
+            $('#schoolModal').modal('show');
+            localStorage.setItem("hasCodeRunBefore", true);
+        }
+    };
     $(document).ready(function () {
+        /*if (initialLoad) {
+            $('#schoolModal').modal('show');
+        }*/
 
 
         $('#search_select').on('change', function (e) {
@@ -54,7 +63,7 @@
         var value = $(this).val();
 
         $.ajax({
-            url:'/{{ app()->getLocale() }}/getRegions/' + value,
+            url: '/{{ app()->getLocale() }}/getRegions/' + value,
             method: 'get',
             success: function (result) {
                 console.log(result);
