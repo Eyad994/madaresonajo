@@ -1,4 +1,9 @@
-<link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/uxcore4.min.css') }}"/>
+
+@if((app()->getLocale() == 'ar'))
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/uxcore4_ar.min.css') }}"/>
+    @else
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/uxcore4.min.css') }}"/>
+@endif
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/style16.css') }}"/>
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/bootstrap.min.css') }}"/>
 <link rel="stylesheet" media="screen,projection" type="text/css" href="{{ asset('Webar/css/responsive.css') }}"/>

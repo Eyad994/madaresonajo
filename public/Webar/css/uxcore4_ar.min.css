@@ -2888,6 +2888,7 @@
     text-decoration: none
 }
 
+
 #main-nav ul.nav-wrap > li .sub-nav .content-row .col.first:after {
     background-color: #f77f27;
     bottom: 0;
@@ -2895,10 +2896,9 @@
     position: absolute;
     width: 1px;
     top: 0;
-    right: 9px;
+    left: 9px;
     display: none
 }
-
 @media (min-width: 992px) {
     #main-nav ul.nav-wrap > li .sub-nav .content-row .col.first:after {
         display: block

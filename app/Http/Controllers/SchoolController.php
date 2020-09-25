@@ -32,6 +32,10 @@ class SchoolController extends Controller
         $this->storeVisitor();
     }
 
+    public function distanceLearning()
+    {
+        return view('madaresona.main.distanceLearning');
+    }
     public function services()
     {
         return view('madaresona.main.services');

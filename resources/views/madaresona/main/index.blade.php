@@ -88,7 +88,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-1"></div>
         </div>
-        <div class="row" style="margin-left: 0px;margin-right: 0px">
+        <div class="row" style="margin-left: 0px;margin-right: 0px;">
             <div class="col-md-1"></div>
             <div class="col-md-8">
                 <div class="owl-carousel owl-theme"

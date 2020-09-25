@@ -56,6 +56,7 @@ Route::group([
     Route::post('newSuggestion', 'SchoolController@storeNewSuggestion')->name('newSuggestion');
     Route::get('services', 'SchoolController@services')->name('services');
     Route::get('faSubscribing', 'SchoolController@faSubscribing')->name('faSubscribing');
+    Route::get('distanceLearning', 'SchoolController@distanceLearning')->name('distanceLearning');
 
     Route::get('faq', 'FaqController@index')->name('faq');
     Route::get('discounts', 'DiscountController@index')->name('discounts');

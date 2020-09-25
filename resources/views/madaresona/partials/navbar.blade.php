@@ -48,7 +48,7 @@
                         <div class="container" data-uw-node-idx="30">
                             <div class="row" data-uw-node-idx="31">
                                 <div class="col-sm-12" data-uw-node-idx="32">
-                                    <div id="site-locale" class="pc-menu-item has-options ux-tray ux-tray-default"
+                                   {{-- <div id="site-locale" class="pc-menu-item has-options ux-tray ux-tray-default"
                                          data-uw-node-idx="59" style="padding: 5px 0px !important;">
                                         <select class="selectpicker" data-width="fit" onchange="location = this.value;">
                                             <option style="font-size: 15px;" {{app()->getLocale() == 'en' ? 'selected' : '' }}
@@ -57,7 +57,7 @@
                                                 value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'ar') }}" >
                                                     العربية </option>
                                         </select>
-                                    </div>
+                                    </div>--}}
 
 
                                     <div id="select-support"
@@ -139,6 +139,7 @@
                                     </a>
                                     <div class="sub-nav" data-uw-node-idx="157">
                                         <ul class="menu_items">
+
                                             <li>
                                                 <a href="{{ route('home') }}" class="font-primary-bold"
                                                    data-uw-node-idx="151">
@@ -172,12 +173,7 @@
                                                             </div>
                                                             <div class="row content-row" data-uw-node-idx="266">
                                                                 <div class="col-md-4 col first" data-uw-node-idx="267">
-                                                                    <p data-uw-node-idx="268">
-                                                                        انضم الآن إلى عائلة مدارسنا وتمتع بميزات العضوية
-                                                                        ، من أكبر وأدق مصدر معلومات للمدارس الخاصة ورياض
-                                                                        الاطفال والحضانات في الاردن !
-
-                                                                    </p>
+                                                                    <p data-uw-node-idx="268">{{ __('index.subscription_text') }}</p>
                                                                 </div>
                                                                 <div class="col-md-4 col-sm-4 HostingLinks"
                                                                      data-uw-node-idx="269">
@@ -225,8 +221,9 @@
                                                             </div>
                                                             <div class="row content-row" data-uw-node-idx="306">
                                                                 <div class="col-md-4 col first" data-uw-node-idx="307">
-                                                                    <p data-uw-node-idx="308"> إذا كنت تبحث عن مزيد من
-                                                                        المساعدة أو لديك سؤال يرجى الاتصال بنا</p>
+                                                                    <p data-uw-node-idx="308">
+
+                                                                    </p>
                                                                 </div>
                                                                 <div class="col-md-4 col-sm-4 HostingLinks"
                                                                      data-uw-node-idx="309">
@@ -336,12 +333,7 @@
                                                 </div>
                                                 <div class="row content-row" data-uw-node-idx="266">
                                                     <div class="col-md-4 col first" data-uw-node-idx="267">
-                                                        <p data-uw-node-idx="268">
-                                                            انضم الآن إلى عائلة مدارسنا وتمتع بميزات العضوية ، من أكبر
-                                                            وأدق مصدر معلومات للمدارس الخاصة ورياض الاطفال والحضانات في
-                                                            الاردن !
-
-                                                        </p>
+                                                        <p data-uw-node-idx="268">{{ __('index.subscription_text') }} </p>
                                                     </div>
                                                     <div class="col-md-4 col-sm-4 HostingLinks" data-uw-node-idx="269">
                                                         <ul class="subnav-ul" data-uw-node-idx="271">
@@ -388,8 +380,7 @@
                                                 </div>
                                                 <div class="row content-row" data-uw-node-idx="306">
                                                     <div class="col-md-4 col first" data-uw-node-idx="307">
-                                                        <p data-uw-node-idx="308"> إذا كنت تبحث عن مزيد من المساعدة أو
-                                                            لديك سؤال يرجى الاتصال بنا</p>
+                                                        <p data-uw-node-idx="308"> {{ __('index.help_text') }}</p>
                                                     </div>
                                                     <div class="col-md-4 col-sm-4 HostingLinks" data-uw-node-idx="309">
                                                         <ul class="subnav-ul" data-uw-node-idx="310">
@@ -454,15 +445,20 @@
                                         {{ __('index.suppliers') }}
                                     </a>
                                 </li>
-
+                                <li class="item-products" data-uw-node-idx="150">
+                                    <a href="{{ route('distanceLearning', app()->getLocale()) }}" class="font-primary-bold" data-uw-node-idx="151">
+                                        <i class="fad fa-chalkboard-teacher" data-uw-node-idx="152"></i>
+                                        {{ __('index.distance_learning') }}
+                                    </a>
+                                </li>
                                 <li class="item-hotdeals ux-noauth" data-uw-node-idx="407">
                                     <a href="{{ route('discounts', app()->getLocale()) }}"
                                        class="button btn-medium orange discount_btn"
                                        data-uw-node-idx="408"><i class="fad fa-user-tag" data-uw-node-idx="409"></i>&nbsp;{{ __('index.discounts') }}
                                     </a>
 
-
                                 </li>
+
 
                             </ul>
                         </div>

@@ -1,13 +1,4 @@
 <script type="text/javascript">
-    function clearData() {
-        window.clipboardData.setData('text', '')
-    }
-    function cldata() {
-        if (clipboardData) {
-            clipboardData.clearData();
-        }
-    }
-    setInterval("cldata();", 1000);
 
     window.onload = function () {
         if (localStorage.getItem("hasCodeRunBefore") === null) {
