@@ -1,11 +1,11 @@
 <script type="text/javascript">
 
-    window.onload = function () {
+ /*   window.onload = function () {
         if (localStorage.getItem("hasCodeRunBefore") === null) {
             $('#schoolModal').modal('show');
             localStorage.setItem("hasCodeRunBefore", true);
         }
-    };
+    };*/
     $(document).ready(function () {
         /*if (initialLoad) {
             $('#schoolModal').modal('show');
