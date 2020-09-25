@@ -80,8 +80,8 @@
 <div id="preloader"></div>
 @include('madaresona.partials.navbar')
 <main>
-    <div id="system-message-container">
-    </div>
+  {{--  <div id="system-message-container">
+    </div>--}}
     @yield('sub_header')
 
     @include('madaresona.main.modal')
