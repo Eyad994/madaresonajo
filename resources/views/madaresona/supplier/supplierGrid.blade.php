@@ -53,17 +53,17 @@
                 <dl class="" style="text-align: right;">
                     {{--<dt class="skin-color">الشخص المسؤول</dt>
                     <dd>م. مهند ابوموجة</dd>--}}
-                    <dt class="skin-color">الهاتف</dt>
+                    <dt class="skin-color">{{__('index.phone')}}</dt>
                     <dd>{{$supplier->phone}}</dd>
-                    <dt class="skin-color">المنطقة</dt>
+                    <dt class="skin-color">{{__('index.region')}}</dt>
                     <dd>{{(app()->getLocale() == 'en') ?$supplier->region->area_name_en:$supplier->region->area_name_ar }}</dd>
-                    <dt class="skin-color" style="font-size: 9px;">البريد الالكتروني</dt>
+                    <dt class="skin-color" style="font-size: 9px;">{{__('index.email')}} </dt>
                     <dd>{{ $supplier->email }}</dd>
                 </dl>
             </div>
             <div class="action col-xs-6 col-sm-2">
                 <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}"
-                   class="button btn-small yellow full-width"> اقرأ المزيد </a>
+                   class="button btn-small yellow full-width"> {{__('index.read_more')}} </a>
             </div>
         </div>
     </article>

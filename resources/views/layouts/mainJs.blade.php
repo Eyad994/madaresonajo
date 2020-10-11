@@ -1,16 +1,38 @@
 <script type="text/javascript">
 
- /*   window.onload = function () {
-        if (localStorage.getItem("hasCodeRunBefore") === null) {
-            $('#schoolModal').modal('show');
-            localStorage.setItem("hasCodeRunBefore", true);
-        }
-    };*/
-    $(document).ready(function () {
-        /*if (initialLoad) {
-            $('#schoolModal').modal('show');
-        }*/
+    window.onload = function () {
+        $.ajax({
+            url: '{{ route('getMainAdd2',app()->getLocale()) }}',
+            method: 'get',
+            success: function (data) {
+                if (data.active == 1) {
+                    $.ajax({
+                        url: '{{ route('getMainAdd',app()->getLocale()) }}',
+                        method: 'get',
+                        success: function (data2) {
+                            if (localStorage.getItem("hasCodeRunBefore") === null) {
+                                $('#schoolModal').modal('show');
+                                $('#data').html(data2);
+                                localStorage.setItem("hasCodeRunBefore", true);
+                            }
+                        }
+                    });
+                }
 
+            }
+        });
+
+    };
+    $('.btn_close_modal').on('click', function () {
+        $('#schoolModal').modal('hide');
+    });
+
+    $(document).ready(function () {
+
+
+        if (initialLoad) {
+            $('#schoolModal').modal('show');
+        }
 
         $('#search_select').on('change', function (e) {
 

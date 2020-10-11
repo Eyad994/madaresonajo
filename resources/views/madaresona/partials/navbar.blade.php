@@ -48,16 +48,16 @@
                         <div class="container" data-uw-node-idx="30">
                             <div class="row" data-uw-node-idx="31">
                                 <div class="col-sm-12" data-uw-node-idx="32">
-                                   {{-- <div id="site-locale" class="pc-menu-item has-options ux-tray ux-tray-default"
-                                         data-uw-node-idx="59" style="padding: 5px 0px !important;">
-                                        <select class="selectpicker" data-width="fit" onchange="location = this.value;">
-                                            <option style="font-size: 15px;" {{app()->getLocale() == 'en' ? 'selected' : '' }}
-                                                     value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'en') }}" >English </option>
-                                            <option style="font-size: 15px;" {{app()->getLocale() == 'ar' ? 'selected' : '' }}
-                                                value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'ar') }}" >
-                                                    العربية </option>
-                                        </select>
-                                    </div>--}}
+                                    {{-- <div id="site-locale" class="pc-menu-item has-options ux-tray ux-tray-default"
+                                          data-uw-node-idx="59" style="padding: 5px 0px !important;">
+                                         <select class="selectpicker" data-width="fit" onchange="location = this.value;">
+                                             <option style="font-size: 15px;" {{app()->getLocale() == 'en' ? 'selected' : '' }}
+                                                      value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'en') }}" >English </option>
+                                             <option style="font-size: 15px;" {{app()->getLocale() == 'ar' ? 'selected' : '' }}
+                                                 value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'ar') }}" >
+                                                     العربية </option>
+                                         </select>
+                                     </div>--}}
 
 
                                     <div id="select-support"
@@ -446,18 +446,27 @@
                                     </a>
                                 </li>
                                 <li class="item-products" data-uw-node-idx="150">
-                                    <a href="{{ route('distanceLearning', app()->getLocale()) }}" class="font-primary-bold" data-uw-node-idx="151">
+                                    <a href="{{ route('distanceLearning', app()->getLocale()) }}"
+                                       class="font-primary-bold" data-uw-node-idx="151">
                                         <i class="fad fa-chalkboard-teacher" data-uw-node-idx="152"></i>
                                         {{ __('index.distance_learning') }}
                                     </a>
                                 </li>
-                                <li class="item-hotdeals ux-noauth" data-uw-node-idx="407">
-                                    <a href="{{ route('discounts', app()->getLocale()) }}"
-                                       class="button btn-medium orange discount_btn"
-                                       data-uw-node-idx="408"><i class="fad fa-user-tag" data-uw-node-idx="409"></i>&nbsp;{{ __('index.discounts') }}
-                                    </a>
-
-                                </li>
+                                @if(!((Request::segment(2))=='supplier'))
+                                    <li class="item-hotdeals ux-noauth" data-uw-node-idx="407">
+                                        <a href="{{ route('discounts', app()->getLocale()) }}"
+                                           class="button btn-medium orange discount_btn"
+                                           data-uw-node-idx="408"><i class="fad fa-user-tag" data-uw-node-idx="409"></i>&nbsp;{{ __('index.discounts') }}
+                                        </a>
+                                    </li>
+                                    @else
+                                    <li class="item-hotdeals ux-noauth" data-uw-node-idx="407">
+                                        <a href="{{ route('newSupplierSubscription', app()->getLocale()) }}"
+                                           class="button btn-medium orange discount_btn"
+                                           data-uw-node-idx="408"><i class="fad fa-user-tag" data-uw-node-idx="409"></i>&nbsp;{{ __('index.register_now') }}
+                                        </a>
+                                    </li>
+                                @endif
 
 
                             </ul>

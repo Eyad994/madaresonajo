@@ -35,6 +35,8 @@ Route::group([
     Route::get('objective', 'HomeController@objective')->name('objective');
     Route::get('terms-conditions', 'HomeController@termsConditions')->name('termsConditions');
     Route::get('vision', 'HomeController@vision')->name('vision');
+    Route::get('getMainAdd', 'HomeController@getMainAdd')->name('getMainAdd');
+    Route::get('getMainAdd2', 'HomeController@getMainAdd2')->name('getMainAdd2');
 
     /***************************Supplier**************************************/
     Route::prefix('supplier')->group(function (){
@@ -57,6 +59,9 @@ Route::group([
     Route::get('services', 'SchoolController@services')->name('services');
     Route::get('faSubscribing', 'SchoolController@faSubscribing')->name('faSubscribing');
     Route::get('distanceLearning', 'SchoolController@distanceLearning')->name('distanceLearning');
+
+    Route::get('supplier/newSubscription', 'SupplierController@newSubscriptionSupplier')->name('newSupplierSubscription');
+    Route::post('supplier/newSubscription/store', 'SupplierController@storeNewSubscriptionSupplier')->name('newSupplierSubscriptionsStore');
 
     Route::get('faq', 'FaqController@index')->name('faq');
     Route::get('discounts', 'DiscountController@index')->name('discounts');

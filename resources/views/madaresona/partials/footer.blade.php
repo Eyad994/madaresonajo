@@ -5,22 +5,17 @@
             <div class="container" data-uw-node-idx="929">
                 <div class="row" data-uw-node-idx="930">
                     <div class="col-sm-6 col-md-5" data-uw-node-idx="931">
-                        <h2 data-uw-node-idx="932">إختصارات</h2>
+                        <h2 data-uw-node-idx="932">{{ __('index.shortcuts') }}</h2>
                         <ul class="discover triangle hover row" data-uw-node-idx="933">
-                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('vision', app()->getLocale()) }}" data-uw-node-idx="935">رؤيتنا</a></li>
-                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('newSubscription', app()->getLocale()) }}" data-uw-node-idx="935">اشتراك جديد</a></li>
+                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('vision', app()->getLocale()) }}" data-uw-node-idx="935">{{ __('index.vision') }}</a></li>
+                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('newSubscription', app()->getLocale()) }}" data-uw-node-idx="935">{{ __('index.new_subscribers_post') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('message', app()->getLocale()) }}" data-uw-node-idx="939">{{ __('index.message') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('faq', app()->getLocale()) }}" data-uw-node-idx="939">{{ __('index.faqs') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('objective', app()->getLocale()) }}" data-uw-node-idx="937">{{ __('index.objective') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('newSuggestion', app()->getLocale()) }}" data-uw-node-idx="937">{{ __('index.feedback') }}</a></li>
 
-                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('message', app()->getLocale()) }}" data-uw-node-idx="939">رسالتنا</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('faq', app()->getLocale()) }}" data-uw-node-idx="939">اسئلة متكررة</a></li>
-
-
-
-
-                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('objective', app()->getLocale()) }}" data-uw-node-idx="937">أهدافنا</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('newSuggestion', app()->getLocale()) }}" data-uw-node-idx="937">اقتراحات و ملاحظات</a></li>
-
-                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('termsConditions', app()->getLocale()) }}" data-uw-node-idx="941">الشروط والأحكام</a></li>
-                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('pricing', app()->getLocale()) }}" data-uw-node-idx="941">الرسوم و طرق الدفع</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('termsConditions', app()->getLocale()) }}" data-uw-node-idx="941">{{ __('index.terms_conditions') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('pricing', app()->getLocale()) }}" data-uw-node-idx="941">{{ __('index.fees_payment_methods') }}</a></li>
 
                         </ul>
 
@@ -28,18 +23,18 @@
                         <br>
                         <h6 data-uw-node-idx="950">
                             <i class="fas fa-map-marked-alt" data-uw-node-idx="951"></i>
-                            فروعنا
+                            {{ __('index.our_branches') }}
                         </h6>
-                        <a href="{{ route('home', app()->getLocale()) }}" data-uw-node-idx="952" title="الاردن">
+                        <a href="{{ route('home', app()->getLocale()) }}" data-uw-node-idx="952" title="{{ __('index.الاردن') }}">
                             <img src="{{ asset('assets/images/flags/jo-s.png') }}" data-uw-node-idx="953">
                         </a>
-                        <a href="" target="_blank" data-uw-node-idx="954" title="فلسطين">
+                        <a href="" target="_blank" data-uw-node-idx="954" title="{{ __('index.palestine') }}">
                             <img src="{{ asset('assets/images/flags/ps-s.png') }}" data-uw-node-idx="955">
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-4" data-uw-node-idx="962">
-                        <h2 data-uw-node-idx="963">القائمة البريدية</h2>
-                        <p data-uw-node-idx="964">سجّل بريدك الإلكتروني ليصلك كل ما تودّ معرفته عن مدرسنا</p>
+                        <h2 data-uw-node-idx="963">{{ __('index.mailing_list') }}</h2>
+                        <p data-uw-node-idx="964">{{ __('index.footer_text') }}</p>
                         <form action="{{ route('subscribe', app()->getLocale()) }}" method="POST" id="formSubscribeEmail">
                             @csrf
                             <div class="with-icon full-width" data-uw-node-idx="965">
@@ -93,7 +88,7 @@
                         <div class="clearer" data-uw-node-idx="969">
                             <br>
                         </div>
-                        <span data-uw-node-idx="970">نحن نحترم خصوصيتك</span>
+                        <span data-uw-node-idx="970">{{ __('index.respect_privacy') }}</span>
                         <div class="clearer" data-uw-node-idx="971">
                             <hr>
                         </div>
@@ -106,12 +101,12 @@
 
                     </div>
                     <div class="col-sm-6 col-md-3" data-uw-node-idx="976">
-                        <h2 data-uw-node-idx="977">عن مدارسنا</h2>
-                        <p data-uw-node-idx="978" style="font-size: 12px;"> مدارسنا هي الخدمة الاولى على مستوى الاردن وهي خدمة فاعلة وشاملة ونسعى من خلال هذا الموقع إلى الربط بين أكبر قدر ممكن من المدارس الخاصة و المراكز و المعاهد و الجامعات و الجهات التعليمية ، الاخرى</p>
+                        <h2 data-uw-node-idx="977">{{ __('index.about_our') }}</h2>
+                        <p data-uw-node-idx="978" style="font-size: 12px;">{{ __('index.footer_text2') }}</p>
                         <address class="contact-details" data-uw-node-idx="979"  style="font-size: 12px">
                             <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px; font-size: 14px;">0797902497</span> </span>
                             <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 14px;">info@madaresonajo.com</span> </span>
-                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">عمان-الأردن-الياسمين -شارع جبل عرفات</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">{{ __('index.address_footer') }}</span> </span>
 
                         </address>
 
@@ -137,7 +132,7 @@
                 </div>
 
                 <div class="copyright pull-right" data-uw-node-idx="1007">
-                    <p data-uw-node-idx="1008">جميع الحقوق محفوظة ©  2018-{{ now()->year }} لـِ MadaresonaJO, LLC</p>
+                    <p data-uw-node-idx="1008">{{ __('index.all_rights_save') }} ©  2018-{{ now()->year }} لـِ MadaresonaJO, LLC</p>
                 </div>
             </div>
         </div>

@@ -539,7 +539,6 @@
         });
 
     </script>
-    @include('modal')
 
 @endsection
 

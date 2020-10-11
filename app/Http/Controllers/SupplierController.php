@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Advertisement;
 use App\Models\News;
+use App\Models\Requests;
 use App\Models\School;
 use App\Models\SchoolType;
 use App\Models\Supplier;
@@ -68,5 +69,31 @@ class SupplierController extends Controller
         SupplierMessage::create($request->except('_token'));
 
         return back()->with(['success' => 'تم الارسال بنجاح']);
+    }
+
+    public function newSubscriptionSupplier()
+    {
+        return view('madaresona.subscription.index2');
+    }
+
+    public function storeNewSubscriptionSupplier(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'contact_name' => 'required',
+            'email_user' => 'required|email',
+            'phone_number' => 'required|numeric',
+        ]);
+
+        Requests::create([
+            'name' => $request->name,
+            'contact_name' => $request->contact_name,
+            'email' => $request->email_user,
+            'phone' => $request->phone_number,
+            'text' => '',
+            'type' => 1
+        ]);
+
+        return back()->with(['success' => 'تم ارسال الطلب بنجاح']);
     }
 }
