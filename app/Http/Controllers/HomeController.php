@@ -73,7 +73,7 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
 (SELECT COUNT(schools.type)  FROM schools WHERE schools.type=2)AS universities ,
 (SELECT COUNT(schools.type)  FROM schools WHERE schools.type=3)AS kindergartens ,
 (SELECT COUNT(schools.type)  FROM schools WHERE schools.type=4)AS nurseries ,
-(SELECT COUNT(schools.type)  FROM schools WHERE schools.type=5)AS training ,
+(SELECT COUNT(suppliers.supplier_type)  FROM suppliers WHERE suppliers.supplier_type=1)AS training ,
 (SELECT COUNT(schools.type)  FROM schools WHERE schools.type=6)AS learning ,
 (SELECT COUNT(*)  FROM suppliers) AS suppliers;'
         );
