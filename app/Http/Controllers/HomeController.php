@@ -81,14 +81,14 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
         $schoolsCounts = $schoolsQuery[0];
 
         $specialSchools = School::where('active', 1)->where('special', 1)->get();
-        $newsArray = News::where('news_type', 2)->where('active', 1)->orderBy('order')->get();
+        $mainNews = News::where('news_type', 2)->where('active', 1)->orderBy('order')->get()->toArray();
         /*$schoolsAdvertisements = Advertisement::where('type', 1)->where('active', 1)->orderBy('order')->get();
         $suppliersAdvertisements = Advertisement::where('type', 2)->where('active', 1)->orderBy('order')->get();*/
         $ads = Advertisement::where('active', 1)->orderBy('order')->get();
 
         $specialSuppliers = Supplier::where('special', 1)->where('active', 1)->get();
 
-        $mainNews = array();
+       /* $mainNews = array();
         foreach ($newsArray as $key => $index) {
             $data['id'] = $index['id'];
             $data['user_id'] = $index['user_id'];
@@ -111,7 +111,7 @@ SELECT COUNT(schools.type)  FROM schools WHERE schools.type=1)AS privateSchools 
                 array_push($mainNews, $data);
             }
 
-        }
+        }*/
 
         $schoolsType = SchoolType::all();
         return view('madaresona.main.index', compact('schools', 'specialSchools', 'mainNews', 'schoolsType',

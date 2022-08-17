@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<html dir="ltr">
 
 <!-- Mirrored from chipblue.net/joomla/codrop/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Jul 2020 21:41:50 GMT -->
 <!-- Added by HTTrack -->
@@ -19,7 +19,8 @@
 
     @if(!((Request::segment(2))=='school-data'||(Request::segment(3))=='data'||(Request::segment(2))=='showMore'))
         <title>MadaresonaJO - دليل مدارسنا</title>
-        <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان"/>
+        <meta name="description" itemprop="description"
+              content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان"/>
         <meta property="og:url" content="https://madaresonajo.com/"/>
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="دليل مدارسنا التعليمي"/>
@@ -68,15 +69,15 @@
     <script src="{{ asset('assets/templates/codrop/less/less-1.5.0.min.js') }}"></script>
 
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+   {{--  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>--}}
+    <script src="{{asset('respond.min.js')}}"></script>
     <![endif]-->
 
 </head>
 
 <body class="site bthome  com_blue_pagebuilder view-page no-layout no-task itemid-154">
 <!-- Page pre loader -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f348045468c04d9"></script>
+{{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f348045468c04d9"></script>--}}
 <div id="preloader"></div>
 @include('madaresona.partials.navbar')
 <main>
@@ -102,16 +103,17 @@
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/pagination.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/social.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/templates/codrop/js/custom.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
-<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="{{ asset('jquery.jscroll.min.js') }}"></script>
+<script src="{{ asset('slick.js') }}"></script>
+<script src="{{ asset('bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/font-awesome/js/all.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnpiNImmRHQBxmLIn5o_zTBufGgXzZBko&language=en&region=JO&libraries=places"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnpiNImmRHQBxmLIn5o_zTBufGgXzZBko&language=en&region=JO&libraries=places"></script>
 @yield('script')
 @include('layouts.mainJs')
 
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+{{--<script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
         var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
@@ -121,7 +123,7 @@
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
     })();
-</script>
+</script>--}}
 <!--End of Tawk.to Script-->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63566876-1"></script>

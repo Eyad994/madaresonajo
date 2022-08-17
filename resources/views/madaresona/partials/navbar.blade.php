@@ -477,11 +477,7 @@
         </div>
     </nav>
 @endsection
-<script>
-    $(function () {
-        $('.selectpicker').selectpicker();
-    });
-</script>
+
 
 
 

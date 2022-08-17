@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'GE Flow';
-    src: url('https://madaresonajo.com/assets/fonts/GEFlow.woff2');format('woff2'),url('https://madaresonajo.com/assets/fonts/GEFlow.woff') format('woff');
+    src: url('/assets/fonts/GEFlow.woff2');format('woff2'),url('/assets/fonts/GEFlow.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

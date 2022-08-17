@@ -12035,7 +12035,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 #footer.style5 > .footer-wrapper {
-    background: url(https://madaresonajo.com/footer.jpg) center bottom no-repeat;
+    background: url(/footer.jpg) center bottom no-repeat;
     padding-bottom: 0;
     background-size:cover;
 }

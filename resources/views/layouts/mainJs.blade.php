@@ -29,6 +29,7 @@
 
     $(document).ready(function () {
 
+        $('.selectpicker').selectpicker();
 
         if (initialLoad) {
             $('#schoolModal').modal('show');
