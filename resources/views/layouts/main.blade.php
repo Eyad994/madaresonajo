@@ -78,7 +78,7 @@
 <body class="site bthome  com_blue_pagebuilder view-page no-layout no-task itemid-154">
 <!-- Page pre loader -->
 {{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f348045468c04d9"></script>--}}
-<div id="preloader"></div>
+{{--<div id="preloader"></div>--}}
 @include('madaresona.partials.navbar')
 <main>
     @yield('sub_header')
