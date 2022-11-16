@@ -471,11 +471,11 @@
                                         <div class="col-md-12" style="text-align-last: center;">
                                             @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
                                                 <img
-                                                    src="{{ env('IMAGE_URL') . $school->school_brochure }}"
+                                                    src="{{ env('IMAGE_URL') .'storage/'. $school->school_brochure }}"
                                                     style="border-radius: 10px;padding: 20px;width: auto; height: 300px;"
                                                     alt="">
                                             @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
-                                                <a href="{{ env('IMAGE_URL') . $school->school_brochure }}"
+                                                <a href="{{ env('IMAGE_URL') .'storage/'. $school->school_brochure }}"
                                                    #f5f5f5 download="">
                                                     <i class="fad fa-cloud-download"
                                                        style="  font-size: 300px; margin-top: 60px; "></i>
@@ -657,7 +657,7 @@
                         <div class="col-md-12" style="    text-align: center;">
                             <img class="rounded"
                                  style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 160px;height:120px"
-                                 src="{{ env('IMAGE_URL') . $school->school_logo }}"
+                                 src="{{ env('IMAGE_URL') .'storage/'. $school->school_logo }}"
                                  alt="">
                         </div>
                         <div class="col-md-12" style="text-align: center">

@@ -102,7 +102,7 @@
                                    title="{{app()->getLocale() == 'en' ?$school->name_en: $school->name_ar }}"
                                    href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                    slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                    <img src="{{ env('IMAGE_URL') . $school->school_logo }}"
+                                    <img src="{{ env('IMAGE_URL') .'storage/'. $school->school_logo }}"
                                          alt="school_logo" style="width: 100px; height:75px;">
                                 </a>
                             </div>
@@ -259,7 +259,7 @@
                                         <a class="img-box {{--show-school--}}" id="{{ $school->id }}"
                                            href="{{ app()->getLocale() }}/school-data/{{$school->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}"
                                            slug="{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($school->name_en) : trim($school->name_ar)) }}">
-                                            <img src="{{ env('IMAGE_URL') . $school->school_logo }}"
+                                            <img src="{{ env('IMAGE_URL') .'storage/'. $school->school_logo }}"
                                                  alt="" style="width: 100%; height: 140px;">
                                         </a>
                                         <div class="caption" style="background: #d6d8dc24;">
