@@ -174,7 +174,7 @@
 
                     <section
 
-                            @if((app()->getLocale() == 'ar'))
+                        @if((app()->getLocale() == 'ar'))
                             style="direction: rtl; text-align: right;">
                         @else
                             style="direction:ltr; text-align:left;">
@@ -225,9 +225,9 @@
                             <div class="tab-pane fade active show" id="gallery" role="tabpanel"
                                  aria-labelledby="gallery-tab">
 
-                            {{-- ******************************************************************************************************************************** --}}
+                                {{-- ******************************************************************************************************************************** --}}
 
-                            <!--Carousel Wrapper-->
+                                <!--Carousel Wrapper-->
 
                                 <div class="carousel-container position-relative row" style="padding: 10px 20px;">
                                     <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
@@ -249,7 +249,7 @@
                                                              src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/gallery/{{ $item->img }}">
                                                     </div>
                                                 @endif
-                                                <?php $i++ ?>
+                                                    <?php $i++ ?>
                                             @endforeach
                                         </div>
                                         <!--/.Slides-->
@@ -283,7 +283,7 @@
                                                              class="img-fluid">
                                                     </li>
                                                 @endif
-                                                <?php $i++ ?>
+                                                    <?php $i++ ?>
                                             @endforeach
                                         </ol>
                                     </div>
@@ -470,11 +470,12 @@
                                     <div class="row">
                                         <div class="col-md-12" style="text-align-last: center;">
                                             @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
-                                                <img src="{{ env('IMAGE_URL') }}/storage/Institution/{{ \Illuminate\Support\Str::slug($school->name_en, '_') }}/{{ $school->school_brochure }}"
-                                                     style="border-radius: 10px;padding: 20px;width: auto; height: 300px;"
-                                                     alt="">
+                                                <img
+                                                    src="{{ env('IMAGE_URL') . $school->school_brochure }}"
+                                                    style="border-radius: 10px;padding: 20px;width: auto; height: 300px;"
+                                                    alt="">
                                             @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
-                                                <a href="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
+                                                <a href="{{ env('IMAGE_URL') . $school->school_brochure }}"
                                                    #f5f5f5 download="">
                                                     <i class="fad fa-cloud-download"
                                                        style="  font-size: 300px; margin-top: 60px; "></i>
@@ -535,7 +536,8 @@
                                             <div class="row">
 
                                                 <div class="col-md-4 form-group">
-                                                    <div style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }}
+                                                    <div
+                                                        style="color: #2d3e52; font-weight: bold;">{{ __('show.website') }}
                                                         :
                                                     </div>
                                                 </div>
@@ -552,15 +554,18 @@
                                             </div>
                                             <div class="col-md-8 form-group">
                                                 @if(in_array(0, $genderSchool))
-                                                    <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
+                                                    <span
+                                                        style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
                                             {{ __('show.female') }}</span>
                                                 @endif
                                                 @if(in_array(1, $genderSchool))
-                                                    <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
+                                                    <span
+                                                        style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
                                             {{ __('show.male') }}</span>
                                                 @endif
                                                 @if(in_array(2, $genderSchool))
-                                                    <span style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
+                                                    <span
+                                                        style="border: 1px solid rgba(34,41,47,.125); box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08); padding: 0px 5px; font-weight: 600; color: #2d3e52; border-radius: 5px;">
                                             {{ __('show.mixed') }}</span>
                                                 @endif
                                             </div>
@@ -583,23 +588,23 @@
                                                 <div class="text-center center-block">
                                                     @if(!empty( $school->facebook_link) )
                                                         <a href="{{ $school->facebook_link}}" target="_blank"><i
-                                                                    class="fab fa-facebook-square fa-3x social"
-                                                                    style="color: #4267B2;"></i></a>
+                                                                class="fab fa-facebook-square fa-3x social"
+                                                                style="color: #4267B2;"></i></a>
                                                     @endif
                                                     @if(!empty( $school->instagram_link) )
                                                         <a href="{{ $school->instagram_link}}" target="_blank"><i
-                                                                    class="fab fa-instagram-square fa-3x social"
-                                                                    style="color: #8a49a1;"></i></a>
+                                                                class="fab fa-instagram-square fa-3x social"
+                                                                style="color: #8a49a1;"></i></a>
                                                     @endif
                                                     @if(!empty( $school->twitter_link) )
                                                         <a href="{{ $school->twitter_link}}" target="_blank"><i
-                                                                    class="fab fa-twitter-square fa-3x social"
-                                                                    style="color: #1DA1F2;"></i></a>
+                                                                class="fab fa-twitter-square fa-3x social"
+                                                                style="color: #1DA1F2;"></i></a>
                                                     @endif
                                                     @if(!empty( $school->linkedin_link) )
                                                         <a href="{{ $school->linkedin_link}}" target="_blank"><i
-                                                                    class="fab fa-linkedin fa-3x social"
-                                                                    style="color: #2867B2;"></i></a>
+                                                                class="fab fa-linkedin fa-3x social"
+                                                                style="color: #2867B2;"></i></a>
                                                     @endif
                                                 </div>
                                             </div>
@@ -636,7 +641,7 @@
 
                 <div class="col-xl-4 mb-4 mb-xl-0 order-0 order-md-12"
                      @if((app()->getLocale() == 'ar'))
-                     style="direction: rtl; text-align: right; border-left: 7px solid #f5f5f5;">
+                         style="direction: rtl; text-align: right; border-left: 7px solid #f5f5f5;">
                     @else
                         style="direction:ltr; text-align:left; border-right: 7px solid #f5f5f5;">
                     @endif
@@ -652,7 +657,7 @@
                         <div class="col-md-12" style="    text-align: center;">
                             <img class="rounded"
                                  style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 160px;height:120px"
-                                 src="{{ env('IMAGE_URL') }}/storage/Institution/{{ \Illuminate\Support\Str::slug($school->name_en, '_') }}/{{ $school->school_logo }}"
+                                 src="{{ env('IMAGE_URL') . $school->school_logo }}"
                                  alt="">
                         </div>
                         <div class="col-md-12" style="text-align: center">
@@ -680,7 +685,7 @@
                     </style>
                     <div class="row" style="padding: 10px 0px">
                         <div class="col-md-4"><h5
-                                    style="color:#ff6000; font-weight: bold; padding: 0px 10px;">{{ __('show.share_us') }}</h5>
+                                style="color:#ff6000; font-weight: bold; padding: 0px 10px;">{{ __('show.share_us') }}</h5>
                         </div>
                         <div class="col-md-8">
                             <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="">
@@ -707,16 +712,18 @@
                                  style="{{ (app()->getLocale() == 'ar') ?'direction: rtl; text-align: right;' : 'direction: ltr; text-align: left;' }}">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/news/{{ $item['img'] }}"
-                                             alt="Avatar"
-                                             style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
+                                        <img
+                                            src="{{ env('IMAGE_URL') }}/images/{{$school->name_en}}/news/{{ $item['img'] }}"
+                                            alt="Avatar"
+                                            style="width: 380px; height: 110px; margin-top: 5px; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
                                     </div>
                                     <div class="col-md-9 container">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <h5>{{ (app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'] }}</h5>
                                             </div>
-                                            <div class="col-md-12">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
+                                            <div
+                                                class="col-md-12">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['text_en']: $item['text_ar'], $limit = 45, $end = '...') !!}</div>
                                             <div class="col-md-12"
                                                  style="{{ (app()->getLocale() == 'en') ?'text-align: right;' : 'text-align: left;' }}">
                                                 <a href="/{{app()->getLocale()}}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
