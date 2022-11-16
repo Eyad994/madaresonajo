@@ -470,7 +470,7 @@
                                     <div class="row">
                                         <div class="col-md-12" style="text-align-last: center;">
                                             @if($school->school_brochure != null && !(strpos($school->school_brochure, 'pdf')))
-                                                <img src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_brochure }}"
+                                                <img src="{{ env('IMAGE_URL') }}/storage/Institution/{{ \Illuminate\Support\Str::slug($school->name_en, '_') }}/{{ $school->school_brochure }}"
                                                      style="border-radius: 10px;padding: 20px;width: auto; height: 300px;"
                                                      alt="">
                                             @elseif($school->school_brochure != null && (strpos($school->school_brochure, 'pdf')))
@@ -652,7 +652,7 @@
                         <div class="col-md-12" style="    text-align: center;">
                             <img class="rounded"
                                  style="box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);width: 160px;height:120px"
-                                 src="{{ env('IMAGE_URL') }}/images/{{ $school->name_en }}/{{ $school->school_logo }}"
+                                 src="{{ env('IMAGE_URL') }}/storage/Institution/{{ \Illuminate\Support\Str::slug($school->name_en, '_') }}/{{ $school->school_logo }}"
                                  alt="">
                         </div>
                         <div class="col-md-12" style="text-align: center">
