@@ -97,7 +97,9 @@ class SchoolController extends Controller
 
         // preg_replace('/[-]+/', ' ', trim($cleanSlug))
 
-        $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
+        $school = School::where('name_ar', 'like', "%$cleanSlug%")
+            ->orWhere('name_en', 'like', "%$cleanSlug%")
+            ->first();
         $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $news = News::where('user_id', $school->user_id)-> latest()->get();
@@ -110,10 +112,13 @@ class SchoolController extends Controller
     public function showWithoutModalOut($locale = 'ar', $id, $slug)
     {
 
-            App::setLocale($locale);
+        App::setLocale($locale);
         $cleanSlug = str_replace('-', ' ', $slug);
         $cleanSlug = rtrim($cleanSlug);
-        $school = School::where('name_ar', 'like', "%$cleanSlug%")->orWhere('name_en', 'like', "%$cleanSlug%")->first();
+        $school = School::where('name_ar', 'like', "%$cleanSlug%")
+            ->orWhere('name_en', 'like', "%$cleanSlug%")
+            ->orWhere('id', $id)
+            ->first();
         $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $news = News::where('user_id', $school->user_id)->latest()->get();
