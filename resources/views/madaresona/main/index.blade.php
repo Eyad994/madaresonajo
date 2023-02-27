@@ -92,10 +92,10 @@
             <div class="col-md-1"></div>
             <div class="col-md-8">
                 <div class="owl-carousel owl-theme"
-                     style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px; ">
+                     style="background: #f5f5f5; box-shadow: 0 2px 4px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; border-radius: 10px;">
                     @foreach($specialSchools as $school)
                         <div class="col-md-10"
-                             style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
+                      style="margin-top: 20px; ">  {{--width: 240px; margin-left: 120px;--}}
                             <div class="cnt-box cnt-box-info boxed z-depth-4 rounded"
                                  style="border: 1px #f1f4f9 solid">
                                 <a class="img-box {{--show-school--}} special-image" id="{{ $school->id }}"
@@ -106,7 +106,7 @@
                                          alt="school_logo" style="width: 100px; height:75px;">
                                 </a>
                             </div>
-                        </div>.
+                        </div>
                     @endforeach
                 </div>
                 <div class="my-owl-nav">
