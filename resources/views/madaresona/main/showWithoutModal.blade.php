@@ -426,7 +426,7 @@
                                                         <tr>
                                                             <td>{{ (app()->getLocale() == 'en') ?$item->schoolClass->class_en:$item->schoolClass->class_ar}}</td>
                                                             <td>{{ $item->price }}</td>
-                                                            <td>{{ $item->curriculum == 0 ? __('show.local_program')  : __('show.international_program') }}</td>
+                                                            <td>{{ $item->curriculum != 0 ? __('show.local_program')  : __('show.international_program') }}</td>
                                                         </tr>
                                                     @endforeach
                                                 </table>
