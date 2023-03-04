@@ -48,9 +48,8 @@
                             <div class="col-md-12" style="bottom: 20px;">
                                 <h3 class="h4"><i class="fa fa-phone" style="color: #ff6000"></i> الهاتف</h3>
                                 <p style="margin-top: 5px;">
-                                    962062006896</p>
-                                <p style="margin-top: 5px;">962-0797902497</p>
-                                <p style="margin-top: 5px;">962-0790452034</p>
+                                    962-799289730</p>
+                                <p style="margin-top: 5px;">962-796385230</p>
                             </div>
                         </div>
                         <div class="row form-group">
