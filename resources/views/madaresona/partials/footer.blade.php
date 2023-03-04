@@ -1,148 +1,145 @@
-@extends('layouts.main')
+@extends('layouts.navAndFooterLinks')
+@section('footer')
+    <footer id="footer" class="style5" data-uw-node-idx="927" style="direction: rtl;text-align: right;">
+        <div class="footer-wrapper" data-uw-node-idx="928">
+            <div class="container" data-uw-node-idx="929">
+                <div class="row" data-uw-node-idx="930">
+                    <div class="col-sm-6 col-md-5" data-uw-node-idx="931">
+                        <h2 data-uw-node-idx="932">{{ __('index.shortcuts') }}</h2>
+                        <ul class="discover triangle hover row" data-uw-node-idx="933">
+                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('vision', app()->getLocale()) }}" data-uw-node-idx="935">{{ __('index.vision') }}</a></li>
+                            <li class=" col-xs-6" data-uw-node-idx="934"><a href="{{ route('newSubscription', app()->getLocale()) }}" data-uw-node-idx="935">{{ __('index.new_subscribers_post') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('message', app()->getLocale()) }}" data-uw-node-idx="939">{{ __('index.message') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="938"><a href="{{ route('faq', app()->getLocale()) }}" data-uw-node-idx="939">{{ __('index.faqs') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('objective', app()->getLocale()) }}" data-uw-node-idx="937">{{ __('index.objective') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="936"><a href="{{ route('newSuggestion', app()->getLocale()) }}" data-uw-node-idx="937">{{ __('index.feedback') }}</a></li>
 
-@section('content')
+                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('termsConditions', app()->getLocale()) }}" data-uw-node-idx="941">{{ __('index.terms_conditions') }}</a></li>
+                            <li class="col-xs-6" data-uw-node-idx="940"><a href="{{ route('pricing', app()->getLocale()) }}" data-uw-node-idx="941">{{ __('index.fees_payment_methods') }}</a></li>
 
-    <link rel="icon" type="image/png" href="{{ asset('contact/images/icons/favicon.ico') }}">
-    <link rel="stylesheet" type="text/css"
-          href="{{ asset('contact/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('contact/vendor/animate/animate.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('contact/vendor/css-hamburgers/hamburgers.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('contact/vendor/select2/select2.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/util.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main.css') }}">
-    @if((app()->getLocale() == 'ar'))
-        <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main_ar.css') }}">
-    @endif
+                        </ul>
 
-    <div class="bg-contact100">
-        <div class="container-contact100" style="background: #f5f5f5 !important; ">
-            <div class="wrap-contact100"
-                 @if((app()->getLocale() == 'ar'))
-                 style="direction: rtl; text-align: right; margin-top: 170px">
-                @else
-                    style="direction:ltr; text-align:left; margin-top: 170px">
-                @endif
-                <div class="row">
-                    @if(Session::has('success'))
-                        <div class="col-md-12">
-                            <p class="alert alert-success">{{ Session::get('success') }}</p>
-                        </div>
-                    @endif
-                    <div class="col-md-4" style="bottom: 15px;">
-                        <div class="col-md-12">
-                            <img src="{{ asset('contact/images/img-01.png') }}" style="height: 100px" alt="IMG">
-                            <hr>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-home" style="color: #ff6000"></i> العنوان</h3>
-                                <p style="margin-top: 5px;">عمان-الأردن الياسمين -شارع جبل عرفات
-                                    مجمع المحتسب التجاري- بناء رقم 83 - الطابق الثاني</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-phone" style="color: #ff6000"></i> الهاتف</h3>
-                                <p style="margin-top: 5px;">
-                                    962-799289730</p>
-                                <p style="margin-top: 5px;">962-796385230</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-fax" style="color: #ff6000"></i> فاكس</h3>
-                                <p style="margin-top: 5px;">962062006896</p>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-12" style="bottom: 20px;">
-                                <h3 class="h4"><i class="fa fa-envelope" style="color: #ff6000"></i> البريد الالكتروني
-                                </h3>
-                                <p style="margin-top: 5px;">Info@madaresonajo.com</p>
-                            </div>
-                        </div>
+                        <br>
+                        <br>
+                        <h6 data-uw-node-idx="950">
+                            <i class="fas fa-map-marked-alt" data-uw-node-idx="951"></i>
+                            {{ __('index.our_branches') }}
+                        </h6>
+                        <a href="{{ route('home', app()->getLocale()) }}" data-uw-node-idx="952" title="{{ __('index.الاردن') }}">
+                            <img src="{{ asset('assets/images/flags/jo-s.png') }}" data-uw-node-idx="953">
+                        </a>
+                        <a href="" target="_blank" data-uw-node-idx="954" title="{{ __('index.palestine') }}">
+                            <img src="{{ asset('assets/images/flags/ps-s.png') }}" data-uw-node-idx="955">
+                        </a>
                     </div>
-                    <div class="col-md-2"></div>
-                    <div class="col-md-6">
-                        <form class="contact100-form validate-form" action="{{ route('newSuggestion', app()->getLocale()) }}" method="POST">
+                    <div class="col-sm-6 col-md-4" data-uw-node-idx="962">
+                        <h2 data-uw-node-idx="963">{{ __('index.mailing_list') }}</h2>
+                        <p data-uw-node-idx="964">{{ __('index.footer_text') }}</p>
+                        <form action="{{ route('subscribe', app()->getLocale()) }}" method="POST" id="formSubscribeEmail">
                             @csrf
-                            <span class="contact100-form-title {{(app()->getLocale() == 'ar')?'text-right' :''}}">
-						ارسل رسالة
-					</span>
-                            <h4 class="contact100-form-sub_title">لطلب المساعدة، من فضلك إملأ النموذج ادناه وسوف نقوم
-                                بالرد في غضون 24 ساعة عمل</h4>
-                            <div class="wrap-input100 validate-input" data-validate="الاسم مطلوب">
-                                <input class="input100" type="text" name="name" placeholder="الاسم">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-							<i class="fad fa-user" aria-hidden="true"></i>
-						</span>
-                            </div>
-                            @if($errors->has('name'))
-                                <div class="error"
-                                     style="color: red; padding: 0px 20px 5px 20px;">
-                                    * {{ $errors->first('name') }}</div>
-                            @endif
-                            <div class="wrap-input100 validate-input"
-                                 data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="email_user" placeholder="البريد الاكتروني">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-							<i class="fad fa-envelope" aria-hidden="true"></i>
-						</span>
-                            </div>
-                            @if($errors->has('email_user'))
-                                <div class="error"
-                                     style="color: red; padding: 0px 20px 5px 20px;">
-                                    * {{ $errors->first('email_user') }}</div>
-                            @endif
-
-                            <div class="wrap-input100 validate-input" data-validate="Message is required">
-                                <textarea class="input100" name="message" placeholder="النص"></textarea>
-                                <span class="focus-input100"></span>
-                            </div>
-                            @if($errors->has('message'))
-                                <div class="error"
-                                     style="color: red; padding: 0px 20px 5px 20px;">
-                                    * {{ $errors->first('message') }}</div>
-                            @endif
-                            <div class="container-contact100-form-btn">
-                                <button type="submit" class="contact100-form-btn">
-                                    ارسال
+                            <div class="with-icon full-width" data-uw-node-idx="965">
+                                <input type="email" id="txtSubscriber" required name="email" class="form-control" data-uw-node-idx="966">
+                                <button id="btnSubscriber" type="submit" class="icon yellow-bg white-color" data-uw-node-idx="967" style="margin-top: -17px !important;height: 35px;width: 35px;">
+                                    <i id="sbciconcclass" class="soap-icon-message" data-uw-node-idx="968"></i>
                                 </button>
                             </div>
                         </form>
+
+                        <script>
+
+                            $('#formSubscribeEmail').submit(function (e) {
+                                e.preventDefault();
+                                var form = $(this);
+                                var url = form.attr('action');
+                                $.ajax({
+                                    type: "POST",
+                                    url: url,
+                                    data: new FormData(this),
+                                    dataType: "json",
+                                    contentType: false,
+                                    cache: false,
+                                    processData: false,
+                                    success: function (data) {
+                                        if (data.status === 422) {
+                                            console.log(data);
+                                            var error_html = '';
+
+                                            for (let value of Object.values(data.errors)) {
+                                                error_html += '<div style="background: #f8d7da;padding: 20px;border-radius: 5px; font-size: 20px; font-weight: bold;">' + "الإيميل مسجل من قبل" + '</div>';
+                                            }
+                                            Swal.fire({
+                                                icon: 'error',
+                                                html: error_html
+                                            })
+                                        } else {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: data.message,
+                                                showConfirmButton: false,
+                                                timer: 1500
+                                            });
+                                        }
+                                    }
+                                });
+
+                            });
+
+                        </script>
+                        <div class="clearer" data-uw-node-idx="969">
+                            <br>
+                        </div>
+                        <span data-uw-node-idx="970">{{ __('index.respect_privacy') }}</span>
+                        <div class="clearer" data-uw-node-idx="971">
+                            <hr>
+                        </div>
+
+                        @if(Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                {{ Session::get('success') }}
+                            </div>
+                            @endif
+
+                    </div>
+                    <div class="col-sm-6 col-md-3" data-uw-node-idx="976">
+                        <h2 data-uw-node-idx="977">{{ __('index.about_our') }}</h2>
+                        <p data-uw-node-idx="978" style="font-size: 12px;">{{ __('index.footer_text2') }}</p>
+                        <address class="contact-details" data-uw-node-idx="979"  style="font-size: 12px">
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px; font-size: 14px;">0797902497</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 14px;">info@madaresonajo.com</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">{{ __('index.address_footer') }}</span> </span>
+
+                        </address>
+
+                        <ul class="social-icons clearfix" data-uw-node-idx="983">
+                            <li class="youtube" data-uw-node-idx="984"><a title="" href="https://www.youtube.com/channel/UCAGYODjz5zE50x8CAgus9Yg" data-toggle="tooltip" target="_blank" data-original-title="youtube" data-uw-node-idx="985"><i class="soap-icon-youtube" data-uw-node-idx="986"></i></a></li>
+                            <li class="twitter" data-uw-node-idx="987"><a title="" href="https://twitter.com/MadaresonaJO" data-toggle="tooltip" target="_blank" data-original-title="twitter" data-uw-node-idx="988"><i class="soap-icon-twitter" data-uw-node-idx="989"></i></a></li>
+                            <li class="linkedin" data-uw-node-idx="993"><a title="" href="https://www.linkedin.com/organization-guest/company/madaresona?trk=tyah&trkInfo=clickedVertical%3Acompany%2Cidx%3A1-1-1%2CtarId%3A1432542756242%2Ctas%3Amadaresona&challengeId=AQFYzHBLDqlKPQAAAXOW38fxb21AbYry5eksRAtNi6xsghsMVxN4OU-lEFX8lc4bP6G2eM_EhwpRzjmlTmTo_R-lb6F9nQMROA&submissionId=baa8b416-e800-2616-d452-2878020ed006" data-toggle="tooltip" target="_blank" data-original-title="linkedin" data-uw-node-idx="994"><i class="soap-icon-linkedin" data-uw-node-idx="995"></i></a></li>
+                            <li class="facebook" data-uw-node-idx="996"><a title="" href="https://web.facebook.com/madaresonajoltd/?ref=bookmarks" data-toggle="tooltip" target="_blank" data-original-title="facebook" data-uw-node-idx="997"><i class="soap-icon-facebook" data-uw-node-idx="998"></i></a></li>
+                        </ul>
+
+
                     </div>
                 </div>
-
             </div>
-
-
         </div>
 
-    </div>
+        <div class="bottom gray-area" data-uw-node-idx="999">
+            <div class="container" data-uw-node-idx="1000">
+                <div class="logo pull-left" data-uw-node-idx="1001">
+                    <a href="{{ route('home', app()->getLocale()) }}" title="MadaresonaJO- Home" data-uw-node-idx="1002">
+                        <img src="{{ asset('WebEn/images/logo.png') }}" alt="TenderJO" data-uw-node-idx="1003">
+                    </a>
+                </div>
+
+                <div class="copyright pull-right" data-uw-node-idx="1007">
+                    <p data-uw-node-idx="1008">{{ __('index.all_rights_save') }} ©  2018-{{ now()->year }} لـِ MadaresonaJO, LLC</p>
+                </div>
+            </div>
+        </div>
 
 
-@endsection
+    </footer>
 
-<!--===============================================================================================-->
-<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script src="{{ asset('contact/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
-<!--===============================================================================================-->
-<script src="{{ asset('contact/vendor/bootstrap/js/popper.js') }}"></script>
-<script src="{{ asset('contact/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<!--===============================================================================================-->
-<script src="{{ asset('contact/vendor/select2/select2.min.js') }}"></script>
-<!--===============================================================================================-->
-<script src="{{ asset('contact/vendor/tilt/tilt.jquery.min.js') }}"></script>
-<script>
-    $('.js-tilt').tilt({
-        scale: 1.1
-    })
-</script>
-<!--===============================================================================================-->
-<script src="{{ asset('contact/js/main.js') }}"></script>
+    @endsection
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
