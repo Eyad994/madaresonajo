@@ -84,8 +84,9 @@
                                         <dl class="" style="text-align: right;">
                                             <dt class="skin-color">{{__('index.phone')}}</dt>
                                             <dd>{{$supplier->phone}}</dd>
-                                            <dt class="skin-color">{{__('index.region')}}</dt>
-                                            <dd>{{(app()->getLocale() == 'en') ?$supplier->region->area_name_en:$supplier->region->area_name_ar }}</dd>
+                                            <dt class="skin-color">{{__('index.
+                                            ')}}</dt>
+                                            <dd>{{(app()->getLocale() == 'en') ?$supplier?->region?->area_name_en:$supplier?->region?->area_name_ar }}</dd>
                                             <dt class="skin-color" style="font-size: 9px;">{{__('index.email')}}</dt>
                                             <dd>{{ $supplier->email }}</dd>
                                         </dl>
