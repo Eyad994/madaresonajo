@@ -104,7 +104,7 @@
                         <h2 data-uw-node-idx="977">{{ __('index.about_our') }}</h2>
                         <p data-uw-node-idx="978" style="font-size: 12px;">{{ __('index.footer_text2') }}</p>
                         <address class="contact-details" data-uw-node-idx="979"  style="font-size: 12px">
-                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px; font-size: 14px;">0797902497</span> </span>
+                            <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-phone" data-uw-node-idx="981"></i> <span style="margin: 0px 5px; font-size: 14px;">0799289730</span> </span>
                             <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-envelope"></i> <span style="margin: 0px 5px; font-size: 14px;">info@madaresonajo.com</span> </span>
                             <span class="contact-phone" data-uw-node-idx="980" style="width: 100%;display: block; "> <i class="fad fa-map-marked"></i> <span style="margin: 0px 5px; font-size: 13px;">{{ __('index.address_footer') }}</span> </span>
 
