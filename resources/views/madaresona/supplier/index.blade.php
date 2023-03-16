@@ -31,8 +31,7 @@
                         @foreach($suppliers as $supplier)
                             <article class="box">
                                 <figure class="col-xs-3">
-                                    <a
-                                            href="SuppliersDetails.aspx?opc_id=465 ">
+                                    <a href="/{{ app()->getLocale() }}/supplier/data/{{$supplier->id}}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($supplier->name_en) : trim($supplier->name_ar)) }}">
                                         <img src="{{ env('IMAGE_URL') }}/images/{{ $supplier->name_en }}/{{ $supplier->supplier_logo }}"
                                              style="height: 115px;width: 160px;">
                                     </a>
