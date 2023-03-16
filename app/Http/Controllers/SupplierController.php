@@ -28,8 +28,8 @@ class SupplierController extends Controller
     public function index()
     {
         $suppliers = Supplier::where('active', 1)
-            ->orderBy('supplier_order')
-            ->paginate(10);
+          
+          ->paginate(10);
         $suppliersCount = Supplier::where('active', 1)->count();
         $suppliersType = SupplierType::all();
         return view('madaresona.supplier.index', compact('suppliers','suppliersType', 'suppliersCount'));
