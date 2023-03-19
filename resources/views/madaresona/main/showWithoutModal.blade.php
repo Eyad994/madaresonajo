@@ -663,8 +663,8 @@
                         <div class="col-md-12" style="text-align: center">
                             <h4 style="color: #2d3e52">{{(app()->getLocale() == 'en')?$school->name_en: $school->name_ar}}</h4>
                             <h6 class="text-muted">{{(app()->getLocale() == 'en')? 'Jordan' :'اﻷردن'}}
-                                , {{(app()->getLocale() == 'en')? $school->city->city_name_en :$school->city->city_name_ar}}
-                                - {{(app()->getLocale() == 'en') ?$school->region->area_name_en:$school->region->area_name_ar }}</h6>
+                                , {{(app()->getLocale() == 'en')? $school?->city?->city_name_en :$school?->city?->city_name_ar}}
+                                - {{(app()->getLocale() == 'en') ?$school?->region?->area_name_en:$school?->region?->area_name_ar }}</h6>
                         </div>
                     </div>
                     <div style="border-bottom: 1px solid rgba(76, 87, 102, .1);margin: 0 0 20px;"></div>
