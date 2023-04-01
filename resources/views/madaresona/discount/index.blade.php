@@ -1,5 +1,7 @@
 @extends('layouts.main')
-
+<head>
+    <title>احصل على خصمك الأن</title>
+</head>
 @section('content')
 
     <link rel="icon" type="image/png" href="{{ asset('contact/images/icons/favicon.ico') }}">
@@ -71,9 +73,9 @@
                                 <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">
                                     +962062006896</p>
                                 <p style="margin-top: 5px; direction:ltr; {{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">
-                                    +962797902497</p>
+                                    +962799289730</p>
                                 <p style="margin-top: 5px; direction:ltr;{{(app()->getLocale() == 'ar') ? 'margin-right:30px':'margin-left:30px'}}">
-                                    +962790452034</p>
+                                    +962796385230</p>
                             </div>
                         </div>
                         <div class="row form-group">
