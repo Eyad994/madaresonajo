@@ -140,7 +140,7 @@ class SchoolController extends Controller
         if(!$school)
             abort(404)
             
-            dd($school);
+            return($school);
         $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $news = News::where('user_id', $school->user_id)->latest()->get();
