@@ -134,7 +134,10 @@ class SchoolController extends Controller
         App::setLocale($locale);
         $cleanSlug = str_replace('-', ' ', $slug);
         $cleanSlug = rtrim($cleanSlug);
-        $school = School::where('name_ar', 'like', '%'.$cleanSlug.'%')->orWhere('name_en', 'like', '%'.$cleanSlug.'%')->first();
+        $school = School::where('name_ar', 'like', '%'.$cleanSlug.'%')
+            ->orWhere('name_en', 'like', '%'.$cleanSlug.'%')
+            ->orWhere('id', $id)
+            ->first();
         if($school?->gender)
             $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
