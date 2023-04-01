@@ -1,6 +1,7 @@
 @extends('layouts.main')
 <head>
     <title>احصل على خصمك الأن</title>
+    <meta property="og:title" content=">احصل على خصمك الأن" />
 </head>
 @section('content')
 
