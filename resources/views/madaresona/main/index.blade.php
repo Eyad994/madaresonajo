@@ -1,7 +1,4 @@
 @extends('layouts.main')
-<head>
-    <title>احصل على خصمك الأن</title>
-</head>
 @section('sub_header')
     @include('madaresona.partials.sub_header')
 @endsection
