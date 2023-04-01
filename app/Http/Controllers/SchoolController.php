@@ -138,8 +138,9 @@ class SchoolController extends Controller
             ->orWhere('name_en', 'like', '%'.$cleanSlug.'%')
             ->orWhere('id', $id)
             ->first();
-        if($school?->gender)
-            $genderSchool = explode(',', $school->gender);
+        if(!$school)
+            abort(404)
+        $genderSchool = explode(',', $school->gender);
         $gallery = GallarySchool::where('school_id', $school->id)->get();
         $news = News::where('user_id', $school->user_id)->latest()->get();
         $transportations = Transportation::where('school_id', $school->id)->get();
