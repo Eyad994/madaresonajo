@@ -1,6 +1,6 @@
 <div>
     <div class="section-image section-full-width-right light no-padding-top section-bottom-layer"
-             style="top: 40px; background-image: url({{ asset('banner.jpg') }});height:350px;margin-top: 100px; margin-right: 0; ">
+             style="top: 40px; background-image: url({{ asset('banner.webp') }});height:350px;margin-top: 100px; margin-right: 0; ">
 
         <div class=""
              style="{{(app()->getLocale()) == 'ar'?'margin-right: 0px; padding: 20px;direction: rtl;padding-left: 50px;':'margin-left: 0px; padding: 20px;direction: lrt;'}}">
