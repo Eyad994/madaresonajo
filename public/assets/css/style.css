@@ -1009,7 +1009,7 @@ IMAGE - SECTION
 
 .section-image {
     background-size: cover;
-    background-position: center center;
+    /*background-position: center center;*/
 }
 
 .section-image.bg-top {
