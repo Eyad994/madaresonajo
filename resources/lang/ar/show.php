@@ -3,6 +3,7 @@
 return [
     'gallery' => 'البوم الصور',
     'principle' => 'كلمة المدير',
+    'about_school' => 'عن المدرسة',
     'president' => 'كلمة الرئيس',
     'discountForm' => 'الخصومات',
     'transportation' => 'المواصلات',
