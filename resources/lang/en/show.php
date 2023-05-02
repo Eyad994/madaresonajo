@@ -3,6 +3,7 @@
 return [
     'gallery' => 'Gallery',
     'principle' => 'Principle',
+    'about_school' => 'About School',
     'discountForm' => 'Discount Form',
     'transportation' => 'Transportation',
     'maps' => 'Maps',
