@@ -189,7 +189,7 @@
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" id="principle-tab" data-toggle="tab" href="#principle" role="tab"
                                    aria-controls="principle"
-                                   aria-selected="false">{{(($school->type)== 2)? __('show.president'): __('show.principle') }}</a>
+                                   aria-selected="false">{{$school->id == 304 ? __('show.about_school') : $school->type == 2 ? __('show.president'): __('show.principle') }}</a>
                             </li>
                             @if(!(($school->type)== 2))
                                 <li class="nav-item waves-effect waves-light">
