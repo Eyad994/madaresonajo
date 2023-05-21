@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     @if((Request::segment(2)) !='school-data'|| (Request::segment(3))!='data'|| (Request::segment(2))!='showMore' ||(Request::segment(2))!='newSubscription')
-{{Request::segment(2)}}
+{{trim(Request::segment(2))}}
         <title>MadaresonaJO - دليل مدارسنا</title>
         <meta name="description" itemprop="description"
               content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان"/>
