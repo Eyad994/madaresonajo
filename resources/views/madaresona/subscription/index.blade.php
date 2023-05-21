@@ -2,6 +2,10 @@
 <head>
     <title>{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}</title>
     <meta property="og:title" content="{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}">
+    <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان">
+    <meta property="og:image" content="https://madaresonajo.com/assets/images/favicon.png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="200">
 </head>
 
 @section('content')
