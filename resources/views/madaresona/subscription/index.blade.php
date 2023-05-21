@@ -1,4 +1,8 @@
 @extends('layouts.main')
+<head>
+    <title>{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}</title>
+    <meta property="og:title" content="{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}">
+</head>
 
 @section('content')
 
