@@ -28,7 +28,7 @@
         <meta property="og:image:width" content="300">
         <meta property="og:image:height" content="200">
         
-    @elseif((Request::segment(2)) != "newSubscription")
+    @elseif((Request::segment(2)) == "newSubscription")
             <title>{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}</title>
             <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان">
             <meta property="og:title" content="{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}">
