@@ -1,7 +1,4 @@
 @extends('layouts.main')
-
-@section('content')
-
 <head>
     <title>{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}</title>
      <meta name="description" itemprop="description" content="دليل مدارس الاردن , دليل المراكز التعليمية الاردن, دليل حضانات الاردن , دليل روضات الاردن , دليل المدارس الخاصة عمان">
@@ -14,6 +11,10 @@
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="200">
 </head>
+
+@section('content')
+
+
 
     <link rel="icon" type="image/png" href="{{ asset('contact/images/icons/favicon.ico') }}">
     <link rel="stylesheet" type="text/css"
