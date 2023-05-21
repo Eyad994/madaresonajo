@@ -1,4 +1,6 @@
 @extends('layouts.main')
+@section('content')
+
 <head>
     <title>{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}</title>
     <meta property="og:title" content="{{(app()->getLocale() == 'ar') ? 'دليل مدارسنا التعليمي | اشترك الان' : 'Our Schools Educational Guide | subscribe now'}}">
@@ -7,8 +9,6 @@
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="200">
 </head>
-
-@section('content')
 
     <link rel="icon" type="image/png" href="{{ asset('contact/images/icons/favicon.ico') }}">
     <link rel="stylesheet" type="text/css"
