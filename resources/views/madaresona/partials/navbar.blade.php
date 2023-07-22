@@ -298,7 +298,11 @@
                                     <a href="{{ route('home') }}" data-uw-node-idx="146">
                                         {{--<div class="logo-locale" data-uw-node-idx="147">الأردن</div>--}}
                                         <div class="logo" data-uw-node-idx="148">
-                                            <img src="{{ asset('assets/images/logo-light.png') }}">
+                                            @if(request()->getHttpHost() == 'madaresonaps.com')
+                                                <img src="{{ asset('assets/images/logo-light-ps.png') }}">
+                                            @else
+                                                <img src="{{ asset('assets/images/logo-light.png') }}">
+                                            @endif
                                         </div>
                                     </a>
                                 </li>
