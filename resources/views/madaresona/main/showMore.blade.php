@@ -10,8 +10,8 @@
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}" />
 {{--<meta property="og:description"   content="{!! (app()->getLocale() == 'en') ? $news->text_en: $news->text_ar!!}" />--}}
-<meta property="og:image" content="{{images}}" />
-{{--<meta property="og:image:width" content="400">
+{{--<meta property="og:image" content="{{images}}" />
+<meta property="og:image:width" content="400">
 <meta property="og:image:height" content="300">--}}
 @section('content')
     <section class="section-base section-color"
