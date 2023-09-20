@@ -1,22 +1,27 @@
 @extends('layouts.main')
- @php
-        if($news->news_type == 1)
-            $images = env('IMAGE_URL') ."images/$schoolName/news/$news->img";
-        else
-            $images = env('IMAGE_URL') ."images/Main News/$news->img"
-    @endphp
+@php
+    if($news->news_type == 1)
+        $images = env('IMAGE_URL') ."images/$schoolName/news/$news->img";
+    else
+        $images = env('IMAGE_URL') ."images/Main News/$news->img";
 
-<meta property="og:url"           content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/showMore/{{ $news->id }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news->title_en) : trim($news->title_ar)) }}" />
-<meta property="og:type"          content="website" />
-<meta property="og:title"         content="{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}" />
-{{--<meta property="og:description"   content="{!! (app()->getLocale() == 'en') ? $news->text_en: $news->text_ar!!}" />--}}
-<meta property="og:image" content="{{$images}}" />
+   $description = strip_tags(preg_replace('#(<style.*?>).*?(</style>)#', '', $news->text_ar));
+
+
+@endphp
+
+<meta property="og:url"
+      content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/showMore/{{ $news->id }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news->title_en) : trim($news->title_ar)) }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{(app()->getLocale() == 'en') ? $news->title_en :$news->title_ar}}"/>
+<meta property="og:description" content="{{$description}}"/>
+<meta property="og:image" content="{{$images}}"/>
 {{--<meta property="og:image:width" content="400">
 <meta property="og:image:height" content="300">--}}
 @section('content')
     <section class="section-base section-color"
              @if((app()->getLocale() == 'ar'))
-             style="direction: rtl; text-align: right;">
+                 style="direction: rtl; text-align: right;">
         @else
             style="direction:ltr; text-align:left;">
         @endif
@@ -43,10 +48,11 @@
                 <hr class="visible-xs visible-sm">
                 <span>{{__('showMore.date_created')}}</span>
                 <span id="fb-root" style="float: left;">
-                    <script>(function(d, s, id) {
+                    <script>(function (d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
                             if (d.getElementById(id)) return;
-                            js = d.createElement(s); js.id = id;
+                            js = d.createElement(s);
+                            js.id = id;
                             js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
                             fjs.parentNode.insertBefore(js, fjs);
                         }(document, 'script', 'facebook-jssdk'));</script>
@@ -85,7 +91,7 @@
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{!! Illuminate\Support\Str::limit((app()->getLocale() == 'en') ? $item['title_en']: $item['title_ar'], $limit = 45, $end = '...') !!}</h5>
                                     <a href="/{{ app()->getLocale() }}/showMore/{{ $item['id'] }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($item['title_en']) : trim($item['title_ar'])) }}"
-                                       class="btn btn-secondary mt-auto" >المزيد</a>
+                                       class="btn btn-secondary mt-auto">المزيد</a>
                                 </div>
                             </div>
                         </div>
