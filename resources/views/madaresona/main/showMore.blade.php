@@ -1,9 +1,9 @@
 @extends('layouts.main')
  @php
         if($news->news_type == 1)
-            $images = env('IMAGE_URL') ."images/{{ $schoolName }}/news/{{ $news->img }}";
+            $images = env('IMAGE_URL') ."images/$schoolName/news/$news->img";
         else
-            $images = env('IMAGE_URL') ."images/Main News/{{ $news->img }}"
+            $images = env('IMAGE_URL') ."images/Main News/$news->img"
     @endphp
 
 <meta property="og:url"           content="{{ env('MADARESONA_URL') }}/{{ app()->getLocale() }}/showMore/{{ $news->id }}/{{ preg_replace('/[ ]+/', '-', app()->getLocale() == 'en' ? trim($news->title_en) : trim($news->title_ar)) }}" />
